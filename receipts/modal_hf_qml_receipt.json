@@ -89,11 +89,11 @@
     "authenticated_account": "socialprescribing",
     "model_repo_id": "socialprescribing/quantinuum-social-prescribing",
     "model_hub_url": "https://huggingface.co/socialprescribing/quantinuum-social-prescribing",
-    "model_commit_oid": "32aead4f27f1b141013d84948e0bc839dfb03b27",
+    "model_commit_oid": "c3f78c9b7d5923df9af09d51b1db576d0c9b38fc",
     "space_repo_id": "socialprescribing/quantinuum-social-prescribing",
     "space_url": "https://huggingface.co/spaces/socialprescribing/quantinuum-social-prescribing",
-    "space_commit_oid": "392567b957cec7705fd68d50552ee01e37ad9bbe",
-    "deployed_at_utc": "2026-11-11T16:51:12.586588+00:00"
+    "space_commit_oid": "f2f67a5efc8d865dccfc6fdcb9542a92d4b744e4",
+    "deployed_at_utc": "2026-11-11T17:46:03.338608+00:00"
   },
-  "receipt_sha256": "db17166cdee628b777ecdef7fc2fdc505b3f8b4a3bb0d074c49612ffb8255aaf"
+  "receipt_sha256": "d5f1a3f7054d9c81f3b771800b9779728ba0c72fa30d8dec676258a2116fc4e1"
 }

@@ -20,3 +20,7 @@ Live GitHub Pages site: **https://arunnadarasa.github.io/quantum-social-prescrib
 - **Samskrift Live Paper View:** https://samskrift.com/view/0db305b3-9a91-4fdb-ada8-b760beda1ec5/668cdf7d-9840-478a-9101-88989e408c54
 - **Hugging Face Model Hub (`QSPMLM`):** https://huggingface.co/socialprescribing/quantinuum-social-prescribing
 - **Hugging Face Interactive Space:** https://huggingface.co/spaces/socialprescribing/quantinuum-social-prescribing
+
+## Acknowledgments
+
+This work was supported in part by complimentary access to Google Antigravity and Gemini 4 Argon to accelerate scientific workflows.

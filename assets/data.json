@@ -169,7 +169,7 @@
     },
     {
       "file": "modal_hf_qml_receipt.json",
-      "sha256": "db17166cdee628b777ecdef7fc2fdc505b3f8b4a3bb0d074c49612ffb8255aaf",
+      "sha256": "d5f1a3f7054d9c81f3b771800b9779728ba0c72fa30d8dec676258a2116fc4e1",
       "platforms": "Modal Cloud PyTorch + Hugging Face Hub/Space + Guppy 1.0 HUGR",
       "metrics": "4q Frobenius QSPMLM-VQC: 99.79% triage acc, 96.46% Zeno acc, 100.0% falls safety recall, 2.22e-16 parity",
       "floor": "27.7 ms (LogReg)"
