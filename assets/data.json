@@ -162,9 +162,9 @@
   "receipts_summary": [
     {
       "file": "direct_nexus_helios_jobs_receipt.json",
-      "sha256": "9f5e2ec181475a18363e690c79a29a7dd4d7871f767df5e37f0b2200c016edd1",
-      "platforms": "Live Quantinuum Nexus Helios-1E-lite (Project Quantum-Social-Prescribing \u00b7 6,144 Shots)",
-      "metrics": "Jobs b813e944 (P(00)=0.9927 vs 0.3525), 295cb111 (8-rung R\u00b2=0.99995, N*=6 +0.6564), 6cc7b395 (4q QSPMLM VQC)",
+      "sha256": "cbcdc300ba875b54e0bbf2efdf3f4bd4386947c2d65fcfa5f88d3571cbeccd52",
+      "platforms": "Quantinuum Nexus Helios-1E-lite \u2014 Emulator for Quantinuum\u2019s Helios-1 system with full error modelling, hosted on lightweight classical compute (26q, QSystemErrorModel='alpha', 6,144 Shots)",
+      "metrics": "Jobs b813e944 (P(00)=0.9927 vs 0.3525), 295cb111 (8-rung R\u00b2=0.99995, N*=6 +0.6564), 6cc7b395 (4q QSPMLM VQC, 0.00 HQC)",
       "floor": "1.31 ms"
     },
     {
@@ -176,7 +176,7 @@
     },
     {
       "file": "modal_hf_qml_receipt.json",
-      "sha256": "ef2c8559db430379ca5a923192f81f15561a61ad4d87fd9462de2119b7e0a704",
+      "sha256": "9efa6ff68642355d513ab7387941b0114330cfe568107ebe65f66b3c1d6fa07e",
       "platforms": "Modal Cloud PyTorch + Hugging Face Hub/Space + Guppy 1.0 HUGR + GBDT/SVM Controls",
       "metrics": "Regime A: VQC & full-split QKernel 99.79%; Regime B Cubic k=3: VQC 65.21% (76.92% falls recall) vs LogReg 32.71%, GBDT 77.92%, RBF-SVM 79.58%",
       "floor": "25.6 ms (LogReg)"

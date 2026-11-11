@@ -73,5 +73,21 @@
       }
     }
   },
-  "receipt_sha256": "9f5e2ec181475a18363e690c79a29a7dd4d7871f767df5e37f0b2200c016edd1"
+  "backend_description": "Emulator for Quantinuum\u2019s Helios-1 system with full error modelling, hosted on lightweight classical compute.",
+  "backend_category": "Emulator",
+  "backend_max_qubits": 26,
+  "backend_config": {
+    "type": "HeliosConfig",
+    "system_name": "Helios-1E-lite",
+    "attempt_batching": false,
+    "simulator_type": "StatevectorSimulator",
+    "error_model_type": "QSystemErrorModel",
+    "error_model_name": "alpha",
+    "runtime_type": "HeliosRuntime",
+    "max_batch_cost_hqc": 0.0,
+    "language": "AUTO",
+    "target_region": "us",
+    "valid_check": true
+  },
+  "receipt_sha256": "cbcdc300ba875b54e0bbf2efdf3f4bd4386947c2d65fcfa5f88d3571cbeccd52"
 }

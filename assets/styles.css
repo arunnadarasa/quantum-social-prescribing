@@ -1601,6 +1601,197 @@ footer.site-footer {
   display: none;
 }
 
+/* ── Section 08: Interactive Universal Knowledge Graph Explorer (Apache ECharts) ── */
+.kg-header-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.kg-toolbar-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.45rem;
+}
+.kg-controls-bar {
+  margin-top: 1.25rem;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem 1.15rem;
+}
+.kg-search-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.7rem;
+}
+.kg-search-input {
+  flex: 1 1 320px;
+  padding: 0.52rem 0.85rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: #081113;
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: 0.86rem;
+  outline: none;
+  transition: border-color 0.15s ease;
+}
+.kg-search-input:focus {
+  border-color: var(--signal);
+}
+.kg-count-badge {
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  color: var(--amber);
+  background: rgba(244, 174, 66, 0.1);
+  border: 1px solid rgba(244, 174, 66, 0.3);
+  padding: 0.3rem 0.65rem;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+.kg-domain-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 0.36rem;
+  vertical-align: middle;
+}
+.kg-layout {
+  margin-top: 1.2rem;
+  display: grid;
+  grid-template-columns: minmax(0, 1.48fr) minmax(310px, 0.92fr);
+  gap: 1.2rem;
+  align-items: start;
+}
+@media (max-width: 980px) {
+  .kg-layout {
+    grid-template-columns: 1fr;
+  }
+}
+.kg-canvas-panel {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.kg-canvas-box {
+  width: 100%;
+  height: 580px;
+  background: radial-gradient(circle at 50% 45%, rgba(45, 212, 191, 0.07) 0%, #071012 78%);
+}
+@media (max-width: 680px) {
+  .kg-canvas-box {
+    height: 440px;
+  }
+}
+.kg-canvas-hint {
+  padding: 0.55rem 0.9rem;
+  border-top: 1px solid var(--border);
+  background: rgba(9, 18, 20, 0.88);
+  font-family: var(--font-mono);
+  font-size: 0.71rem;
+  color: var(--ink-muted);
+  text-align: center;
+}
+.kg-inspector {
+  max-height: 625px;
+  overflow-y: auto;
+}
+.kg-inspector-top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.45rem;
+}
+.kg-cat-tag {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--ink-muted);
+  padding: 0.16rem 0.5rem;
+  border-radius: 5px;
+  border: 1px solid var(--border);
+  background: rgba(9, 18, 20, 0.65);
+}
+.kg-node-id {
+  margin-top: 0.15rem;
+  font-family: var(--font-mono);
+  font-size: 0.73rem;
+  color: var(--ink-muted);
+}
+.kg-formula-label {
+  margin-top: 0.85rem;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ink-muted);
+}
+.kg-formula-box {
+  margin: 0.35rem 0 0;
+  white-space: pre-wrap;
+  line-height: 1.45;
+}
+.kg-node-desc {
+  margin: 0.75rem 0 0;
+  font-size: 0.87rem;
+  line-height: 1.58;
+  color: var(--ink);
+}
+.kg-rel-section {
+  margin-top: 0.75rem;
+  padding-top: 0.65rem;
+  border-top: 1px solid var(--border);
+}
+.kg-rel-list {
+  margin-top: 0.42rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+.kg-rel-btn {
+  width: 100%;
+  text-align: left;
+  padding: 0.45rem 0.65rem;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: rgba(8, 17, 19, 0.72);
+  color: var(--ink);
+  cursor: pointer;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.35rem;
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  transition: border-color 0.14s ease, background 0.14s ease;
+}
+.kg-rel-btn:hover {
+  border-color: var(--signal);
+  background: rgba(45, 212, 191, 0.1);
+}
+.kg-rel-verb {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: var(--signal);
+}
+.kg-rel-empty {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  color: var(--ink-muted);
+  padding: 0.2rem 0;
+}
+
+
 
 
 /* ── Core UX Overrides: Sticky Header Fix, Loaded Font Stack & Clean Heading Code ── */
