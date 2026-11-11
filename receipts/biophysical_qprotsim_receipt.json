@@ -1,0 +1,302 @@
+{
+  "schema_version": "1.0.0-qspm-hqs-qprotsim-biophysical",
+  "timestamp_utc": "2026-11-11T15:03:27.698441+00:00",
+  "physical_hardware_shots": 0,
+  "wet_lab_experiments_performed": 0,
+  "hqs_circadian_hpa_lindblad": {
+    "platform": "HQS Quantum Simulations (`struqture-py` + `qoqo`)",
+    "hqs_token_configured": true,
+    "n_spins": 4,
+    "pauli_terms_isolation": 14,
+    "pauli_terms_social_prescribing": 16,
+    "lindblad_noise_terms": 4,
+    "qoqo_trotter_circuit_operations": 31,
+    "gate_g4_classical_liouvillian_floor_ms": 156.883,
+    "total_runtime_ms": 159.917,
+    "chronic_isolation_regime": {
+      "scn_hpa_phase_sync_magnitude": 0.01826,
+      "hpa_cortisol_excitation_prob": 0.69173,
+      "il6_inflammatory_excitation_prob": 0.84618,
+      "liouvillian_spectral_gap": 0.21842,
+      "steady_state_purity": 0.12102
+    },
+    "social_prescribing_zeitgeber_regime": {
+      "scn_hpa_phase_sync_magnitude": 0.11339,
+      "hpa_cortisol_excitation_prob": 0.24847,
+      "il6_inflammatory_excitation_prob": 0.19867,
+      "liouvillian_spectral_gap": 0.26258,
+      "steady_state_purity": 0.24831
+    },
+    "il6_relative_suppression_percent": 76.52,
+    "cortisol_relative_suppression_percent": 64.08
+  },
+  "qprotsim_oxytocin_1xy1": {
+    "framework": "QProtSim (Dr Bhushan Bonde & Pratik Patil, University of Suffolk, https://github.com/pra-ashok/qprotsim)",
+    "pdb_id": "1XY1",
+    "molecule": "Human Oxytocin (Social-Bonding & HPA-Stress-Buffering Nonapeptide)",
+    "sequence": "CYIQNCPLG",
+    "n_residues_qubits": 9,
+    "hilbert_space_dimension": 512,
+    "measured_cys1_cys6_disulfide_distance_angstroms": 1.9533,
+    "circuit_gates": {
+      "ry_init": 9,
+      "cry_directed": 14,
+      "ryy_diffusion": 8
+    },
+    "shots_sampled": 16384,
+    "thermodynamic_energy_ensemble": {
+      "mean_solvation_energy": -20.69,
+      "std_solvation_energy": 11.7417
+    },
+    "residue_kl_sensitivity_bits": {
+      "C1": 0.00011,
+      "Y2": 0.37733,
+      "I3": 4e-05,
+      "Q4": 1.43364,
+      "N5": 0.18913,
+      "C6": 0.22861,
+      "P7": 0.36122,
+      "L8": 0.00011,
+      "G9": 0.64162
+    },
+    "top_5_allosteric_mutual_information_pairs": [
+      {
+        "pair": "L8-G9",
+        "min_heavy_atom_distance_A": 1.391,
+        "coupling_K_ij": 1.27,
+        "mutual_information_bits": 0.18439
+      },
+      {
+        "pair": "P7-L8",
+        "min_heavy_atom_distance_A": 1.405,
+        "coupling_K_ij": 1.27,
+        "mutual_information_bits": 0.11449
+      },
+      {
+        "pair": "I3-Q4",
+        "min_heavy_atom_distance_A": 1.386,
+        "coupling_K_ij": 1.27,
+        "mutual_information_bits": 0.09672
+      },
+      {
+        "pair": "Y2-I3",
+        "min_heavy_atom_distance_A": 1.404,
+        "coupling_K_ij": 1.27,
+        "mutual_information_bits": 0.08712
+      },
+      {
+        "pair": "C1-C6",
+        "min_heavy_atom_distance_A": 1.953,
+        "coupling_K_ij": 0.85,
+        "mutual_information_bits": 0.08096
+      }
+    ],
+    "runtime_milliseconds": 84.8
+  },
+  "biohub_uniprot_psychoneuroimmunology": {
+    "platform": "BioHub (biohub.ai) + Live UniProtKB REST API",
+    "biohub_endpoint_probe": {
+      "api_key_present": true,
+      "biohub_web_http_status": 200
+    },
+    "proteins": {
+      "OXTR": {
+        "uniprot": "P30559",
+        "pathway": "Oxytocinergic social bonding & vagal stress buffering",
+        "length_aa": 389,
+        "mass_da": 42772,
+        "protein_name": "Oxytocin receptor"
+      },
+      "NR3C1": {
+        "uniprot": "P04150",
+        "pathway": "Glucocorticoid receptor HPA-axis cortisol feedback",
+        "length_aa": 777,
+        "mass_da": 85659,
+        "protein_name": "Glucocorticoid receptor"
+      },
+      "BDNF": {
+        "uniprot": "P23560",
+        "pathway": "Neuroplasticity & enriched social-environment trophic factor",
+        "length_aa": 247,
+        "mass_da": 27818,
+        "protein_name": "Neurotrophic factor BDNF precursor form"
+      },
+      "ARNTL": {
+        "uniprot": "O00327",
+        "pathway": "BMAL1 core circadian transcription factor (Social Zeitgeber)",
+        "length_aa": 626,
+        "mass_da": 68762,
+        "protein_name": "Basic helix-loop-helix ARNT-like protein 1"
+      },
+      "IL6": {
+        "uniprot": "P05231",
+        "pathway": "Pro-inflammatory cytokine elevated in chronic loneliness",
+        "length_aa": 212,
+        "mass_da": 23718,
+        "protein_name": "Interleukin-6"
+      }
+    },
+    "real_sequence_dipeptide_cosine_similarity": {
+      "NR3C1_vs_ARNTL_circadian_glucocorticoid_axis": 0.7431,
+      "OXTR_vs_NR3C1_neuroendocrine_axis": 0.5673,
+      "ARNTL_vs_IL6_divergent_control": 0.5364
+    },
+    "runtime_milliseconds": 1674.21
+  },
+  "neurosnap_oxtr_6tpk_orthosteric_audit": {
+    "platform": "Neurosnap API + RCSB PDB Experimental Structure `6TPK` (Human OXTR)",
+    "neurosnap_live_api": {
+      "api_key_present": true,
+      "http_status": 200,
+      "authenticated": true,
+      "historical_jobs_count": 13
+    },
+    "pdb_id": "6TPK",
+    "orthosteric_ligand_code": "NU2 (Retosiban)",
+    "ligand_heavy_atoms": 36,
+    "minimum_ligand_receptor_clearance_angstroms": 2.4394,
+    "steric_clashes_below_2_0_angstroms": 0,
+    "orthosteric_pocket_contact_residues_within_4A": [
+      "ALA318",
+      "GLN119",
+      "GLN171",
+      "GLN295",
+      "GLN92",
+      "ILE201",
+      "ILE204",
+      "LYS116",
+      "MET123",
+      "PHE175",
+      "PHE291",
+      "PHE311",
+      "TRP288"
+    ],
+    "contact_residue_count": 13,
+    "gate_g3_steric_safety": "PASS",
+    "runtime_milliseconds": 384.44
+  },
+  "alphagenome_atlas_and_kuramoto": {
+    "platform": "Google DeepMind AlphaGenome Atlas (GENCODE v46 & AVI) + Social-Zeitgeber Kuramoto Model",
+    "gencode_v46_loci": {
+      "OXTR": {
+        "gene_name": "OXTR",
+        "gene_id": "ENSG00000180914.11",
+        "transcript_id": "ENST00000316793.8",
+        "chromosome": "chr3",
+        "start": 8750380,
+        "end": 8769613,
+        "strand": "-",
+        "num_exons": 4,
+        "is_mane_select": true
+      },
+      "NR3C1": {
+        "gene_name": "NR3C1",
+        "gene_id": "ENSG00000113580.15",
+        "transcript_id": "ENST00000394464.7",
+        "chromosome": "chr5",
+        "start": 143277933,
+        "end": 143403686,
+        "strand": "-",
+        "num_exons": 9,
+        "is_mane_select": true
+      },
+      "IL6": {
+        "gene_name": "IL6",
+        "gene_id": "ENSG00000136244.12",
+        "transcript_id": "ENST00000258743.10",
+        "chromosome": "chr7",
+        "start": 22727199,
+        "end": 22731998,
+        "strand": "+",
+        "num_exons": 5,
+        "is_mane_select": true
+      },
+      "BMAL1": {
+        "gene_name": "BMAL1",
+        "gene_id": "ENSG00000133794.20",
+        "transcript_id": "ENST00000403290.6",
+        "chromosome": "chr11",
+        "start": 13277789,
+        "end": 13387266,
+        "strand": "+",
+        "num_exons": 20,
+        "is_mane_select": true
+      }
+    },
+    "il6_promoter_window_avi_scan": {},
+    "neighbourhood_kuramoto_12week_simulation": {
+      "n_residents": 24,
+      "horizon_days": 84,
+      "initial_coherence_R0": 0.1784,
+      "isolated_week12_coherence_R": 0.237,
+      "social_prescribing_week4_coherence_R": 0.9721,
+      "social_prescribing_week8_coherence_R": 0.9723,
+      "social_prescribing_week12_coherence_R": 0.9723
+    },
+    "runtime_milliseconds": 16052.47
+  },
+  "arc_institute_recombinase_and_screenpro2": {
+    "platform": "Arc Institute Open-Source Frameworks (`bridge-rna-designer` & `ScreenPro2` Formalism)",
+    "dagger_anti_homomorphism_verified": true,
+    "scarless_pathway_recombination_trials": 1000,
+    "scarless_fidelity_percent": 100.0,
+    "screenpro2_glucocorticoid_sensitivity_benchmark": {
+      "negative_control_guides_n": 200,
+      "fkbp5_perturbation_pseudo_z_score": -7.804,
+      "epistemic_note": "In-silico functional genomics scoring formalism only; 0 wet-lab CRISPR edits claimed."
+    },
+    "runtime_milliseconds": 34.87
+  },
+  "paperclip_amass_openalex_literature": {
+    "paperclip_gxl_mcp": {
+      "authenticated": true,
+      "http_status": 200,
+      "pmc_accessions_retrieved": [
+        "PMC7496112",
+        "PMC11554121",
+        "PMC12231811",
+        "PMC10092430",
+        "PMC8295963"
+      ],
+      "excerpt": "Found 20 papers  [s_531fd2a4]\n\n  1. Connecting communities: A qualitative investigation of the challenges in delivering a national social prescribing service to reduce loneliness\n     Eleanor Holding; Jill Thompson; Alexis Foster; Annette Haywood\n     PMC7496112 \u00b7 PMC \u00b7 2020-03-12 \u00b7 54 citations\n     https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7496112/\n     Matched: INTRODUCTION \u00b7 cat /papers/PMC7496112/content.lines --lines 16-18\n     \"This qualitative study investigated challenges in deliveri"
+    },
+    "amass_platform": {
+      "api_key_present": true,
+      "http_status": 403
+    },
+    "openalex_verified_works": [
+      {
+        "title": "Link workers\u2019 and clients\u2019 perspectives on how social prescribing offers a social cure for loneliness",
+        "year": 2024,
+        "doi": "https://doi.org/10.1177/13591053241274090",
+        "cited_by_count": 8
+      },
+      {
+        "title": "Social prescribing link workers\u2019 views of training and perceived training needs for supporting people experiencing loneliness: a qualitative study",
+        "year": 2026,
+        "doi": "https://doi.org/10.31234/osf.io/ndvx8_v1",
+        "cited_by_count": 0
+      },
+      {
+        "title": "Impact of social prescribing to address loneliness: A mixed methods evaluation of a national social prescribing programme",
+        "year": 2020,
+        "doi": "https://doi.org/10.1111/hsc.13200",
+        "cited_by_count": 120
+      },
+      {
+        "title": "Connecting communities: A qualitative investigation of the challenges in delivering a national social prescribing service to reduce loneliness",
+        "year": 2020,
+        "doi": "https://doi.org/10.1111/hsc.12976",
+        "cited_by_count": 67
+      },
+      {
+        "title": "Supporting social prescribing in primary care by linking people to local assets: a realist review",
+        "year": 2020,
+        "doi": "https://doi.org/10.1186/s12916-020-1510-7",
+        "cited_by_count": 288
+      }
+    ],
+    "runtime_milliseconds": 3371.37
+  },
+  "receipt_sha256": "21e3b1eb2eca2c4565819523f883dd29fc9f728a3ae42d5e6732b117e092ab08"
+}

@@ -1,0 +1,174 @@
+{
+  "zeno_sweep": [
+    {
+      "n_checkins": 0,
+      "p_engaged": 0.77152,
+      "retention_contrast": 0.54303
+    },
+    {
+      "n_checkins": 1,
+      "p_engaged": 0.75411,
+      "retention_contrast": 0.50822
+    },
+    {
+      "n_checkins": 2,
+      "p_engaged": 0.78915,
+      "retention_contrast": 0.5783
+    },
+    {
+      "n_checkins": 3,
+      "p_engaged": 0.82004,
+      "retention_contrast": 0.64007
+    },
+    {
+      "n_checkins": 4,
+      "p_engaged": 0.83063,
+      "retention_contrast": 0.66126
+    },
+    {
+      "n_checkins": 6,
+      "p_engaged": 0.83489,
+      "retention_contrast": 0.66979
+    },
+    {
+      "n_checkins": 8,
+      "p_engaged": 0.82406,
+      "retention_contrast": 0.64812
+    },
+    {
+      "n_checkins": 12,
+      "p_engaged": 0.78267,
+      "retention_contrast": 0.56534
+    },
+    {
+      "n_checkins": 16,
+      "p_engaged": 0.73509,
+      "retention_contrast": 0.47018
+    }
+  ],
+  "atlas_contracts": [
+    {
+      "id": "P13",
+      "name": "Expectation and overlap estimation",
+      "category": "procedural",
+      "qspm_use": "Guppy 1.0 / Helios HUGR & Cloud `nexus:H2-Emulator` Care-Plan Bell Visibility \u2014 Estimates overlap / interference visibility P(00) between co-produced medical and VCFSE pathways.",
+      "complexity": "Aharonov, Jones, Landau (2005)",
+      "caveat": "{'best_known_cost': 'O(1/epsilon) coherent, optimal (quant-ph/0607019); O(sqrt(M)/epsilon) for M observables (2111.09283); 1/epsilon^2 \u2026"
+    },
+    {
+      "id": "P20",
+      "name": "Transformation of an unknown unitary or channel (inversion, conjugation, transposition; quantum combs)",
+      "category": "procedural",
+      "qspm_use": "8-Rung Sequential Mid-Circuit Zeno / Anti-Zeno Check-In Ladder \u2014 Quantum comb / sequential mid-circuit `project_z` intervention schedule across 12-week care horizon.",
+      "complexity": "Quintino, Dong, Shimbo, Soeda, Murao (2019)",
+      "caveat": "{'best_known_cost': 'inversion: O(d^2) calls deterministic exact (2403.04704); d = 2 in 4 calls with 3 ancillas (2209.02907, 2403.03761\u2026"
+    },
+    {
+      "id": "A01d",
+      "name": "Alternating-operator ansatz",
+      "category": "architectural",
+      "qspm_use": "Haiqu SDK v1.7.1 Linear-Ramp QAOA + State Compression on 8-Qubit 3-Body HUBO \u2014 Alternating-operator ansatz compressed by 94.2% depth for pharmacy deprescribing + VCFSE synergy.",
+      "complexity": "Farhi, Goldstone, Gutmann (2014)",
+      "caveat": "{'best_known_cost': 'SK model: Parisi-value fractions at p up to 12 (1910.08187); large-girth MaxCut 0.7424 of the Parisi value at p = \u2026"
+    },
+    {
+      "id": "P08",
+      "name": "Adiabatic state preparation and annealing",
+      "category": "procedural",
+      "qspm_use": "OpenJij + JijModeling 120-Variable Neighbourhood Core20PLUS5 Caseload QUBO \u2014 Thermal/annealing schedule allocation across 24 multimorbid patients and 5 capacity-capped hubs.",
+      "complexity": "Farhi, Goldstone, Gutmann, Sipser (2000)",
+      "caveat": "{'best_known_cost': 'Inverse-gap scaling holds for specified paths and schedules with path-variation and accuracy factors. The discrete\u2026"
+    },
+    {
+      "id": "P09",
+      "name": "Loading classical data: QRAM, state preparation from classical data, block encoding of dense matrices",
+      "category": "procedural",
+      "qspm_use": "Haiqu Entangled Manifold Embedding (EME) \u2014 Linear-depth loading of multi-dimensional Core20PLUS5 socio-clinical patient vectors.",
+      "complexity": "Giovannetti, Lloyd, Maccone (2007)",
+      "caveat": "{'best_known_cost': 'T-count Theta(sqrt(N log(1/epsilon)) + log(1/epsilon)) for state preparation (2411.04790); depth Theta(n + N/(n + \u2026"
+    },
+    {
+      "id": "A01g",
+      "name": "Equivariant and geometric ansatz",
+      "category": "architectural",
+      "qspm_use": "Haiqu SU(2)-Equivariant Ansatz & Modal Frobenius Neighbourhood Circuits \u2014 Symmetry-preserving geometric circuits eliminating spin contamination (<1e-15) and barren plateaus.",
+      "complexity": "Larocca et al. (2022)",
+      "caveat": "{'best_known_cost': 'no guarantee', 'lower_bound': '?', 'dequantisation_or_simulability': 'For the natural permutation action on fixed-\u2026"
+    },
+    {
+      "id": "P22",
+      "name": "Open-system (Lindbladian) simulation",
+      "category": "procedural",
+      "qspm_use": "HQS `struqture-py` + `qoqo` 4-Spin Circadian-HPA-Oxytocin-IL6 Lindbladian \u2014 Open-system Lindbladian simulation of Social Zeitgeber entrainment vs chronic isolation dephasing.",
+      "complexity": "Bacon, Childs, Chuang, Kempe, Leung, Zhou (2001)",
+      "caveat": "{'best_known_cost': 'O(tau + log(1/epsilon)/log(e + log(1/epsilon)/tau)) queries, tau = (alpha_H + alpha_B^2) t, with gates linear in q\u2026"
+    },
+    {
+      "id": "A01h",
+      "name": "Quantum graph neural networks",
+      "category": "architectural",
+      "qspm_use": "QProtSim (Bonde & Patil, U. Suffolk) on Crystal PDB `1XY1` Oxytocin \u2014 Residue-contact graph quantum circuit sampling pairwise allosteric mutual information across Cys1-Cys6.",
+      "complexity": "Verdon et al. (2019)",
+      "caveat": "{'best_known_cost': 'no guarantee', 'lower_bound': '?', 'dequantisation_or_simulability': 'open; 56-qubit simulations in 2606.26873 are\u2026"
+    },
+    {
+      "id": "X03",
+      "name": "Quantum subspace and Krylov diagonalisation template",
+      "category": "composite",
+      "qspm_use": "Haiqu SKQD / Subspace Diagonalization & Psychoneuroimmunological Active Spaces \u2014 Composite quantum subspace & configuration-recovery template for noisy active-space spectra.",
+      "complexity": "McClean, Schwartz, Carter, de Jong (2017)",
+      "caveat": "{'best_known_cost': 'real-time Krylov: D Krylov vectors with O(D^2) matrix elements (linear in D in the unitary VQPE formulation, 2103.\u2026"
+    }
+  ],
+  "receipts_summary": [
+    {
+      "file": "modal_hf_qml_receipt.json",
+      "sha256": "9bde648bb9198c4f5547e4f4387b2db66d8ed1e72d8bef1073329e6ab9b718d7",
+      "platforms": "Modal Cloud PyTorch + Hugging Face Hub/Space + Guppy 1.0 HUGR",
+      "metrics": "4q Frobenius QSPMLM-VQC: 99.79% triage acc, 96.46% Zeno acc, 100.0% falls safety recall, 2.22e-16 parity",
+      "floor": "27.7 ms (LogReg)"
+    },
+    {
+      "file": "nexus_helios_qspm_receipt.json",
+      "sha256": "f06fd7a99c01e233921cbf4e345b08921923a07d0e875f0aa6309617d0655a14",
+      "platforms": "Quantinuum Guppy 1.0 -> HUGR (Selene) + 3 Cloud nexus:H2-Emulator Jobs",
+      "metrics": "Coherent care-plan P(00)=0.9980 (Cloud H2-Emulator) vs 0.5000 collapse; optimal Zeno N*=6 (+0.6488 cal, R\u00b2=0.99923)",
+      "floor": "1.31 ms"
+    },
+    {
+      "file": "haiqu_jij_qspm_receipt.json",
+      "sha256": "752067c4580e22edeadb492031cd8270788102ccda0528e1867cb27f27078e97",
+      "platforms": "Haiqu SDK v1.7.1 (Compression, Cloud EME, OBP, SU(2)) + OpenJij / JijModeling",
+      "metrics": "8q 3-body HUBO depth 241 -> 14 (-94.19%), exact E0 = -20.3000; OpenJij 120-var QUBO: 0 constraint violations",
+      "floor": "0.89 ms / 10.3 ms"
+    },
+    {
+      "file": "biophysical_qprotsim_receipt.json",
+      "sha256": "21e3b1eb2eca2c4565819523f883dd29fc9f728a3ae42d5e6732b117e092ab08",
+      "platforms": "HQS struqture/qoqo, QProtSim (1XY1), BioHub, Neurosnap (6TPK), AlphaGenome, Arc, Paperclip",
+      "metrics": "Cortisol -64.08%, IL-6 -76.52%; QProtSim Cys1-Cys6 1.95 \u00c5; 6TPK 0 clashes; 12-wk Kuramoto R: 0.237 -> 0.972",
+      "floor": "156.9 ms"
+    },
+    {
+      "file": "modal_rhyme_quops_receipt.json",
+      "sha256": "65bd5901f72b07e9d980afc29770d80322bb9cdc264e86bb2c4f52283c9c2bd7",
+      "platforms": "Modal Cloud + Rhyme (rhyme-beta 0.1.0b1) + Sandia QUOPS / [[8,3,2]] Color Code",
+      "metrics": "4/4 rhyme-beta programs PASS (100% rumination extinction); 184.07x Frobenius gradient variance at 10 qubits",
+      "floor": "Dominates N <= 16"
+    },
+    {
+      "file": "text2wetlab_medicus_primitives_receipt.json",
+      "sha256": "872a8c42e3c2026ab3669601e4b4ee997164b06c333763b8f2a2a3d185db4e6d",
+      "platforms": "Text2WetLab OT-2 + Medicus NHS DAPB4066 ML-DSA-65 + DisCoPy + Moth + Kashefi Atlas",
+      "metrics": "Opentrons OT-2 6/6 PASS; NIST FIPS 204 ML-DSA-65 verified; DisCoPy snake error 2.22e-16; 42 Atlas cards audited",
+      "floor": "< 95 ms"
+    },
+    {
+      "file": "typesafe_jev_qspm_receipt.json",
+      "sha256": "215a566d39d6228bc883537342aa89837e96fbf6ca9bf7039d9678fb8a7b0a6f",
+      "platforms": "TypeSafe System One (jev-latest / Jev 1.14) \u2014 arXiv:2611.05127v2",
+      "metrics": "Mean Safety 3.96/5, 0.00 autonomous deployment probability across 4 CUJs, strict zero-hype demarcation (p=1.000)",
+      "floor": "0.83 s"
+    }
+  ]
+}

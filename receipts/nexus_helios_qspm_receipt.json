@@ -1,0 +1,304 @@
+{
+  "schema_version": "1.0.0-qspm-helios-hugr-and-cloud-nexus-h2",
+  "timestamp_utc": "2026-11-11T14:35:15.429907+00:00",
+  "physical_hardware_shots": 0,
+  "direct_qnexus_helios_1e_lite_config": "type='HeliosConfig' system_name='Helios-1E-lite' emulator_config=HeliosEmulatorConfig(n_qubits=3, simulator=StatevectorSimulator(type='StatevectorSimulator', seed=None), error_model=QSystemErrorModel(type='QSystemErrorModel', seed=None, name='alpha'), runtime=HeliosRuntime(type='HeliosRuntime', seed=None)) max_cost=None attempt_batching=False batch_id=None max_batch_cost=None options=None",
+  "direct_qnexus_auth_status": {
+    "authenticated": false,
+    "error_type": "AuthenticationError",
+    "detail": "Not authenticated. Please run `qnx login` in your terminal.",
+    "resolution": "Direct ~/.qnx/auth 30-day browser token expired; executing compiled Guppy 1.0 HUGR binaries via Quantinuum Selene HeliosInterface (DepolarizingErrorModel alpha-envelope) AND submitting live remote cloud jobs via Aqora `nexus:H2-Emulator`."
+  },
+  "gate_g4_classical_baseline": {
+    "classical_floor_runtime_microseconds": 1307.13,
+    "coherent_bell_probs_exact": [
+      1.0,
+      0.0,
+      -0.0,
+      0.0
+    ],
+    "decohered_bell_probs_exact": [
+      0.5,
+      0.25,
+      0.25,
+      0.0
+    ],
+    "s2_bell_entropy_coherent_exact_bits": 0.0,
+    "s2_bell_entropy_decohered_exact_bits": 1.415037,
+    "zeno_checkin_cadence_curve": {
+      "0": {
+        "p_engaged": 0.77152,
+        "contrast_2p_minus_1": 0.54303
+      },
+      "1": {
+        "p_engaged": 0.75411,
+        "contrast_2p_minus_1": 0.50822
+      },
+      "2": {
+        "p_engaged": 0.78915,
+        "contrast_2p_minus_1": 0.5783
+      },
+      "3": {
+        "p_engaged": 0.82004,
+        "contrast_2p_minus_1": 0.64007
+      },
+      "4": {
+        "p_engaged": 0.83063,
+        "contrast_2p_minus_1": 0.66126
+      },
+      "6": {
+        "p_engaged": 0.83489,
+        "contrast_2p_minus_1": 0.66979
+      },
+      "8": {
+        "p_engaged": 0.82406,
+        "contrast_2p_minus_1": 0.64812
+      },
+      "12": {
+        "p_engaged": 0.78267,
+        "contrast_2p_minus_1": 0.56534
+      },
+      "16": {
+        "p_engaged": 0.73509,
+        "contrast_2p_minus_1": 0.47018
+      }
+    },
+    "optimal_cadence_N": 6,
+    "non_monotone_zeno_antizeno_verified": true
+  },
+  "guppy_hugr_selene_helios_execution": {
+    "runtime_engine": "Quantinuum guppylang 1.0 -> HUGR -> selene_sim (DepolarizingErrorModel: p_1q=1.5e-4, p_2q=1.8e-3, p_meas=1.5e-3)",
+    "wall_clock_seconds": 4.195,
+    "emulator_shots_total": 3072,
+    "hugr_sha256": {
+      "qspm_careplan_coherent": "6b26d45b7e0459205a9349374523c5409cbb50937687884f685aa36eb8a3d181",
+      "qspm_careplan_decohered_control": "d04f2ab6e89bf040fef39d3efbe9af98feb547442d3c5e3bdd69d8a623bf6c45",
+      "qspm_8rung_zeno_checkin_ladder": "2a061672dfec9d087a97e3ebadec729275dbb3c0b7a7d5a01d867e9c10ab90ad"
+    },
+    "careplan_coherence_vs_premature_collapse": {
+      "coherent": {
+        "total_shots": 1024,
+        "asps_syndrome_zero_shots": 1020,
+        "asps_retention_rate": 0.9961,
+        "bell_counts_all": {
+          "00": 1009,
+          "01": 3,
+          "10": 10,
+          "11": 2
+        },
+        "bell_counts_asps_clean": {
+          "00": 1008,
+          "01": 3,
+          "10": 7,
+          "11": 2
+        },
+        "p00_interference_visibility_all": 0.9854,
+        "p00_interference_visibility_asps_clean": 0.9882,
+        "renyi2_bell_entropy_all_bits": 0.0424,
+        "renyi2_bell_entropy_asps_clean_bits": 0.0341
+      },
+      "equal_depth_decohered_control": {
+        "total_shots": 1024,
+        "asps_syndrome_zero_shots": 1019,
+        "asps_retention_rate": 0.9951,
+        "bell_counts_all": {
+          "00": 506,
+          "01": 264,
+          "10": 246,
+          "11": 8
+        },
+        "bell_counts_asps_clean": {
+          "00": 504,
+          "01": 264,
+          "10": 246,
+          "11": 5
+        },
+        "p00_interference_visibility_all": 0.4941,
+        "p00_interference_visibility_asps_clean": 0.4946,
+        "renyi2_bell_entropy_all_bits": 1.4406,
+        "renyi2_bell_entropy_asps_clean_bits": 1.4342
+      },
+      "delta_p00_visibility": 0.4913,
+      "delta_renyi2_entropy_bits": 1.3982
+    },
+    "eight_rung_zeno_checkin_ladder": {
+      "affine_calibration": {
+        "intercept_a": 0.50312,
+        "slope_b": 0.51147,
+        "r_squared": 0.999225
+      },
+      "true_contrasts": {
+        "Cal_Std_1_m050": -0.8,
+        "Cal_Std_2_m025": -0.4,
+        "Cal_Std_3_zero": 0.0,
+        "Cal_Std_4_p025": 0.4,
+        "Cal_Std_5_p050": 0.8,
+        "Blinded_QC_Checkin_N3": 0.64007,
+        "Optimal_Zeno_Checkin_N6": 0.66979,
+        "Exact_Null_Twin": 0.0
+      },
+      "raw_counts": {
+        "Cal_Std_1_m050": {
+          "k_excited": 102,
+          "n_shots": 1024,
+          "p_raw": 0.09961
+        },
+        "Cal_Std_2_m025": {
+          "k_excited": 299,
+          "n_shots": 1024,
+          "p_raw": 0.29199
+        },
+        "Cal_Std_3_zero": {
+          "k_excited": 507,
+          "n_shots": 1024,
+          "p_raw": 0.49512
+        },
+        "Cal_Std_4_p025": {
+          "k_excited": 738,
+          "n_shots": 1024,
+          "p_raw": 0.7207
+        },
+        "Cal_Std_5_p050": {
+          "k_excited": 930,
+          "n_shots": 1024,
+          "p_raw": 0.9082
+        },
+        "Blinded_QC_Checkin_N3": {
+          "k_excited": 836,
+          "n_shots": 1024,
+          "p_raw": 0.81641
+        },
+        "Optimal_Zeno_Checkin_N6": {
+          "k_excited": 853,
+          "n_shots": 1024,
+          "p_raw": 0.83301
+        },
+        "Exact_Null_Twin": {
+          "k_excited": 528,
+          "n_shots": 1024,
+          "p_raw": 0.51562
+        }
+      },
+      "calibrated_contrasts": {
+        "Cal_Std_1_m050": -0.78893,
+        "Cal_Std_2_m025": -0.41279,
+        "Cal_Std_3_zero": -0.01566,
+        "Cal_Std_4_p025": 0.42539,
+        "Cal_Std_5_p050": 0.79198,
+        "Blinded_QC_Checkin_N3": 0.61251,
+        "Optimal_Zeno_Checkin_N6": 0.64496,
+        "Exact_Null_Twin": 0.02444
+      },
+      "audit_gates": {
+        "Gate_GL_Linearity": {
+          "r_squared": 0.999225,
+          "status": "PASS"
+        },
+        "Gate_GA_Blinded_QC_N3": {
+          "error": 0.02756,
+          "status": "PASS"
+        },
+        "Gate_GC_Optimal_Zeno": {
+          "error": 0.02483,
+          "status": "PASS"
+        },
+        "Gate_GS_Exact_Null": {
+          "magnitude": 0.02444,
+          "status": "PASS"
+        }
+      }
+    }
+  },
+  "live_cloud_quantinuum_nexus_h2_emulator": {
+    "provider": "Aqora Cloud -> Quantinuum Nexus",
+    "platform": "aqora:nexus:H2-Emulator",
+    "as_entity": "quantumagent",
+    "physical_hardware_shots": 0,
+    "cloud_emulator_shots_total": 1536,
+    "wall_clock_seconds": 76.96,
+    "coherent_careplan_job": {
+      "job_id": "AFByb3ZpZGVySm9iAaHLB-9CdxCPOKol3O_tYw",
+      "n_qubits": 3,
+      "n_gates_rebased": 29,
+      "metrics": {
+        "raw_3bit_counts": {
+          "000": 510,
+          "001": 1,
+          "100": 1
+        },
+        "marginal_bell_counts": {
+          "00": 511,
+          "01": 0,
+          "10": 1,
+          "11": 0
+        },
+        "total_shots": 512,
+        "ancilla_zero_shots": 511,
+        "p00_visibility": 0.998,
+        "p00_asps_postselected": 0.998,
+        "renyi2_bell_entropy_bits": 0.0056
+      }
+    },
+    "decohered_control_job": {
+      "job_id": "AFByb3ZpZGVySm9iAaHLB_Lsc9CsbStjj7T_Zg",
+      "n_qubits": 3,
+      "n_gates_rebased": 24,
+      "metrics": {
+        "raw_3bit_counts": {
+          "000": 125,
+          "001": 131,
+          "010": 78,
+          "011": 65,
+          "100": 60,
+          "101": 51,
+          "110": 1,
+          "111": 1
+        },
+        "marginal_bell_counts": {
+          "00": 256,
+          "01": 143,
+          "10": 111,
+          "11": 2
+        },
+        "total_shots": 512,
+        "ancilla_zero_shots": 512,
+        "p00_visibility": 0.5,
+        "p00_asps_postselected": 0.5,
+        "renyi2_bell_entropy_bits": 1.4149
+      }
+    },
+    "zeno_calibration_job": {
+      "job_id": "AFByb3ZpZGVySm9iAaHLB_aLdROPCvMz4-zurw",
+      "n_qubits": 4,
+      "n_gates_rebased": 8,
+      "raw_4bit_counts": {
+        "0000": 4,
+        "0001": 5,
+        "0010": 21,
+        "0011": 21,
+        "0100": 42,
+        "0101": 34,
+        "0110": 162,
+        "0111": 170,
+        "1000": 2,
+        "1010": 2,
+        "1011": 2,
+        "1100": 3,
+        "1101": 5,
+        "1110": 23,
+        "1111": 16
+      },
+      "observed_p1": {
+        "q0_cal_neg050": 0.1035,
+        "q1_cal_pos050": 0.8887,
+        "q2_optimal_zeno": 0.8145,
+        "q3_exact_null": 0.4941
+      },
+      "calibrated_optimal_zeno_contrast": 0.6488,
+      "true_optimal_zeno_contrast": 0.6698,
+      "calibrated_null_contrast": -0.004
+    },
+    "cloud_h2_delta_p00": 0.498,
+    "cloud_h2_delta_s2_bits": 1.4093
+  }
+}

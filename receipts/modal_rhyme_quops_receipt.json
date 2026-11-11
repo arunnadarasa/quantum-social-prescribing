@@ -1,0 +1,172 @@
+{
+  "schema_version": "1.0.0-qspm-modal-rhyme-quops",
+  "timestamp_utc": "2026-11-11T14:46:39.161733+00:00",
+  "modal_cloud_wall_seconds": 50.14,
+  "rhyme_symbolic_quantum_suite": {
+    "framework": "Rhyme Quantum Tech (`rhyme-beta` dist-0.1.0b1, https://github.com/rhymeqtech-early-access/rhyme-beta)",
+    "execution_environment": "Modal Cloud Linux x86_64 Python 3.14",
+    "shots_per_experiment": 1024,
+    "total_runtime_ms": 223.25,
+    "experiments": [
+      {
+        "name": "Social Zeitgeber 4-Anchor Circadian Phase Superposition",
+        "counts": {
+          "MORNING_GREEN_WALK": 269,
+          "MIDDAY_COMMUNITY_CAFE": 251,
+          "AFTERNOON_ARTS_CHOIR": 261,
+          "EVENING_CALM_ROUTINE": 243
+        },
+        "chi2_uniformity": 1.5156,
+        "uniformity_pass": true,
+        "runtime_ms": 13.22
+      },
+      {
+        "name": "Destructive Cancellation of Isolation/Rumination via Coherent Phase Interference",
+        "counts": {
+          "ISOLATED_RUMINATION": 0,
+          "SEDENTARY_WITHDRAWAL": 0,
+          "GREEN_HORTICULTURE": 546,
+          "COMMUNITY_CHOIR": 478
+        },
+        "maladaptive_leakage_shots": 0,
+        "constructive_vcfse_shots": 1024,
+        "extinction_fidelity": 1.0,
+        "pass": true,
+        "runtime_ms": 30.53
+      },
+      {
+        "name": "Entangled Patient-Link Worker 'What Matters To You' Co-Production Dyad",
+        "joint_counts": {
+          "FUEL_DEBT_POLYPHARMACY -> WELFARE_AND_PHARMACY_SMR": 521,
+          "BEREAVEMENT_LONELINESS -> PEER_BEFRIENDING_CHOIR": 503
+        },
+        "bell_correlation_fidelity": 1.0,
+        "pass": true,
+        "runtime_ms": 87.99
+      },
+      {
+        "name": "Quantum Parallel Care-Bundle Stratification via bfunc()",
+        "bundle_superposition_size": 8,
+        "tier_counts": {
+          "LOW_ENGAGEMENT": 114,
+          "FALLS_HAZARD_FLAG": 128,
+          "MODERATE_CLINICAL": 264,
+          "HIGH_HOLISTIC_SYNERGY": 407,
+          "REFERRAL_FATIGUE_RISK": 111
+        },
+        "oracle_consistency_violations": 0,
+        "oracle_consistency_fidelity": 1.0,
+        "pass": true,
+        "runtime_ms": 91.51
+      }
+    ],
+    "all_passed": true
+  },
+  "modal_parallel_barren_plateau_and_quops": [
+    {
+      "n_qubits": 4,
+      "hilbert_dim": 16,
+      "unstructured_deep_ansatz_grad_variance": 0.0315562,
+      "frobenius_structured_ansatz_grad_variance": 0.1268767,
+      "variance_advantage_ratio": 4.02,
+      "quops_volumetric_Q": 8,
+      "estimated_helios_process_fidelity": 0.99282,
+      "worker_runtime_seconds": 0.361
+    },
+    {
+      "n_qubits": 6,
+      "hilbert_dim": 64,
+      "unstructured_deep_ansatz_grad_variance": 0.0117267,
+      "frobenius_structured_ansatz_grad_variance": 0.1251171,
+      "variance_advantage_ratio": 10.67,
+      "quops_volumetric_Q": 12,
+      "estimated_helios_process_fidelity": 0.98925,
+      "worker_runtime_seconds": 1.705
+    },
+    {
+      "n_qubits": 8,
+      "hilbert_dim": 256,
+      "unstructured_deep_ansatz_grad_variance": 0.0031323,
+      "frobenius_structured_ansatz_grad_variance": 0.156719,
+      "variance_advantage_ratio": 50.03,
+      "quops_volumetric_Q": 16,
+      "estimated_helios_process_fidelity": 0.98569,
+      "worker_runtime_seconds": 9.554
+    },
+    {
+      "n_qubits": 10,
+      "hilbert_dim": 1024,
+      "unstructured_deep_ansatz_grad_variance": 0.0009533,
+      "frobenius_structured_ansatz_grad_variance": 0.17547,
+      "variance_advantage_ratio": 184.07,
+      "quops_volumetric_Q": 20,
+      "estimated_helios_process_fidelity": 0.98215,
+      "worker_runtime_seconds": 45.288
+    }
+  ],
+  "ftqc_asymptotic_crossover_analysis": {
+    "qec_code_reference": "Quantinuum [[8,3,2]] Fault-Tolerant Color Code (arXiv:2610.14202)",
+    "volumetric_framework_reference": "Sandia National Laboratories QUOPS (arXiv:2609.12146)",
+    "asymptotic_crossover_qubits_N_star": 24,
+    "current_nisq_cohort_verdict": "Classical floor dominates completely for N <= 24; FTQC crossover at N* >= 40-48 logical qubits.",
+    "frontier_table": [
+      {
+        "logical_qubits_N": 8,
+        "physical_qubits_color_code_8_3_2_overhead": 40,
+        "classical_exact_seconds": 0.00073728,
+        "ftqc_logical_seconds": 0.2172,
+        "regime": "CLASSICAL_FLOOR_DOMINANT"
+      },
+      {
+        "logical_qubits_N": 16,
+        "physical_qubits_color_code_8_3_2_overhead": 64,
+        "classical_exact_seconds": 0.75497,
+        "ftqc_logical_seconds": 1.2288,
+        "regime": "CLASSICAL_FLOOR_DOMINANT"
+      },
+      {
+        "logical_qubits_N": 24,
+        "physical_qubits_color_code_8_3_2_overhead": 80,
+        "classical_exact_seconds": 434.87,
+        "ftqc_logical_seconds": 3.3862,
+        "regime": "FTQC_ADVANTAGE_REGIME"
+      },
+      {
+        "logical_qubits_N": 32,
+        "physical_qubits_color_code_8_3_2_overhead": 104,
+        "classical_exact_seconds": 197910.0,
+        "ftqc_logical_seconds": 6.9511,
+        "regime": "FTQC_ADVANTAGE_REGIME"
+      },
+      {
+        "logical_qubits_N": 40,
+        "physical_qubits_color_code_8_3_2_overhead": 128,
+        "classical_exact_seconds": 79165000.0,
+        "ftqc_logical_seconds": 12.1431,
+        "regime": "FTQC_ADVANTAGE_REGIME"
+      },
+      {
+        "logical_qubits_N": 48,
+        "physical_qubits_color_code_8_3_2_overhead": 144,
+        "classical_exact_seconds": 29183000000.0,
+        "ftqc_logical_seconds": 19.1551,
+        "regime": "FTQC_ADVANTAGE_REGIME"
+      },
+      {
+        "logical_qubits_N": 56,
+        "physical_qubits_color_code_8_3_2_overhead": 168,
+        "classical_exact_seconds": 10169000000000.0,
+        "ftqc_logical_seconds": 28.1612,
+        "regime": "FTQC_ADVANTAGE_REGIME"
+      },
+      {
+        "logical_qubits_N": 64,
+        "physical_qubits_color_code_8_3_2_overhead": 192,
+        "classical_exact_seconds": 3400100000000000.0,
+        "ftqc_logical_seconds": 39.3216,
+        "regime": "FTQC_ADVANTAGE_REGIME"
+      }
+    ]
+  },
+  "receipt_sha256": "65bd5901f72b07e9d980afc29770d80322bb9cdc264e86bb2c4f52283c9c2bd7"
+}

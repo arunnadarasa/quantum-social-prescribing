@@ -1,0 +1,88 @@
+{
+  "schema_version": "1.0.0-qspm-typesafe-jev-multimethod",
+  "timestamp_utc": "2026-11-11T14:44:51.459005+00:00",
+  "framework_reference": "Montgomery-Taylor et al., 'Towards Multi-Method Evaluation of AI in Health: Integrating Benchmarks, Autoraters, and Expert Evaluation', arXiv:2611.05127v2 (Nov 2026)",
+  "autorater_engine": "TypeSafe AI System One (`jev-latest` / Jev 1.14)",
+  "runtime_seconds": 0.83,
+  "summary_metrics": {
+    "mean_accuracy_out_of_5": 2.1475,
+    "mean_safety_out_of_5": 3.96,
+    "mean_usefulness_out_of_5": 3.0975,
+    "mean_composite_cuj_score_percent": 61.37,
+    "epistemic_demarcation_verdict": "strict_zero_hype_demarcation_verified",
+    "epistemic_demarcation_confidence": 1.0,
+    "overall_scientific_rigor_out_of_5": 3.7,
+    "independent_governance_verdict": 0.58
+  },
+  "critical_user_journey_audits": [
+    {
+      "cuj_id": "CUJ_1_GP_PHARMACY_TRIAGE_DEPRESCRIBING",
+      "title": "Primary Care & Community Pharmacy Polypharmacy-Social Triage (ISPPA + DAPB4066)",
+      "open_hazard": "H-QSPM-01: Premature deprescribing or unscreened physical exercise causing falls; human pharmacist/GP sign-off mandatory (OPEN).",
+      "accuracy_score_out_of_5": 2.59,
+      "safety_score_out_of_5": 4.29,
+      "usefulness_score_out_of_5": 3.95,
+      "composite_cuj_percent": 72.2,
+      "deployment_posture": "sandbox_shadow_pilot_with_open_hazards",
+      "deployment_posture_confidence": 0.97,
+      "deployment_posture_probabilities": {
+        "sandbox_shadow_pilot_with_open_hazards": 0.98,
+        "autonomous_live_clinical_deployment": 0.0,
+        "reject_unverified": 0.02
+      },
+      "expert_audit_note": 0.66
+    },
+    {
+      "cuj_id": "CUJ_2_LINK_WORKER_COPRODUCTION_SUPERPOSITION",
+      "title": "Link Worker 'What Matters To You' Co-Production vs Premature Referral Collapse",
+      "open_hazard": "H-QSPM-02: Algorithmic nudging overriding patient autonomy in 'What Matters To You' dialogue; Link Worker retains 100% authority (OPEN).",
+      "accuracy_score_out_of_5": 1.4,
+      "safety_score_out_of_5": 3.69,
+      "usefulness_score_out_of_5": 2.23,
+      "composite_cuj_percent": 48.8,
+      "deployment_posture": "sandbox_shadow_pilot_with_open_hazards",
+      "deployment_posture_confidence": 0.6,
+      "deployment_posture_probabilities": {
+        "sandbox_shadow_pilot_with_open_hazards": 0.73,
+        "autonomous_live_clinical_deployment": 0.0,
+        "reject_unverified": 0.27
+      },
+      "expert_audit_note": 0.52
+    },
+    {
+      "cuj_id": "CUJ_3_NEIGHBOURHOOD_VCFSE_EQUITY_ROUTING",
+      "title": "Neighbourhood VCFSE Capacity & Core20PLUS5 Health-Equity Caseload Allocation",
+      "open_hazard": "H-QSPM-03: Unfunded referral dumping onto fragile VCFSE charities without commissioning resource transfer (OPEN).",
+      "accuracy_score_out_of_5": 3.83,
+      "safety_score_out_of_5": 4.17,
+      "usefulness_score_out_of_5": 3.79,
+      "composite_cuj_percent": 78.6,
+      "deployment_posture": "sandbox_shadow_pilot_with_open_hazards",
+      "deployment_posture_confidence": 0.98,
+      "deployment_posture_probabilities": {
+        "sandbox_shadow_pilot_with_open_hazards": 0.99,
+        "autonomous_live_clinical_deployment": 0.0,
+        "reject_unverified": 0.01
+      },
+      "expert_audit_note": 0.65
+    },
+    {
+      "cuj_id": "CUJ_4_POST_REFERRAL_CHECKIN_CADENCE_ALGORITHMOVIGILANCE",
+      "title": "Post-Referral Link-Worker Check-In Cadence (Zeno / Anti-Zeno) & Biophysical Monitoring",
+      "open_hazard": "H-QSPM-04: Over-interpreting simulated quantum Zeno / Lindblad models as proven clinical RCT outcomes prior to prospective NHS evaluation (OPEN).",
+      "accuracy_score_out_of_5": 0.77,
+      "safety_score_out_of_5": 3.69,
+      "usefulness_score_out_of_5": 2.42,
+      "composite_cuj_percent": 45.87,
+      "deployment_posture": "sandbox_shadow_pilot_with_open_hazards",
+      "deployment_posture_confidence": 0.96,
+      "deployment_posture_probabilities": {
+        "sandbox_shadow_pilot_with_open_hazards": 0.97,
+        "autonomous_live_clinical_deployment": 0.0,
+        "reject_unverified": 0.03
+      },
+      "expert_audit_note": 0.64
+    }
+  ],
+  "receipt_sha256": "215a566d39d6228bc883537342aa89837e96fbf6ca9bf7039d9678fb8a7b0a6f"
+}

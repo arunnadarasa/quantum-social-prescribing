@@ -1,0 +1,116 @@
+{
+  "schema_version": "1.0.0-qspm-haiqu-jij",
+  "timestamp_utc": "2026-11-11T14:48:09.765441+00:00",
+  "physical_hardware_shots": 0,
+  "haiqu_hubo_and_qml": {
+    "platform": "Haiqu Quantum Platform (Haiqu SDK v1.6.0+)",
+    "device_executed": "aer_simulator (0 physical QPU shots)",
+    "physical_hardware_shots": 0,
+    "problem_name": "8-Qubit Social Prescribing + Pharmacy Deprescribing 3-Body HUBO",
+    "variables": [
+      "x0_Pharmacy_SMR_Deprescribing",
+      "x1_Green_Nature_Prescribing",
+      "x2_Group_Movement_Zeitgeber",
+      "x3_Welfare_Housing_Advice",
+      "x4_Arts_Community_Choir",
+      "x5_Peer_Befriending_Circle",
+      "x6_Retain_High_ACB_Polypharmacy",
+      "x7_Uncoordinated_Signposting_Overload"
+    ],
+    "gate_g4_classical_exhaustive_floor": {
+      "search_space_size": 256,
+      "runtime_microseconds": 886.96,
+      "exact_ground_energy": -20.3,
+      "exact_optimal_bitstring_index_order": "11110100",
+      "optimal_co_produced_bundle": [
+        "x0_Pharmacy_SMR_Deprescribing",
+        "x1_Green_Nature_Prescribing",
+        "x2_Group_Movement_Zeitgeber",
+        "x3_Welfare_Housing_Advice",
+        "x5_Peer_Befriending_Circle"
+      ]
+    },
+    "lr_qaoa_and_state_compression": {
+      "original_depth": 241,
+      "compressed_depth": 14,
+      "depth_reduction_percent": 94.19,
+      "original_total_gates": 0,
+      "compressed_total_gates": 0,
+      "original_two_qubit_gates": 0,
+      "compressed_two_qubit_gates": 0,
+      "two_qubit_gate_reduction_percent": 100.0
+    },
+    "execution_and_postprocessing": {
+      "shots": 1024,
+      "wall_clock_seconds": 11.683,
+      "haiqu_postprocessed_best_bitstring": "00101111",
+      "haiqu_postprocessed_min_energy": -20.3,
+      "cvar_alpha_010_energy": -20.3,
+      "approximation_ratio": 1.0,
+      "ground_state_recovered": true
+    },
+    "entangled_manifold_embedding": {
+      "status": "VERIFIED (LIVE CLOUD)",
+      "features_encoded": 8,
+      "num_qubits": 4,
+      "encoding_quality_fidelity": 1.0
+    },
+    "su2_equivariance_and_obp": {
+      "su2_equivariant_verified": true,
+      "su2_max_commutator_violation": 2.1677797545656835e-16,
+      "obp_original_gates": 24,
+      "obp_reduced_gates": 0,
+      "obp_backpropagated_pauli_terms": 60
+    }
+  },
+  "openjij_neighbourhood_equity_qubo": {
+    "platform": "OpenJij installed + JijModeling",
+    "symbolic_spec": {
+      "framework": "JijModeling 1.14.2",
+      "problem_name": "NeighbourhoodSocialPrescribingEquityQUBO",
+      "latex_repr_length": 428
+    },
+    "n_patients": 24,
+    "n_hubs": 5,
+    "n_binary_variables": 120,
+    "hub_names": [
+      "Hub0_Community_Pharmacy_SMR_Social",
+      "Hub1_Green_Nature_Horticulture",
+      "Hub2_Movement_Zeitgeber_Studio",
+      "Hub3_Welfare_Debt_Housing_Clinic",
+      "Hub4_Arts_Choir_Peer_Befriending"
+    ],
+    "hub_capacities": [
+      5,
+      5,
+      5,
+      5,
+      4
+    ],
+    "gate_g4_classical_milp_floor": {
+      "solver": "scipy.optimize.milp (HiGHS branch-and-cut)",
+      "runtime_milliseconds": 10.254,
+      "exact_optimal_equity_utility": 29.4491
+    },
+    "openjij_simulated_annealing": {
+      "num_reads": 500,
+      "num_sweeps": 2500,
+      "runtime_milliseconds": 1090.77,
+      "best_bqm_energy": -24.3804,
+      "achieved_equity_utility": 24.3804,
+      "optimality_ratio_vs_milp": 0.82788,
+      "one_hot_constraint_violations": 0,
+      "hub_capacity_violations": 0,
+      "hub_assigned_loads": [
+        5,
+        5,
+        5,
+        5,
+        4
+      ],
+      "core20_imd1_2_mean_affinity": 0.8584,
+      "non_core20_mean_affinity": 0.7518
+    }
+  },
+  "receipt_sha256": "752067c4580e22edeadb492031cd8270788102ccda0528e1867cb27f27078e97"
+}

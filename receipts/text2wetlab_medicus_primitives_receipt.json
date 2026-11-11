@@ -1,0 +1,187 @@
+{
+  "schema_version": "1.0.0-qspm-text2wetlab-medicus-discopy-moth-atlas",
+  "timestamp_utc": "2026-11-11T14:49:37.854636+00:00",
+  "text2wetlab_ot2_verification": {
+    "evaluation": "Text2WetLab 6-Point Robotics Benchmark",
+    "protocol": "qspm_salivary_cortisol_il6_ot2.py",
+    "score": "6/6 PASS",
+    "all_passed": true,
+    "criteria": {
+      "criterion_1_ast_syntax": {
+        "status": "PASS",
+        "details": "Valid Python 3 AST successfully parsed (89 lines)."
+      },
+      "criterion_2_protocol_api_structure": {
+        "status": "PASS",
+        "details": "metadata=True, apiLevel='2.15', run(protocol)=True"
+      },
+      "criterion_3_deck_layout_validity": {
+        "status": "PASS",
+        "details": "Loaded slots: [1, 2, 4, 10, 11] (bounds 1..11, required: [1, 2, 10, 11])."
+      },
+      "criterion_4_pipette_management": {
+        "status": "PASS",
+        "details": "Instruments: {'left': 'p20_single_gen2', 'right': 'p300_single_gen2'} (left/right mounts, P20 & P300 present)."
+      },
+      "criterion_5_tip_lifecycle_discipline": {
+        "status": "PASS",
+        "details": "pick_up_tip=4, drop_tip=4, return_tip=0 (balanced: True)."
+      },
+      "criterion_6_volume_boundary_guards": {
+        "status": "PASS",
+        "details": "Quantum doses verified: [2.5, 5.0, 7.5, 10.0, 70.0, 80.0, 85.0, 95.0] uL, mixing_performed=True, dual_pipette_calls=True"
+      }
+    },
+    "epistemic_disclosure": "Dry-run deterministic code & deck-safety verification ONLY; 0 physical wet-lab samples executed.",
+    "protocol_sha256": "30aa7a27661b225006b47789b1d9d2e88c43e83a71cca141eec4a024b5d5cc2e"
+  },
+  "medicus_dapb4066_fhir_mldsa65": {
+    "architecture": "Medicus GP Product Shape + NHS DAPB4066 FHIR R4 Dual-Stack PQC Sketch",
+    "legal_spine_algorithm_today": "CIS2 DSS RS256 (unchanged; ML-DSA-65 attached strictly as parallel provenance)",
+    "parallel_pqc_algorithm": "ML-DSA-65 (NIST FIPS 204)",
+    "synthetic_payload": true,
+    "snomed_ct_codes": [
+      "871731000000106",
+      "871691000000100",
+      "1364751000000104",
+      "267076002"
+    ],
+    "canonical_payload_bytes": 1090,
+    "digest_sha256": "6d37f7bc9adcf0c18971ec1a0a8067884d6f14b5768f124f7c2153bef4f82503",
+    "domain_separation_ctx": "quantinuum-social-prescribing:dapb4066-fhir-r4:v1",
+    "verify_ok": true,
+    "wrong_context_rejected": true,
+    "public_key_bytes": 1952,
+    "signature_bytes": 3309,
+    "public_key_sha256_prefix": "1dc44a3acd32f8be43530fb1",
+    "signature_sha256_prefix": "b1342ae8cb46ab1219427e23",
+    "runtime_milliseconds": 89.35
+  },
+  "discopy_categorical_qspm": {
+    "framework": "DisCoPy (`discopy.quantum`) Dagger-Compact Monoidal Functor `F: C_QSPM -> FHilb`",
+    "snake_equation_identity_max_error": 2.220446049250313e-16,
+    "snake_equation_verified": true,
+    "triadic_coproduction_state_norm": 1.0,
+    "patient_reduced_purity": 0.5,
+    "triadic_entanglement_entropy_bits": 1.0,
+    "runtime_milliseconds": 10.35
+  },
+  "moth_quantum_relational_blur": {
+    "framework": "Moth Quantum Relational State / Quantum Blur Formalism (Wootton)",
+    "moth_api_key_configured": true,
+    "execution_tier": "Unitary Statevector Emulator (0 physical QPU shots)",
+    "neighbourhood_nodes": 16,
+    "qubits": 4,
+    "crisis_concentration_gini_before": 0.875,
+    "crisis_concentration_gini_after_blur": 0.4609,
+    "inverse_participation_ratio_before": 0.5,
+    "inverse_participation_ratio_after": 0.1221,
+    "runtime_milliseconds": 0.73
+  },
+  "kashefi_primitives_atlas_v04": {
+    "atlas_title": "Quantum Algorithmic Primitives Atlas (Version 0.4, 27 October 2026)",
+    "editor": "Prof. Elham Kashefi (Quantum Software Lab, University of Edinburgh; LIP6, Sorbonne Universite & CNRS)",
+    "symposium_origin": "Nobel Symposium 210 (Stellenbosch, October 2026) - 'Algorithms as collisions'",
+    "url": "https://elhamkashefi.github.io/primitives-atlas/#cards",
+    "total_cards_in_atlas": 42,
+    "counts_by_kind": {
+      "procedural": 24,
+      "architectural": 13,
+      "composite": 5
+    },
+    "qspm_primitive_platform_matchmaking": [
+      {
+        "card_id": "P13",
+        "kind": "procedural",
+        "atlas_name": "Expectation and overlap estimation",
+        "qspm_module": "Guppy 1.0 / Helios HUGR & Cloud `nexus:H2-Emulator` Care-Plan Bell Visibility",
+        "role_in_qspm": "Estimates overlap / interference visibility P(00) between co-produced medical and VCFSE pathways.",
+        "defining_paper_0": "Aharonov, Jones, Landau (2005)",
+        "verification_hook_summary": "{'certificate_type': 'statistical', 'verifier_needs': \"trusted sampling, or a verifiable observable-estimation protocol with traps (the verification layer); overlap with a classically describable phi is checkable by the ",
+        "status_summary": "{'best_known_cost': 'O(1/epsilon) coherent, optimal (quant-ph/0607019); O(sqrt(M)/epsilon) for M observables (2111.09283); 1/epsilon^2 tight for copies', 'lower_bound': 'Omega(1/epsilon) queries (Heisenberg limit); Omega"
+      },
+      {
+        "card_id": "P20",
+        "kind": "procedural",
+        "atlas_name": "Transformation of an unknown unitary or channel (inversion, conjugation, transposition; quantum combs)",
+        "qspm_module": "8-Rung Sequential Mid-Circuit Zeno / Anti-Zeno Check-In Ladder",
+        "role_in_qspm": "Quantum comb / sequential mid-circuit `project_z` intervention schedule across 12-week care horizon.",
+        "defining_paper_0": "Quintino, Dong, Shimbo, Soeda, Murao (2019)",
+        "verification_hook_summary": "{'certificate_type': 'statistical', 'verifier_needs': 'black-box access to U and test states: applying the output f(U) after U (for inversion) and checking the identity on known states, or a swap test against the input (",
+        "status_summary": "{'best_known_cost': 'inversion: O(d^2) calls deterministic exact (2403.04704); d = 2 in 4 calls with 3 ancillas (2209.02907, 2403.03761); d = 3 catalytic 3 + 8m (2610.12664); transposition: d = 3 in 7 queries (2510.07100"
+      },
+      {
+        "card_id": "A01d",
+        "kind": "architectural",
+        "atlas_name": "Alternating-operator ansatz",
+        "qspm_module": "Haiqu SDK v1.7.1 Linear-Ramp QAOA + State Compression on 8-Qubit 3-Body HUBO",
+        "role_in_qspm": "Alternating-operator ansatz compressed by 94.2% depth for pharmacy deprescribing + VCFSE synergy.",
+        "defining_paper_0": "Farhi, Goldstone, Gutmann (2014)",
+        "verification_hook_summary": "{'certificate_type': 'classically checkable (the sampled bit string and its cost value); the approximation ratio and the expectation are not', 'verifier_needs': 'the bit string; the optimum is unavailable in general'}",
+        "status_summary": "{'best_known_cost': 'SK model: Parisi-value fractions at p up to 12 (1910.08187); large-girth MaxCut 0.7424 of the Parisi value at p = 11 (2110.14206); p > 1 guarantees (2010.11209); scaling-advantage evidence on LABS (2"
+      },
+      {
+        "card_id": "P08",
+        "kind": "procedural",
+        "atlas_name": "Adiabatic state preparation and annealing",
+        "qspm_module": "OpenJij + JijModeling 120-Variable Neighbourhood Core20PLUS5 Caseload QUBO",
+        "role_in_qspm": "Thermal/annealing schedule allocation across 24 multimorbid patients and 5 capacity-capped hubs.",
+        "defining_paper_0": "Farhi, Goldstone, Gutmann, Sipser (2000)",
+        "verification_hook_summary": "{'certificate_type': 'Quantum state, no direct check for ground-state preparation; energy estimates are statistical. For optimisation, feasibility and the objective value of a returned string can be checked classically. ",
+        "status_summary": "{'best_known_cost': 'Inverse-gap scaling holds for specified paths and schedules with path-variation and accuracy factors. The discrete adiabatic QLSS construction achieves O(kappa log(1/epsilon)) calls (2111.08152; 2406"
+      },
+      {
+        "card_id": "P09",
+        "kind": "procedural",
+        "atlas_name": "Loading classical data: QRAM, state preparation from classical data, block encoding of dense matrices",
+        "qspm_module": "Haiqu Entangled Manifold Embedding (EME)",
+        "role_in_qspm": "Linear-depth loading of multi-dimensional Core20PLUS5 socio-clinical patient vectors.",
+        "defining_paper_0": "Giovannetti, Lloyd, Maccone (2007)",
+        "verification_hook_summary": "{'certificate_type': 'classically checkable in principle (the data is classical and known), but the loaded state or oracle is a quantum object with no direct check; computational-basis sampling of a prepared state is a s",
+        "status_summary": "{'best_known_cost': 'T-count Theta(sqrt(N log(1/epsilon)) + log(1/epsilon)) for state preparation (2411.04790); depth Theta(n + N/(n + m)) (2202.11302); select-swap N/lambda + lambda b (1812.00954)', 'lower_bound': 'Omeg"
+      },
+      {
+        "card_id": "A01g",
+        "kind": "architectural",
+        "atlas_name": "Equivariant and geometric ansatz",
+        "qspm_module": "Haiqu SU(2)-Equivariant Ansatz & Modal Frobenius Neighbourhood Circuits",
+        "role_in_qspm": "Symmetry-preserving geometric circuits eliminating spin contamination (<1e-15) and barren plateaus.",
+        "defining_paper_0": "Larocca et al. (2022)",
+        "verification_hook_summary": "{'certificate_type': 'statistical', 'verifier_needs': 'trusted sampling; invariance under G is a consistency test with extra samples'}",
+        "status_summary": "{'best_known_cost': 'no guarantee', 'lower_bound': '?', 'dequantisation_or_simulability': 'For the natural permutation action on fixed-dimensional subsystems, efficiently represented invariant operators admit polynomial-"
+      },
+      {
+        "card_id": "P22",
+        "kind": "procedural",
+        "atlas_name": "Open-system (Lindbladian) simulation",
+        "qspm_module": "HQS `struqture-py` + `qoqo` 4-Spin Circadian-HPA-Oxytocin-IL6 Lindbladian",
+        "role_in_qspm": "Open-system Lindbladian simulation of Social Zeitgeber entrainment vs chronic isolation dephasing.",
+        "defining_paper_0": "Bacon, Childs, Chuang, Kempe, Leung, Zhou (2001)",
+        "verification_hook_summary": "{'certificate_type': 'quantum state, no direct check', 'verifier_needs': 'the same description of L and rho_0; checks are statistical on observables of rho(t), or structural for steady states (stationarity of the output ",
+        "status_summary": "{'best_known_cost': 'O(tau + log(1/epsilon)/log(e + log(1/epsilon)/tau)) queries, tau = (alpha_H + alpha_B^2) t, with gates linear in queries up to polylog (2609.18757); lattice depth O(t polylog(Nt/epsilon)) (2609.36203"
+      },
+      {
+        "card_id": "A01h",
+        "kind": "architectural",
+        "atlas_name": "Quantum graph neural networks",
+        "qspm_module": "QProtSim (Bonde & Patil, U. Suffolk) on Crystal PDB `1XY1` Oxytocin",
+        "role_in_qspm": "Residue-contact graph quantum circuit sampling pairwise allosteric mutual information across Cys1-Cys6.",
+        "defining_paper_0": "Verdon et al. (2019)",
+        "verification_hook_summary": "{'certificate_type': 'statistical; graph-distinction outputs on known non-isomorphic pairs are classically checkable', 'verifier_needs': 'trusted sampling; permutation equivariance as a consistency test'}",
+        "status_summary": "{'best_known_cost': 'no guarantee', 'lower_bound': '?', 'dequantisation_or_simulability': 'open; 56-qubit simulations in 2606.26873 are a statement about simulation cost of test cases, not a hardness claim', 'trainabilit"
+      },
+      {
+        "card_id": "X03",
+        "kind": "composite",
+        "atlas_name": "Quantum subspace and Krylov diagonalisation template",
+        "qspm_module": "Haiqu SKQD / Subspace Diagonalization & Psychoneuroimmunological Active Spaces",
+        "role_in_qspm": "Composite quantum subspace & configuration-recovery template for noisy active-space spectra.",
+        "defining_paper_0": "McClean, Schwartz, Carter, de Jong (2017)",
+        "verification_hook_summary": "{'certificate_type': 'classically checkable (variational upper bound: for QSCI and SQD the configurations and the eigenvector are explicit, so the energy can be recomputed classically)', 'verifier_needs': 'the sampled co",
+        "status_summary": "{'best_known_cost': 'real-time Krylov: D Krylov vectors with O(D^2) matrix elements (linear in D in the unitary VQPE formulation, 2103.08563); fast convergence bound (2208.01063); errors linear in input noise after thres"
+      }
+    ],
+    "runtime_milliseconds": 94.02
+  },
+  "receipt_sha256": "872a8c42e3c2026ab3669601e4b4ee997164b06c333763b8f2a2a3d185db4e6d"
+}

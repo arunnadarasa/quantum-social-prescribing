@@ -1,0 +1,99 @@
+{
+  "schema_version": "1.0.0-qspm-modal-hf-qml",
+  "timestamp_utc": "2026-11-11T15:56:06.159723+00:00",
+  "physical_hardware_shots": 0,
+  "modal_wall_clock_seconds": 51.102,
+  "modal_execution": {
+    "platform": "Modal Cloud (`modal.com` Serverless Container)",
+    "python_version": "3.11.12",
+    "total_remote_wall_seconds": 39.98
+  },
+  "dataset": {
+    "synthetic_payload": true,
+    "n_total": 2400,
+    "n_train": 1920,
+    "n_test": 480,
+    "n_features": 8,
+    "n_pathway_classes": 5,
+    "n_cadence_classes": 3
+  },
+  "qspmlm_vqc_4q_frobenius": {
+    "n_qubits": 4,
+    "n_layers": 3,
+    "quantum_variational_parameters": 60,
+    "total_parameters": 159,
+    "training_seconds": 38.58,
+    "batch_480_inference_ms": 9.737,
+    "per_patient_inference_microseconds": 20.29,
+    "test_pathway_accuracy": 0.9979,
+    "test_pathway_macro_f1": 0.9979,
+    "test_zeno_cadence_accuracy": 0.9646,
+    "test_12wk_recovery_mae": 0.0328,
+    "urgent_clinical_escalation_recall": 1.0,
+    "urgent_clinical_escalation_brier": 0.00011,
+    "loss_trajectory": [
+      {
+        "epoch": 1,
+        "multi_task_loss": 1.93416
+      },
+      {
+        "epoch": 20,
+        "multi_task_loss": 0.20614
+      },
+      {
+        "epoch": 50,
+        "multi_task_loss": 0.12103
+      },
+      {
+        "epoch": 100,
+        "multi_task_loss": 0.07637
+      },
+      {
+        "epoch": 140,
+        "multi_task_loss": 0.06926
+      }
+    ]
+  },
+  "qspmlm_iqp_quantum_kernel_svm": {
+    "n_qubits": 4,
+    "subset_train_test": "450 / 150",
+    "test_pathway_accuracy": 0.9933,
+    "test_pathway_macro_f1": 0.9931,
+    "runtime_milliseconds": 30.7
+  },
+  "gate_g4_classical_ml_baselines": {
+    "logistic_regression": {
+      "test_pathway_accuracy": 0.9979,
+      "test_pathway_macro_f1": 0.9979,
+      "train_eval_ms": 27.66
+    },
+    "classical_rbf_svm": {
+      "test_pathway_accuracy": 1.0,
+      "test_pathway_macro_f1": 1.0,
+      "train_eval_ms": 48.58
+    },
+    "classical_mlp_32x16": {
+      "test_pathway_accuracy": 0.9979,
+      "test_pathway_macro_f1": 0.998,
+      "train_eval_ms": 1149.14
+    },
+    "epistemic_note": "Classical RBF-SVM & MLP remain slightly faster and comparable in accuracy on 8D tabular features (Gate G4); QSPMLM-VQC achieves competitive multi-task accuracy in only 60 quantum/scaling parameters and compiles natively to Quantinuum HUGR."
+  },
+  "local_verification": {
+    "numpy_vs_modal_pytorch_max_abs_diff": 2.220446049250313e-16,
+    "guppy_hugr_compiled_bytes": 7247,
+    "guppy_hugr_sha256": "3793da66d5a302cf77c333b0a31806fc0670621bebb8dd6067c260197d0a4dc2",
+    "weights_sha256": "55658d5dc39d98eddf8f7ca44729a30ac67ac23d689f019251ee01abf963be42"
+  },
+  "huggingface_deployment": {
+    "authenticated_account": "socialprescribing",
+    "model_repo_id": "socialprescribing/quantinuum-social-prescribing",
+    "model_hub_url": "https://huggingface.co/socialprescribing/quantinuum-social-prescribing",
+    "model_commit_oid": "71a2fc2a4c2924ac8b8fa5308703c811ac8d6218",
+    "space_repo_id": "socialprescribing/quantinuum-social-prescribing",
+    "space_url": "https://huggingface.co/spaces/socialprescribing/quantinuum-social-prescribing",
+    "space_commit_oid": "392567b957cec7705fd68d50552ee01e37ad9bbe",
+    "deployed_at_utc": "2026-11-11T16:01:54.400626+00:00"
+  },
+  "receipt_sha256": "9bde648bb9198c4f5547e4f4387b2db66d8ed1e72d8bef1073329e6ab9b718d7"
+}
