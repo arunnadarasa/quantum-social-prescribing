@@ -1,12 +1,12 @@
 {
-  "schema_version": "1.0.0-qspm-modal-hf-qml",
-  "timestamp_utc": "2026-11-11T15:56:06.159723+00:00",
+  "schema_version": "1.1.0-qspm-modal-hf-qml-cubic-verified",
+  "timestamp_utc": "2026-11-11T18:09:41.505258+00:00",
   "physical_hardware_shots": 0,
-  "modal_wall_clock_seconds": 51.102,
+  "modal_wall_clock_seconds": 157.094,
   "modal_execution": {
     "platform": "Modal Cloud (`modal.com` Serverless Container)",
     "python_version": "3.11.12",
-    "total_remote_wall_seconds": 39.98
+    "total_remote_wall_seconds": 139.658
   },
   "dataset": {
     "synthetic_payload": true,
@@ -15,16 +15,29 @@
     "n_test": 480,
     "n_features": 8,
     "n_pathway_classes": 5,
-    "n_cadence_classes": 3
+    "n_cadence_classes": 3,
+    "generative_equations": {
+      "regime_A_archetype_cohort": "5 Gaussian socio-clinical archetypes clipped to [0.02, 0.98]^8 plus deterministic cubic safety override I(x1>0.80 & x7<0.30 & x6>0.72)->Class 4; vulnerability score v=0.35*x0+0.25*x2+0.25*x5+0.15*(1-x4) thresholded at {0.46, 0.63} for Zeno cadence; 12-wk recovery r = 0.28*(1-0.5*x5-0.5*x6) + 0.26*x7 + 0.24*(0.5+0.5*x4) + 0.22*(1-x1*(1-x7))*(0.5+0.5*x7) + N(0, 0.025^2).",
+      "regime_B_cubic_k3_synergy_cohort": "X ~ Uniform(0.02, 0.98)^{2400x8}, centered z_j = 2(x_j - 0.5); latent class utilities driven by zero-mean cubic (k=3) monomials U0 = +3.2 z1 z7 z4 + 1.5 z0 z1, U1 = -3.2 z1 z7 z4 + 3.0 z2 z3 z5 + 1.4 z2 z3, U2 = -3.0 z0 z4 z7 - 1.4 z2 z3, U3 = +3.0 z0 z4 z7 - 3.0 z2 z3 z5 - 1.4 z0 z7, U4 = -3.6 z1 z7 z6 - 1.5 z1 z7 - 0.45 + N(0, 0.05^2)."
+    }
   },
   "qspmlm_vqc_4q_frobenius": {
     "n_qubits": 4,
     "n_layers": 3,
+    "vqc_euler_parameters": 36,
+    "data_reuploading_scale_parameters": 24,
     "quantum_variational_parameters": 60,
+    "classical_linear_readout_parameters": 99,
     "total_parameters": 159,
-    "training_seconds": 38.58,
-    "batch_480_inference_ms": 9.737,
-    "per_patient_inference_microseconds": 20.29,
+    "multi_task_loss_weights": {
+      "pathway_cross_entropy": 1.0,
+      "cadence_cross_entropy": 0.65,
+      "recovery_mse": 2.0
+    },
+    "training_seconds": 52.994,
+    "batch_480_inference_ms": 10.278,
+    "per_patient_inference_microseconds": 21.41,
+    "correct_out_of_480": 479,
     "test_pathway_accuracy": 0.9979,
     "test_pathway_macro_f1": 0.9979,
     "test_zeno_cadence_accuracy": 0.9646,
@@ -56,44 +69,114 @@
   },
   "qspmlm_iqp_quantum_kernel_svm": {
     "n_qubits": 4,
-    "subset_train_test": "450 / 150",
-    "test_pathway_accuracy": 0.9933,
-    "test_pathway_macro_f1": 0.9931,
-    "runtime_milliseconds": 30.7
+    "split_train_test": "1920 / 480 (full cohort split)",
+    "correct_out_of_480": 479,
+    "test_pathway_accuracy": 0.9979,
+    "test_pathway_macro_f1": 0.998,
+    "runtime_milliseconds": 141.92,
+    "per_patient_inference_microseconds": 6.27
   },
   "gate_g4_classical_ml_baselines": {
     "logistic_regression": {
       "test_pathway_accuracy": 0.9979,
+      "correct_out_of_480": 479,
       "test_pathway_macro_f1": 0.9979,
-      "train_eval_ms": 27.66
+      "urgent_escalation_recall": 1.0,
+      "train_eval_ms": 36.01,
+      "per_patient_inference_microseconds": 0.97
+    },
+    "gradient_boosted_trees_gbdt": {
+      "test_pathway_accuracy": 0.9938,
+      "correct_out_of_480": 477,
+      "test_pathway_macro_f1": 0.9937,
+      "urgent_escalation_recall": 1.0,
+      "train_eval_ms": 821.83,
+      "per_patient_inference_microseconds": 33.2
     },
     "classical_rbf_svm": {
       "test_pathway_accuracy": 1.0,
+      "correct_out_of_480": 480,
       "test_pathway_macro_f1": 1.0,
-      "train_eval_ms": 48.58
+      "urgent_escalation_recall": 1.0,
+      "train_eval_ms": 48.38,
+      "per_patient_inference_microseconds": 6.84
     },
     "classical_mlp_32x16": {
       "test_pathway_accuracy": 0.9979,
+      "correct_out_of_480": 479,
       "test_pathway_macro_f1": 0.998,
-      "train_eval_ms": 1149.14
+      "urgent_escalation_recall": 1.0,
+      "train_eval_ms": 1131.37,
+      "per_patient_inference_microseconds": 1.63
     },
-    "epistemic_note": "Classical RBF-SVM & MLP remain slightly faster and comparable in accuracy on 8D tabular features (Gate G4); QSPMLM-VQC achieves competitive multi-task accuracy in only 60 quantum/scaling parameters and compiles natively to Quantinuum HUGR."
+    "epistemic_note": "On Regime A (Gaussian archetype clusters), linear LogisticRegression achieves 99.79% (479/480), demonstrating near-linear cluster separability. On Regime B (Cubic k=3 Synergy & Contextuality Cohort), linear LogisticRegression collapses to ~30.2%, whereas 4-qubit Frobenius QSPMLM-VQC, QSPMLM-QKernel, GBDT, RBF-SVM, and MLP resolve the cubic decision boundaries."
+  },
+  "cubic_k3_synergy_nonlinear_benchmark": {
+    "n_train": 1920,
+    "n_test": 480,
+    "qspmlm_vqc_4q_frobenius": {
+      "test_pathway_accuracy": 0.6521,
+      "correct_out_of_480": 313,
+      "test_pathway_macro_f1": 0.6564,
+      "urgent_escalation_recall": 0.7692,
+      "training_seconds": 78.021
+    },
+    "qspmlm_iqp_quantum_kernel_svm": {
+      "test_pathway_accuracy": 0.3542,
+      "correct_out_of_480": 170,
+      "test_pathway_macro_f1": 0.3212,
+      "urgent_escalation_recall": 0.1923,
+      "train_eval_ms": 435.45
+    },
+    "logistic_regression_linear": {
+      "test_pathway_accuracy": 0.3271,
+      "correct_out_of_480": 157,
+      "test_pathway_macro_f1": 0.2312,
+      "urgent_escalation_recall": 0.0,
+      "train_eval_ms": 25.6,
+      "per_patient_inference_microseconds": 0.99
+    },
+    "gradient_boosted_trees_gbdt": {
+      "test_pathway_accuracy": 0.7792,
+      "correct_out_of_480": 374,
+      "test_pathway_macro_f1": 0.7681,
+      "urgent_escalation_recall": 0.6154,
+      "train_eval_ms": 2452.85,
+      "per_patient_inference_microseconds": 51.27
+    },
+    "classical_rbf_svm": {
+      "test_pathway_accuracy": 0.7958,
+      "correct_out_of_480": 382,
+      "test_pathway_macro_f1": 0.7927,
+      "urgent_escalation_recall": 0.7692,
+      "train_eval_ms": 131.5,
+      "per_patient_inference_microseconds": 49.95
+    },
+    "classical_mlp_32x16": {
+      "test_pathway_accuracy": 0.7125,
+      "correct_out_of_480": 342,
+      "test_pathway_macro_f1": 0.7081,
+      "urgent_escalation_recall": 0.6154,
+      "train_eval_ms": 3240.14,
+      "per_patient_inference_microseconds": 1.6
+    }
   },
   "local_verification": {
-    "numpy_vs_modal_pytorch_max_abs_diff": 2.220446049250313e-16,
+    "numpy_vs_modal_pytorch_max_abs_diff": 4.440892098500626e-16,
     "guppy_hugr_compiled_bytes": 7247,
+    "guppy_hugr_scope_note": "7,247-byte HUGR binary compiles the 4-qubit 3-layer Frobenius feature-extraction circuit (60 quantum/encoding parameters); the 10 measured <Z_i>, <Z_i Z_j> expectations feed the 99-parameter classical linear readout head.",
     "guppy_hugr_sha256": "3793da66d5a302cf77c333b0a31806fc0670621bebb8dd6067c260197d0a4dc2",
-    "weights_sha256": "55658d5dc39d98eddf8f7ca44729a30ac67ac23d689f019251ee01abf963be42"
+    "weights_sha256": "4c6324c075605b55252d3fcd9b24a39de3e2b1f3eb92cd614fdbf9f877e0c825"
   },
   "huggingface_deployment": {
     "authenticated_account": "socialprescribing",
     "model_repo_id": "socialprescribing/quantinuum-social-prescribing",
     "model_hub_url": "https://huggingface.co/socialprescribing/quantinuum-social-prescribing",
-    "model_commit_oid": "c3f78c9b7d5923df9af09d51b1db576d0c9b38fc",
+    "model_commit_oid": "02708e3c991281e262d04847c13b68375bc90e20",
     "space_repo_id": "socialprescribing/quantinuum-social-prescribing",
     "space_url": "https://huggingface.co/spaces/socialprescribing/quantinuum-social-prescribing",
-    "space_commit_oid": "f2f67a5efc8d865dccfc6fdcb9542a92d4b744e4",
-    "deployed_at_utc": "2026-11-11T17:46:03.338608+00:00"
+    "space_commit_oid": "9d2569aad7d900398b91b714da13bc23ed3c3dbd",
+    "deployed_at_utc": "2026-11-11T18:35:25.624076+00:00"
   },
-  "receipt_sha256": "d5f1a3f7054d9c81f3b771800b9779728ba0c72fa30d8dec676258a2116fc4e1"
+  "receipt_sha256": "ef2c8559db430379ca5a923192f81f15561a61ad4d87fd9462de2119b7e0a704"
 }

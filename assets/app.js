@@ -111,7 +111,7 @@ const BIBTEX_ENTRIES = {
   journal = {Samskrift Open Monograph Preprint (Mid and South Essex NHS Foundation Trust \& ISPPA)},
   pages   = {1--10},
   url     = {https://arunnadarasa.github.io/quantum-social-prescribing/},
-  note    = {0 physical QPU shots claimed; 8 SHA-256-verified receipts across Quantinuum Nexus Helios-1E-lite, H2-Emulator, Haiqu SDK v1.7.1, OpenJij, Modal, Hugging Face, HQS, QProtSim, AlphaGenome, Text2WetLab, and TypeSafe Jev 1.14}
+  note    = {0 physical QPU shots claimed; 9 SHA-256-verified receipts across Quantinuum Nexus Helios-1E-lite, H2-Emulator, Haiqu SDK v1.7.1, OpenJij, HiGHS MILP, Modal, Hugging Face, HQS, QProtSim, AlphaGenome, Text2WetLab, and TypeSafe Jev 1.14}
 }`,
   qspmlm: `@misc{nadarasa2026qspmlm,
   title        = {{QSPMLM}: 4-Qubit Frobenius Multi-Task Variational Quantum Classifier for Holistic Social Prescribing Triage \& Safety Escalation},
@@ -119,13 +119,17 @@ const BIBTEX_ENTRIES = {
   year         = {2026},
   howpublished = {Hugging Face Model Hub \& Space},
   url          = {https://huggingface.co/socialprescribing/quantinuum-social-prescribing},
-  note         = {99.79\% test accuracy, 100.0\% falls-hazard safety recall, 2.22e-16 PyTorch/NumPy parity, live Quantinuum Nexus Helios-1E-lite Job 6cc7b395}
+  note         = {60 quantum + 99 classical params; 99.79\% Regime A test accuracy, 65.21\% vs 32.71\% LogReg on Cubic k=3 Synergy cohort, 4.44e-16 PyTorch/NumPy parity}
 }`,
-  isppa: `@article{hussein2026isppa,
-  title   = {Pharmacy Social Prescribing in Integrated Neighbourhood Teams: Structured Medication Reviews and Community Asset Co-Production},
-  author  = {Hussein, Sara and Lindsey, Laura and Cartwright, Nikki and Nadarasa, Arun and others},
-  journal = {International Social Prescribing Pharmacy Association (ISPPA) White Paper},
-  year    = {2026}
+  isppa: `@article{rathbone2024pharmacy,
+  title   = {'You don't get side effects from social prescribing'---A qualitative study exploring community pharmacists' attitudes to social prescribing},
+  author  = {Rathbone, Adam Pattison and Pearson, Hannah and Akinyemi, Oluwatoyin and Cartwright, Nikki and Tierney, Stephanie and Rowlands, Gillian and Lindsey, Laura},
+  journal = {PLOS ONE},
+  volume  = {19},
+  number  = {5},
+  pages   = {e0301076},
+  year    = {2024},
+  doi     = {10.1371/journal.pone.0301076}
 }`
 };
 
@@ -913,28 +917,32 @@ function initChartsAndLightbox() {
       charts.push(c3);
     }
 
-    // Chart 4: Modal QSPMLM vs Gate G4 Baselines
+    // Chart 4: Modal QSPMLM vs Gate G4 Baselines (Regime A vs Cubic k=3 Regime B)
     const elQ = document.getElementById("echart-qml");
     if (elQ) {
       const c4 = window.echarts.init(elQ);
       c4.setOption({
         tooltip: darkTooltip,
-        grid: { left: 44, right: 16, top: 36, bottom: 42 },
-        xAxis: { type: "category", data: ["4q\nVQC", "4q\nQKernel", "Zeno\nHead", "G4\nLogReg", "Falls\nRecall"], ...baseAxis, axisLabel: { color: "#9eb7b4", fontSize: 10, interval: 0, lineHeight: 13 } },
-        yAxis: { type: "value", min: 92, max: 100, interval: 2, ...baseAxis },
-        series: [{
-          name: "Held-Out Accuracy / Recall (%)",
-          type: "bar",
-          barWidth: "44%",
-          label: { show: true, position: "top", color: "#eef7f5", fontSize: 10, formatter: "{c}%" },
-          data: [
-            { value: 99.79, itemStyle: { color: "#38d6c4", borderRadius: [4, 4, 0, 0] } },
-            { value: 99.33, itemStyle: { color: "#a78bfa", borderRadius: [4, 4, 0, 0] } },
-            { value: 96.46, itemStyle: { color: "#2ab3a3", borderRadius: [4, 4, 0, 0] } },
-            { value: 99.79, itemStyle: { color: "#6f8a87", borderRadius: [4, 4, 0, 0] } },
-            { value: 100.0, itemStyle: { color: "#f4ae42", borderRadius: [4, 4, 0, 0] } }
-          ]
-        }]
+        legend: { data: ["Regime A: Archetypes", "Regime B: Cubic k=3 Synergy"], textStyle: { color: "#eef7f5", fontSize: 11 }, top: 6 },
+        grid: { left: 44, right: 16, top: 54, bottom: 42 },
+        xAxis: { type: "category", data: ["4q\nVQC", "4q\nQKernel", "Linear\nLogReg", "G4\nGBDT", "G4\nRBF-SVM"], ...baseAxis, axisLabel: { color: "#9eb7b4", fontSize: 10, interval: 0, lineHeight: 13 } },
+        yAxis: { type: "value", min: 0, max: 112, interval: 25, ...baseAxis },
+        series: [
+          {
+            name: "Regime A: Archetypes",
+            type: "bar",
+            barGap: "16%",
+            data: [99.79, 99.79, 99.79, 99.38, 100.0],
+            itemStyle: { color: "#526d6a", borderRadius: [4, 4, 0, 0] }
+          },
+          {
+            name: "Regime B: Cubic k=3 Synergy",
+            type: "bar",
+            label: { show: true, position: "top", color: "#38d6c4", fontSize: 9.5, fontWeight: "bold", formatter: "{c}%" },
+            data: [65.21, 35.42, 32.71, 77.92, 79.58],
+            itemStyle: { color: "#38d6c4", borderRadius: [4, 4, 0, 0] }
+          }
+        ]
       });
       charts.push(c4);
     }

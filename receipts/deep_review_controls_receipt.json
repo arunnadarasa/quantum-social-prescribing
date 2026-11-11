@@ -1,0 +1,575 @@
+{
+  "schema_version": "1.0.0-qspm-deep-review-controls",
+  "timestamp_utc": "2026-11-11T18:04:44.949789+00:00",
+  "physical_hardware_shots": 0,
+  "wet_lab_experiments_performed": 0,
+  "total_runtime_seconds": 6.334,
+  "rosenberg_milp_hubo_vs_open_lindbladian": {
+    "n8_exact_verification": {
+      "bitstring": "11110100",
+      "energy": -20.3,
+      "milp_runtime_ms": 14.486,
+      "exact_coefficients": {
+        "linear": [
+          -2.4,
+          -1.9,
+          -2.1,
+          -2.6,
+          -1.5,
+          -1.7,
+          2.8,
+          3.2
+        ],
+        "quadratic": {
+          "0,6": 6.0,
+          "1,4": 1.4,
+          "4,5": 1.2,
+          "0,3": -1.3,
+          "1,2": -1.1,
+          "5,7": 4.5
+        },
+        "cubic": {
+          "0,1,2": -3.8,
+          "0,3,5": -3.4,
+          "2,6,7": 6.5,
+          "1,3,4": 2.9
+        }
+      }
+    },
+    "sparse_3body_hubo_milp_scaling": [
+      {
+        "n_pathways": 8,
+        "auxiliary_linearized_vars": 32,
+        "highs_milp_exact_ms": 6.184,
+        "highs_milp_exact_seconds": 0.006184,
+        "optimal_energy": -12.4611,
+        "naive_brute_force_enum_est_seconds": 0.000896,
+        "verdict": "CLASSICAL_MILP_TRACTABLE_MILLISECONDS"
+      },
+      {
+        "n_pathways": 16,
+        "auxiliary_linearized_vars": 68,
+        "highs_milp_exact_ms": 6.969,
+        "highs_milp_exact_seconds": 0.006969,
+        "optimal_energy": -19.4631,
+        "naive_brute_force_enum_est_seconds": 0.22938,
+        "verdict": "CLASSICAL_MILP_TRACTABLE_MILLISECONDS"
+      },
+      {
+        "n_pathways": 24,
+        "auxiliary_linearized_vars": 105,
+        "highs_milp_exact_ms": 19.71,
+        "highs_milp_exact_seconds": 0.01971,
+        "optimal_energy": -29.7154,
+        "naive_brute_force_enum_est_seconds": 58.72,
+        "verdict": "CLASSICAL_MILP_TRACTABLE_MILLISECONDS"
+      },
+      {
+        "n_pathways": 32,
+        "auxiliary_linearized_vars": 135,
+        "highs_milp_exact_ms": 23.431,
+        "highs_milp_exact_seconds": 0.023431,
+        "optimal_energy": -29.029,
+        "naive_brute_force_enum_est_seconds": 15032.0,
+        "verdict": "CLASSICAL_MILP_TRACTABLE_MILLISECONDS"
+      },
+      {
+        "n_pathways": 40,
+        "auxiliary_linearized_vars": 177,
+        "highs_milp_exact_ms": 657.336,
+        "highs_milp_exact_seconds": 0.657336,
+        "optimal_energy": -42.2404,
+        "naive_brute_force_enum_est_seconds": 3848300.0,
+        "verdict": "CLASSICAL_MILP_TRACTABLE_MILLISECONDS"
+      },
+      {
+        "n_pathways": 48,
+        "auxiliary_linearized_vars": 210,
+        "highs_milp_exact_ms": 1315.03,
+        "highs_milp_exact_seconds": 1.31503,
+        "optimal_energy": -52.7459,
+        "naive_brute_force_enum_est_seconds": 985160000.0,
+        "verdict": "CLASSICAL_MILP_TRACTABLE_MILLISECONDS"
+      },
+      {
+        "n_pathways": 60,
+        "auxiliary_linearized_vars": 266,
+        "highs_milp_exact_ms": 56.516,
+        "highs_milp_exact_seconds": 0.056516,
+        "optimal_energy": -67.6836,
+        "naive_brute_force_enum_est_seconds": 4035200000000.0,
+        "verdict": "CLASSICAL_MILP_TRACTABLE_MILLISECONDS"
+      }
+    ],
+    "open_system_lindbladian_vs_active_ftqc": {
+      "measured_n3_n4_n5_dense_expm_seconds": {
+        "3": 0.00934,
+        "4": 0.00798,
+        "5": 0.34747
+      },
+      "crossover_n_spins_vs_sparse_krylov_liouvillian": 12,
+      "color_code_832_caveat": "[[8,3,2]] is a distance-2 error-detecting code whose post-selection acceptance probability decays exponentially with circuit volume V; scalable n_spin >= 16 open-system Lindbladian simulation requires active d >= 5 error correction plus magic-state T-gate synthesis.",
+      "scaling_table": [
+        {
+          "n_spins_open_system": 4,
+          "liouvillian_hilbert_schmidt_dim": 256,
+          "classical_krylov_liouvillian_seconds": 0.0079766,
+          "color_code_832_detect_phys_qubits": 32,
+          "color_code_832_postselection_accept_prob": 0.63052,
+          "active_qec_d7_phys_qubits_with_msf": 1234,
+          "active_qec_t_gate_budget": 960,
+          "active_ftqc_lindbladian_seconds": 0.36,
+          "regime": "CLASSICAL_LIOUVILLIAN_DOMINANT"
+        },
+        {
+          "n_spins_open_system": 8,
+          "liouvillian_hilbert_schmidt_dim": 65536,
+          "classical_krylov_liouvillian_seconds": 0.1468,
+          "color_code_832_detect_phys_qubits": 40,
+          "color_code_832_postselection_accept_prob": 0.25066,
+          "active_qec_d7_phys_qubits_with_msf": 1626,
+          "active_qec_t_gate_budget": 3840,
+          "active_ftqc_lindbladian_seconds": 1.44,
+          "regime": "CLASSICAL_LIOUVILLIAN_DOMINANT"
+        },
+        {
+          "n_spins_open_system": 12,
+          "liouvillian_hilbert_schmidt_dim": 16777216,
+          "classical_krylov_liouvillian_seconds": 56.371,
+          "color_code_832_detect_phys_qubits": 48,
+          "color_code_832_postselection_accept_prob": 0.062832,
+          "active_qec_d7_phys_qubits_with_msf": 2018,
+          "active_qec_t_gate_budget": 8640,
+          "active_ftqc_lindbladian_seconds": 3.24,
+          "regime": "ACTIVE_FTQC_LINDBLAD_ADVANTAGE"
+        },
+        {
+          "n_spins_open_system": 16,
+          "liouvillian_hilbert_schmidt_dim": 4294967296,
+          "classical_krylov_liouvillian_seconds": 19241.0,
+          "color_code_832_detect_phys_qubits": 64,
+          "color_code_832_postselection_accept_prob": 0.0039479,
+          "active_qec_d7_phys_qubits_with_msf": 2410,
+          "active_qec_t_gate_budget": 15360,
+          "active_ftqc_lindbladian_seconds": 5.76,
+          "regime": "ACTIVE_FTQC_LINDBLAD_ADVANTAGE"
+        },
+        {
+          "n_spins_open_system": 20,
+          "liouvillian_hilbert_schmidt_dim": 1099511627776,
+          "classical_krylov_liouvillian_seconds": 6157300.0,
+          "color_code_832_detect_phys_qubits": 72,
+          "color_code_832_postselection_accept_prob": 0.00031239,
+          "active_qec_d7_phys_qubits_with_msf": 2802,
+          "active_qec_t_gate_budget": 24000,
+          "active_ftqc_lindbladian_seconds": 9.0,
+          "regime": "ACTIVE_FTQC_LINDBLAD_ADVANTAGE"
+        },
+        {
+          "n_spins_open_system": 24,
+          "liouvillian_hilbert_schmidt_dim": 281474976710656,
+          "classical_krylov_liouvillian_seconds": 1891500000.0,
+          "color_code_832_detect_phys_qubits": 80,
+          "color_code_832_postselection_accept_prob": 1.5586e-05,
+          "active_qec_d7_phys_qubits_with_msf": 3194,
+          "active_qec_t_gate_budget": 34560,
+          "active_ftqc_lindbladian_seconds": 12.96,
+          "regime": "ACTIVE_FTQC_LINDBLAD_ADVANTAGE"
+        },
+        {
+          "n_spins_open_system": 32,
+          "liouvillian_hilbert_schmidt_dim": 18446744073709551616,
+          "classical_krylov_liouvillian_seconds": 165280000000000.0,
+          "color_code_832_detect_phys_qubits": 104,
+          "color_code_832_postselection_accept_prob": 1.5369e-09,
+          "active_qec_d7_phys_qubits_with_msf": 3978,
+          "active_qec_t_gate_budget": 61440,
+          "active_ftqc_lindbladian_seconds": 23.04,
+          "regime": "ACTIVE_FTQC_LINDBLAD_ADVANTAGE"
+        },
+        {
+          "n_spins_open_system": 40,
+          "liouvillian_hilbert_schmidt_dim": 1208925819614629174706176,
+          "classical_krylov_liouvillian_seconds": 1.354e+19,
+          "color_code_832_detect_phys_qubits": 128,
+          "color_code_832_postselection_accept_prob": 9.523e-15,
+          "active_qec_d7_phys_qubits_with_msf": 4762,
+          "active_qec_t_gate_budget": 96000,
+          "active_ftqc_lindbladian_seconds": 36.0,
+          "regime": "ACTIVE_FTQC_LINDBLAD_ADVANTAGE"
+        },
+        {
+          "n_spins_open_system": 48,
+          "liouvillian_hilbert_schmidt_dim": 79228162514264337593543950336,
+          "classical_krylov_liouvillian_seconds": 1.0648e+24,
+          "color_code_832_detect_phys_qubits": 144,
+          "color_code_832_postselection_accept_prob": 5.9005e-20,
+          "active_qec_d7_phys_qubits_with_msf": 5546,
+          "active_qec_t_gate_budget": 138240,
+          "active_ftqc_lindbladian_seconds": 51.84,
+          "regime": "ACTIVE_FTQC_LINDBLAD_ADVANTAGE"
+        }
+      ]
+    }
+  },
+  "matched_depth_2x2_barren_plateau": [
+    {
+      "n_qubits": 4,
+      "depth_constant": 2,
+      "depth_linear": 8,
+      "var_unstructured_L2": 0.09623,
+      "var_frobenius_shared_L2": 0.15754,
+      "var_unstructured_L2n": 0.03839,
+      "var_frobenius_shared_L2n": 0.05239,
+      "matched_L2_ratio_frob_over_unstruct": 1.64,
+      "matched_L2n_ratio_frob_over_unstruct": 1.36,
+      "pure_depth_decay_unstruct_L2_over_L2n": 2.51
+    },
+    {
+      "n_qubits": 6,
+      "depth_constant": 2,
+      "depth_linear": 12,
+      "var_unstructured_L2": 0.116092,
+      "var_frobenius_shared_L2": 0.133362,
+      "var_unstructured_L2n": 0.008748,
+      "var_frobenius_shared_L2n": 0.023696,
+      "matched_L2_ratio_frob_over_unstruct": 1.15,
+      "matched_L2n_ratio_frob_over_unstruct": 2.71,
+      "pure_depth_decay_unstruct_L2_over_L2n": 13.27
+    },
+    {
+      "n_qubits": 8,
+      "depth_constant": 2,
+      "depth_linear": 16,
+      "var_unstructured_L2": 0.072455,
+      "var_frobenius_shared_L2": 0.107374,
+      "var_unstructured_L2n": 0.002305,
+      "var_frobenius_shared_L2n": 0.011962,
+      "matched_L2_ratio_frob_over_unstruct": 1.48,
+      "matched_L2n_ratio_frob_over_unstruct": 5.19,
+      "pure_depth_decay_unstruct_L2_over_L2n": 31.43
+    },
+    {
+      "n_qubits": 10,
+      "depth_constant": 2,
+      "depth_linear": 20,
+      "var_unstructured_L2": 0.093892,
+      "var_frobenius_shared_L2": 0.167794,
+      "var_unstructured_L2n": 0.000788,
+      "var_frobenius_shared_L2n": 0.004593,
+      "matched_L2_ratio_frob_over_unstruct": 1.79,
+      "matched_L2n_ratio_frob_over_unstruct": 5.83,
+      "pure_depth_decay_unstruct_L2_over_L2n": 119.09
+    }
+  ],
+  "hubo_pre_post_and_qubo_kempe_ablations": {
+    "hubo_8q_pre_vs_post_local_search": {
+      "uniform_random_p_ground": 0.003906,
+      "haiqu_live_raw_p_ground_11110100": 0.74707,
+      "haiqu_live_raw_ground_hits_out_of_1024": 765,
+      "haiqu_live_raw_ground_enrichment_factor": 191.25,
+      "haiqu_live_raw_expected_energy": -18.5772,
+      "haiqu_live_raw_energy_ratio_E_over_E0": 0.9151,
+      "haiqu_live_raw_normalized_approx_ratio": 0.9536,
+      "haiqu_live_raw_cvar_alpha_010_energy": -20.3,
+      "haiqu_lr_qaoa_build_ms": 233.01,
+      "haiqu_tensor_state_compression_seconds": 5.604,
+      "haiqu_obp_classical_compile_ms": 157.85,
+      "local_p2_uncompressed_lr_qaoa_p_ground": 3.4e-05,
+      "local_p2_uncompressed_expected_energy": 7.3928,
+      "local_p2_uncompressed_cvar_alpha_010": -2.8202,
+      "uniform_1024_shots_raw_ground_hits": 6,
+      "uniform_plus_5step_bitflip_min_energy": -20.3,
+      "epistemic_disclosure": "Without bitflip postprocessing, Haiqu's compressed LR-QAOA circuit samples exact ground state `11110100` (`00101111` little-endian) on 765/1,024 raw shots (74.71%, 191.2x over uniform, raw E[H]=-18.5772, raw CVaR_0.10=-20.3000). However, at n=8 (256 states), greedy 1-bitflip local search from uniform random samples also finds E0=-20.3000, and classical tensor-network compression (5.60 s) + OBP (157.85 ms, full classical Heisenberg dequantisation to 0 gates) exceed the 886.96 us exhaustive classical floor."
+    },
+    "qubo_120var_kempe_swap_analysis": {
+      "lagrange_one_hot": 12.0,
+      "lagrange_capacity": 8.0,
+      "single_bitflip_penalty_barrier": 20.0,
+      "openjij_single_flip_sa_utility": 24.3804,
+      "openjij_single_flip_sa_ratio": 0.82788,
+      "kempe_4bit_swap_utility": 29.4491,
+      "kempe_4bit_swap_ratio_vs_milp": 1.0,
+      "kempe_runtime_ms": 8.721
+    }
+  },
+  "hyperparameter_sensitivity_sweeps": {
+    "zeno_125_point_sensitivity": {
+      "grid_dimensions": {
+        "J_coup": [
+          0.6,
+          0.76,
+          0.92,
+          1.08,
+          1.24
+        ],
+        "kick_angle_rad": [
+          0.2,
+          0.28,
+          0.36,
+          0.44,
+          0.52
+        ],
+        "omega_env": [
+          0.28,
+          0.38,
+          0.48,
+          0.58,
+          0.68
+        ]
+      },
+      "total_grid_points": 125,
+      "optimal_N_check_distribution": {
+        "0": 44,
+        "1": 0,
+        "2": 0,
+        "3": 11,
+        "4": 21,
+        "6": 25,
+        "8": 15,
+        "12": 7,
+        "16": 2
+      },
+      "optimal_N_check_median": 4.0,
+      "optimal_N_check_iqr": [
+        0.0,
+        6.0
+      ],
+      "optimal_N_check_min_max": [
+        0,
+        16
+      ],
+      "non_monotone_turnover_fraction": 0.632,
+      "omega_048_2d_slice": [
+        {
+          "J_coup": 0.6,
+          "kick_angle_rad": 0.2,
+          "optimal_N_check": 6,
+          "peak_p_engaged": 0.9014
+        },
+        {
+          "J_coup": 0.6,
+          "kick_angle_rad": 0.28,
+          "optimal_N_check": 4,
+          "peak_p_engaged": 0.8745
+        },
+        {
+          "J_coup": 0.6,
+          "kick_angle_rad": 0.36,
+          "optimal_N_check": 4,
+          "peak_p_engaged": 0.8537
+        },
+        {
+          "J_coup": 0.6,
+          "kick_angle_rad": 0.44,
+          "optimal_N_check": 3,
+          "peak_p_engaged": 0.8313
+        },
+        {
+          "J_coup": 0.6,
+          "kick_angle_rad": 0.52,
+          "optimal_N_check": 3,
+          "peak_p_engaged": 0.81
+        },
+        {
+          "J_coup": 0.76,
+          "kick_angle_rad": 0.2,
+          "optimal_N_check": 8,
+          "peak_p_engaged": 0.8888
+        },
+        {
+          "J_coup": 0.76,
+          "kick_angle_rad": 0.28,
+          "optimal_N_check": 6,
+          "peak_p_engaged": 0.8642
+        },
+        {
+          "J_coup": 0.76,
+          "kick_angle_rad": 0.36,
+          "optimal_N_check": 4,
+          "peak_p_engaged": 0.8407
+        },
+        {
+          "J_coup": 0.76,
+          "kick_angle_rad": 0.44,
+          "optimal_N_check": 4,
+          "peak_p_engaged": 0.8219
+        },
+        {
+          "J_coup": 0.76,
+          "kick_angle_rad": 0.52,
+          "optimal_N_check": 3,
+          "peak_p_engaged": 0.8017
+        },
+        {
+          "J_coup": 0.92,
+          "kick_angle_rad": 0.2,
+          "optimal_N_check": 8,
+          "peak_p_engaged": 0.8773
+        },
+        {
+          "J_coup": 0.92,
+          "kick_angle_rad": 0.28,
+          "optimal_N_check": 6,
+          "peak_p_engaged": 0.8548
+        },
+        {
+          "J_coup": 0.92,
+          "kick_angle_rad": 0.36,
+          "optimal_N_check": 6,
+          "peak_p_engaged": 0.8349
+        },
+        {
+          "J_coup": 0.92,
+          "kick_angle_rad": 0.44,
+          "optimal_N_check": 4,
+          "peak_p_engaged": 0.8155
+        },
+        {
+          "J_coup": 0.92,
+          "kick_angle_rad": 0.52,
+          "optimal_N_check": 4,
+          "peak_p_engaged": 0.7965
+        },
+        {
+          "J_coup": 1.08,
+          "kick_angle_rad": 0.2,
+          "optimal_N_check": 12,
+          "peak_p_engaged": 0.8716
+        },
+        {
+          "J_coup": 1.08,
+          "kick_angle_rad": 0.28,
+          "optimal_N_check": 8,
+          "peak_p_engaged": 0.8503
+        },
+        {
+          "J_coup": 1.08,
+          "kick_angle_rad": 0.36,
+          "optimal_N_check": 6,
+          "peak_p_engaged": 0.8312
+        },
+        {
+          "J_coup": 1.08,
+          "kick_angle_rad": 0.44,
+          "optimal_N_check": 0,
+          "peak_p_engaged": 0.8261
+        },
+        {
+          "J_coup": 1.08,
+          "kick_angle_rad": 0.52,
+          "optimal_N_check": 0,
+          "peak_p_engaged": 0.8261
+        },
+        {
+          "J_coup": 1.24,
+          "kick_angle_rad": 0.2,
+          "optimal_N_check": 0,
+          "peak_p_engaged": 0.8884
+        },
+        {
+          "J_coup": 1.24,
+          "kick_angle_rad": 0.28,
+          "optimal_N_check": 0,
+          "peak_p_engaged": 0.8884
+        },
+        {
+          "J_coup": 1.24,
+          "kick_angle_rad": 0.36,
+          "optimal_N_check": 0,
+          "peak_p_engaged": 0.8884
+        },
+        {
+          "J_coup": 1.24,
+          "kick_angle_rad": 0.44,
+          "optimal_N_check": 0,
+          "peak_p_engaged": 0.8884
+        },
+        {
+          "J_coup": 1.24,
+          "kick_angle_rad": 0.52,
+          "optimal_N_check": 0,
+          "peak_p_engaged": 0.8884
+        }
+      ]
+    },
+    "lindblad_49_point_sensitivity": {
+      "g_zeitgeber_range": [
+        0.25,
+        0.35,
+        0.45,
+        0.55,
+        0.65,
+        0.75,
+        0.85
+      ],
+      "gamma_relax_range": [
+        0.14,
+        0.19,
+        0.24,
+        0.29,
+        0.34,
+        0.39,
+        0.44
+      ],
+      "total_grid_points": 49,
+      "il6_suppression_percent_median": 76.63,
+      "il6_suppression_percent_iqr": [
+        70.33,
+        82.81
+      ],
+      "il6_suppression_percent_min_max": [
+        58.43,
+        92.13
+      ],
+      "cortisol_suppression_percent_median": 65.02,
+      "cortisol_suppression_percent_iqr": [
+        59.22,
+        71.83
+      ],
+      "scn_hpa_sync_median": 0.1067
+    }
+  },
+  "qprotsim_1xy1_deamino_and_classical_baseline": {
+    "pdb_id": "1XY1",
+    "chemical_identity": "Deamino-oxytocin ([Mpa1]-oxytocin, Wood et al., Science 1986; residue 1 annotated as HETATM MPR/MPT lacking the N-terminal alpha-amino group, mapped to CYS1 canonical equivalent in QProtSim)",
+    "residue_1_pdb_record": "HETATM resName=MPT chain=A resSeq=1",
+    "asymmetric_unit_chains": [
+      "A",
+      "B"
+    ],
+    "chain_analyzed": "A",
+    "residues_parsed": [
+      "MPT1",
+      "TYR2",
+      "ILE3",
+      "GLN4",
+      "ASN5",
+      "CYS6",
+      "PRO7",
+      "LEU8",
+      "GLY9"
+    ],
+    "gate_g4_classical_additive_solvation_baseline": {
+      "runtime_microseconds": 1064.87,
+      "classical_product_mean_energy_kj_mol": -27.6397,
+      "classical_product_ensemble_std_kj_mol": 9.2879,
+      "qprotsim_coupled_mean_energy_kj_mol": -20.6889,
+      "qprotsim_coupled_ensemble_std_kj_mol": 11.7412,
+      "qprotsim_16384_shot_sampling_se_kj_mol": 0.0917,
+      "variance_explanation": "The +/- 11.74 kJ/mol figure is the conformational ensemble standard deviation across the 2^9=512 coupled residue solvation states (comparable to the +/- 9.85 kJ/mol uncoupled Bernoulli spread), whereas the 16,384-shot Monte Carlo sampling standard error on the mean is +/- 0.0917 kJ/mol.",
+      "classical_contact_weighted_degree": {
+        "MPT1": 2.7094,
+        "TYR2": 3.6709,
+        "ILE3": 3.1197,
+        "GLN4": 3.1811,
+        "ASN5": 3.8679,
+        "CYS6": 4.682,
+        "PRO7": 3.0578,
+        "LEU8": 3.1813,
+        "GLY9": 1.9736
+      }
+    }
+  },
+  "receipt_sha256": "904af66e1934a63880016dc3adb9fc3b33c1b9b1f2836de6eaae0b8209f5be75"
+}

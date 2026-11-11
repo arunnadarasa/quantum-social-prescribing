@@ -53,8 +53,8 @@
       "category": "procedural",
       "paper": "Aharonov, Jones, Landau (2005)",
       "qspm_use_html": "Guppy 1.0 / Helios HUGR &amp; Cloud <code>nexus:H2-Emulator</code> Care-Plan Bell Visibility \u2014 Estimates overlap / interference visibility P(00) between co-produced medical and VCFSE pathways.",
-      "scaling_contract": "Statistical overlap P(00) with trap &amp; exact-null twin; O(1/\u03b5\u00b2) incoherent vs O(1/\u03b5) coherent Heisenberg limit.",
-      "caveat": "Classically checkable at small qubit counts; used here for calibrated interference metrology rather than asymptotic speedup."
+      "scaling_contract": "Implemented via O(1/\u03b5\u00b2) single-copy projective shot sampling (not O(1/\u03b5) multi-round QAE); calibrated with exact-null twin.",
+      "caveat": "Trivially classically simulable at n = 3 qubits; used here for calibrated trapped-ion emulator visibility metrology rather than speedup."
     },
     {
       "id": "P20",
@@ -62,8 +62,8 @@
       "category": "procedural",
       "paper": "Quintino, Dong, Shimbo, Soeda, Murao (2019)",
       "qspm_use_html": "8-Rung Sequential Mid-Circuit Zeno / Anti-Zeno Check-In Ladder \u2014 Quantum comb / sequential mid-circuit <code>project_z</code> intervention schedule across 12-week care horizon.",
-      "scaling_contract": "Sequential quantum comb / mid-circuit project_z schedule; 5-standard affine fit R\u00b2 = 0.99995 &amp; blinded N=3 QC check.",
-      "caveat": "2-qubit system+memory bath is classically exact in 1.31 ms; validates non-Markovian Zeno vs Anti-Zeno retention physics."
+      "scaling_contract": "Sequential quantum comb / mid-circuit project_z schedule; 5-standard affine fit R\u00b2 = 0.99995 (Helios-1E-lite) &amp; R\u00b2 = 0.99923 (Selene).",
+      "caveat": "Verifies emulator readout linearity; 2-qubit system+memory Zeno ODE solves classically in 1.31 ms (median N*=4, IQR [0,6] over 125-pt grid)."
     },
     {
       "id": "A01d",
@@ -71,8 +71,8 @@
       "category": "architectural",
       "paper": "Farhi, Goldstone, Gutmann (2014)",
       "qspm_use_html": "Haiqu SDK v1.7.1 Linear-Ramp QAOA + State Compression on 8-Qubit 3-Body HUBO \u2014 Alternating-operator ansatz compressed by 94.2% depth for pharmacy deprescribing + VCFSE synergy.",
-      "scaling_contract": "Haiqu LR-QAOA + tensor state compression (depth 241 \u2192 14); sampled bitstring cost checkable against exact E\u2080 = \u221220.30.",
-      "caveat": "Exhaustive 2\u2078 = 256 classical evaluation takes 0.89 ms; FTQC crossover requires strongly coupled N \u2265 24\u201348 HUBO instances."
+      "scaling_contract": "Haiqu LR-QAOA + tensor-network compression (depth 241 \u2192 14, 5.60 s compile); 74.71% (765/1,024) raw pre-postprocessing ground-state shots.",
+      "caveat": "Heuristic optimizer; Rosenberg linearization + HiGHS MILP solves sparse 3-body HUBOs up to n_path = 60 to optimality in \u2264 1.32 s."
     },
     {
       "id": "P08",
@@ -80,8 +80,8 @@
       "category": "procedural",
       "paper": "Farhi, Goldstone, Gutmann, Sipser (2000)",
       "qspm_use_html": "OpenJij + JijModeling 120-Variable Neighbourhood Core20PLUS5 Caseload QUBO \u2014 Thermal/annealing schedule allocation across 24 multimorbid patients and 5 capacity-capped hubs.",
-      "scaling_contract": "Thermal/adiabatic QUBO schedule with inverse-gap scaling; 0 one-hot &amp; 0 hub-cap violations across 120 binary variables.",
-      "caveat": "Exact HiGHS MILP solves linear assignment in 10.25 ms; quantum/annealing utility arises only with non-convex cubic equity terms."
+      "scaling_contract": "Thermal annealing over 120-variable Core20PLUS5 QUBO (0 one-hot &amp; 0 cap violations; single-flip SA reaches 82.79% of optimum).",
+      "caveat": "Totally unimodular linear assignment solves to 100% optimality via HiGHS MILP in 10.25 ms (and 4-bit Kempe swaps in 8.72 ms)."
     },
     {
       "id": "P09",
@@ -89,8 +89,8 @@
       "category": "procedural",
       "paper": "Giovannetti, Lloyd, Maccone (2007)",
       "qspm_use_html": "Haiqu Entangled Manifold Embedding (EME) \u2014 Linear-depth loading of multi-dimensional Core20PLUS5 socio-clinical patient vectors.",
-      "scaling_contract": "Linear-depth manifold loading of 8 normalized Core20PLUS5 features into 4 qubits on cloud with state fidelity 1.000.",
-      "caveat": "General QRAM / arbitrary amplitude loading incurs O(\u221aN) T-count; low-qubit EME avoids QRAM overhead on structured tabular data."
+      "scaling_contract": "Haiqu Entangled Manifold Embedding loads 8D feature vector into n = 4 qubits (dim = 16) on cloud with state fidelity 1.000.",
+      "caveat": "Avoids QRAM overhead on small registers, but classically simulable in O(2^n) at n = 4."
     },
     {
       "id": "A01g",
@@ -98,8 +98,8 @@
       "category": "architectural",
       "paper": "Larocca et al. (2022)",
       "qspm_use_html": "Haiqu SU(2)-Equivariant Ansatz &amp; Modal Frobenius Neighbourhood Circuits \u2014 Symmetry-preserving geometric circuits eliminating spin contamination (&lt;1e-15) and barren plateaus.",
-      "scaling_contract": "Symmetry-preserving SU(2) &amp; Frobenius circuits; commutator violation 2.17\u00d710\u207b\u00b9\u2076 and 184.07\u00d7 gradient variance at 10 qubits.",
-      "caveat": "No unconditional speedup guarantee; permutation-invariant subspaces on fixed subsystems admit polynomial classical simulation."
+      "scaling_contract": "Symmetry-preserving SU(2) (2.17\u00d710\u207b\u00b9\u2076 commutator) &amp; Frobenius parameter-sharing circuits across n = 4..10 qubits.",
+      "caveat": "2\u00d72 matched-depth control separates 119.2\u00d7 depth decay from 5.83\u00d7 matched L = 2n variance retention at n = 10; no unconditional speedup proof."
     },
     {
       "id": "P22",
@@ -107,8 +107,8 @@
       "category": "procedural",
       "paper": "Bacon, Childs, Chuang, Kempe, Leung, Zhou (2001)",
       "qspm_use_html": "HQS <code>struqture-py</code> + <code>qoqo</code> 4-Spin Circadian-HPA-Oxytocin-IL6 Lindbladian \u2014 Open-system Lindbladian simulation of Social Zeitgeber entrainment vs chronic isolation dephasing.",
-      "scaling_contract": "Steady-state stationarity &amp; observable verification on \u03c1(t); O(\u03c4 + log(1/\u03b5)) query scaling for open-system Lindbladians.",
-      "caveat": "4-spin Liouvillian superoperator solves classically in 156.9 ms; models biological Social Zeitgeber synchrony (not RCT proof)."
+      "scaling_contract": "Synthesized in qoqo via polynomial-error Trotterization O(\u03c4^(1+1/p)/\u03b5^(1/p)) (FTQC block-encoding limit is O(\u03c4 + log(1/\u03b5))).",
+      "caveat": "4-spin (4^4 = 256) Liouvillian solves classically in 156.9 ms; conceptual phenomenological model (not calibrated clinical RCT data)."
     },
     {
       "id": "A01h",
@@ -116,8 +116,8 @@
       "category": "architectural",
       "paper": "Verdon et al. (2019)",
       "qspm_use_html": "QProtSim (Bonde &amp; Patil, U. Suffolk) on Crystal PDB <code>1XY1</code> Oxytocin \u2014 Residue-contact graph quantum circuit sampling pairwise allosteric mutual information across Cys1-Cys6.",
-      "scaling_contract": "Residue-contact RY/CRY/RYY graph circuit on crystal oxytocin (PDB 1XY1); KL divergence &amp; Cys1\u2013Cys6 MI checkable at N = 9.",
-      "caveat": "Heuristic GNN architecture with open dequantisation boundary; small peptide graphs remain classically simulable."
+      "scaling_contract": "Shallow RY/CRY/RYY residue-contact circuit on Chain A of crystal deamino-oxytocin (PDB 1XY1, n = 9 qubits, dim = 512).",
+      "caveat": "KL &amp; pairwise MI checkable via classical statevector / bounded-treewidth floor (Gate G4 additive solvation floor takes 1.06 ms)."
     },
     {
       "id": "X03",
@@ -125,8 +125,8 @@
       "category": "composite",
       "paper": "McClean, Schwartz, Carter, de Jong (2017)",
       "qspm_use_html": "Haiqu SKQD / Subspace Diagonalization &amp; Psychoneuroimmunological Active Spaces \u2014 Composite quantum subspace &amp; configuration-recovery template for noisy active-space spectra.",
-      "scaling_contract": "Variational Krylov subspace bound &amp; Pauli observable backpropagation (OBP cuts expectation circuit gates 24 \u2192 0).",
-      "caveat": "Errors scale linearly with input noise post-thresholding; OBP shifts bounded-clifford depth onto classical preprocessing."
+      "scaling_contract": "Sample-based Krylov subspace diagonalization &amp; Pauli Observable Backpropagation (OBP reduces 24 quantum gates \u2192 0 over 60 Paulis in 157.9 ms).",
+      "caveat": "Reducing circuit gates to 0 on |0\u27e9^\u22974 constitutes complete classical Heisenberg-picture dequantisation for shallow brickwork expectation values."
     }
   ],
   "jev_cujs": [
@@ -168,39 +168,46 @@
       "floor": "1.31 ms"
     },
     {
+      "file": "deep_review_controls_receipt.json",
+      "sha256": "904af66e1934a63880016dc3adb9fc3b33c1b9b1f2836de6eaae0b8209f5be75",
+      "platforms": "Rosenberg/McCormick HiGHS MILP + 2\u00d72 Matched-Depth Barren Plateau + 4-Bit Kempe Swaps + Sensitivity Grids",
+      "metrics": "HiGHS MILP n=48 in 1.32 s; Kempe swap 100.0% of MILP (8.72 ms); L=2n ratio 5.83\u00d7; 125-pt Zeno & 49-pt Lindblad grids; 1XY1 MPT1 audit",
+      "floor": "1.06 ms \u2013 1.32 s"
+    },
+    {
       "file": "modal_hf_qml_receipt.json",
-      "sha256": "d5f1a3f7054d9c81f3b771800b9779728ba0c72fa30d8dec676258a2116fc4e1",
-      "platforms": "Modal Cloud PyTorch + Hugging Face Hub/Space + Guppy 1.0 HUGR",
-      "metrics": "4q Frobenius QSPMLM-VQC: 99.79% triage acc, 96.46% Zeno acc, 100.0% falls safety recall, 2.22e-16 parity",
-      "floor": "27.7 ms (LogReg)"
+      "sha256": "ef2c8559db430379ca5a923192f81f15561a61ad4d87fd9462de2119b7e0a704",
+      "platforms": "Modal Cloud PyTorch + Hugging Face Hub/Space + Guppy 1.0 HUGR + GBDT/SVM Controls",
+      "metrics": "Regime A: VQC & full-split QKernel 99.79%; Regime B Cubic k=3: VQC 65.21% (76.92% falls recall) vs LogReg 32.71%, GBDT 77.92%, RBF-SVM 79.58%",
+      "floor": "25.6 ms (LogReg)"
     },
     {
       "file": "nexus_helios_qspm_receipt.json",
       "sha256": "415fe077d5a2d34de242f7522957f7dfe02a96f0d42c9e22414f5c841a23c53f",
       "platforms": "Quantinuum Guppy 1.0 -> HUGR (Selene) + 3 Cloud nexus:H2-Emulator Jobs",
-      "metrics": "Coherent care-plan P(00)=0.9980 (Cloud H2-Emulator) vs 0.5000 collapse; optimal Zeno N*=6 (+0.6488 cal, R\u00b2=0.99923)",
+      "metrics": "Coherent care-plan P(00)=0.9980 (29 gates) vs 0.5000 collapse (24 gates); Zeno emulator calibration R\u00b2=0.99923",
       "floor": "1.31 ms"
     },
     {
       "file": "haiqu_jij_qspm_receipt.json",
       "sha256": "752067c4580e22edeadb492031cd8270788102ccda0528e1867cb27f27078e97",
-      "platforms": "Haiqu SDK v1.7.1 (Compression, Cloud EME, OBP, SU(2)) + OpenJij / JijModeling",
-      "metrics": "8q 3-body HUBO depth 241 -> 14 (-94.19%), exact E0 = -20.3000; OpenJij 120-var QUBO: 0 constraint violations",
+      "platforms": "Haiqu SDK v1.7.1 (Compression, Raw Pre-Postprocessing Audit, Cloud EME, OBP, SU(2)) + OpenJij",
+      "metrics": "8q pure 3-body HUBO depth 241 -> 14 (-94.19%), 74.71% (765/1,024) raw pre-postprocessing E0 = -20.3000; OpenJij 120-var QUBO: 0 violations",
       "floor": "0.89 ms / 10.3 ms"
     },
     {
       "file": "biophysical_qprotsim_receipt.json",
       "sha256": "21e3b1eb2eca2c4565819523f883dd29fc9f728a3ae42d5e6732b117e092ab08",
-      "platforms": "HQS struqture/qoqo, QProtSim (1XY1), BioHub, Neurosnap (6TPK), AlphaGenome, Arc, Paperclip",
-      "metrics": "Cortisol -64.08%, IL-6 -76.52%; QProtSim Cys1-Cys6 1.95 \u00c5; 6TPK 0 clashes; 12-wk Kuramoto R: 0.237 -> 0.972",
+      "platforms": "HQS struqture/qoqo, QProtSim (PDB 1XY1 deamino-oxytocin), AlphaGenome GENCODE v46, BioHub, Neurosnap, Arc",
+      "metrics": "Simulated cortisol -64.08%, IL-6 -76.52%; QProtSim Mpt1*-Cys6 1.95 \u00c5 (\u00b111.74 kJ/mol \u03c3_ens vs \u00b10.092 SE); Kuramoto R: 0.237 -> 0.972",
       "floor": "156.9 ms"
     },
     {
       "file": "modal_rhyme_quops_receipt.json",
       "sha256": "65bd5901f72b07e9d980afc29770d80322bb9cdc264e86bb2c4f52283c9c2bd7",
-      "platforms": "Modal Cloud + Rhyme (rhyme-beta 0.1.0b1) + Sandia QUOPS / [[8,3,2]] Color Code",
-      "metrics": "4/4 rhyme-beta programs PASS (100% rumination extinction); 184.07x Frobenius gradient variance at 10 qubits",
-      "floor": "Dominates N <= 16"
+      "platforms": "Modal Cloud + Rhyme (rhyme-beta 0.1.0b1) + Sandia QUOPS / Active-QEC Lindbladian Scaling",
+      "metrics": "4/4 rhyme-beta compiler programs PASS (0 oracle violations); Frobenius shallow vs deep 184.07\u00d7 (matched L=2n 5.83\u00d7)",
+      "floor": "Dominates N_path <= 60"
     },
     {
       "file": "text2wetlab_medicus_primitives_receipt.json",
@@ -212,7 +219,7 @@
     {
       "file": "typesafe_jev_qspm_receipt.json",
       "sha256": "215a566d39d6228bc883537342aa89837e96fbf6ca9bf7039d9678fb8a7b0a6f",
-      "platforms": "TypeSafe System One (jev-latest / Jev 1.14) \u2014 arXiv:2611.05127v2",
+      "platforms": "TypeSafe System One (jev-latest / Jev 1.14) \u2014 arXiv:2611.05127",
       "metrics": "Mean Safety 3.96/5, 0.00 autonomous deployment probability across 4 CUJs, strict zero-hype demarcation (p=1.000)",
       "floor": "0.83 s"
     }
