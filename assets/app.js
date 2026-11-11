@@ -3,7 +3,7 @@
 const BOOKMARKS = [
   { label: "p.1 · Abstract & Overview", page: 1 },
   { label: "p.2 · DisCoPy & Rhyme", page: 2 },
-  { label: "p.4 · Nexus HUGR & Zeno N*=6", page: 4 },
+  { label: "p.4 · Live Nexus Helios-1E & Zeno", page: 4 },
   { label: "p.5 · Haiqu HUBO & OpenJij", page: 5 },
   { label: "p.6 · Modal/HF 4q QSPMLM", page: 6 },
   { label: "p.7 · HQS, QProtSim & AlphaGenome", page: 7 },
@@ -64,8 +64,8 @@ const BLOCH_CUES = {
   RX: "Pharmacy SMR · Rx(π/2) — Structured Medication Review deprescribing rotates patient trajectory smoothly across the Bloch meridian.",
   S: "Zeitgeber · Phase S = Rz(π/2) — Regular weekly group attendance advances circadian SCN–HPA phase by +90°.",
   Z: "Peer Buffer · Pauli-Z — Oxytocinergic peer support inverts destructive stress phase (+1 → −1), suppressing rumination.",
-  ZENO: "Zeno Check-In (N* = 6) — Biweekly Link-Worker check-in stabilizes retention near |0⟩ (+0.6698 contrast; Cloud H2-Emulator +0.6488).",
-  COLLAPSE: "Signpost · Premature Collapse — Uncoordinated bureaucratic leaflet collapses state into 50/50 attrition noise (S₂ = 1.4149 bits).",
+  ZENO: "Zeno Check-In (N* = 6) — Biweekly Link-Worker check-in stabilizes retention near |0⟩ (+0.6564 live Nexus Helios-1E-lite Job 295cb111).",
+  COLLAPSE: "Signpost · Premature Collapse — Uncoordinated leaflet collapses state into high-entropy attrition noise (1.8503 bits on Nexus Helios-1E).",
   RESET: "Reset |0⟩ — Return patient care-plan state to engaged baseline (+Z north pole)."
 };
 
@@ -96,9 +96,9 @@ const DISCOPY_STEPS = [
   },
   {
     short: "5. ε_C Lock",
-    title: "Layer 5 · Co-Produced Care Lock ε_C on Cloud H2-Emulator",
-    circuit: "CX >> (H @ Id(1)) >> Measure  [P(00) = 99.80% Cloud H2-Emulator]",
-    desc: "Coherent uncompute locks onto |00⟩ with P(00) = 0.9980 (Job AFByb3ZpZGVySm9iAaHLB-9CdxCPOKol3O_tYw) vs 0.5000 under premature signposting collapse."
+    title: "Layer 5 · Co-Produced Care Lock ε_C on Live Quantinuum Nexus Helios-1E-lite",
+    circuit: "CX >> (H @ Id(1)) >> Measure  [P(00) = 99.27% Nexus Helios-1E · 99.80% H2-Emul]",
+    desc: "Coherent uncompute locks onto |00⟩ with P(00) = 0.9927 on live Nexus Helios-1E-lite (Job b813e944) vs 0.3525 under premature mid-circuit signposting collapse."
   }
 ];
 
@@ -111,7 +111,7 @@ const BIBTEX_ENTRIES = {
   journal = {Samskrift Open Monograph Preprint (Mid and South Essex NHS Foundation Trust \& ISPPA)},
   pages   = {1--10},
   url     = {https://arunnadarasa.github.io/quantum-social-prescribing/},
-  note    = {0 physical QPU shots claimed; 7 SHA-256-verified receipts across Quantinuum H2-Emulator, Haiqu SDK v1.7.1, OpenJij, Modal, Hugging Face, HQS, QProtSim, AlphaGenome, Text2WetLab, and TypeSafe Jev 1.14}
+  note    = {0 physical QPU shots claimed; 8 SHA-256-verified receipts across Quantinuum Nexus Helios-1E-lite, H2-Emulator, Haiqu SDK v1.7.1, OpenJij, Modal, Hugging Face, HQS, QProtSim, AlphaGenome, Text2WetLab, and TypeSafe Jev 1.14}
 }`,
   qspmlm: `@misc{nadarasa2026qspmlm,
   title        = {{QSPMLM}: 4-Qubit Frobenius Multi-Task Variational Quantum Classifier for Holistic Social Prescribing Triage \& Safety Escalation},
@@ -119,7 +119,7 @@ const BIBTEX_ENTRIES = {
   year         = {2026},
   howpublished = {Hugging Face Model Hub \& Space},
   url          = {https://huggingface.co/socialprescribing/quantinuum-social-prescribing},
-  note         = {99.79\% test accuracy, 100.0\% falls-hazard safety recall, 2.22e-16 PyTorch/NumPy parity, 7,247-byte Quantinuum Guppy 1.0 HUGR}
+  note         = {99.79\% test accuracy, 100.0\% falls-hazard safety recall, 2.22e-16 PyTorch/NumPy parity, live Quantinuum Nexus Helios-1E-lite Job 6cc7b395}
 }`,
   isppa: `@article{hussein2026isppa,
   title   = {Pharmacy Social Prescribing in Integrated Neighbourhood Teams: Structured Medication Reviews and Community Asset Co-Production},
@@ -191,7 +191,6 @@ async function initPdfReader() {
   let zoom = 1.0;
   const totalPages = 10;
 
-  // Render bookmarks
   BOOKMARKS.forEach((bm, idx) => {
     const btn = document.createElement("button");
     btn.type = "button";
@@ -272,7 +271,6 @@ async function initPdfReader() {
     }
   }
 
-  // Render instant high-DPI page previews immediately, then upgrade to vector PDF.js when ready
   renderFallbackImages();
   setTimeout(renderPdfJs, 350);
 
@@ -370,7 +368,6 @@ function applySingleQubitGate4Q(re, im, q, g00r, g00i, g01r, g01i, g10r, g10i, g
 }
 
 function cMul2x2(A, B) {
-  // Complex 2x2 matrix multiply: each is [00r,00i, 01r,01i, 10r,10i, 11r,11i]
   const out = new Float64Array(8);
   for (let r = 0; r < 2; r++) {
     for (let c = 0; c < 2; c++) {
@@ -463,7 +460,6 @@ function initQSPMLMSimulator() {
   const pathwayWrap = document.getElementById("qsp-pathway-bars");
   if (!presetWrap || !sliderWrap || !hilbertWrap) return;
 
-  // Build 16 Hilbert bars
   for (let i = 0; i < 16; i++) {
     const col = document.createElement("div");
     col.className = "h-bar-col";
@@ -478,7 +474,6 @@ function initQSPMLMSimulator() {
     hilbertWrap.appendChild(col);
   }
 
-  // Build 5 Pathway bars
   PATHWAY_NAMES.forEach((name, idx) => {
     const row = document.createElement("div");
     row.className = "pw-row";
@@ -492,7 +487,6 @@ function initQSPMLMSimulator() {
     pathwayWrap.appendChild(row);
   });
 
-  // Build Sliders
   FEATURE_META.forEach((f, idx) => {
     const row = document.createElement("div");
     row.className = "f-slider-row";
@@ -510,7 +504,6 @@ function initQSPMLMSimulator() {
     });
   });
 
-  // Build Presets
   CLINICAL_PRESETS.forEach((pr, idx) => {
     const btn = document.createElement("button");
     btn.type = "button";
@@ -578,7 +571,7 @@ function initBlochAndDisCoPy() {
 
   let theta = (36 * Math.PI) / 180;
   let phi = (45 * Math.PI) / 180;
-  let camYaw = 0.52, camPitch = 0.32;
+  let camYaw = 0.52, camPitch = 0.30;
   let dragging = false, lx = 0, ly = 0;
 
   const thSlider = document.getElementById("theta-slider");
@@ -624,16 +617,15 @@ function initBlochAndDisCoPy() {
   function draw() {
     const w = wrap.clientWidth, h = wrap.clientHeight;
     ctx.clearRect(0, 0, w, h);
-    const cx = w / 2, cy = h / 2 + 6, R = Math.min(w, h) * 0.36;
+    // Offset sphere center +18px vertically so north pole label stays well clear of .bloch-overlay-tag
+    const cx = w / 2, cy = h / 2 + 18, R = Math.min(w, h) * 0.325;
 
-    // Outer sphere
     ctx.strokeStyle = "rgba(158, 183, 180, 0.28)";
     ctx.lineWidth = 1.4;
     ctx.beginPath();
     ctx.arc(cx, cy, R, 0, Math.PI * 2);
     ctx.stroke();
 
-    // Equator & meridians
     for (const mode of ["eq", "m1", "m2"]) {
       ctx.beginPath();
       for (let k = 0; k <= 72; k++) {
@@ -648,17 +640,15 @@ function initBlochAndDisCoPy() {
       ctx.stroke();
     }
 
-    // Poles
-    const [nx, ny] = project(0, 0, 1.08, cx, cy, R);
-    const [sx2, sy2] = project(0, 0, -1.12, cx, cy, R);
+    const [nx, ny] = project(0, 0, 1.07, cx, cy, R);
+    const [sx2, sy2] = project(0, 0, -1.11, cx, cy, R);
     ctx.fillStyle = "#38d6c4";
     ctx.font = "600 11px 'JetBrains Mono', monospace";
     ctx.textAlign = "center";
-    ctx.fillText("|0⟩ Engaged", nx, ny - 4);
+    ctx.fillText("|0⟩ Engaged", nx, ny - 5);
     ctx.fillStyle = "#f06a3b";
-    ctx.fillText("|1⟩ Dropout", sx2, sy2 + 12);
+    ctx.fillText("|1⟩ Dropout", sx2, sy2 + 13);
 
-    // State vector
     const vx = Math.sin(theta) * Math.cos(phi);
     const vy = Math.sin(theta) * Math.sin(phi);
     const vz = Math.cos(theta);
@@ -681,7 +671,7 @@ function initBlochAndDisCoPy() {
   wrap.addEventListener("pointermove", e => {
     if (!dragging) return;
     camYaw += (e.clientX - lx) * 0.01;
-    camPitch = Math.max(-1.1, Math.min(1.1, camPitch + (e.clientY - ly) * 0.01));
+    camPitch = Math.max(-1.05, Math.min(1.05, camPitch + (e.clientY - ly) * 0.01));
     lx = e.clientX; ly = e.clientY;
     draw();
   });
@@ -710,7 +700,6 @@ function initBlochAndDisCoPy() {
   updateReadout();
   resize();
 
-  // DisCoPy 5-layer stepper
   const pillsWrap = document.getElementById("discopy-pills");
   let step = 4, timer = null;
   function setStep(s) {
@@ -747,79 +736,149 @@ function initBlochAndDisCoPy() {
   setStep(4);
 }
 
-/* ── 5. Apache ECharts Multi-Scale Benchmark Gallery + Print Lightbox ── */
+/* ── 5. Apache ECharts Multi-Scale Benchmark Gallery (All 5 Cards) + Print Lightbox ── */
 function initChartsAndLightbox() {
-  const cards = [...document.querySelectorAll("#benchmark-fig-grid .fig-card")];
+  const cards = [...document.querySelectorAll("#benchmarks .fig-card")];
   const btnInt = document.getElementById("btn-chart-interactive");
   const btnStat = document.getElementById("btn-chart-static");
+  const charts = [];
 
   btnInt?.addEventListener("click", () => {
-    btnInt.classList.add("btn-primary"); btnInt.classList.remove("btn-ghost");
-    btnStat.classList.add("btn-ghost"); btnStat.classList.remove("btn-primary");
+    btnInt.classList.add("active");
+    btnInt.setAttribute("aria-selected", "true");
+    btnStat.classList.remove("active");
+    btnStat.setAttribute("aria-selected", "false");
     cards.forEach(c => c.classList.add("interactive-mode"));
     setTimeout(() => charts.forEach(ch => ch.resize()), 50);
   });
+
   btnStat?.addEventListener("click", () => {
-    btnStat.classList.add("btn-primary"); btnStat.classList.remove("btn-ghost");
-    btnInt.classList.add("btn-ghost"); btnInt.classList.remove("btn-primary");
+    btnStat.classList.add("active");
+    btnStat.setAttribute("aria-selected", "true");
+    btnInt.classList.remove("active");
+    btnInt.setAttribute("aria-selected", "false");
     cards.forEach(c => c.classList.remove("interactive-mode"));
   });
 
-  // Lightbox for print figures
   const lb = document.getElementById("img-lightbox");
   const lbImg = document.getElementById("lightbox-img");
   const lbCap = document.getElementById("lightbox-caption");
-  document.querySelectorAll(".fig-card").forEach(card => {
-    card.addEventListener("click", () => {
+
+  function openLightbox(src, alt, caption) {
+    lbImg.src = src;
+    lbImg.alt = alt || "300-DPI Monograph Figure";
+    lbCap.textContent = caption || "";
+    lb.classList.add("open");
+  }
+
+  cards.forEach(card => {
+    card.addEventListener("click", (e) => {
+      if (e.target.closest("[data-open-fig]")) return;
       if (card.classList.contains("interactive-mode")) return;
       const img = card.querySelector("img");
       if (!img) return;
-      lbImg.src = card.dataset.zoomSrc || img.src;
-      lbImg.alt = img.alt;
-      lbCap.textContent = card.querySelector("figcaption")?.innerText || "";
-      lb.classList.add("open");
+      const capText = card.querySelector("figcaption > div")?.innerText || card.querySelector("figcaption")?.innerText || "";
+      openLightbox(card.dataset.zoomSrc || img.src, img.alt, capText);
     });
   });
+
+  document.querySelectorAll("[data-open-fig]").forEach(btn => {
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const card = btn.closest(".fig-card");
+      const img = card?.querySelector("img");
+      const capText = card?.querySelector("figcaption > div")?.innerText || "";
+      openLightbox(btn.dataset.openFig, img?.alt, capText);
+    });
+  });
+
   document.getElementById("lightbox-close")?.addEventListener("click", () => lb.classList.remove("open"));
   lb?.addEventListener("click", e => { if (e.target === lb) lb.classList.remove("open"); });
 
-  const charts = [];
+  let mounted = false;
   function mountCharts() {
-    if (!window.echarts || !PORTAL_DATA) return;
-    const baseAxis = { axisLabel: { color: "#9eb7b4", fontSize: 11 }, axisLine: { lineStyle: { color: "rgba(158,183,180,0.25)" } }, splitLine: { lineStyle: { color: "rgba(158,183,180,0.1)" } } };
+    if (mounted || !window.echarts || !PORTAL_DATA) return;
+    mounted = true;
 
-    // Chart 1: Zeno curve
+    const baseAxis = {
+      axisLabel: { color: "#9eb7b4", fontSize: 11, fontFamily: "JetBrains Mono, monospace" },
+      axisLine: { lineStyle: { color: "rgba(158,183,180,0.25)" } },
+      splitLine: { lineStyle: { color: "rgba(158,183,180,0.09)" } }
+    };
+    const darkTooltip = {
+      trigger: "axis",
+      backgroundColor: "rgba(11, 21, 23, 0.96)",
+      borderColor: "rgba(56, 214, 196, 0.45)",
+      textStyle: { color: "#eef7f5", fontSize: 12 }
+    };
+
+    // Chart 1: Non-Markovian Zeno Cadence + Live Nexus Helios-1E-lite N*=6
     const elZ = document.getElementById("echart-zeno");
     if (elZ) {
       const c1 = window.echarts.init(elZ);
       const zRows = PORTAL_DATA.zeno_sweep;
       c1.setOption({
-        tooltip: { trigger: "axis" },
-        legend: { data: ["Retention Contrast", "Engaged Probability"], textStyle: { color: "#eef7f5", fontSize: 11 }, top: 4 },
-        grid: { left: 46, right: 18, top: 38, bottom: 34 },
-        xAxis: { type: "category", data: zRows.map(r => `N=${r.n_checkins}`), ...baseAxis },
-        yAxis: { type: "value", min: 0.44, max: 0.88, ...baseAxis },
+        tooltip: darkTooltip,
+        legend: { data: ["Zeno Contrast (2P−1)", "Engaged Prob P(0)"], textStyle: { color: "#eef7f5", fontSize: 11 }, top: 6 },
+        grid: { left: 44, right: 16, top: 54, bottom: 34 },
+        xAxis: { type: "category", data: zRows.map(r => `N=${r.n_checkins}`), ...baseAxis, axisLabel: { color: "#9eb7b4", fontSize: 10, interval: 0 } },
+        yAxis: { type: "value", min: 0.40, max: 0.90, interval: 0.10, ...baseAxis },
         series: [
-          { name: "Retention Contrast", type: "line", smooth: true, data: zRows.map(r => Number(r.retention_contrast.toFixed(4))), itemStyle: { color: "#38d6c4" }, lineStyle: { width: 3 } },
-          { name: "Engaged Probability", type: "bar", barWidth: "36%", data: zRows.map(r => Number(r.p_engaged.toFixed(4))), itemStyle: { color: "rgba(244,174,66,0.65)", borderRadius: [4, 4, 0, 0] } }
+          {
+            name: "Zeno Contrast (2P−1)",
+            type: "line",
+            smooth: true,
+            symbolSize: 7,
+            data: zRows.map(r => Number(r.retention_contrast.toFixed(4))),
+            itemStyle: { color: "#38d6c4" },
+            lineStyle: { width: 3 },
+            markPoint: {
+              symbolSize: 42,
+              label: { fontSize: 9.5, fontWeight: "bold", color: "#061618" },
+              data: [
+                { name: "Optimal N*=6", coord: ["N=6", 0.6698], value: "N*=6", itemStyle: { color: "#38d6c4" } },
+                { name: "Anti-Zeno Dip", coord: ["N=1", 0.5082], value: "Dip", itemStyle: { color: "#f06a3b" } }
+              ]
+            }
+          },
+          {
+            name: "Engaged Prob P(0)",
+            type: "bar",
+            barWidth: "38%",
+            data: zRows.map(r => Number(r.p_engaged.toFixed(4))),
+            itemStyle: { color: "rgba(244,174,66,0.58)", borderRadius: [4, 4, 0, 0] }
+          }
         ]
       });
       charts.push(c1);
     }
 
-    // Chart 2: Haiqu HUBO & OpenJij
+    // Chart 2: Haiqu HUBO Compression & OBP Gates
     const elH = document.getElementById("echart-haiqu");
     if (elH) {
       const c2 = window.echarts.init(elH);
       c2.setOption({
-        tooltip: { trigger: "axis" },
-        legend: { data: ["Before Haiqu / Raw", "After Haiqu SDK v1.7.1"], textStyle: { color: "#eef7f5", fontSize: 11 }, top: 4 },
-        grid: { left: 48, right: 18, top: 38, bottom: 34 },
-        xAxis: { type: "category", data: ["LR-QAOA Depth", "OBP Circuit Gates", "VCFSE Cap Violations"], ...baseAxis },
-        yAxis: { type: "value", ...baseAxis },
+        tooltip: darkTooltip,
+        legend: { data: ["Uncompressed / Raw", "Haiqu SDK v1.7.1 + OpenJij"], textStyle: { color: "#eef7f5", fontSize: 11 }, top: 6 },
+        grid: { left: 44, right: 16, top: 54, bottom: 42 },
+        xAxis: { type: "category", data: ["QAOA\nDepth", "OBP\nGates", "Matched\nHubs", "Cap\nViolations"], ...baseAxis, axisLabel: { color: "#9eb7b4", fontSize: 10, interval: 0, lineHeight: 13 } },
+        yAxis: { type: "value", min: 0, max: 260, interval: 65, ...baseAxis },
         series: [
-          { name: "Before Haiqu / Raw", type: "bar", data: [241, 24, 0], itemStyle: { color: "#6f8a87", borderRadius: [4, 4, 0, 0] } },
-          { name: "After Haiqu SDK v1.7.1", type: "bar", data: [14, 0, 0], itemStyle: { color: "#38d6c4", borderRadius: [4, 4, 0, 0] } }
+          {
+            name: "Uncompressed / Raw",
+            type: "bar",
+            barGap: "18%",
+            data: [241, 24, 5, 0],
+            itemStyle: { color: "#526d6a", borderRadius: [4, 4, 0, 0] },
+            label: { show: true, position: "top", color: "#9eb7b4", fontSize: 10 }
+          },
+          {
+            name: "Haiqu SDK v1.7.1 + OpenJij",
+            type: "bar",
+            data: [14, 0, 5, 0],
+            itemStyle: { color: "#38d6c4", borderRadius: [4, 4, 0, 0] },
+            label: { show: true, position: "top", color: "#38d6c4", fontWeight: "bold", fontSize: 10.5 }
+          }
         ]
       });
       charts.push(c2);
@@ -830,48 +889,127 @@ function initChartsAndLightbox() {
     if (elB) {
       const c3 = window.echarts.init(elB);
       c3.setOption({
-        tooltip: { trigger: "axis" },
-        legend: { data: ["Chronic Social Isolation", "Social Prescribing Zeitgeber"], textStyle: { color: "#eef7f5", fontSize: 11 }, top: 4 },
-        grid: { left: 48, right: 18, top: 38, bottom: 34 },
-        xAxis: { type: "category", data: ["HPA Cortisol", "IL-6 Load", "SCN-HPA Sync", "12-Wk Kuramoto R"], ...baseAxis },
-        yAxis: { type: "value", max: 1.05, ...baseAxis },
+        tooltip: darkTooltip,
+        legend: { data: ["Chronic Social Isolation", "Social Prescribing Zeitgeber"], textStyle: { color: "#eef7f5", fontSize: 11 }, top: 6 },
+        grid: { left: 44, right: 16, top: 54, bottom: 42 },
+        xAxis: { type: "category", data: ["HPA\nCortisol", "IL-6\nLoad", "SCN–HPA\nSync", "12-Wk\nKuramoto R"], ...baseAxis, axisLabel: { color: "#9eb7b4", fontSize: 10, interval: 0, lineHeight: 13 } },
+        yAxis: { type: "value", min: 0, max: 1.0, interval: 0.2, ...baseAxis },
         series: [
-          { name: "Chronic Social Isolation", type: "bar", data: [0.6917, 0.8462, 0.0183, 0.2370], itemStyle: { color: "#f06a3b", borderRadius: [4, 4, 0, 0] } },
-          { name: "Social Prescribing Zeitgeber", type: "bar", data: [0.2485, 0.1987, 0.1134, 0.9723], itemStyle: { color: "#38d6c4", borderRadius: [4, 4, 0, 0] } }
+          {
+            name: "Chronic Social Isolation",
+            type: "bar",
+            barGap: "18%",
+            data: [0.6917, 0.8462, 0.0183, 0.2370],
+            itemStyle: { color: "#f06a3b", borderRadius: [4, 4, 0, 0] }
+          },
+          {
+            name: "Social Prescribing Zeitgeber",
+            type: "bar",
+            data: [0.2485, 0.1987, 0.1134, 0.9723],
+            itemStyle: { color: "#38d6c4", borderRadius: [4, 4, 0, 0] }
+          }
         ]
       });
       charts.push(c3);
     }
 
-    // Chart 4: Modal QSPMLM vs Baselines
+    // Chart 4: Modal QSPMLM vs Gate G4 Baselines
     const elQ = document.getElementById("echart-qml");
     if (elQ) {
       const c4 = window.echarts.init(elQ);
       c4.setOption({
-        tooltip: { trigger: "axis" },
-        grid: { left: 48, right: 18, top: 28, bottom: 38 },
-        xAxis: { type: "category", data: ["4q VQC", "4q QKernel", "G4 LogReg", "G4 RBF-SVM", "Falls Recall"], ...baseAxis },
-        yAxis: { type: "value", min: 94, max: 100.5, ...baseAxis },
+        tooltip: darkTooltip,
+        grid: { left: 44, right: 16, top: 36, bottom: 42 },
+        xAxis: { type: "category", data: ["4q\nVQC", "4q\nQKernel", "Zeno\nHead", "G4\nLogReg", "Falls\nRecall"], ...baseAxis, axisLabel: { color: "#9eb7b4", fontSize: 10, interval: 0, lineHeight: 13 } },
+        yAxis: { type: "value", min: 92, max: 100, interval: 2, ...baseAxis },
         series: [{
-          name: "Score (%)",
+          name: "Held-Out Accuracy / Recall (%)",
           type: "bar",
-          barWidth: "46%",
+          barWidth: "44%",
+          label: { show: true, position: "top", color: "#eef7f5", fontSize: 10, formatter: "{c}%" },
           data: [
-            { value: 99.79, itemStyle: { color: "#38d6c4" } },
-            { value: 99.33, itemStyle: { color: "#a78bfa" } },
-            { value: 99.79, itemStyle: { color: "#6f8a87" } },
-            { value: 100.0, itemStyle: { color: "#6f8a87" } },
-            { value: 100.0, itemStyle: { color: "#f4ae42" } }
+            { value: 99.79, itemStyle: { color: "#38d6c4", borderRadius: [4, 4, 0, 0] } },
+            { value: 99.33, itemStyle: { color: "#a78bfa", borderRadius: [4, 4, 0, 0] } },
+            { value: 96.46, itemStyle: { color: "#2ab3a3", borderRadius: [4, 4, 0, 0] } },
+            { value: 99.79, itemStyle: { color: "#6f8a87", borderRadius: [4, 4, 0, 0] } },
+            { value: 100.0, itemStyle: { color: "#f4ae42", borderRadius: [4, 4, 0, 0] } }
           ]
         }]
       });
       charts.push(c4);
     }
+
+    // Chart 5 (Full-Width Dark-Native): TypeSafe Jev 1.14 Multi-Method Health AI Audit across 4 CUJs
+    const elG = document.getElementById("echart-governance");
+    if (elG && PORTAL_DATA.jev_cujs) {
+      const c5 = window.echarts.init(elG);
+      const cujs = PORTAL_DATA.jev_cujs;
+      c5.setOption({
+        tooltip: darkTooltip,
+        legend: {
+          data: ["Safety (/5 · Mean 3.96)", "Usefulness (/5 · Mean 3.10)", "Empirical Accuracy (/5 · Calibrated Skepticism)", "Autonomous Live Deployment Prob (0.00)"],
+          textStyle: { color: "#eef7f5", fontSize: 11 },
+          top: 6
+        },
+        grid: { left: 48, right: 24, top: 56, bottom: 40 },
+        xAxis: {
+          type: "category",
+          data: cujs.map(c => c.short_label),
+          ...baseAxis,
+          axisLabel: { color: "#bfece6", fontSize: 11 }
+        },
+        yAxis: { type: "value", min: 0, max: 5.0, ...baseAxis, name: "Score (/5)", nameTextStyle: { color: "#9eb7b4", fontSize: 11 } },
+        series: [
+          {
+            name: "Safety (/5 · Mean 3.96)",
+            type: "bar",
+            barGap: "14%",
+            data: cujs.map(c => c.safety),
+            itemStyle: { color: "#38d6c4", borderRadius: [4, 4, 0, 0] },
+            label: { show: true, position: "top", color: "#38d6c4", fontSize: 10.5 }
+          },
+          {
+            name: "Usefulness (/5 · Mean 3.10)",
+            type: "bar",
+            data: cujs.map(c => c.usefulness),
+            itemStyle: { color: "#f4ae42", borderRadius: [4, 4, 0, 0] },
+            label: { show: true, position: "top", color: "#f4ae42", fontSize: 10.5 }
+          },
+          {
+            name: "Empirical Accuracy (/5 · Calibrated Skepticism)",
+            type: "bar",
+            data: cujs.map(c => c.accuracy),
+            itemStyle: { color: "#a78bfa", borderRadius: [4, 4, 0, 0] },
+            label: { show: true, position: "top", color: "#c4b5fd", fontSize: 10.5 }
+          },
+          {
+            name: "Autonomous Live Deployment Prob (0.00)",
+            type: "line",
+            symbolSize: 8,
+            data: cujs.map(c => c.auto_prob),
+            itemStyle: { color: "#f06a3b" },
+            lineStyle: { width: 2.5, type: "dashed" }
+          }
+        ]
+      });
+      charts.push(c5);
+    }
+
     window.addEventListener("resize", () => charts.forEach(c => c.resize()));
   }
 
-  if (window.echarts) mountCharts();
-  else window.addEventListener("load", mountCharts);
+  // Deterministic mount with retry poll so defer order never leaves blank chart boxes
+  let tries = 0;
+  const poll = setInterval(() => {
+    tries++;
+    if (window.echarts && PORTAL_DATA) {
+      clearInterval(poll);
+      mountCharts();
+    } else if (tries > 60) {
+      clearInterval(poll);
+    }
+  }, 60);
+  mountCharts();
 }
 
 /* ── 6. Kashefi Atlas Filter, Receipt JSON Inspector & BibTeX ── */
@@ -889,10 +1027,10 @@ function initTablesAndCitations() {
     atlasCount.textContent = `${rows.length} / ${PORTAL_DATA.atlas_contracts.length} Contracts Shown (42 Cards Audited)`;
     atlasTbody.innerHTML = rows.map(r => `
       <tr>
-        <td><code>${r.id}</code></td>
-        <td><strong style="color:var(--ink)">${r.name}</strong><br/><span style="font-size:0.75rem;color:var(--ink-dim)">${r.category}</span></td>
-        <td>${r.qspm_use}</td>
-        <td><code>${r.Scaling || r.complexity || "Gate-bounded"}</code></td>
+        <td><code>${r.id}</code><br/><span style="font-size:0.72rem;color:var(--ink-dim);text-transform:capitalize">${r.category}</span></td>
+        <td><strong style="color:var(--ink)">${r.name}</strong><br/><span style="font-family:var(--font-mono);font-size:0.73rem;color:var(--amber)">${r.paper}</span></td>
+        <td>${r.qspm_use_html}</td>
+        <td style="font-size:0.81rem;color:var(--ink)">${r.scaling_contract}</td>
         <td style="color:var(--ink-muted);font-size:0.8rem">${r.caveat}</td>
       </tr>
     `).join("");
@@ -900,7 +1038,6 @@ function initTablesAndCitations() {
   renderAtlas("");
   atlasInput?.addEventListener("input", e => renderAtlas(e.target.value));
 
-  // Receipts Census Table + Modal
   const recTbody = document.getElementById("receipts-tbody");
   const modal = document.getElementById("json-modal");
   const modalTitle = document.getElementById("json-modal-title");
@@ -939,7 +1076,6 @@ function initTablesAndCitations() {
   document.getElementById("json-modal-close")?.addEventListener("click", () => modal.classList.remove("open"));
   modal?.addEventListener("click", e => { if (e.target === modal) modal.classList.remove("open"); });
 
-  // BibTeX Tabs
   const bibPre = document.getElementById("bibtex-code");
   let activeBib = "monograph";
   if (bibPre) bibPre.textContent = BIBTEX_ENTRIES.monograph;
