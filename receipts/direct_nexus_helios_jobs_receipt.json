@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.1.0-direct-quantinuum-nexus-helios-1e-lite",
+  "timestamp_utc": "2026-11-11T16:46:57.076692+00:00",
+  "nexus_portal_url": "https://nexus.quantinuum.com/jobs",
+  "project_name": "Quantum-Social-Prescribing",
+  "project_id": "2d5eb5c3-14f5-4b0a-9efd-50e49f7897d4",
+  "backend": "Helios-1E-lite",
+  "physical_hardware_shots": 0,
+  "emulator_shots_total": 6144,
+  "jobs": {
+    "careplan_duet": {
+      "job_name": "quantum-social-prescribing-careplan-duet-20261111_164424",
+      "job_id": "b813e944-ddf0-4119-a770-585ed248b078",
+      "hugr_ref_id": "ddb31356-39c4-4225-9797-35cde263850e",
+      "shots": 2048,
+      "coherent_p00": 0.992676,
+      "coherent_s2_bits": 0.073946,
+      "collapsed_p00": 0.352539,
+      "collapsed_s2_bits": 1.850282
+    },
+    "zeno_8rungs": {
+      "job_name": "quantum-social-prescribing-zeno-8rungs-20261111_164424",
+      "job_id": "295cb111-1d8f-443f-817d-b016f6f379b6",
+      "hugr_ref_id": "dea3c4ef-9ffb-46d5-81e0-717897e4800f",
+      "shots": 2048,
+      "calibration_r2": 0.999948,
+      "blinded_qc_n3_calibrated": 0.638135,
+      "optimal_zeno_n6_calibrated": 0.656368,
+      "null_twin_calibrated": -0.045581,
+      "raw_contrasts": [
+        -0.46582,
+        -0.230469,
+        0.014648,
+        0.251953,
+        0.498047,
+        0.628906,
+        0.646484,
+        -0.030273
+      ],
+      "calibrated_contrasts": [
+        -0.49734,
+        -0.253228,
+        0.001013,
+        0.247151,
+        0.502405,
+        0.638135,
+        0.656368,
+        -0.045581
+      ]
+    },
+    "qspmlm_4q_vqc": {
+      "job_name": "quantum-social-prescribing-qspmlm-4q-vqc-20261111_164424",
+      "job_id": "6cc7b395-2af3-4be6-95ce-2d4d99db1bda",
+      "hugr_ref_id": "0f5a7f89-81c3-4476-a783-0503fed71c63",
+      "shots": 2048,
+      "bitstring_counts": {
+        "0000": 97,
+        "0001": 27,
+        "0010": 350,
+        "0011": 220,
+        "0100": 101,
+        "0101": 161,
+        "0110": 49,
+        "0111": 111,
+        "1000": 4,
+        "1001": 38,
+        "1010": 131,
+        "1011": 139,
+        "1100": 208,
+        "1101": 105,
+        "1110": 206,
+        "1111": 101
+      }
+    }
+  },
+  "receipt_sha256": "9f5e2ec181475a18363e690c79a29a7dd4d7871f767df5e37f0b2200c016edd1"
+}
