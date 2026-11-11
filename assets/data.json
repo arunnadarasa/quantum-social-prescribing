@@ -159,6 +159,1564 @@
       "auto_prob": 0.0
     }
   ],
+  "knowledge_graph": {
+    "@context": {
+      "@vocab": "https://schema.org/",
+      "qspm": "https://arunnadarasa.github.io/quantum-social-prescribing/ns#",
+      "snomed": "http://snomed.info/id/",
+      "ensembl": "https://identifiers.org/ensembl:",
+      "pdb": "https://identifiers.org/pdb:"
+    },
+    "@type": "Dataset",
+    "schema_version": "1.0.0-qspm-knowledge-graph",
+    "name": "Quantum Social Prescribing Multi-Tier Knowledge Graph (QSPM-KG v1.0)",
+    "timestamp_utc": "2026-11-11T19:03:44.192705+00:00",
+    "physical_hardware_shots": 0,
+    "wet_lab_experiments_performed": 0,
+    "synthetic_payload": true,
+    "categories": [
+      {
+        "id": "clinical_standard",
+        "label": "NHS Clinical, Equity & Post-Quantum Standards",
+        "short": "Clinical & FHIR",
+        "color": "#38d6c4",
+        "tier": "Tier 1 / 3"
+      },
+      {
+        "id": "care_pathway",
+        "label": "Socio-Clinical HUBO Pathways & VCFSE Hubs",
+        "short": "Care Pathways",
+        "color": "#10b981",
+        "tier": "Tier 1"
+      },
+      {
+        "id": "quantum_platform",
+        "label": "Quantum Emulators, Compilers & Gate G4 Solvers",
+        "short": "Quantum & G4 Engines",
+        "color": "#3b82f6",
+        "tier": "Tier 1 / 2 / 3"
+      },
+      {
+        "id": "atlas_primitive",
+        "label": "Kashefi Primitives Atlas v0.4 Contracts",
+        "short": "Kashefi Atlas",
+        "color": "#a78bfa",
+        "tier": "Tier 3"
+      },
+      {
+        "id": "biophysical_target",
+        "label": "Phenomenological Zeno, PNI Spins & Structural Loci",
+        "short": "PNI & Genomics",
+        "color": "#f4ae42",
+        "tier": "Tier 2"
+      },
+      {
+        "id": "governance_hazard",
+        "label": "TypeSafe Jev 1.14 & Open NHS DCB0129 Hazards",
+        "short": "DCB0129 & Jev",
+        "color": "#f06a3b",
+        "tier": "Tier 3"
+      },
+      {
+        "id": "provenance_receipt",
+        "label": "SHA-256 Cryptographic Provenance Receipts",
+        "short": "SHA-256 Receipts",
+        "color": "#94a3b8",
+        "tier": "Tier 3"
+      }
+    ],
+    "topology_metrics": {
+      "node_count": 56,
+      "edge_count": 86,
+      "connected_components": 1,
+      "is_fully_connected": true,
+      "network_density": 0.0558,
+      "undirected_diameter": 8,
+      "mean_shortest_path_length": 3.6552,
+      "category_counts": {
+        "clinical_standard": 6,
+        "care_pathway": 9,
+        "quantum_platform": 12,
+        "atlas_primitive": 9,
+        "biophysical_target": 6,
+        "governance_hazard": 5,
+        "provenance_receipt": 9
+      },
+      "relation_counts": {
+        "ENCODED_IN_FHIR_STANDARD": 1,
+        "ROUTES_TO_CLINICAL_REVIEW": 1,
+        "CO_PRODUCES_CARE_PLAN": 1,
+        "SIGNED_BY_PQC_SIGNATURE": 1,
+        "STRATIFIED_BY_EQUITY": 1,
+        "WEIGHTS_HUB_ALLOCATION": 1,
+        "ACTIVATES_PATHWAY": 1,
+        "SUPPRESSES_HAZARD": 1,
+        "CO_SELECTS_ASSET": 4,
+        "PRUNES_VENUE_FATIGUE": 1,
+        "PREVENTS_SIGNPOST_OVERLOAD": 1,
+        "CUBIC_SYNERGY_K012": 2,
+        "CUBIC_SYNERGY_K035": 2,
+        "CUBIC_FALLS_HAZARD_K267": 2,
+        "CUBIC_FATIGUE_K134": 1,
+        "SCHEDULING_CONFLICT": 1,
+        "MODELED_BY_FUNCTOR": 1,
+        "COMPILES_TO_HUGR": 1,
+        "EXECUTES_ON_EMULATOR": 2,
+        "CALIBRATES_READOUT": 2,
+        "OPTIMIZED_BY_LR_QAOA": 1,
+        "BENCHMARKED_AGAINST_G4_FLOOR": 1,
+        "ANNEALED_BY_QUBO": 1,
+        "SOLVED_EXACTLY_BY_MILP_KEMPE": 1,
+        "TRIAGED_BY_MULTITASK_VQC": 1,
+        "VERIFIED_ON_JOB_6CC7B395": 1,
+        "EXTINGUISHED_BY_PHASE_ORACLE": 1,
+        "MOTIVATES_OPEN_SYSTEM_FTQC": 1,
+        "DECOUPLES_DISCRETE_HUBO": 1,
+        "GOVERNED_BY_ATLAS_CARD": 10,
+        "SCHEDULES_FOLLOWUP": 1,
+        "ENTRAINS_ZEITGEBER_MODEL": 1,
+        "BUFFERS_VAGAL_TONE_MODEL": 1,
+        "SIMULATES_SPIN_0": 1,
+        "SIMULATES_SPIN_1": 1,
+        "SIMULATES_SPIN_2": 1,
+        "SIMULATES_SPIN_3": 1,
+        "COUPLED_VIA_XX_YY": 1,
+        "SUPPRESSES_IN_LINDBLAD": 1,
+        "STRUCTURAL_LIGAND_ANALOG": 1,
+        "PROSPECTIVE_SALIVARY_ASSAY": 2,
+        "AUDITS_CUJ_1": 1,
+        "AUDITS_CUJ_2": 1,
+        "AUDITS_CUJ_3": 1,
+        "AUDITS_CUJ_4": 1,
+        "MANDATES_PHARMACIST_GATE": 1,
+        "GUARDS_FALLS_ESCALATION": 1,
+        "PRESERVES_PATIENT_AUTONOMY": 1,
+        "REQUIRES_ICB_GRANT_PAIRING": 1,
+        "REQUIRES_CPRD_CALIBRATION": 1,
+        "DEMARCATES_METAPHOR_VS_RCT": 1,
+        "VERIFIED_BY_RECEIPT": 17
+      },
+      "top_bridge_hubs": [
+        {
+          "id": "LINK_WORKER_WMTY",
+          "label": "Link-Worker 'What Matters To You' Co-Production",
+          "category": "clinical_standard",
+          "total_degree": 10,
+          "betweenness_centrality": 0.2535
+        },
+        {
+          "id": "ZENO_CADENCE_CHANNEL",
+          "label": "2-Qubit Non-Markovian Zeno/Anti-Zeno Channel",
+          "category": "biophysical_target",
+          "total_degree": 6,
+          "betweenness_centrality": 0.2371
+        },
+        {
+          "id": "HQS_STRUQTURE_QOQO",
+          "label": "HQS struqture-py + qoqo 4-Spin Lindbladian",
+          "category": "quantum_platform",
+          "total_degree": 8,
+          "betweenness_centrality": 0.2062
+        },
+        {
+          "id": "ROSENBERG_HIGHS_MILP",
+          "label": "Rosenberg + HiGHS MILP & 4-Bit Kempe Swaps (Gate G4)",
+          "category": "quantum_platform",
+          "total_degree": 4,
+          "betweenness_centrality": 0.1708
+        },
+        {
+          "id": "HAIQU_SDK_V171",
+          "label": "Haiqu SDK v1.7.1 (LR-QAOA + TN Compression + OBP)",
+          "category": "quantum_platform",
+          "total_degree": 6,
+          "betweenness_centrality": 0.1627
+        },
+        {
+          "id": "HAZARD_H04_DEMARCATION",
+          "label": "H-QSPM-04 [OPEN]: Over-Interpreting Zeno/PNI Curves",
+          "category": "governance_hazard",
+          "total_degree": 3,
+          "betweenness_centrality": 0.1171
+        },
+        {
+          "id": "ACTIVE_D7_FTQC",
+          "label": "Active d >= 7 QEC Lindbladian FTQC Frontier",
+          "category": "quantum_platform",
+          "total_degree": 3,
+          "betweenness_centrality": 0.107
+        },
+        {
+          "id": "PATH_x0_SMR",
+          "label": "x0: Pharmacy SMR Deprescribing",
+          "category": "care_pathway",
+          "total_degree": 5,
+          "betweenness_centrality": 0.1003
+        }
+      ]
+    },
+    "nodes": [
+      {
+        "id": "NHS_DAPB4066",
+        "label": "NHS DAPB4066 Referral Standard",
+        "category": "clinical_standard",
+        "tier": "Tier 1 / 3",
+        "external_id": "SNOMED CT 871731000000106 \u00b7 FHIR R4",
+        "metric": "1,090-byte synthetic FHIR R4 Bundle; CPRD national rollout anchor (Bu et al. 2025)",
+        "epistemic_status": "Verified NHS Information Standard (synthetic_payload: true)",
+        "in_degree": 1,
+        "out_degree": 3,
+        "total_degree": 4,
+        "degree_centrality": 0.0727,
+        "betweenness_centrality": 0.0894,
+        "closeness_centrality": 0.3254
+      },
+      {
+        "id": "PHARMACY_SMR",
+        "label": "Community Pharmacy SMR (Deprescribing)",
+        "category": "clinical_standard",
+        "tier": "Tier 1",
+        "external_id": "SNOMED CT 1364751000000104 \u00b7 Rathbone et al. 2024",
+        "metric": "Walk-in ACB & sedative polypharmacy deprescribing coupled with VCFSE referral",
+        "epistemic_status": "Peer-reviewed clinical pathway (PLOS ONE 2024)",
+        "in_degree": 1,
+        "out_degree": 2,
+        "total_degree": 3,
+        "degree_centrality": 0.0545,
+        "betweenness_centrality": 0.0257,
+        "closeness_centrality": 0.2941
+      },
+      {
+        "id": "LINK_WORKER_WMTY",
+        "label": "Link-Worker 'What Matters To You' Co-Production",
+        "category": "clinical_standard",
+        "tier": "Tier 1 / 2",
+        "external_id": "SNOMED CT 871691000000100 \u00b7 Muhl et al. 2023",
+        "metric": "Preserves multi-pathway context prior to shared care-plan lock (100% human authority)",
+        "epistemic_status": "International Delphi definition (BMJ Open 2023)",
+        "in_degree": 2,
+        "out_degree": 8,
+        "total_degree": 10,
+        "degree_centrality": 0.1818,
+        "betweenness_centrality": 0.2535,
+        "closeness_centrality": 0.3819
+      },
+      {
+        "id": "LONELINESS_ISOLATION",
+        "label": "Chronic Loneliness & Multimorbidity Cohort",
+        "category": "clinical_standard",
+        "tier": "Tier 1 / 2",
+        "external_id": "SNOMED CT 267076002 \u00b7 N_cohort = 2,400",
+        "metric": "Synthetic 8-feature socio-clinical cohort (Regime A archetypes + Regime B cubic k=3)",
+        "epistemic_status": "Synthetic cohort (0 patient EHR records)",
+        "in_degree": 0,
+        "out_degree": 3,
+        "total_degree": 3,
+        "degree_centrality": 0.0545,
+        "betweenness_centrality": 0.0587,
+        "closeness_centrality": 0.285
+      },
+      {
+        "id": "CORE20PLUS5_IMD",
+        "label": "NHS Core20PLUS5 Equity (IMD Deciles 1\u20132)",
+        "category": "clinical_standard",
+        "tier": "Tier 1",
+        "external_id": "NHS England Core20PLUS5 \u00b7 MSE Trust Strategy",
+        "metric": "Priority deprivation weights w_p in [1.444, 1.500]; Core20 affinity 0.8584 vs 0.7518",
+        "epistemic_status": "Operational equity objective",
+        "in_degree": 1,
+        "out_degree": 1,
+        "total_degree": 2,
+        "degree_centrality": 0.0364,
+        "betweenness_centrality": 0.0262,
+        "closeness_centrality": 0.2644
+      },
+      {
+        "id": "NIST_ML_DSA_65",
+        "label": "NIST FIPS 204 ML-DSA-65 + CIS2 RS256",
+        "category": "clinical_standard",
+        "tier": "Tier 3",
+        "external_id": "doi:10.6028/NIST.FIPS.204 \u00b7 dilithium-py v1.5.1",
+        "metric": "pk=1,952 B, sig=3,309 B, verify_ok=True, replay_rejected=True (89.35 ms)",
+        "epistemic_status": "Cryptographically verified post-quantum provenance",
+        "in_degree": 1,
+        "out_degree": 1,
+        "total_degree": 2,
+        "degree_centrality": 0.0364,
+        "betweenness_centrality": 0.0125,
+        "closeness_centrality": 0.2644
+      },
+      {
+        "id": "PATH_x0_SMR",
+        "label": "x0: Pharmacy SMR Deprescribing",
+        "category": "care_pathway",
+        "tier": "Tier 1",
+        "external_id": "HUBO Bit x0 = 1 (SELECTED)",
+        "metric": "Linear bias h0 = -2.4; cubic anchors K_012 = -3.8 & K_035 = -3.4; J_06 = +6.0",
+        "epistemic_status": "Selected in exact ground bundle 11110100",
+        "in_degree": 2,
+        "out_degree": 3,
+        "total_degree": 5,
+        "degree_centrality": 0.0909,
+        "betweenness_centrality": 0.1003,
+        "closeness_centrality": 0.3161
+      },
+      {
+        "id": "PATH_x1_GREEN",
+        "label": "x1: Green Nature Horticulture",
+        "category": "care_pathway",
+        "tier": "Tier 1",
+        "external_id": "HUBO Bit x1 = 1 (SELECTED)",
+        "metric": "Linear bias h1 = -1.9; J_12 = -1.1; cubic outdoor mobility synergy K_012 = -3.8",
+        "epistemic_status": "Selected in exact ground bundle 11110100",
+        "in_degree": 2,
+        "out_degree": 2,
+        "total_degree": 4,
+        "degree_centrality": 0.0727,
+        "betweenness_centrality": 0.0301,
+        "closeness_centrality": 0.3274
+      },
+      {
+        "id": "PATH_x2_ZEITGEBER",
+        "label": "x2: Movement & Circadian Zeitgeber",
+        "category": "care_pathway",
+        "tier": "Tier 1",
+        "external_id": "HUBO Bit x2 = 1 (SELECTED)",
+        "metric": "Linear bias h2 = -2.1; cubic synergy K_012 = -3.8; falls hazard penalty K_267 = +6.5",
+        "epistemic_status": "Selected in exact ground bundle 11110100",
+        "in_degree": 2,
+        "out_degree": 2,
+        "total_degree": 4,
+        "degree_centrality": 0.0727,
+        "betweenness_centrality": 0.0432,
+        "closeness_centrality": 0.3235
+      },
+      {
+        "id": "PATH_x3_WELFARE",
+        "label": "x3: Welfare, Debt & Housing Clinic",
+        "category": "care_pathway",
+        "tier": "Tier 1",
+        "external_id": "HUBO Bit x3 = 1 (SELECTED)",
+        "metric": "Linear bias h3 = -2.6; J_03 = -1.3; cubic adherence/relief synergy K_035 = -3.4",
+        "epistemic_status": "Selected in exact ground bundle 11110100",
+        "in_degree": 2,
+        "out_degree": 1,
+        "total_degree": 3,
+        "degree_centrality": 0.0545,
+        "betweenness_centrality": 0.0288,
+        "closeness_centrality": 0.3274
+      },
+      {
+        "id": "PATH_x4_CHOIR",
+        "label": "x4: Community Arts Choir (Pruned)",
+        "category": "care_pathway",
+        "tier": "Tier 1",
+        "external_id": "HUBO Bit x4 = 0 (OPTIMIZED OUT)",
+        "metric": "Linear bias h4 = -1.5 outweighed by scheduling conflicts J_14+J_45+K_134 = +5.5 (+4.00 net cost)",
+        "epistemic_status": "Pruned at E0 = -20.3000 to prevent venue fatigue",
+        "in_degree": 2,
+        "out_degree": 1,
+        "total_degree": 3,
+        "degree_centrality": 0.0545,
+        "betweenness_centrality": 0.0016,
+        "closeness_centrality": 0.3073
+      },
+      {
+        "id": "PATH_x5_PEER",
+        "label": "x5: Peer Befriending Circle",
+        "category": "care_pathway",
+        "tier": "Tier 1",
+        "external_id": "HUBO Bit x5 = 1 (SELECTED)",
+        "metric": "Linear bias h5 = -1.7; cubic stabilization K_035 = -3.4; overload conflict J_57 = +4.5",
+        "epistemic_status": "Selected in exact ground bundle 11110100",
+        "in_degree": 3,
+        "out_degree": 1,
+        "total_degree": 4,
+        "degree_centrality": 0.0727,
+        "betweenness_centrality": 0.0584,
+        "closeness_centrality": 0.3254
+      },
+      {
+        "id": "PATH_x6_ACB_HAZARD",
+        "label": "x6: Unreviewed High-ACB Polypharmacy",
+        "category": "care_pathway",
+        "tier": "Tier 1",
+        "external_id": "HUBO Bit x6 = 0 (SUPPRESSED HAZARD)",
+        "metric": "Penalty h6 = +2.8, J_06 = +6.0, cubic falls hazard K_267 = +6.5; 100% safety recall in QSPMLM",
+        "epistemic_status": "Suppressed clinical hazard state",
+        "in_degree": 3,
+        "out_degree": 1,
+        "total_degree": 4,
+        "degree_centrality": 0.0727,
+        "betweenness_centrality": 0.0224,
+        "closeness_centrality": 0.2895
+      },
+      {
+        "id": "PATH_x7_OVERLOAD",
+        "label": "x7: Uncoordinated Signposting Overload",
+        "category": "care_pathway",
+        "tier": "Tier 1",
+        "external_id": "HUBO Bit x7 = 0 (SUPPRESSED HAZARD)",
+        "metric": "Penalty h7 = +3.2, J_57 = +4.5, cubic overload hazard K_267 = +6.5",
+        "epistemic_status": "Suppressed administrative failure mode",
+        "in_degree": 2,
+        "out_degree": 1,
+        "total_degree": 3,
+        "degree_centrality": 0.0545,
+        "betweenness_centrality": 0.04,
+        "closeness_centrality": 0.2941
+      },
+      {
+        "id": "VCFSE_5_HUBS",
+        "label": "5 Neighbourhood VCFSE Hubs (Caps [5,5,5,5,4])",
+        "category": "care_pathway",
+        "tier": "Tier 1",
+        "external_id": "120-Var Transportation QUBO \u00b7 N_pat = 24",
+        "metric": "0 one-hot & 0 cap violations; exact MILP & 4-bit Kempe-swap optimum = 29.4491",
+        "epistemic_status": "Capacity-protected community hub allocation",
+        "in_degree": 2,
+        "out_degree": 2,
+        "total_degree": 4,
+        "degree_centrality": 0.0727,
+        "betweenness_centrality": 0.0863,
+        "closeness_centrality": 0.2835
+      },
+      {
+        "id": "NEXUS_HELIOS_1E_LITE",
+        "label": "Quantinuum Nexus Helios-1E-lite (26q Emulator)",
+        "category": "quantum_platform",
+        "tier": "Tier 1",
+        "external_id": "HeliosConfig \u00b7 QSystemErrorModel='alpha' \u00b7 0.00 HQC",
+        "metric": "Emulator for Helios-1 with full error modelling on lightweight classical compute; 6,144 shots across Jobs b813e944 (P00=0.9927), 295cb111 (R\u00b2=0.99995), 6cc7b395",
+        "epistemic_status": "Live cloud emulator execution (0 physical QPU shots)",
+        "in_degree": 2,
+        "out_degree": 3,
+        "total_degree": 5,
+        "degree_centrality": 0.0909,
+        "betweenness_centrality": 0.0995,
+        "closeness_centrality": 0.3005
+      },
+      {
+        "id": "CLOUD_H2_EMULATOR",
+        "label": "Cloud aqora:nexus:H2-Emulator (26q)",
+        "category": "quantum_platform",
+        "tier": "Tier 1",
+        "external_id": "Jobs AFByb3Zp...3O_tYw \u00b7 ...j7T_Zg \u00b7 ...4-zurw",
+        "metric": "1,536 shots; coherent Bell P(00)=0.9980 (29 rebased gates) vs collapsed 0.5000 (24 gates, S2=1.4149 b)",
+        "epistemic_status": "Live cloud H2 full-error-model emulator (0 physical QPU shots)",
+        "in_degree": 1,
+        "out_degree": 3,
+        "total_degree": 4,
+        "degree_centrality": 0.0727,
+        "betweenness_centrality": 0.0428,
+        "closeness_centrality": 0.285
+      },
+      {
+        "id": "GUPPY_HUGR_SELENE",
+        "label": "Guppy 1.0 -> HUGR & Selene HeliosInterface",
+        "category": "quantum_platform",
+        "tier": "Tier 1",
+        "external_id": "7,247 B HUGR (3793da66\u2026) \u00b7 3,072 Selene Shots",
+        "metric": "Linear-typed mid-circuit ASPS parity screening: 98.82% visibility (99.6% shot retention)",
+        "epistemic_status": "Compiled HUGR binary + local noisy emulator",
+        "in_degree": 1,
+        "out_degree": 3,
+        "total_degree": 4,
+        "degree_centrality": 0.0727,
+        "betweenness_centrality": 0.0268,
+        "closeness_centrality": 0.2683
+      },
+      {
+        "id": "HAIQU_SDK_V171",
+        "label": "Haiqu SDK v1.7.1 (LR-QAOA + TN Compression + OBP)",
+        "category": "quantum_platform",
+        "tier": "Tier 1",
+        "external_id": "Depth 241 -> 14 (-94.19%) \u00b7 5.604 s Compile",
+        "metric": "765/1,024 (74.71%) raw pre-postprocessing shots hit E0=-20.3000; 60-Pauli OBP cuts 24 -> 0 gates",
+        "epistemic_status": "Cloud tensor-network compiler + aer_simulator (0 physical QPU shots)",
+        "in_degree": 1,
+        "out_degree": 5,
+        "total_degree": 6,
+        "degree_centrality": 0.1091,
+        "betweenness_centrality": 0.1627,
+        "closeness_centrality": 0.3022
+      },
+      {
+        "id": "OPENJIJ_QUBO",
+        "label": "OpenJij + JijModeling 1.14.2 (120-Var QUBO)",
+        "category": "quantum_platform",
+        "tier": "Tier 1",
+        "external_id": "500 Reads x 2,500 Sweeps \u00b7 1,090.8 ms",
+        "metric": "0 constraint violations; single-spin-flip SA stalls at 24.3804 (82.79%) across +20.0 barrier",
+        "epistemic_status": "Thermal simulated annealing benchmark",
+        "in_degree": 1,
+        "out_degree": 2,
+        "total_degree": 3,
+        "degree_centrality": 0.0545,
+        "betweenness_centrality": 0.0407,
+        "closeness_centrality": 0.2361
+      },
+      {
+        "id": "ROSENBERG_HIGHS_MILP",
+        "label": "Rosenberg + HiGHS MILP & 4-Bit Kempe Swaps (Gate G4)",
+        "category": "quantum_platform",
+        "tier": "Tier 1 / 3",
+        "external_id": "Rosenberg 1975 \u00b7 scipy.optimize.milp (HiGHS)",
+        "metric": "Solves sparse 3-body HUBOs in 14.5 ms (n=8), 51.4 ms (n=24), 1.32 s (n=48), 0.11 s (n=60); Kempe swaps 100.00% in 8.72 ms",
+        "epistemic_status": "Exact classical baseline dominating discrete optimization up to n=60",
+        "in_degree": 2,
+        "out_degree": 2,
+        "total_degree": 4,
+        "degree_centrality": 0.0727,
+        "betweenness_centrality": 0.1708,
+        "closeness_centrality": 0.3293
+      },
+      {
+        "id": "MODAL_HF_QSPMLM",
+        "label": "Modal + Hugging Face 4q QSPMLM (VQC & QKernel vs GBDT/SVM)",
+        "category": "quantum_platform",
+        "tier": "Tier 1",
+        "external_id": "socialprescribing/quantinuum-social-prescribing",
+        "metric": "60q+99c=159 params; Regime A: VQC & full-split QKernel 99.79%; Cubic k=3 Regime B: VQC 65.21% vs LogReg 32.71%, GBDT 77.92%, RBF-SVM 79.58%",
+        "epistemic_status": "Serverless statevector QML + Gate G4 tabular baselines",
+        "in_degree": 1,
+        "out_degree": 3,
+        "total_degree": 4,
+        "degree_centrality": 0.0727,
+        "betweenness_centrality": 0.0599,
+        "closeness_centrality": 0.2683
+      },
+      {
+        "id": "DISCOPY_MOTH_Q4",
+        "label": "DisCoPy v1.2.2 Functor & Moth Quantum Q4 Blur",
+        "category": "quantum_platform",
+        "tier": "Tier 2",
+        "external_id": "F: C_QSPM -> FHilb \u00b7 U_blur = R_X(pi/3)^\u22974",
+        "metric": "Snake identity error 2.22e-16; Q4 capacity diffusion lowers Gini 0.8750 -> 0.4609 (-47.3%)",
+        "epistemic_status": "Exact categorical unit test & hypercube diffusion operator",
+        "in_degree": 1,
+        "out_degree": 2,
+        "total_degree": 3,
+        "degree_centrality": 0.0545,
+        "betweenness_centrality": 0.0533,
+        "closeness_centrality": 0.3039
+      },
+      {
+        "id": "RHYME_SYMBOLIC",
+        "label": "Rhyme (rhyme-beta 0.1.0b1) Symbolic Compiler",
+        "category": "quantum_platform",
+        "tier": "Tier 2",
+        "external_id": "Modal Cloud \u00b7 4/4 Compiler Programs PASS",
+        "metric": "Exact linear-algebraic phase cancellation (0/1,024 maladaptive leakage; 0 bfunc oracle violations)",
+        "epistemic_status": "Deterministic compiler verification check",
+        "in_degree": 1,
+        "out_degree": 1,
+        "total_degree": 2,
+        "degree_centrality": 0.0364,
+        "betweenness_centrality": 0.0141,
+        "closeness_centrality": 0.2546
+      },
+      {
+        "id": "HQS_STRUQTURE_QOQO",
+        "label": "HQS struqture-py + qoqo 4-Spin Lindbladian",
+        "category": "quantum_platform",
+        "tier": "Tier 2",
+        "external_id": "31 qoqo PragmaDamping/Dephasing Ops \u00b7 156.9 ms",
+        "metric": "49-point sensitivity sweep: median -76.6% simulated IL-6 (IQR 70.3\u201382.8%), -65.0% cortisol",
+        "epistemic_status": "Uncalibrated phenomenological open-system model",
+        "in_degree": 1,
+        "out_degree": 7,
+        "total_degree": 8,
+        "degree_centrality": 0.1455,
+        "betweenness_centrality": 0.2062,
+        "closeness_centrality": 0.3333
+      },
+      {
+        "id": "TEXT2WETLAB_OT2",
+        "label": "Text2WetLab Opentrons OT-2 Protocol Verifier",
+        "category": "quantum_platform",
+        "tier": "Tier 2",
+        "external_id": "protocols/qspm_salivary_cortisol_il6_ot2.py",
+        "metric": "89-line apiLevel 2.15 ELISA deck/pipette script: 6/6 static AST & geometry checks PASS",
+        "epistemic_status": "In-silico robotic verification (0 wet-lab runs)",
+        "in_degree": 2,
+        "out_degree": 1,
+        "total_degree": 3,
+        "degree_centrality": 0.0545,
+        "betweenness_centrality": 0.0196,
+        "closeness_centrality": 0.2489
+      },
+      {
+        "id": "ACTIVE_D7_FTQC",
+        "label": "Active d >= 7 QEC Lindbladian FTQC Frontier",
+        "category": "quantum_platform",
+        "tier": "Tier 3",
+        "external_id": "Proctor arXiv:2609.12146 \u00b7 Nelson arXiv:2610.14202",
+        "metric": "Decouples O(n_spin * 4^n_spin) open Lindbladians (crossover n_spin >= 12\u201316) from MILP-tractable HUBOs",
+        "epistemic_status": "Asymptotic fault-tolerant resource projection",
+        "in_degree": 2,
+        "out_degree": 1,
+        "total_degree": 3,
+        "degree_centrality": 0.0545,
+        "betweenness_centrality": 0.107,
+        "closeness_centrality": 0.3039
+      },
+      {
+        "id": "ATLAS_P13",
+        "label": "Atlas P13: Overlap & Expectation Estimation",
+        "category": "atlas_primitive",
+        "tier": "Tier 3",
+        "external_id": "Kashefi Atlas Card P13 \u00b7 Gheorghiu et al. 2019",
+        "metric": "Implemented via O(1/eps^2) projective shot sampling (not O(1/eps) QAE); classically trivial at n=3",
+        "epistemic_status": "Simulability boundary disclosed",
+        "in_degree": 2,
+        "out_degree": 0,
+        "total_degree": 2,
+        "degree_centrality": 0.0364,
+        "betweenness_centrality": 0.0012,
+        "closeness_centrality": 0.235
+      },
+      {
+        "id": "ATLAS_P20",
+        "label": "Atlas P20: Quantum Comb / Sequential Channel",
+        "category": "atlas_primitive",
+        "tier": "Tier 3",
+        "external_id": "Kashefi Atlas Card P20 \u00b7 Chiribella et al. 2008",
+        "metric": "8-rung mid-circuit calibration verifies emulator linearity (R\u00b2=0.99995); 2q ODE takes 1.31 ms",
+        "epistemic_status": "Simulability boundary disclosed",
+        "in_degree": 1,
+        "out_degree": 0,
+        "total_degree": 1,
+        "degree_centrality": 0.0182,
+        "betweenness_centrality": 0.0,
+        "closeness_centrality": 0.2723
+      },
+      {
+        "id": "ATLAS_A01D",
+        "label": "Atlas A01d: Alternating-Operator Ansatz (LR-QAOA)",
+        "category": "atlas_primitive",
+        "tier": "Tier 3",
+        "external_id": "Kashefi Atlas Card A01d \u00b7 Farhi et al. 2014",
+        "metric": "Heuristic HUBO circuit; sparse 3-body instances up to n=60 solve exactly via Rosenberg + HiGHS MILP",
+        "epistemic_status": "Classical MILP dominance disclosed",
+        "in_degree": 1,
+        "out_degree": 0,
+        "total_degree": 1,
+        "degree_centrality": 0.0182,
+        "betweenness_centrality": 0.0,
+        "closeness_centrality": 0.2331
+      },
+      {
+        "id": "ATLAS_P08",
+        "label": "Atlas P08: Adiabatic & Thermal Annealing",
+        "category": "atlas_primitive",
+        "tier": "Tier 3",
+        "external_id": "Kashefi Atlas Card P08 \u00b7 Kadowaki & Nishimori 1998",
+        "metric": "Totally unimodular linear assignment solves exactly via HiGHS MILP (10.25 ms) & Kempe swaps (8.72 ms)",
+        "epistemic_status": "Exact LP/MILP integrality disclosed",
+        "in_degree": 1,
+        "out_degree": 0,
+        "total_degree": 1,
+        "degree_centrality": 0.0182,
+        "betweenness_centrality": 0.0,
+        "closeness_centrality": 0.1916
+      },
+      {
+        "id": "ATLAS_P09",
+        "label": "Atlas P09: Structured Data Manifold Encoding",
+        "category": "atlas_primitive",
+        "tier": "Tier 3",
+        "external_id": "Kashefi Atlas Card P09 \u00b7 Haiqu EME",
+        "metric": "Loads 8D vector into n=4 qubits (dim=16, fidelity 1.000) without QRAM; O(2^n) classically simulable",
+        "epistemic_status": "Simulability boundary disclosed",
+        "in_degree": 1,
+        "out_degree": 0,
+        "total_degree": 1,
+        "degree_centrality": 0.0182,
+        "betweenness_centrality": 0.0,
+        "closeness_centrality": 0.2331
+      },
+      {
+        "id": "ATLAS_A01G",
+        "label": "Atlas A01g: Equivariant & Frobenius Ansatz",
+        "category": "atlas_primitive",
+        "tier": "Tier 3",
+        "external_id": "Kashefi Atlas Card A01g \u00b7 2x2 Matched-Depth Control",
+        "metric": "Separates 119.2x depth decay from 5.83x matched L=2n variance retention at n=10; no speedup proof",
+        "epistemic_status": "2x2 factorial control verified",
+        "in_degree": 1,
+        "out_degree": 1,
+        "total_degree": 2,
+        "degree_centrality": 0.0364,
+        "betweenness_centrality": 0.0121,
+        "closeness_centrality": 0.2607
+      },
+      {
+        "id": "ATLAS_P22",
+        "label": "Atlas P22: Open-System Lindbladian Simulation",
+        "category": "atlas_primitive",
+        "tier": "Tier 3",
+        "external_id": "Kashefi Atlas Card P22 \u00b7 polynomial Trotterization",
+        "metric": "Compiled via O(tau^(1+1/p)/eps^(1/p)) Trotter steps (vs FTQC O(tau+log(1/eps))); 4^4=256 takes 156.9 ms",
+        "epistemic_status": "Trotter vs block-encoding gap disclosed",
+        "in_degree": 1,
+        "out_degree": 0,
+        "total_degree": 1,
+        "degree_centrality": 0.0182,
+        "betweenness_centrality": 0.0,
+        "closeness_centrality": 0.2511
+      },
+      {
+        "id": "ATLAS_A01H",
+        "label": "Atlas A01h: Residue-Contact Quantum Graph Circuit",
+        "category": "atlas_primitive",
+        "tier": "Tier 3",
+        "external_id": "Kashefi Atlas Card A01h \u00b7 Patil, Bonde & Choubey 2026",
+        "metric": "9-qubit RY/CRY/RYY peptide circuit (dim=512); Gate G4 additive solvation floor takes 1.06 ms",
+        "epistemic_status": "Bounded-size simulability disclosed",
+        "in_degree": 1,
+        "out_degree": 0,
+        "total_degree": 1,
+        "degree_centrality": 0.0182,
+        "betweenness_centrality": 0.0,
+        "closeness_centrality": 0.1877
+      },
+      {
+        "id": "ATLAS_X03",
+        "label": "Atlas X03: SKQD & Pauli Backprop (OBP Dequantisation)",
+        "category": "atlas_primitive",
+        "tier": "Tier 3",
+        "external_id": "Kashefi Atlas Card X03 \u00b7 24 -> 0 Quantum Gates",
+        "metric": "Reducing 24 gates to 0 over 60 Paulis (157.85 ms) is complete classical Heisenberg dequantisation",
+        "epistemic_status": "Exact classical dequantisation verified",
+        "in_degree": 1,
+        "out_degree": 0,
+        "total_degree": 1,
+        "degree_centrality": 0.0182,
+        "betweenness_centrality": 0.0,
+        "closeness_centrality": 0.2331
+      },
+      {
+        "id": "ZENO_CADENCE_CHANNEL",
+        "label": "2-Qubit Non-Markovian Zeno/Anti-Zeno Channel",
+        "category": "biophysical_target",
+        "tier": "Tier 2",
+        "external_id": "Kofman & Kurizki 2000 \u00b7 H_SE + D_S + U_kick",
+        "metric": "Baseline Anti-Zeno dip N=1 (0.7541), peak N*=6 (0.8349); 125-pt grid median N*=4 (IQR [0,6], turnover 63.2%)",
+        "epistemic_status": "Phenomenological cadence metaphor (requires CPRD survival fit)",
+        "in_degree": 4,
+        "out_degree": 2,
+        "total_degree": 6,
+        "degree_centrality": 0.1091,
+        "betweenness_centrality": 0.2371,
+        "closeness_centrality": 0.3716
+      },
+      {
+        "id": "GENE_BMAL1_SCN",
+        "label": "Spin 0: BMAL1 Circadian Pacemaker (ENSG00000133794.20)",
+        "category": "biophysical_target",
+        "tier": "Tier 2",
+        "external_id": "GENCODE v46 chr11:13277789-13387266 \u00b7 Ehlers 1988",
+        "metric": "AlphaGenome MANE Select locus; 24-node Kuramoto Social Zeitgeber order R: 0.2370 -> 0.9723",
+        "epistemic_status": "Reference genomic metadata + phenomenological oscillator",
+        "in_degree": 2,
+        "out_degree": 1,
+        "total_degree": 3,
+        "degree_centrality": 0.0545,
+        "betweenness_centrality": 0.0266,
+        "closeness_centrality": 0.2895
+      },
+      {
+        "id": "GENE_NR3C1_HPA",
+        "label": "Spin 1: NR3C1 HPA Cortisol Axis (ENSG00000113580.15)",
+        "category": "biophysical_target",
+        "tier": "Tier 2",
+        "external_id": "GENCODE v46 chr5:143277933-143403686 \u00b7 Cacioppo 2015",
+        "metric": "Simulated HPA excitation P1: 0.6917 -> 0.2485 (-64.08%; 49-pt median -65.0%)",
+        "epistemic_status": "Reference genomic metadata + phenomenological spin",
+        "in_degree": 2,
+        "out_degree": 1,
+        "total_degree": 3,
+        "degree_centrality": 0.0545,
+        "betweenness_centrality": 0.015,
+        "closeness_centrality": 0.275
+      },
+      {
+        "id": "GENE_OXTR_6TPK",
+        "label": "Spin 2: OXTR Vagal Buffer & PDB 6TPK (ENSG00000180914.11)",
+        "category": "biophysical_target",
+        "tier": "Tier 2",
+        "external_id": "GENCODE v46 chr3:8750380-8769613 \u00b7 Waltenspuhl 2020",
+        "metric": "Antagonist crystal PDB 6TPK: 0 steric clashes < 2.0 \u00c5 (min 2.4394 \u00c5); couples g_oxt to HPA/IL-6 spins",
+        "epistemic_status": "Static crystal QC + phenomenological vagal buffer spin",
+        "in_degree": 2,
+        "out_degree": 2,
+        "total_degree": 4,
+        "degree_centrality": 0.0727,
+        "betweenness_centrality": 0.0731,
+        "closeness_centrality": 0.291
+      },
+      {
+        "id": "GENE_IL6_CYTOKINE",
+        "label": "Spin 3: IL6 Inflammatory Cytokine (ENSG00000136244.12)",
+        "category": "biophysical_target",
+        "tier": "Tier 2",
+        "external_id": "GENCODE v46 chr7:22727199-22731998",
+        "metric": "Simulated IL-6 excitation P3: 0.8462 -> 0.1987 (-76.52%; 49-pt grid median -76.6%, span 58.4\u201392.1%)",
+        "epistemic_status": "Phenomenological biomarker hypothesis (prospective OT-2 assay target)",
+        "in_degree": 2,
+        "out_degree": 1,
+        "total_degree": 3,
+        "degree_centrality": 0.0545,
+        "betweenness_centrality": 0.0178,
+        "closeness_centrality": 0.2764
+      },
+      {
+        "id": "PEPTIDE_1XY1_QPROTSIM",
+        "label": "Deamino-Oxytocin PDB 1XY1 (9q QProtSim)",
+        "category": "biophysical_target",
+        "tier": "Tier 2",
+        "external_id": "Wood et al. Science 1986 \u00b7 Chain A HETATM MPT1",
+        "metric": "Mpt1*-Cys6 S-S = 1.9533 \u00c5; E_solv = -20.69 \u00b1 11.74 kJ/mol (shot SE \u00b10.092) vs G4 floor -27.64 kJ/mol (1.06 ms)",
+        "epistemic_status": "Standalone structural energetics benchmark",
+        "in_degree": 1,
+        "out_degree": 2,
+        "total_degree": 3,
+        "degree_centrality": 0.0545,
+        "betweenness_centrality": 0.0385,
+        "closeness_centrality": 0.2301
+      },
+      {
+        "id": "TYPESAFE_JEV_114",
+        "label": "TypeSafe Jev 1.14 Multi-Method Audit (arXiv:2611.05127)",
+        "category": "governance_hazard",
+        "tier": "Tier 3",
+        "external_id": "Montgomery-Taylor et al. Nov 2026 \u00b7 jev-latest",
+        "metric": "Mean Safety 3.96/5, Usefulness 3.10/5, Accuracy 2.15/5, P_auto = 0.00, zero-hype demarcation p = 1.000",
+        "epistemic_status": "Live System One multi-method clinical governance audit",
+        "in_degree": 0,
+        "out_degree": 5,
+        "total_degree": 5,
+        "degree_centrality": 0.0909,
+        "betweenness_centrality": 0.0924,
+        "closeness_centrality": 0.3216
+      },
+      {
+        "id": "HAZARD_H01_FALLS",
+        "label": "H-QSPM-01 [OPEN]: Unreviewed Deprescribing / Falls",
+        "category": "governance_hazard",
+        "tier": "Tier 3",
+        "external_id": "NHS DCB0129 CUJ-1 \u00b7 Safe 4.29/5 \u00b7 Comp 72.2%",
+        "metric": "P_auto = 0.00; mandatory human Community Pharmacist & GP SMR sign-off + falls clearance",
+        "epistemic_status": "OPEN clinical safety hazard",
+        "in_degree": 1,
+        "out_degree": 2,
+        "total_degree": 3,
+        "degree_centrality": 0.0545,
+        "betweenness_centrality": 0.0277,
+        "closeness_centrality": 0.288
+      },
+      {
+        "id": "HAZARD_H02_AUTONOMY",
+        "label": "H-QSPM-02 [OPEN]: Algorithmic Nudging vs WMTY",
+        "category": "governance_hazard",
+        "tier": "Tier 3",
+        "external_id": "NHS DCB0129 CUJ-2 \u00b7 Acc 1.4/5 \u00b7 Safe 3.69/5",
+        "metric": "P_auto = 0.00; Jev penalizes unvalidated Bell contextuality (1.40/5); Link Worker retains 100% authority",
+        "epistemic_status": "OPEN relational autonomy hazard",
+        "in_degree": 1,
+        "out_degree": 1,
+        "total_degree": 2,
+        "degree_centrality": 0.0364,
+        "betweenness_centrality": 0.0219,
+        "closeness_centrality": 0.3073
+      },
+      {
+        "id": "HAZARD_H03_DUMPING",
+        "label": "H-QSPM-03 [OPEN]: Unfunded VCFSE Referral Dumping",
+        "category": "governance_hazard",
+        "tier": "Tier 3",
+        "external_id": "NHS DCB0129 CUJ-3 \u00b7 Safe 4.17/5 \u00b7 Comp 78.6%",
+        "metric": "P_auto = 0.00; hard hub caps [5,5,5,5,4] must pair with ring-fenced NHS ICB commissioning grants",
+        "epistemic_status": "OPEN neighbourhood sustainability hazard",
+        "in_degree": 1,
+        "out_degree": 1,
+        "total_degree": 2,
+        "degree_centrality": 0.0364,
+        "betweenness_centrality": 0.019,
+        "closeness_centrality": 0.2736
+      },
+      {
+        "id": "HAZARD_H04_DEMARCATION",
+        "label": "H-QSPM-04 [OPEN]: Over-Interpreting Zeno/PNI Curves",
+        "category": "governance_hazard",
+        "tier": "Tier 3",
+        "external_id": "NHS DCB0129 CUJ-4 \u00b7 Acc 0.77/5 \u00b7 Safe 3.69/5",
+        "metric": "P_auto = 0.00; Jev flags uncalibrated Zeno/Lindblad trajectories (0.77/5); requires CPRD & RCT validation",
+        "epistemic_status": "OPEN epistemic demarcation hazard",
+        "in_degree": 1,
+        "out_degree": 2,
+        "total_degree": 3,
+        "degree_centrality": 0.0545,
+        "betweenness_centrality": 0.1171,
+        "closeness_centrality": 0.3374
+      },
+      {
+        "id": "REC_DIRECT_NEXUS",
+        "label": "Receipt 01: direct_nexus_helios_jobs_receipt.json",
+        "category": "provenance_receipt",
+        "tier": "Tier 3",
+        "external_id": "SHA-256: cbcdc300ba875b54\u2026",
+        "metric": "3 live Helios-1E-lite jobs (6,144 shots, QSystemErrorModel='alpha', 0.00 HQC)",
+        "epistemic_status": "Cryptographically sealed JSON receipt",
+        "in_degree": 1,
+        "out_degree": 0,
+        "total_degree": 1,
+        "degree_centrality": 0.0182,
+        "betweenness_centrality": 0.0,
+        "closeness_centrality": 0.2321
+      },
+      {
+        "id": "REC_DEEP_REVIEW",
+        "label": "Receipt 02: deep_review_controls_receipt.json",
+        "category": "provenance_receipt",
+        "tier": "Tier 3",
+        "external_id": "SHA-256: 904af66e1934a638\u2026",
+        "metric": "Rosenberg+HiGHS MILP (n=8..60), 2x2 barren plateau, 4-bit Kempe swaps, 125-pt Zeno & 49-pt Lindblad grids",
+        "epistemic_status": "Cryptographically sealed JSON receipt",
+        "in_degree": 3,
+        "out_degree": 0,
+        "total_degree": 3,
+        "degree_centrality": 0.0545,
+        "betweenness_centrality": 0.0926,
+        "closeness_centrality": 0.3216
+      },
+      {
+        "id": "REC_MODAL_HF_QML",
+        "label": "Receipt 03: modal_hf_qml_receipt.json",
+        "category": "provenance_receipt",
+        "tier": "Tier 3",
+        "external_id": "SHA-256: 1b90fb34aedb405f\u2026",
+        "metric": "Modal PyTorch 4q QSPMLM-VQC, full-split QKernel, GBDT/SVM controls & Cubic k=3 Synergy benchmark",
+        "epistemic_status": "Cryptographically sealed JSON receipt",
+        "in_degree": 1,
+        "out_degree": 0,
+        "total_degree": 1,
+        "degree_centrality": 0.0182,
+        "betweenness_centrality": 0.0,
+        "closeness_centrality": 0.2124
+      },
+      {
+        "id": "REC_NEXUS_QSPM",
+        "label": "Receipt 04: nexus_helios_qspm_receipt.json",
+        "category": "provenance_receipt",
+        "tier": "Tier 3",
+        "external_id": "SHA-256: 415fe077d5a2d34d\u2026",
+        "metric": "Selene HeliosInterface HUGR (3,072 shots) + 3 Cloud aqora:nexus:H2-Emulator jobs (1,536 shots)",
+        "epistemic_status": "Cryptographically sealed JSON receipt",
+        "in_degree": 2,
+        "out_degree": 0,
+        "total_degree": 2,
+        "degree_centrality": 0.0364,
+        "betweenness_centrality": 0.0,
+        "closeness_centrality": 0.2331
+      },
+      {
+        "id": "REC_HAIQU_JIJ",
+        "label": "Receipt 05: haiqu_jij_qspm_receipt.json",
+        "category": "provenance_receipt",
+        "tier": "Tier 3",
+        "external_id": "SHA-256: 752067c4580e22ed\u2026",
+        "metric": "Haiqu SDK v1.7.1 HUBO compression (241->14), Cloud EME, OBP (24->0), SU(2) & OpenJij 120-var QUBO",
+        "epistemic_status": "Cryptographically sealed JSON receipt",
+        "in_degree": 2,
+        "out_degree": 0,
+        "total_degree": 2,
+        "degree_centrality": 0.0364,
+        "betweenness_centrality": 0.0181,
+        "closeness_centrality": 0.2412
+      },
+      {
+        "id": "REC_BIOPHYSICAL",
+        "label": "Receipt 06: biophysical_qprotsim_receipt.json",
+        "category": "provenance_receipt",
+        "tier": "Tier 3",
+        "external_id": "SHA-256: 21e3b1eb2eca2c45\u2026",
+        "metric": "HQS 4-spin Lindbladian, QProtSim PDB 1XY1, AlphaGenome GENCODE v46, Kuramoto & PDB 6TPK",
+        "epistemic_status": "Cryptographically sealed JSON receipt",
+        "in_degree": 2,
+        "out_degree": 0,
+        "total_degree": 2,
+        "degree_centrality": 0.0364,
+        "betweenness_centrality": 0.0186,
+        "closeness_centrality": 0.2558
+      },
+      {
+        "id": "REC_MODAL_RHYME",
+        "label": "Receipt 07: modal_rhyme_quops_receipt.json",
+        "category": "provenance_receipt",
+        "tier": "Tier 3",
+        "external_id": "SHA-256: 65bd5901f72b07e9\u2026",
+        "metric": "Modal rhyme-beta 4/4 compiler checks, Frobenius gradient variance & Sandia QUOPS scaling",
+        "epistemic_status": "Cryptographically sealed JSON receipt",
+        "in_degree": 2,
+        "out_degree": 0,
+        "total_degree": 2,
+        "degree_centrality": 0.0364,
+        "betweenness_centrality": 0.0159,
+        "closeness_centrality": 0.2558
+      },
+      {
+        "id": "REC_TEXT2WETLAB",
+        "label": "Receipt 08: text2wetlab_medicus_primitives_receipt.json",
+        "category": "provenance_receipt",
+        "tier": "Tier 3",
+        "external_id": "SHA-256: 872a8c42e3c2026a\u2026",
+        "metric": "Text2WetLab OT-2 6/6 PASS, Medicus ML-DSA-65 FHIR R4, DisCoPy, Moth Q4 & 42 Kashefi Atlas cards",
+        "epistemic_status": "Cryptographically sealed JSON receipt",
+        "in_degree": 3,
+        "out_degree": 0,
+        "total_degree": 3,
+        "degree_centrality": 0.0545,
+        "betweenness_centrality": 0.0283,
+        "closeness_centrality": 0.2644
+      },
+      {
+        "id": "REC_TYPESAFE_JEV",
+        "label": "Receipt 09: typesafe_jev_qspm_receipt.json",
+        "category": "provenance_receipt",
+        "tier": "Tier 3",
+        "external_id": "SHA-256: 215a566d39d6228b\u2026",
+        "metric": "Live TypeSafe System One (Jev 1.14) multi-method audit across CUJ-1..4 (P_auto = 0.00)",
+        "epistemic_status": "Cryptographically sealed JSON receipt",
+        "in_degree": 1,
+        "out_degree": 0,
+        "total_degree": 1,
+        "degree_centrality": 0.0182,
+        "betweenness_centrality": 0.0,
+        "closeness_centrality": 0.2444
+      }
+    ],
+    "edges": [
+      {
+        "source": "LONELINESS_ISOLATION",
+        "target": "NHS_DAPB4066",
+        "relation": "ENCODED_IN_FHIR_STANDARD",
+        "weight": "N=2,400"
+      },
+      {
+        "source": "NHS_DAPB4066",
+        "target": "PHARMACY_SMR",
+        "relation": "ROUTES_TO_CLINICAL_REVIEW",
+        "weight": "SNOMED"
+      },
+      {
+        "source": "NHS_DAPB4066",
+        "target": "LINK_WORKER_WMTY",
+        "relation": "CO_PRODUCES_CARE_PLAN",
+        "weight": "WMTY"
+      },
+      {
+        "source": "NHS_DAPB4066",
+        "target": "NIST_ML_DSA_65",
+        "relation": "SIGNED_BY_PQC_SIGNATURE",
+        "weight": "FIPS 204"
+      },
+      {
+        "source": "LONELINESS_ISOLATION",
+        "target": "CORE20PLUS5_IMD",
+        "relation": "STRATIFIED_BY_EQUITY",
+        "weight": "IMD 1\u20132"
+      },
+      {
+        "source": "CORE20PLUS5_IMD",
+        "target": "VCFSE_5_HUBS",
+        "relation": "WEIGHTS_HUB_ALLOCATION",
+        "weight": "w_p=1.50"
+      },
+      {
+        "source": "PHARMACY_SMR",
+        "target": "PATH_x0_SMR",
+        "relation": "ACTIVATES_PATHWAY",
+        "weight": "h0=-2.4"
+      },
+      {
+        "source": "PHARMACY_SMR",
+        "target": "PATH_x6_ACB_HAZARD",
+        "relation": "SUPPRESSES_HAZARD",
+        "weight": "J_06=+6.0"
+      },
+      {
+        "source": "LINK_WORKER_WMTY",
+        "target": "PATH_x1_GREEN",
+        "relation": "CO_SELECTS_ASSET",
+        "weight": "h1=-1.9"
+      },
+      {
+        "source": "LINK_WORKER_WMTY",
+        "target": "PATH_x2_ZEITGEBER",
+        "relation": "CO_SELECTS_ASSET",
+        "weight": "h2=-2.1"
+      },
+      {
+        "source": "LINK_WORKER_WMTY",
+        "target": "PATH_x3_WELFARE",
+        "relation": "CO_SELECTS_ASSET",
+        "weight": "h3=-2.6"
+      },
+      {
+        "source": "LINK_WORKER_WMTY",
+        "target": "PATH_x4_CHOIR",
+        "relation": "PRUNES_VENUE_FATIGUE",
+        "weight": "+4.00 cost"
+      },
+      {
+        "source": "LINK_WORKER_WMTY",
+        "target": "PATH_x5_PEER",
+        "relation": "CO_SELECTS_ASSET",
+        "weight": "h5=-1.7"
+      },
+      {
+        "source": "LINK_WORKER_WMTY",
+        "target": "PATH_x7_OVERLOAD",
+        "relation": "PREVENTS_SIGNPOST_OVERLOAD",
+        "weight": "x7=0"
+      },
+      {
+        "source": "PATH_x0_SMR",
+        "target": "PATH_x1_GREEN",
+        "relation": "CUBIC_SYNERGY_K012",
+        "weight": "K=-3.8"
+      },
+      {
+        "source": "PATH_x1_GREEN",
+        "target": "PATH_x2_ZEITGEBER",
+        "relation": "CUBIC_SYNERGY_K012",
+        "weight": "K=-3.8"
+      },
+      {
+        "source": "PATH_x0_SMR",
+        "target": "PATH_x3_WELFARE",
+        "relation": "CUBIC_SYNERGY_K035",
+        "weight": "K=-3.4"
+      },
+      {
+        "source": "PATH_x3_WELFARE",
+        "target": "PATH_x5_PEER",
+        "relation": "CUBIC_SYNERGY_K035",
+        "weight": "K=-3.4"
+      },
+      {
+        "source": "PATH_x2_ZEITGEBER",
+        "target": "PATH_x6_ACB_HAZARD",
+        "relation": "CUBIC_FALLS_HAZARD_K267",
+        "weight": "K=+6.5"
+      },
+      {
+        "source": "PATH_x6_ACB_HAZARD",
+        "target": "PATH_x7_OVERLOAD",
+        "relation": "CUBIC_FALLS_HAZARD_K267",
+        "weight": "K=+6.5"
+      },
+      {
+        "source": "PATH_x1_GREEN",
+        "target": "PATH_x4_CHOIR",
+        "relation": "CUBIC_FATIGUE_K134",
+        "weight": "K=+2.9"
+      },
+      {
+        "source": "PATH_x4_CHOIR",
+        "target": "PATH_x5_PEER",
+        "relation": "SCHEDULING_CONFLICT",
+        "weight": "J_45=+1.2"
+      },
+      {
+        "source": "LINK_WORKER_WMTY",
+        "target": "DISCOPY_MOTH_Q4",
+        "relation": "MODELED_BY_FUNCTOR",
+        "weight": "2.22e-16"
+      },
+      {
+        "source": "DISCOPY_MOTH_Q4",
+        "target": "GUPPY_HUGR_SELENE",
+        "relation": "COMPILES_TO_HUGR",
+        "weight": "7,247 B"
+      },
+      {
+        "source": "GUPPY_HUGR_SELENE",
+        "target": "NEXUS_HELIOS_1E_LITE",
+        "relation": "EXECUTES_ON_EMULATOR",
+        "weight": "6,144 shots"
+      },
+      {
+        "source": "GUPPY_HUGR_SELENE",
+        "target": "CLOUD_H2_EMULATOR",
+        "relation": "EXECUTES_ON_EMULATOR",
+        "weight": "1,536 shots"
+      },
+      {
+        "source": "NEXUS_HELIOS_1E_LITE",
+        "target": "ZENO_CADENCE_CHANNEL",
+        "relation": "CALIBRATES_READOUT",
+        "weight": "R\u00b2=0.99995"
+      },
+      {
+        "source": "CLOUD_H2_EMULATOR",
+        "target": "ZENO_CADENCE_CHANNEL",
+        "relation": "CALIBRATES_READOUT",
+        "weight": "+0.6488"
+      },
+      {
+        "source": "PATH_x0_SMR",
+        "target": "HAIQU_SDK_V171",
+        "relation": "OPTIMIZED_BY_LR_QAOA",
+        "weight": "74.71% raw"
+      },
+      {
+        "source": "HAIQU_SDK_V171",
+        "target": "ROSENBERG_HIGHS_MILP",
+        "relation": "BENCHMARKED_AGAINST_G4_FLOOR",
+        "weight": "14.5 ms / 1.32 s"
+      },
+      {
+        "source": "VCFSE_5_HUBS",
+        "target": "OPENJIJ_QUBO",
+        "relation": "ANNEALED_BY_QUBO",
+        "weight": "82.79% SA"
+      },
+      {
+        "source": "VCFSE_5_HUBS",
+        "target": "ROSENBERG_HIGHS_MILP",
+        "relation": "SOLVED_EXACTLY_BY_MILP_KEMPE",
+        "weight": "100% in 8.72 ms"
+      },
+      {
+        "source": "LONELINESS_ISOLATION",
+        "target": "MODAL_HF_QSPMLM",
+        "relation": "TRIAGED_BY_MULTITASK_VQC",
+        "weight": "99.79% / 65.21%"
+      },
+      {
+        "source": "MODAL_HF_QSPMLM",
+        "target": "NEXUS_HELIOS_1E_LITE",
+        "relation": "VERIFIED_ON_JOB_6CC7B395",
+        "weight": "2,048 shots"
+      },
+      {
+        "source": "PATH_x7_OVERLOAD",
+        "target": "RHYME_SYMBOLIC",
+        "relation": "EXTINGUISHED_BY_PHASE_ORACLE",
+        "weight": "0/1,024"
+      },
+      {
+        "source": "HQS_STRUQTURE_QOQO",
+        "target": "ACTIVE_D7_FTQC",
+        "relation": "MOTIVATES_OPEN_SYSTEM_FTQC",
+        "weight": "n_spin>=12"
+      },
+      {
+        "source": "ROSENBERG_HIGHS_MILP",
+        "target": "ACTIVE_D7_FTQC",
+        "relation": "DECOUPLES_DISCRETE_HUBO",
+        "weight": "No HUBO Q-adv"
+      },
+      {
+        "source": "NEXUS_HELIOS_1E_LITE",
+        "target": "ATLAS_P13",
+        "relation": "GOVERNED_BY_ATLAS_CARD",
+        "weight": "O(1/eps^2)"
+      },
+      {
+        "source": "CLOUD_H2_EMULATOR",
+        "target": "ATLAS_P13",
+        "relation": "GOVERNED_BY_ATLAS_CARD",
+        "weight": "29 vs 24g"
+      },
+      {
+        "source": "ZENO_CADENCE_CHANNEL",
+        "target": "ATLAS_P20",
+        "relation": "GOVERNED_BY_ATLAS_CARD",
+        "weight": "1.31 ms ODE"
+      },
+      {
+        "source": "HAIQU_SDK_V171",
+        "target": "ATLAS_A01D",
+        "relation": "GOVERNED_BY_ATLAS_CARD",
+        "weight": "241->14"
+      },
+      {
+        "source": "OPENJIJ_QUBO",
+        "target": "ATLAS_P08",
+        "relation": "GOVERNED_BY_ATLAS_CARD",
+        "weight": "TU integral"
+      },
+      {
+        "source": "HAIQU_SDK_V171",
+        "target": "ATLAS_P09",
+        "relation": "GOVERNED_BY_ATLAS_CARD",
+        "weight": "EME F=1.0"
+      },
+      {
+        "source": "MODAL_HF_QSPMLM",
+        "target": "ATLAS_A01G",
+        "relation": "GOVERNED_BY_ATLAS_CARD",
+        "weight": "5.83x L=2n"
+      },
+      {
+        "source": "HQS_STRUQTURE_QOQO",
+        "target": "ATLAS_P22",
+        "relation": "GOVERNED_BY_ATLAS_CARD",
+        "weight": "4^4=256"
+      },
+      {
+        "source": "PEPTIDE_1XY1_QPROTSIM",
+        "target": "ATLAS_A01H",
+        "relation": "GOVERNED_BY_ATLAS_CARD",
+        "weight": "dim=512"
+      },
+      {
+        "source": "HAIQU_SDK_V171",
+        "target": "ATLAS_X03",
+        "relation": "GOVERNED_BY_ATLAS_CARD",
+        "weight": "24->0 dequant"
+      },
+      {
+        "source": "LINK_WORKER_WMTY",
+        "target": "ZENO_CADENCE_CHANNEL",
+        "relation": "SCHEDULES_FOLLOWUP",
+        "weight": "N*=6 / med 4"
+      },
+      {
+        "source": "PATH_x2_ZEITGEBER",
+        "target": "GENE_BMAL1_SCN",
+        "relation": "ENTRAINS_ZEITGEBER_MODEL",
+        "weight": "R: 0.24->0.97"
+      },
+      {
+        "source": "PATH_x5_PEER",
+        "target": "GENE_OXTR_6TPK",
+        "relation": "BUFFERS_VAGAL_TONE_MODEL",
+        "weight": "g_oxt=0.58"
+      },
+      {
+        "source": "HQS_STRUQTURE_QOQO",
+        "target": "GENE_BMAL1_SCN",
+        "relation": "SIMULATES_SPIN_0",
+        "weight": "SCN/BMAL1"
+      },
+      {
+        "source": "HQS_STRUQTURE_QOQO",
+        "target": "GENE_NR3C1_HPA",
+        "relation": "SIMULATES_SPIN_1",
+        "weight": "-64.08%"
+      },
+      {
+        "source": "HQS_STRUQTURE_QOQO",
+        "target": "GENE_OXTR_6TPK",
+        "relation": "SIMULATES_SPIN_2",
+        "weight": "0 clashes"
+      },
+      {
+        "source": "HQS_STRUQTURE_QOQO",
+        "target": "GENE_IL6_CYTOKINE",
+        "relation": "SIMULATES_SPIN_3",
+        "weight": "-76.52%"
+      },
+      {
+        "source": "GENE_BMAL1_SCN",
+        "target": "GENE_NR3C1_HPA",
+        "relation": "COUPLED_VIA_XX_YY",
+        "weight": "J_01=0.42"
+      },
+      {
+        "source": "GENE_OXTR_6TPK",
+        "target": "GENE_IL6_CYTOKINE",
+        "relation": "SUPPRESSES_IN_LINDBLAD",
+        "weight": "J_23=-0.36"
+      },
+      {
+        "source": "GENE_OXTR_6TPK",
+        "target": "PEPTIDE_1XY1_QPROTSIM",
+        "relation": "STRUCTURAL_LIGAND_ANALOG",
+        "weight": "Mpt1*-Cys6"
+      },
+      {
+        "source": "GENE_NR3C1_HPA",
+        "target": "TEXT2WETLAB_OT2",
+        "relation": "PROSPECTIVE_SALIVARY_ASSAY",
+        "weight": "6/6 PASS"
+      },
+      {
+        "source": "GENE_IL6_CYTOKINE",
+        "target": "TEXT2WETLAB_OT2",
+        "relation": "PROSPECTIVE_SALIVARY_ASSAY",
+        "weight": "ELISA OT-2"
+      },
+      {
+        "source": "TYPESAFE_JEV_114",
+        "target": "HAZARD_H01_FALLS",
+        "relation": "AUDITS_CUJ_1",
+        "weight": "Safe 4.29/5"
+      },
+      {
+        "source": "TYPESAFE_JEV_114",
+        "target": "HAZARD_H02_AUTONOMY",
+        "relation": "AUDITS_CUJ_2",
+        "weight": "Acc 1.40/5"
+      },
+      {
+        "source": "TYPESAFE_JEV_114",
+        "target": "HAZARD_H03_DUMPING",
+        "relation": "AUDITS_CUJ_3",
+        "weight": "Comp 78.6%"
+      },
+      {
+        "source": "TYPESAFE_JEV_114",
+        "target": "HAZARD_H04_DEMARCATION",
+        "relation": "AUDITS_CUJ_4",
+        "weight": "Acc 0.77/5"
+      },
+      {
+        "source": "HAZARD_H01_FALLS",
+        "target": "PATH_x0_SMR",
+        "relation": "MANDATES_PHARMACIST_GATE",
+        "weight": "P_auto=0.00"
+      },
+      {
+        "source": "HAZARD_H01_FALLS",
+        "target": "PATH_x6_ACB_HAZARD",
+        "relation": "GUARDS_FALLS_ESCALATION",
+        "weight": "100% recall"
+      },
+      {
+        "source": "HAZARD_H02_AUTONOMY",
+        "target": "LINK_WORKER_WMTY",
+        "relation": "PRESERVES_PATIENT_AUTONOMY",
+        "weight": "100% human"
+      },
+      {
+        "source": "HAZARD_H03_DUMPING",
+        "target": "VCFSE_5_HUBS",
+        "relation": "REQUIRES_ICB_GRANT_PAIRING",
+        "weight": "0 cap viol"
+      },
+      {
+        "source": "HAZARD_H04_DEMARCATION",
+        "target": "ZENO_CADENCE_CHANNEL",
+        "relation": "REQUIRES_CPRD_CALIBRATION",
+        "weight": "Bu et al. 2025"
+      },
+      {
+        "source": "HAZARD_H04_DEMARCATION",
+        "target": "HQS_STRUQTURE_QOQO",
+        "relation": "DEMARCATES_METAPHOR_VS_RCT",
+        "weight": "49-pt grid"
+      },
+      {
+        "source": "NEXUS_HELIOS_1E_LITE",
+        "target": "REC_DIRECT_NEXUS",
+        "relation": "VERIFIED_BY_RECEIPT",
+        "weight": "SHA-256"
+      },
+      {
+        "source": "ROSENBERG_HIGHS_MILP",
+        "target": "REC_DEEP_REVIEW",
+        "relation": "VERIFIED_BY_RECEIPT",
+        "weight": "SHA-256"
+      },
+      {
+        "source": "ATLAS_A01G",
+        "target": "REC_DEEP_REVIEW",
+        "relation": "VERIFIED_BY_RECEIPT",
+        "weight": "2x2 L=2n"
+      },
+      {
+        "source": "ZENO_CADENCE_CHANNEL",
+        "target": "REC_DEEP_REVIEW",
+        "relation": "VERIFIED_BY_RECEIPT",
+        "weight": "125-pt grid"
+      },
+      {
+        "source": "MODAL_HF_QSPMLM",
+        "target": "REC_MODAL_HF_QML",
+        "relation": "VERIFIED_BY_RECEIPT",
+        "weight": "SHA-256"
+      },
+      {
+        "source": "CLOUD_H2_EMULATOR",
+        "target": "REC_NEXUS_QSPM",
+        "relation": "VERIFIED_BY_RECEIPT",
+        "weight": "SHA-256"
+      },
+      {
+        "source": "GUPPY_HUGR_SELENE",
+        "target": "REC_NEXUS_QSPM",
+        "relation": "VERIFIED_BY_RECEIPT",
+        "weight": "SHA-256"
+      },
+      {
+        "source": "HAIQU_SDK_V171",
+        "target": "REC_HAIQU_JIJ",
+        "relation": "VERIFIED_BY_RECEIPT",
+        "weight": "SHA-256"
+      },
+      {
+        "source": "OPENJIJ_QUBO",
+        "target": "REC_HAIQU_JIJ",
+        "relation": "VERIFIED_BY_RECEIPT",
+        "weight": "SHA-256"
+      },
+      {
+        "source": "HQS_STRUQTURE_QOQO",
+        "target": "REC_BIOPHYSICAL",
+        "relation": "VERIFIED_BY_RECEIPT",
+        "weight": "SHA-256"
+      },
+      {
+        "source": "PEPTIDE_1XY1_QPROTSIM",
+        "target": "REC_BIOPHYSICAL",
+        "relation": "VERIFIED_BY_RECEIPT",
+        "weight": "SHA-256"
+      },
+      {
+        "source": "RHYME_SYMBOLIC",
+        "target": "REC_MODAL_RHYME",
+        "relation": "VERIFIED_BY_RECEIPT",
+        "weight": "SHA-256"
+      },
+      {
+        "source": "ACTIVE_D7_FTQC",
+        "target": "REC_MODAL_RHYME",
+        "relation": "VERIFIED_BY_RECEIPT",
+        "weight": "SHA-256"
+      },
+      {
+        "source": "NIST_ML_DSA_65",
+        "target": "REC_TEXT2WETLAB",
+        "relation": "VERIFIED_BY_RECEIPT",
+        "weight": "SHA-256"
+      },
+      {
+        "source": "TEXT2WETLAB_OT2",
+        "target": "REC_TEXT2WETLAB",
+        "relation": "VERIFIED_BY_RECEIPT",
+        "weight": "SHA-256"
+      },
+      {
+        "source": "DISCOPY_MOTH_Q4",
+        "target": "REC_TEXT2WETLAB",
+        "relation": "VERIFIED_BY_RECEIPT",
+        "weight": "SHA-256"
+      },
+      {
+        "source": "TYPESAFE_JEV_114",
+        "target": "REC_TYPESAFE_JEV",
+        "relation": "VERIFIED_BY_RECEIPT",
+        "weight": "SHA-256"
+      }
+    ],
+    "receipt_sha256": "7eaf3c763ac60613e3f14028185ae122411cd990fee1d28fec28d76105b10cd8"
+  },
   "receipts_summary": [
     {
       "file": "direct_nexus_helios_jobs_receipt.json",
@@ -176,7 +1734,7 @@
     },
     {
       "file": "modal_hf_qml_receipt.json",
-      "sha256": "9efa6ff68642355d513ab7387941b0114330cfe568107ebe65f66b3c1d6fa07e",
+      "sha256": "1b90fb34aedb405f9543cb6dce58c9d01899e4fcba3f1b7722b8784f9eec344b",
       "platforms": "Modal Cloud PyTorch + Hugging Face Hub/Space + Guppy 1.0 HUGR + GBDT/SVM Controls",
       "metrics": "Regime A: VQC & full-split QKernel 99.79%; Regime B Cubic k=3: VQC 65.21% (76.92% falls recall) vs LogReg 32.71%, GBDT 77.92%, RBF-SVM 79.58%",
       "floor": "25.6 ms (LogReg)"
@@ -222,6 +1780,13 @@
       "platforms": "TypeSafe System One (jev-latest / Jev 1.14) \u2014 arXiv:2611.05127",
       "metrics": "Mean Safety 3.96/5, 0.00 autonomous deployment probability across 4 CUJs, strict zero-hype demarcation (p=1.000)",
       "floor": "0.83 s"
+    },
+    {
+      "file": "qspm_knowledge_graph.json",
+      "sha256": "7eaf3c763ac60613e3f14028185ae122411cd990fee1d28fec28d76105b10cd8",
+      "platforms": "JSON-LD 1.1 & Brandes Centrality Multi-Tier Ontology Graph (QSPM-KG v1.0)",
+      "metrics": "56 ontology nodes, 86 typed semantic edges, 1 connected component, diameter 8, mean shortest path 3.6552 across 7 classes",
+      "floor": "< 25 ms"
     }
   ]
 }

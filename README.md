@@ -11,9 +11,9 @@ Live GitHub Pages site: **https://arunnadarasa.github.io/quantum-social-prescrib
 - **Interactive Modules (`index.html`, `assets/app.js`, `assets/styles.css`, `assets/echarts.min.js`)**:
   - In-page `PDF.js` continuous monograph reader with section bookmarks and high-DPI page stream.
   - Real-time client-side 4-qubit complex statevector `QSPMLM` clinical triage & safety escalation simulator running exact Modal-trained weights (`receipts/qspmlm_weights.json`, `4.44e-16` parity).
-  - Interactive 3D Bloch Care-Plan Sphere, 5-layer `DisCoPy` Frobenius co-production stepper, and 5 dark-native Apache `ECharts` multi-scale benchmark cards + 300-DPI figure zoom lightbox.
+  - Interactive 3D Bloch Care-Plan Sphere, 5-layer `DisCoPy` Frobenius co-production stepper, 5 dark-native Apache `ECharts` multi-scale benchmark cards, and the **Interactive Multi-Tier Knowledge Graph Explorer (`QSPM-KG v1.0`, `#kg`, `receipts/qspm_knowledge_graph.json`, `figures/fig6_qspm_knowledge_graph.png`)** across 56 ontology nodes and 86 typed semantic edges.
 - **Sealed Provenance Receipts (`receipts/`)**:
-  - All **9 SHA-256-verified JSON receipts** (`0` physical QPU shots claimed; `0` wet-lab/patient samples; `synthetic_payload: true`; `4 OPEN` NHS DCB0129 clinical safety hazards).
+  - All **9 SHA-256-verified experimental JSON receipts** plus the sealed **JSON-LD 1.1 Knowledge Graph (`qspm_knowledge_graph.json`)** (`0` physical QPU shots claimed; `0` wet-lab/patient samples; `synthetic_payload: true`; `4 OPEN` NHS DCB0129 clinical safety hazards).
 
 ## External Cloud Links
 

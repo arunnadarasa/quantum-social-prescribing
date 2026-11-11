@@ -1108,6 +1108,407 @@ function initTablesAndCitations() {
   });
 }
 
+/* ── 7. Interactive Apache ECharts Knowledge Graph Explorer (QSPM-KG v1.0) ── */
+function initKnowledgeGraph() {
+  const el = document.getElementById("echart-kg");
+  if (!el || !PORTAL_DATA?.knowledge_graph) return;
+
+  const kg = PORTAL_DATA.knowledge_graph;
+  const catMap = Object.fromEntries(kg.categories.map(c => [c.id, c]));
+  const nodeMap = Object.fromEntries(kg.nodes.map(n => [n.id, n]));
+  const activeCats = new Set(kg.categories.map(c => c.id));
+  let currentLayout = "concentric";
+  let searchNeedle = "";
+  let selectedId = "NEXUS_HELIOS_1E_LITE";
+  let pathNodes = new Set();
+  let pathEdges = new Set();
+
+  const shaEl = document.getElementById("kg-sha-lbl");
+  if (shaEl) shaEl.textContent = `SHA-256: ${kg.receipt_sha256.slice(0, 16)}…`;
+
+  // Adjacency & incident edges
+  const adj = {};
+  const incident = {};
+  kg.nodes.forEach(n => { adj[n.id] = []; incident[n.id] = []; });
+  kg.edges.forEach((e, idx) => {
+    adj[e.source].push({ neighbor: e.target, edge: e, idx });
+    adj[e.target].push({ neighbor: e.source, edge: e, idx });
+    incident[e.source].push({ ...e, dir: "OUT" });
+    incident[e.target].push({ ...e, dir: "IN" });
+  });
+
+  function shortLabel(n) {
+    const base = n.label.split("(")[0].trim();
+    return base.length > 25 ? base.slice(0, 24).trim() + "…" : base;
+  }
+
+  // Deterministic concentric coordinates for layout="none"
+  const concentricPos = {};
+  (function computeConcentric() {
+    const rings = {
+      clinical_standard: [140, 0.32],
+      care_pathway: [265, 0.08],
+      quantum_platform: [405, 0.24],
+      biophysical_target: [535, -0.78],
+      governance_hazard: [535, 2.35],
+      atlas_primitive: [660, 0.14],
+      provenance_receipt: [780, 0.36]
+    };
+    const grouped = {};
+    kg.categories.forEach(c => { grouped[c.id] = []; });
+    kg.nodes.forEach(n => grouped[n.category].push(n));
+    Object.entries(grouped).forEach(([cid, items]) => {
+      if (cid === "biophysical_target" || cid === "governance_hazard") {
+        const rad = 535;
+        const start = cid === "biophysical_target" ? -0.82 : 2.32;
+        const span = cid === "biophysical_target" ? 2.55 : 2.45;
+        items.forEach((it, i) => {
+          const a = start + span * (i / Math.max(1, items.length - 1));
+          concentricPos[it.id] = [rad * Math.cos(a), -rad * Math.sin(a)];
+        });
+      } else {
+        const [rad, phase] = rings[cid];
+        items.forEach((it, i) => {
+          const a = phase + (2 * Math.PI * i) / Math.max(1, items.length);
+          concentricPos[it.id] = [rad * Math.cos(a), -rad * Math.sin(a)];
+        });
+      }
+    });
+  })();
+
+  function nodeMatches(n) {
+    if (!activeCats.has(n.category)) return false;
+    if (!searchNeedle) return true;
+    const q = searchNeedle.toLowerCase();
+    return (
+      n.id.toLowerCase().includes(q) ||
+      n.label.toLowerCase().includes(q) ||
+      (n.external_id || "").toLowerCase().includes(q) ||
+      (n.metric || "").toLowerCase().includes(q)
+    );
+  }
+
+  function renderInspector(nid) {
+    selectedId = nid;
+    const n = nodeMap[nid];
+    const box = document.getElementById("kg-inspector");
+    if (!n || !box) return;
+    const cat = catMap[n.category];
+    const edges = incident[nid] || [];
+
+    const edgeHtml = edges.map(e => {
+      const peerId = e.dir === "OUT" ? e.target : e.source;
+      const peer = nodeMap[peerId];
+      const arrow = e.dir === "OUT" ? "→" : "←";
+      return `
+        <button type="button" class="kg-edge-btn" data-kg-hop="${peerId}">
+          <div style="display:flex;justify-content:space-between;gap:0.4rem;font-family:var(--font-mono);font-size:0.71rem">
+            <span style="color:var(--signal);font-weight:700">${arrow} ${e.relation}</span>
+            <span style="color:var(--amber)">${e.weight}</span>
+          </div>
+          <div style="font-size:0.8rem;margin-top:0.15rem;color:var(--ink)">${peer ? peer.label : peerId}</div>
+        </button>
+      `;
+    }).join("");
+
+    box.innerHTML = `
+      <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:0.4rem">
+        <span class="pill" style="border-color:${cat.color};color:${cat.color}">${cat.short} · ${n.tier}</span>
+        <code style="font-size:0.72rem;color:var(--ink-dim)">${n.id}</code>
+      </div>
+      <h3 style="margin:0.65rem 0 0.35rem;font-size:1.12rem">${n.label}</h3>
+      <div class="ket-readout" style="margin-top:0.3rem;font-size:0.74rem;color:var(--amber)">${n.external_id}</div>
+
+      <div style="margin-top:0.75rem;padding:0.7rem 0.8rem;border-radius:6px;background:#081012;border:1px solid var(--border);font-size:0.83rem;line-height:1.5">
+        <div style="font-family:var(--font-mono);font-size:0.69rem;color:var(--ink-muted);text-transform:uppercase;margin-bottom:0.25rem">Verified Telemetry</div>
+        <div>${n.metric}</div>
+        <div style="margin-top:0.45rem;padding-top:0.4rem;border-top:1px solid var(--border);font-size:0.77rem;color:var(--ink-muted)">
+          <strong>Epistemic Status:</strong> ${n.epistemic_status}
+        </div>
+      </div>
+
+      <div style="margin-top:0.7rem;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0.45rem;text-align:center">
+        <div class="ket-readout" style="margin:0;padding:0.45rem">
+          <div style="font-size:0.68rem;color:var(--ink-muted)">Degree</div>
+          <strong style="color:var(--ink)">${n.total_degree}</strong> <span style="font-size:0.68rem;color:var(--ink-dim)">(${n.in_degree}↓/${n.out_degree}↑)</span>
+        </div>
+        <div class="ket-readout" style="margin:0;padding:0.45rem">
+          <div style="font-size:0.68rem;color:var(--ink-muted)">Betweenness</div>
+          <strong style="color:var(--signal)">${n.betweenness_centrality.toFixed(4)}</strong>
+        </div>
+        <div class="ket-readout" style="margin:0;padding:0.45rem">
+          <div style="font-size:0.68rem;color:var(--ink-muted)">Closeness</div>
+          <strong style="color:var(--amber)">${n.closeness_centrality.toFixed(3)}</strong>
+        </div>
+      </div>
+
+      <div style="margin-top:0.8rem">
+        <div style="font-family:var(--font-mono);font-size:0.71rem;color:var(--ink-muted);text-transform:uppercase">
+          Incident Semantic Edges (${edges.length}) — Click to Hop
+        </div>
+        <div class="kg-edge-list">${edgeHtml}</div>
+      </div>
+    `;
+
+    box.querySelectorAll("[data-kg-hop]").forEach(b => {
+      b.addEventListener("click", () => {
+        renderInspector(b.dataset.kgHop);
+        updateChart();
+      });
+    });
+  }
+
+  let chart = null;
+  function updateChart() {
+    if (!chart) return;
+    const visNodes = kg.nodes.filter(nodeMatches);
+    const visSet = new Set(visNodes.map(n => n.id));
+    const hasPath = pathNodes.size > 0;
+
+    const eNodes = visNodes.map(n => {
+      const catIdx = kg.categories.findIndex(c => c.id === n.category);
+      const col = catMap[n.category].color;
+      const onPath = hasPath && pathNodes.has(n.id);
+      const isSel = n.id === selectedId;
+      const [cx, cy] = concentricPos[n.id] || [0, 0];
+      const base = {
+        id: n.id,
+        name: shortLabel(n),
+        fullLabel: n.label,
+        metric: n.metric,
+        external_id: n.external_id,
+        category: catIdx,
+        symbolSize: 13 + Math.min(18, n.total_degree * 1.65),
+        draggable: true,
+        itemStyle: {
+          color: col,
+          borderColor: onPath ? "#f4ae42" : (isSel ? "#ffffff" : "#0b1517"),
+          borderWidth: onPath || isSel ? 2.8 : 1.2,
+          opacity: hasPath && !onPath ? 0.25 : 1.0
+        },
+        label: {
+          show: true,
+          fontSize: 10,
+          color: "#eef7f5",
+          backgroundColor: "rgba(11,21,23,0.82)",
+          borderColor: onPath ? "#f4ae42" : col,
+          borderWidth: 0.7,
+          borderRadius: 4,
+          padding: [2, 5]
+        }
+      };
+      if (currentLayout === "concentric") {
+        base.x = cx;
+        base.y = cy;
+      }
+      return base;
+    });
+
+    const eLinks = [];
+    kg.edges.forEach((e, idx) => {
+      if (!visSet.has(e.source) || !visSet.has(e.target)) return;
+      const onPath = hasPath && pathEdges.has(idx);
+      const isFocus = !hasPath && (e.source === selectedId || e.target === selectedId);
+      eLinks.push({
+        source: e.source,
+        target: e.target,
+        relation: e.relation,
+        weightLabel: e.weight,
+        lineStyle: {
+          color: onPath
+            ? "#f4ae42"
+            : (isFocus ? (e.relation.includes("HAZARD") ? "#f06a3b" : "#38d6c4") : "rgba(158,183,180,0.28)"),
+          width: onPath ? 3.2 : (isFocus ? 2.1 : 1.0),
+          opacity: hasPath && !onPath ? 0.14 : 0.85,
+          curveness: 0.11
+        }
+      });
+    });
+
+    const statusPill = document.getElementById("kg-status-pill");
+    if (statusPill) statusPill.textContent = `${eNodes.length} / ${kg.nodes.length} Nodes · ${eLinks.length} Edges`;
+
+    chart.setOption({
+      tooltip: {
+        trigger: "item",
+        backgroundColor: "rgba(11, 21, 23, 0.96)",
+        borderColor: "rgba(56, 214, 196, 0.48)",
+        textStyle: { color: "#eef7f5", fontSize: 12 },
+        formatter: (params) => {
+          if (params.dataType === "edge") {
+            return `<strong>${params.data.relation}</strong> (${params.data.weightLabel})<br/>${params.data.source} → ${params.data.target}`;
+          }
+          const d = params.data;
+          return `<strong>${d.fullLabel}</strong><br/><span style="color:#f4ae42">${d.external_id}</span><br/>${d.metric}`;
+        }
+      },
+      categories: kg.categories.map(c => ({ name: c.short, itemStyle: { color: c.color } })),
+      series: [
+        {
+          type: "graph",
+          layout: currentLayout === "concentric" ? "none" : currentLayout,
+          data: eNodes,
+          links: eLinks,
+          categories: kg.categories.map(c => ({ name: c.short })),
+          roam: true,
+          zoom: currentLayout === "concentric" ? 0.84 : 0.92,
+          edgeSymbol: ["none", "arrow"],
+          edgeSymbolSize: [4, 7],
+          emphasis: { focus: "adjacency", lineStyle: { width: 2.6 } },
+          force: { repulsion: 320, edgeLength: [75, 135], gravity: 0.08, layoutAnimation: true },
+          labelLayout: { hideOverlap: true }
+        }
+      ]
+    }, true);
+  }
+
+  // Category chips
+  const chipWrap = document.getElementById("kg-cat-chips");
+  kg.categories.forEach(c => {
+    const cnt = kg.topology_metrics.category_counts[c.id] || 0;
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "kg-cat-chip";
+    btn.innerHTML = `<span class="kg-cat-dot" style="background:${c.color}"></span><span>${c.short} (${cnt})</span>`;
+    btn.addEventListener("click", () => {
+      if (activeCats.has(c.id) && activeCats.size > 1) {
+        activeCats.delete(c.id);
+        btn.classList.add("muted");
+      } else {
+        activeCats.add(c.id);
+        btn.classList.remove("muted");
+      }
+      updateChart();
+    });
+    chipWrap?.appendChild(btn);
+  });
+
+  // Layout buttons
+  document.querySelectorAll("[data-kg-layout]").forEach(btn => {
+    btn.addEventListener("click", () => {
+      document.querySelectorAll("[data-kg-layout]").forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      currentLayout = btn.dataset.kgLayout;
+      updateChart();
+    });
+  });
+
+  // Search box
+  const searchInput = document.getElementById("kg-search");
+  searchInput?.addEventListener("input", () => {
+    searchNeedle = searchInput.value.trim();
+    const matches = kg.nodes.filter(nodeMatches);
+    if (searchNeedle && matches.length > 0 && !matches.some(m => m.id === selectedId)) {
+      renderInspector(matches[0].id);
+    }
+    updateChart();
+  });
+
+  // Shortest-path dropdowns & BFS
+  const srcSel = document.getElementById("kg-path-src");
+  const dstSel = document.getElementById("kg-path-dst");
+  kg.nodes.forEach(n => {
+    const opt = document.createElement("option");
+    opt.value = n.id;
+    opt.textContent = `[${catMap[n.category].short}] ${shortLabel(n)}`;
+    srcSel?.appendChild(opt);
+    dstSel?.appendChild(opt.cloneNode(true));
+  });
+  if (srcSel) srcSel.value = "LONELINESS_ISOLATION";
+  if (dstSel) dstSel.value = "HAZARD_H04_DEMARCATION";
+
+  function runShortestPath(sId, dId) {
+    pathNodes.clear();
+    pathEdges.clear();
+    const rib = document.getElementById("kg-path-ribbon");
+    if (!sId || !dId || sId === dId) {
+      rib?.classList.remove("visible");
+      updateChart();
+      return;
+    }
+    kg.categories.forEach(c => activeCats.add(c.id));
+    chipWrap?.querySelectorAll(".kg-cat-chip").forEach(b => b.classList.remove("muted"));
+
+    const prev = {};
+    const vis = new Set([sId]);
+    const q = [sId];
+    while (q.length > 0) {
+      const cur = q.shift();
+      if (cur === dId) break;
+      for (const step of adj[cur] || []) {
+        if (!vis.has(step.neighbor)) {
+          vis.add(step.neighbor);
+          prev[step.neighbor] = { from: cur, edgeIdx: step.idx, rel: step.edge.relation };
+          q.push(step.neighbor);
+        }
+      }
+    }
+    if (!vis.has(dId)) return;
+    const chain = [];
+    let cur = dId;
+    pathNodes.add(cur);
+    while (cur !== sId) {
+      const p = prev[cur];
+      pathEdges.add(p.edgeIdx);
+      pathNodes.add(p.from);
+      chain.unshift({ from: p.from, to: cur, rel: p.rel });
+      cur = p.from;
+    }
+    if (rib) {
+      rib.innerHTML =
+        `<strong style="color:var(--amber)">Shortest Multi-Tier Path (${chain.length} hops):</strong> ` +
+        chain.map(s => `<strong>${shortLabel(nodeMap[s.from])}</strong> <code style="color:var(--signal)">--[${s.rel}]--&gt;</code> `).join("") +
+        `<strong>${shortLabel(nodeMap[dId])}</strong>`;
+      rib.classList.add("visible");
+    }
+    renderInspector(dId);
+    updateChart();
+  }
+
+  document.getElementById("kg-trace-btn")?.addEventListener("click", () => runShortestPath(srcSel.value, dstSel.value));
+  document.getElementById("kg-clear-path-btn")?.addEventListener("click", () => {
+    pathNodes.clear();
+    pathEdges.clear();
+    document.getElementById("kg-path-ribbon")?.classList.remove("visible");
+    updateChart();
+  });
+  document.querySelectorAll("[data-kg-preset]").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const [s, d] = btn.dataset.kgPreset.split("|");
+      if (srcSel) srcSel.value = s;
+      if (dstSel) dstSel.value = d;
+      runShortestPath(s, d);
+    });
+  });
+
+  renderInspector("NEXUS_HELIOS_1E_LITE");
+
+  function mountKg() {
+    if (chart || !window.echarts) return;
+    chart = window.echarts.init(el);
+    chart.on("click", params => {
+      if (params.dataType === "node" && params.data?.id) {
+        renderInspector(params.data.id);
+        updateChart();
+      }
+    });
+    updateChart();
+    window.addEventListener("resize", () => chart && chart.resize());
+  }
+
+  let tries = 0;
+  const poll = setInterval(() => {
+    tries++;
+    if (window.echarts) {
+      clearInterval(poll);
+      mountKg();
+    } else if (tries > 60) {
+      clearInterval(poll);
+    }
+  }, 60);
+  mountKg();
+}
+
 async function boot() {
   initNav();
   initPdfReader();
@@ -1120,6 +1521,7 @@ async function boot() {
   QSP_WEIGHTS = weightsRes;
   initQSPMLMSimulator();
   initChartsAndLightbox();
+  initKnowledgeGraph();
   initTablesAndCitations();
 }
 

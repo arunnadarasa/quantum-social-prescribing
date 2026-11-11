@@ -49,12 +49,13 @@
       </a>
 
       <nav id="primary-nav" class="nav-links" aria-label="Primary sections">
-        <a href="#paper">Monograph (10 pp.)</a>
-        <a href="#qml">Live 4q QSPMLM</a>
+        <a href="#paper">Monograph</a>
+        <a href="#qml">4q QSPMLM</a>
         <a href="#zeno">Bloch &amp; DisCoPy</a>
-        <a href="#benchmarks">Multi-Scale Charts</a>
+        <a href="#benchmarks">Charts</a>
+        <a href="#kg">Knowledge Graph</a>
         <a href="#governance">Atlas &amp; DCB0129</a>
-        <a href="#census">9 Receipts</a>
+        <a href="#census">Receipts</a>
         <a href="#cite">Cite</a>
       </nav>
 
@@ -534,10 +535,70 @@
       </div>
     </section>
 
-    <!-- Section 05: Kashefi Primitives Atlas v0.4 Explorer & NHS DCB0129 / TypeSafe Jev Governance -->
-    <section id="governance" class="band band-alt">
+    <!-- Section 05: Multi-Tier Knowledge Graph Explorer (QSPM-KG v1.0) -->
+    <section id="kg" class="band band-alt">
       <div class="container">
-        <p class="kicker">05 · Formal Complexity Contracts &amp; Clinical Safety Governance</p>
+        <div class="section-head-row">
+          <div>
+            <p class="kicker">05 · Ontology &amp; Semantic Provenance Graph (JSON-LD 1.1 · SHA-256 Sealed)</p>
+            <h2 style="margin-bottom:0">Interactive Knowledge Graph Explorer (<code>QSPM-KG v1.0</code>)</h2>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:0.45rem;align-items:center">
+            <div class="mode-segmented" role="tablist" aria-label="Knowledge Graph layout">
+              <button type="button" class="mode-seg-btn active" data-kg-layout="concentric">◎ Concentric Tiers</button>
+              <button type="button" class="mode-seg-btn" data-kg-layout="force">⚛ Force Physics</button>
+              <button type="button" class="mode-seg-btn" data-kg-layout="circular">◯ Circular</button>
+            </div>
+            <button type="button" class="fig-zoom-btn" data-open-fig="figures/fig6_qspm_knowledge_graph.png">🔍 300-DPI Print Fig</button>
+            <a class="btn btn-sm" href="receipts/qspm_knowledge_graph.json" download="qspm_knowledge_graph.json">⬇ JSON-LD</a>
+          </div>
+        </div>
+        <p class="lead">
+          Unifies <strong>56 ontology nodes</strong> and <strong>86 typed semantic edges</strong> across 7 classes (1 connected component, diameter <code>8</code>, mean shortest path <code>3.66</code>): NHS DAPB4066 &amp; Core20PLUS5 clinical standards, 8 socio-clinical HUBO care pathways + 5 VCFSE hubs, 12 quantum emulators &amp; Gate G4 classical engines (incl. Quantinuum Nexus <code>Helios-1E-lite</code> &amp; Rosenberg/HiGHS MILP), 9 Kashefi Primitives Atlas v0.4 contracts, 6 phenomenological PNI/genomic/structural loci, 5 TypeSafe Jev 1.14 / NHS DCB0129 hazards, and all 9 SHA-256 receipts.
+        </p>
+
+        <div class="kg-toolbar">
+          <input id="kg-search" type="search" class="search-input" style="margin:0" placeholder="Search 56 nodes by label, ID, SNOMED CT, Ensembl, Helios-1E-lite, or SHA-256…" aria-label="Search knowledge graph nodes" />
+          <span id="kg-status-pill" class="pill pill-signal">56 / 56 Nodes · 86 Edges</span>
+        </div>
+
+        <div id="kg-cat-chips" class="kg-chip-row" aria-label="Filter knowledge graph categories"></div>
+
+        <div class="kg-path-bar">
+          <span style="font-family:var(--font-mono);font-size:0.74rem;color:var(--ink-muted);text-transform:uppercase">Shortest-Path Tracer:</span>
+          <select id="kg-path-src" class="kg-select" aria-label="Source node"></select>
+          <span style="color:var(--amber);font-weight:700">→</span>
+          <select id="kg-path-dst" class="kg-select" aria-label="Target node"></select>
+          <button type="button" id="kg-trace-btn" class="btn btn-primary btn-sm">Trace Path</button>
+          <button type="button" id="kg-clear-path-btn" class="btn btn-ghost btn-sm">Clear</button>
+          <button type="button" class="preset-chip" data-kg-preset="LONELINESS_ISOLATION|HAZARD_H04_DEMARCATION">Cohort → Helios → Demarcation</button>
+          <button type="button" class="preset-chip" data-kg-preset="PHARMACY_SMR|ROSENBERG_HIGHS_MILP">SMR → Haiqu → HiGHS MILP</button>
+          <button type="button" class="preset-chip" data-kg-preset="PATH_x5_PEER|TEXT2WETLAB_OT2">Peer → OXTR → OT-2 ELISA</button>
+        </div>
+
+        <div id="kg-path-ribbon" class="kg-path-ribbon" role="status"></div>
+
+        <div class="kg-grid">
+          <div class="panel" style="padding:0.75rem">
+            <div id="echart-kg" class="echart-kg-box" aria-label="Interactive Apache ECharts Knowledge Graph Network"></div>
+            <img src="figures/fig6_qspm_knowledge_graph.png" alt="300-DPI Multi-Tier Quantum Social Prescribing Knowledge Graph (QSPM-KG v1.0)" style="display:none" />
+            <div style="margin-top:0.55rem;display:flex;flex-wrap:wrap;justify-content:space-between;gap:0.5rem;font-family:var(--font-mono);font-size:0.72rem;color:var(--ink-dim)">
+              <span>Scroll to zoom · Drag background to pan · Drag any node · Click node to inspect provenance</span>
+              <span id="kg-sha-lbl"></span>
+            </div>
+          </div>
+
+          <div class="panel" id="kg-inspector-panel">
+            <div id="kg-inspector"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 06: Kashefi Primitives Atlas v0.4 Explorer & NHS DCB0129 / TypeSafe Jev Governance -->
+    <section id="governance" class="band">
+      <div class="container">
+        <p class="kicker">06 · Formal Complexity Contracts &amp; Clinical Safety Governance</p>
         <h2>Kashefi Primitives Atlas v0.4 &amp; NHS DCB0129 / Jev 1.14 Audit</h2>
         <p class="lead">
           Audited against all <strong>42 cards</strong> of Prof. Elham Kashefi's <a href="https://elhamkashefi.github.io/primitives-atlas/#cards" target="_blank" rel="noopener">Quantum Algorithmic Primitives Atlas v0.4</a> alongside Montgomery-Taylor et al. (<code>arXiv:2611.05127v2</code>) in live <strong>TypeSafe Jev 1.14</strong> (Mean Safety <code>3.96/5</code>, <code>0.00</code> autonomous deployment probability).
@@ -597,13 +658,13 @@
       </div>
     </section>
 
-    <!-- Section 06: 9 Sealed Provenance Receipts & In-Page JSON Inspector -->
-    <section id="census" class="band">
+    <!-- Section 07: Sealed Provenance Receipts & In-Page JSON Inspector -->
+    <section id="census" class="band band-alt">
       <div class="container">
-        <p class="kicker">06 · Cryptographic &amp; Computational Provenance</p>
-        <h2>9 SHA-256-Sealed JSON Experimental Receipts</h2>
+        <p class="kicker">07 · Cryptographic &amp; Computational Provenance</p>
+        <h2>SHA-256-Sealed JSON Receipts &amp; Ontology Graph</h2>
         <p class="lead">
-          Every number in the 10-page monograph and interactive charts is read directly from the 9 JSON receipts below. Click <strong>Inspect JSON</strong> to audit any receipt inline.
+          Every number in the 10-page monograph, interactive charts, and knowledge graph is read directly from the 9 experimental JSON receipts plus <code>qspm_knowledge_graph.json</code> below. Click <strong>Inspect JSON</strong> to audit any receipt inline.
         </p>
 
         <div class="table-wrap">
@@ -623,10 +684,10 @@
       </div>
     </section>
 
-    <!-- Section 07: Cloud Ecosystem & Zero-Overflow Tabbed BibTeX -->
-    <section id="cite" class="band band-alt">
+    <!-- Section 08: Cloud Ecosystem & Zero-Overflow Tabbed BibTeX -->
+    <section id="cite" class="band">
       <div class="container">
-        <p class="kicker">07 · Open Science Ecosystem &amp; Citation</p>
+        <p class="kicker">08 · Open Science Ecosystem &amp; Citation</p>
         <h2>Cloud Deployments &amp; Academic Citation</h2>
 
         <div class="two-col cite-grid">

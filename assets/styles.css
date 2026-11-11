@@ -2132,3 +2132,128 @@ h1 code, h2 code, h3 code {
   display: block;
   border-radius: 4px;
 }
+
+/* ── Multi-Tier Knowledge Graph Explorer (#kg) ── */
+.kg-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1.15rem;
+  padding: 0.85rem 1rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+}
+.kg-chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.42rem;
+  margin-top: 0.7rem;
+}
+.kg-cat-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.32rem 0.68rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: #0b1619;
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: 0.77rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.15s ease, border-color 0.15s ease;
+}
+.kg-cat-chip.muted {
+  opacity: 0.36;
+}
+.kg-cat-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.kg-path-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+  margin-top: 0.7rem;
+  padding: 0.7rem 0.95rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+}
+.kg-select {
+  padding: 0.42rem 0.65rem;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: #081012;
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  max-width: 100%;
+  min-width: 180px;
+}
+.kg-path-ribbon {
+  margin-top: 0.65rem;
+  padding: 0.7rem 0.95rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(244, 174, 66, 0.45);
+  background: rgba(244, 174, 66, 0.09);
+  font-size: 0.82rem;
+  line-height: 1.55;
+  display: none;
+}
+.kg-path-ribbon.visible {
+  display: block;
+}
+.kg-grid {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: minmax(0, 1.55fr) minmax(0, 0.95fr);
+  gap: 1.15rem;
+  align-items: start;
+}
+@media (max-width: 980px) {
+  .kg-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.echart-kg-box {
+  width: 100%;
+  height: 580px;
+  background: radial-gradient(circle at 50% 45%, rgba(56, 214, 196, 0.08), rgba(8, 16, 18, 0.98) 76%);
+  border: 1px solid rgba(158, 183, 180, 0.16);
+  border-radius: 8px;
+}
+@media (max-width: 640px) {
+  .echart-kg-box {
+    height: 430px;
+  }
+}
+.kg-edge-list {
+  display: grid;
+  gap: 0.42rem;
+  max-height: 240px;
+  overflow-y: auto;
+  padding-right: 0.2rem;
+  margin-top: 0.45rem;
+}
+.kg-edge-btn {
+  width: 100%;
+  text-align: left;
+  padding: 0.5rem 0.65rem;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: #081012;
+  color: var(--ink);
+  cursor: pointer;
+  transition: border-color 0.14s ease;
+}
+.kg-edge-btn:hover {
+  border-color: var(--signal);
+}
