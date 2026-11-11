@@ -19,8 +19,8 @@
   --radius: 12px;
   --radius-sm: 8px;
   --nav-h: 64px;
-  --font-display: "Barlow Condensed", system-ui, -apple-system, sans-serif;
-  --font-sans: "Barlow", "Noto Sans Devanagari", "Noto Sans Tamil", "Noto Sans JP", "Noto Sans SC", "Noto Sans KR", system-ui, -apple-system, sans-serif;
+  --font-display: "Barlow Condensed", "IBM Plex Sans", "Noto Sans JP", "Noto Sans KR", "Noto Sans SC", "Noto Sans Devanagari", "Noto Sans Tamil", system-ui, -apple-system, sans-serif;
+  --font-sans: "IBM Plex Sans", "Noto Sans Devanagari", "Noto Sans Tamil", "Noto Sans SC", "Noto Sans JP", "Noto Sans KR", system-ui, -apple-system, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
   --max-w: 1240px;
 }
@@ -611,8 +611,42 @@ h3 {
   border-radius: var(--radius-sm);
   background: rgba(11, 21, 23, 0.74);
   border: 1px solid var(--border);
-  font-size: 0.91rem;
+  font-size: 0.92rem;
+  line-height: 1.68;
   color: var(--ink);
+}
+
+/* Locale-specific CJK & Indic typography (avoids Han Unification glyph mismatch & matra crowding) */
+#active-lang-title {
+  font-family: var(--font-sans);
+  text-transform: none;
+  line-height: 1.38;
+  letter-spacing: -0.01em;
+  font-size: 1.24rem;
+  font-weight: 700;
+}
+:lang(ja) {
+  font-family: "IBM Plex Sans", "Noto Sans JP", sans-serif;
+}
+:lang(ko) {
+  font-family: "IBM Plex Sans", "Noto Sans KR", sans-serif;
+  word-break: keep-all;
+}
+:lang(zh-Hans) {
+  font-family: "IBM Plex Sans", "Noto Sans SC", sans-serif;
+}
+:lang(hi) {
+  font-family: "IBM Plex Sans", "Noto Sans Devanagari", sans-serif;
+}
+:lang(ta) {
+  font-family: "IBM Plex Sans", "Noto Sans Tamil", sans-serif;
+}
+.abstract-box:lang(ja),
+.abstract-box:lang(ko),
+.abstract-box:lang(zh-Hans),
+.abstract-box:lang(hi),
+.abstract-box:lang(ta) {
+  line-height: 1.82;
 }
 
 /* ── Two-Column Interactive Layouts ── */
