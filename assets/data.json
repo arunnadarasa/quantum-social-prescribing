@@ -170,7 +170,7 @@
     "@type": "Dataset",
     "schema_version": "1.0.0-qspm-knowledge-graph",
     "name": "Quantum Social Prescribing Multi-Tier Knowledge Graph (QSPM-KG v1.0)",
-    "timestamp_utc": "2026-11-11T21:23:03.098447+00:00",
+    "timestamp_utc": "2026-11-11T22:02:50.757057+00:00",
     "physical_hardware_shots": 0,
     "wet_lab_experiments_performed": 0,
     "synthetic_payload": true,
@@ -1211,9 +1211,9 @@
         "label": "NHS England DES + OHID Fingertips (6,105 GP Practices)",
         "category": "clinical_standard",
         "tier": "Tier 1",
-        "external_id": "OGL v3.0 \u00b7 1,296 PCNs \u00b7 42 ICBs \u00b7 61,832,846 Patients",
-        "metric": "FY23/24 median SP refusal 21.93% (IQR 10.92\u201340.55%); Core20 opioid gap +51.0% vs flat SMR; Sep 2026 follow-up",
-        "epistemic_status": "Real public aggregate NHS England & OHID cohort (0 patient-identifiable records)",
+        "external_id": "OGL v3.0 \u00b7 1,296 PCNs \u00b7 42 ICBs \u00b7 61,832,846 Patients \u00b7 3 Waves (FY22/23\u2013Sep 2026)",
+        "metric": "FY23/24 median SP refusal 21.93%; 3-wave SMR panel (17,340 obs); GP-FE null cadence (p=0.986) & Pharmacist buffer (p=1.64e-6)",
+        "epistemic_status": "Real public aggregate NHS England & OHID longitudinal panel (0 patient-identifiable records)",
         "in_degree": 0,
         "out_degree": 7,
         "total_degree": 7,
@@ -1256,8 +1256,8 @@
         "label": "Receipt 10: nhs_empirical_cohort_calibration_receipt.json",
         "category": "provenance_receipt",
         "tier": "Tier 1 / 3",
-        "external_id": "SHA-256: 8d3bef4db68f3959\u2026",
-        "metric": "6,105 NHS GPs + MSE ICB + ELSA/CPRD empirical HUBO (-94.47% Haiqu vs 19.19 ms HiGHS MILP), cadence BIC, OOS AUROC & ML-DSA-65",
+        "external_id": "SHA-256: 193bddf943723b3d\u2026",
+        "metric": "6,105 NHS GPs (3 waves, 17,340 obs) + GP-FE falsification + 4.2\u00d7 HUBO plateau + 1.0\u00d7\u20132.0\u00d7 Core20 Pareto + OOS AUROC & ML-DSA-65",
         "epistemic_status": "Cryptographically sealed empirical clinical-informatics receipt",
         "in_degree": 3,
         "out_degree": 0,
@@ -1857,14 +1857,14 @@
         "weight": "SHA-256"
       }
     ],
-    "receipt_sha256": "e38ba5fd4bb9340ce2ac0882199bd775c315d010443584b083d7aa1412bb0bd3"
+    "receipt_sha256": "c6106cf8f983cc9c53d116eeec559a8bf779eba54328b95bf5d0dafe6c881c20"
   },
   "receipts_summary": [
     {
       "file": "nhs_empirical_cohort_calibration_receipt.json",
-      "sha256": "8d3bef4db68f3959a89d690bf494ffd220973d2f1dc2036fd15a717bc2d7a5a6",
-      "platforms": "Real NHS England (6,105 GPs, 61.83M pts, 143 MSE GPs) + ELSA Wave 10 / CPRD + Rosenberg HiGHS MILP + Haiqu v1.7.1 + Live Nexus Helios-1E-lite + ML-DSA-65 + Jev 1.14",
-      "metrics": "SP refusal 21.93% (vs 22.30% CPRD); Core20\u00d7Pharm\u00d7SDM +9.90 pp (p=1.13e-3); HiGHS MILP 19.19 ms (HUBO) & 200.95 ms (1,296 PCNs); Nexus Job af987c9a",
+      "sha256": "193bddf943723b3d3253cb33c5d9f99895727731a62fda8a7aee9b4bed70188b",
+      "platforms": "Real NHS England 3-Wave Panel (6,105 GPs, 17,340 obs, 143 MSE GPs) + ELSA W10 / CPRD + Rosenberg HiGHS MILP + Haiqu v1.7.1 + Nexus Helios-1E-lite + ML-DSA-65 + Jev 1.14",
+      "metrics": "SP refusal 21.93% (vs 22.30% CPRD); GP-FE null cadence (p=0.986) & Pharmacist buffer (p=1.64e-6); 4.2\u00d7 HUBO plateau; Core20 1.5\u00d7 Pareto +12.69 pp (99.81% eff.); Nexus Job af987c9a",
       "floor": "2.51 ms \u2013 200.95 ms"
     },
     {
@@ -1932,7 +1932,7 @@
     },
     {
       "file": "qspm_knowledge_graph.json",
-      "sha256": "e38ba5fd4bb9340ce2ac0882199bd775c315d010443584b083d7aa1412bb0bd3",
+      "sha256": "c6106cf8f983cc9c53d116eeec559a8bf779eba54328b95bf5d0dafe6c881c20",
       "platforms": "JSON-LD 1.1 & Brandes Centrality Multi-Tier Ontology Graph (QSPM-KG v1.1)",
       "metrics": "60 ontology nodes, 98 typed semantic edges, 1 connected component, diameter 8, mean shortest path 3.5390 across 7 classes",
       "floor": "< 25 ms"

@@ -1,12 +1,12 @@
 {
   "schema_version": "1.0.0-nhs-empirical-cohort-calibration",
-  "timestamp_utc": "2026-11-11T21:07:09.404132+00:00",
+  "timestamp_utc": "2026-11-11T21:54:32.196363+00:00",
   "physical_hardware_shots": 0,
   "patient_identifiable_records_used": 0,
   "open_data_license": "Open Government Licence v3.0 (NHS England Network Contract DES MI & OHID Fingertips) + CC BY Published ELSA Wave 10 / CPRD Benchmarks",
   "cohort_manifest": {
     "cohort_csv": "data/nhs_england_sp_smr_empirical_cohort.csv",
-    "cohort_csv_sha256": "fe053239f959f2b5297c6537d51ae9f82e2a143534ae146beca2729a73f033fb",
+    "cohort_csv_sha256": "76abf5ff95b2cd897530cdc5d39cad55c3f195fb0f1efcec11166a25ec9ff7c6",
     "n_england_gp_practices": 6105,
     "n_england_pcns": 1296,
     "n_england_icbs": 42,
@@ -806,5 +806,415 @@
     }
   },
   "runtime_seconds": 254.205,
-  "receipt_sha256": "8d3bef4db68f3959a89d690bf494ffd220973d2f1dc2036fd15a717bc2d7a5a6"
+  "track_e6_panel_fixed_effects_and_pareto_sensitivity": {
+    "within_practice_fixed_effects_panel": {
+      "cadence_u_curve_within_practice_fe_fy22_23_to_fy23_24": {
+        "active_lw_coding_practices": {
+          "n_practices": 1692,
+          "n_practice_years": 3384,
+          "year_fe_intercept": 0.01739,
+          "linear_fe_beta": 0.01573,
+          "linear_fe_se": 0.01975,
+          "linear_fe_p_value": 0.42589,
+          "quadratic_fe_beta": -0.00015,
+          "quadratic_fe_se": 0.00814,
+          "quadratic_fe_p_value": 0.9857,
+          "verdict": "CROSS_SECTIONAL_U_CURVE_ATTENUATES_TO_NULL_UNDER_GP_FIXED_EFFECTS"
+        },
+        "all_active_sp_caseload_practices": {
+          "n_practices": 5885,
+          "n_practice_years": 11770,
+          "year_fe_intercept": 0.01258,
+          "linear_fe_beta": 0.02195,
+          "linear_fe_se": 0.01961,
+          "linear_fe_p_value": 0.26302,
+          "quadratic_fe_beta": -0.00186,
+          "quadratic_fe_se": 0.00819,
+          "quadratic_fe_p_value": 0.82042,
+          "verdict": "CROSS_SECTIONAL_U_CURVE_ATTENUATES_TO_NULL_UNDER_GP_FIXED_EFFECTS"
+        }
+      },
+      "smr_to_sp_reach_within_practice_fe_fy22_23_to_fy23_24": {
+        "n_practices": 6048,
+        "n_practice_years": 12096,
+        "d_log_smr_beta": 0.04212,
+        "d_log_smr_se": 0.01318,
+        "d_log_smr_p_value": 0.0013926,
+        "d_log_pharm_beta": 0.01893,
+        "d_log_pharm_p_value": 0.27028,
+        "d_log_sdm_beta": 0.02041,
+        "d_log_sdm_p_value": 0.14515
+      },
+      "three_wave_highrisk_smr_panel_fy22_23_fy23_24_sep26": {
+        "n_balanced_practices": 5780,
+        "n_practice_wave_observations": 17340,
+        "waves": [
+          "FY2022/23 (IIF NCD019/114/115/116)",
+          "FY2023/24 (Post-IIF NCDMI180/181/188/189)",
+          "Sep 2026 H1 (SMR01A-01D)"
+        ],
+        "mean_highrisk_smr_coverage_pct": {
+          "fy22_23_full_year": 43.1,
+          "fy23_24_full_year": 20.21,
+          "sep26_h1_raw_6month": 12.72,
+          "sep26_annualized_pct": 25.26
+        },
+        "within_practice_pharmacist_buffering_fy23_24": {
+          "d_log_pharm_beta": 0.03608,
+          "d_log_pharm_se": 0.00753,
+          "d_log_pharm_p_value": 1.6436e-06,
+          "core20_diff_beta": -0.00436,
+          "core20_diff_p_value": 0.73673
+        },
+        "within_practice_pharmacist_buffering_sep26_prospective": {
+          "d_log_pharm_beta": 0.0207,
+          "d_log_pharm_se": 0.00818,
+          "d_log_pharm_p_value": 0.011371,
+          "core20_diff_beta": 0.02462,
+          "core20_diff_p_value": 0.14667
+        }
+      }
+    },
+    "policy_prior_and_pareto_sensitivity": {
+      "hubo_8lever_arrs_cost_phase_transitions_0_to_2x": [
+        {
+          "alpha_threshold": 0.0,
+          "c_staff_value": 0.0,
+          "ground_state_bitstring": "11101101",
+          "active_levers": 6,
+          "min_energy": -5.2844
+        },
+        {
+          "alpha_threshold": 0.4,
+          "c_staff_value": 0.34,
+          "ground_state_bitstring": "11100000",
+          "active_levers": 3,
+          "min_energy": -3.2481
+        },
+        {
+          "alpha_threshold": 1.68,
+          "c_staff_value": 1.428,
+          "ground_state_bitstring": "00000000",
+          "active_levers": 0,
+          "min_energy": 0.0
+        }
+      ],
+      "hubo_8lever_arrs_cost_pm50pct_milp_grid": [
+        {
+          "alpha_multiplier": 0.5,
+          "c_staff_value": 0.425,
+          "milp_ground_bitstring": "11100000",
+          "milp_min_energy": -2.9931,
+          "milp_wall_ms": 14.9142
+        },
+        {
+          "alpha_multiplier": 0.6,
+          "c_staff_value": 0.51,
+          "milp_ground_bitstring": "11100000",
+          "milp_min_energy": -2.7381,
+          "milp_wall_ms": 6.5998
+        },
+        {
+          "alpha_multiplier": 0.7,
+          "c_staff_value": 0.595,
+          "milp_ground_bitstring": "11100000",
+          "milp_min_energy": -2.4831,
+          "milp_wall_ms": 6.2825
+        },
+        {
+          "alpha_multiplier": 0.8,
+          "c_staff_value": 0.68,
+          "milp_ground_bitstring": "11100000",
+          "milp_min_energy": -2.2281,
+          "milp_wall_ms": 6.3262
+        },
+        {
+          "alpha_multiplier": 0.9,
+          "c_staff_value": 0.765,
+          "milp_ground_bitstring": "11100000",
+          "milp_min_energy": -1.9731,
+          "milp_wall_ms": 6.548
+        },
+        {
+          "alpha_multiplier": 1.0,
+          "c_staff_value": 0.85,
+          "milp_ground_bitstring": "11100000",
+          "milp_min_energy": -1.7181,
+          "milp_wall_ms": 6.3879
+        },
+        {
+          "alpha_multiplier": 1.1,
+          "c_staff_value": 0.935,
+          "milp_ground_bitstring": "11100000",
+          "milp_min_energy": -1.4631,
+          "milp_wall_ms": 6.4696
+        },
+        {
+          "alpha_multiplier": 1.2,
+          "c_staff_value": 1.02,
+          "milp_ground_bitstring": "11100000",
+          "milp_min_energy": -1.2081,
+          "milp_wall_ms": 6.47
+        },
+        {
+          "alpha_multiplier": 1.3,
+          "c_staff_value": 1.105,
+          "milp_ground_bitstring": "11100000",
+          "milp_min_energy": -0.9531,
+          "milp_wall_ms": 6.2395
+        },
+        {
+          "alpha_multiplier": 1.4,
+          "c_staff_value": 1.19,
+          "milp_ground_bitstring": "11100000",
+          "milp_min_energy": -0.6981,
+          "milp_wall_ms": 6.5115
+        },
+        {
+          "alpha_multiplier": 1.5,
+          "c_staff_value": 1.275,
+          "milp_ground_bitstring": "11100000",
+          "milp_min_energy": -0.4431,
+          "milp_wall_ms": 6.5311
+        }
+      ],
+      "core20_equity_pareto_mse_143_gps": {
+        "n_units": 143,
+        "n_core20_units": 14,
+        "n_binary_vars": 715,
+        "hub_capacity_cap": 31,
+        "pareto_frontier_1_0x_to_2_0x": [
+          {
+            "core20_equity_multiplier": 1.0,
+            "weighted_objective": 75.0462,
+            "unweighted_baseline_utility": 75.0462,
+            "unweighted_efficiency_retained_pct": 100.0,
+            "price_of_equity_pct": 0.0,
+            "core20_first_choice_hub_pct": 92.86,
+            "core20_mean_baseline_affinity": 0.7333,
+            "highs_milp_wall_ms": 8.2
+          },
+          {
+            "core20_equity_multiplier": 1.1,
+            "weighted_objective": 76.4873,
+            "unweighted_baseline_utility": 75.0462,
+            "unweighted_efficiency_retained_pct": 100.0,
+            "price_of_equity_pct": 0.0,
+            "core20_first_choice_hub_pct": 92.86,
+            "core20_mean_baseline_affinity": 0.7333,
+            "highs_milp_wall_ms": 8.13
+          },
+          {
+            "core20_equity_multiplier": 1.2,
+            "weighted_objective": 77.9283,
+            "unweighted_baseline_utility": 75.0462,
+            "unweighted_efficiency_retained_pct": 100.0,
+            "price_of_equity_pct": 0.0,
+            "core20_first_choice_hub_pct": 92.86,
+            "core20_mean_baseline_affinity": 0.7333,
+            "highs_milp_wall_ms": 8.19
+          },
+          {
+            "core20_equity_multiplier": 1.3,
+            "weighted_objective": 79.3774,
+            "unweighted_baseline_utility": 75.0253,
+            "unweighted_efficiency_retained_pct": 99.9721,
+            "price_of_equity_pct": 0.0279,
+            "core20_first_choice_hub_pct": 92.86,
+            "core20_mean_baseline_affinity": 0.7402,
+            "highs_milp_wall_ms": 7.81
+          },
+          {
+            "core20_equity_multiplier": 1.4,
+            "weighted_objective": 80.8288,
+            "unweighted_baseline_utility": 75.0217,
+            "unweighted_efficiency_retained_pct": 99.9673,
+            "price_of_equity_pct": 0.0327,
+            "core20_first_choice_hub_pct": 92.86,
+            "core20_mean_baseline_affinity": 0.7402,
+            "highs_milp_wall_ms": 8.19
+          },
+          {
+            "core20_equity_multiplier": 1.5,
+            "weighted_objective": 82.2806,
+            "unweighted_baseline_utility": 75.0217,
+            "unweighted_efficiency_retained_pct": 99.9673,
+            "price_of_equity_pct": 0.0327,
+            "core20_first_choice_hub_pct": 92.86,
+            "core20_mean_baseline_affinity": 0.7402,
+            "highs_milp_wall_ms": 7.6
+          },
+          {
+            "core20_equity_multiplier": 1.6,
+            "weighted_objective": 83.7324,
+            "unweighted_baseline_utility": 75.0217,
+            "unweighted_efficiency_retained_pct": 99.9673,
+            "price_of_equity_pct": 0.0327,
+            "core20_first_choice_hub_pct": 92.86,
+            "core20_mean_baseline_affinity": 0.7402,
+            "highs_milp_wall_ms": 7.73
+          },
+          {
+            "core20_equity_multiplier": 1.7,
+            "weighted_objective": 85.1842,
+            "unweighted_baseline_utility": 75.0217,
+            "unweighted_efficiency_retained_pct": 99.9673,
+            "price_of_equity_pct": 0.0327,
+            "core20_first_choice_hub_pct": 92.86,
+            "core20_mean_baseline_affinity": 0.7402,
+            "highs_milp_wall_ms": 7.72
+          },
+          {
+            "core20_equity_multiplier": 1.8,
+            "weighted_objective": 86.636,
+            "unweighted_baseline_utility": 75.0217,
+            "unweighted_efficiency_retained_pct": 99.9673,
+            "price_of_equity_pct": 0.0327,
+            "core20_first_choice_hub_pct": 92.86,
+            "core20_mean_baseline_affinity": 0.7402,
+            "highs_milp_wall_ms": 7.77
+          },
+          {
+            "core20_equity_multiplier": 1.9,
+            "weighted_objective": 88.0878,
+            "unweighted_baseline_utility": 75.0217,
+            "unweighted_efficiency_retained_pct": 99.9673,
+            "price_of_equity_pct": 0.0327,
+            "core20_first_choice_hub_pct": 92.86,
+            "core20_mean_baseline_affinity": 0.7402,
+            "highs_milp_wall_ms": 7.62
+          },
+          {
+            "core20_equity_multiplier": 2.0,
+            "weighted_objective": 89.5396,
+            "unweighted_baseline_utility": 75.0217,
+            "unweighted_efficiency_retained_pct": 99.9673,
+            "price_of_equity_pct": 0.0327,
+            "core20_first_choice_hub_pct": 92.86,
+            "core20_mean_baseline_affinity": 0.7402,
+            "highs_milp_wall_ms": 7.66
+          }
+        ]
+      },
+      "core20_equity_pareto_england_1296_pcns": {
+        "n_units": 1296,
+        "n_core20_units": 260,
+        "n_binary_vars": 6480,
+        "hub_capacity_cap": 280,
+        "pareto_frontier_1_0x_to_2_0x": [
+          {
+            "core20_equity_multiplier": 1.0,
+            "weighted_objective": 606.1468,
+            "unweighted_baseline_utility": 606.1468,
+            "unweighted_efficiency_retained_pct": 100.0,
+            "price_of_equity_pct": 0.0,
+            "core20_first_choice_hub_pct": 53.46,
+            "core20_mean_baseline_affinity": 0.5159,
+            "highs_milp_wall_ms": 178.37
+          },
+          {
+            "core20_equity_multiplier": 1.1,
+            "weighted_objective": 619.5962,
+            "unweighted_baseline_utility": 606.1192,
+            "unweighted_efficiency_retained_pct": 99.9954,
+            "price_of_equity_pct": 0.0046,
+            "core20_first_choice_hub_pct": 55.0,
+            "core20_mean_baseline_affinity": 0.5183,
+            "highs_milp_wall_ms": 167.28
+          },
+          {
+            "core20_equity_multiplier": 1.2,
+            "weighted_objective": 633.155,
+            "unweighted_baseline_utility": 605.9042,
+            "unweighted_efficiency_retained_pct": 99.96,
+            "price_of_equity_pct": 0.04,
+            "core20_first_choice_hub_pct": 58.08,
+            "core20_mean_baseline_affinity": 0.5241,
+            "highs_milp_wall_ms": 166.21
+          },
+          {
+            "core20_equity_multiplier": 1.3,
+            "weighted_objective": 646.8212,
+            "unweighted_baseline_utility": 605.6961,
+            "unweighted_efficiency_retained_pct": 99.9256,
+            "price_of_equity_pct": 0.0744,
+            "core20_first_choice_hub_pct": 60.38,
+            "core20_mean_baseline_affinity": 0.5272,
+            "highs_milp_wall_ms": 158.75
+          },
+          {
+            "core20_equity_multiplier": 1.4,
+            "weighted_objective": 660.6066,
+            "unweighted_baseline_utility": 605.1972,
+            "unweighted_efficiency_retained_pct": 99.8433,
+            "price_of_equity_pct": 0.1567,
+            "core20_first_choice_hub_pct": 64.62,
+            "core20_mean_baseline_affinity": 0.5328,
+            "highs_milp_wall_ms": 158.99
+          },
+          {
+            "core20_equity_multiplier": 1.5,
+            "weighted_objective": 674.4761,
+            "unweighted_baseline_utility": 604.9686,
+            "unweighted_efficiency_retained_pct": 99.8056,
+            "price_of_equity_pct": 0.1944,
+            "core20_first_choice_hub_pct": 66.15,
+            "core20_mean_baseline_affinity": 0.5347,
+            "highs_milp_wall_ms": 157.0
+          },
+          {
+            "core20_equity_multiplier": 1.6,
+            "weighted_objective": 688.4045,
+            "unweighted_baseline_utility": 604.712,
+            "unweighted_efficiency_retained_pct": 99.7633,
+            "price_of_equity_pct": 0.2367,
+            "core20_first_choice_hub_pct": 67.69,
+            "core20_mean_baseline_affinity": 0.5365,
+            "highs_milp_wall_ms": 156.47
+          },
+          {
+            "core20_equity_multiplier": 1.7,
+            "weighted_objective": 702.3713,
+            "unweighted_baseline_utility": 604.4972,
+            "unweighted_efficiency_retained_pct": 99.7278,
+            "price_of_equity_pct": 0.2722,
+            "core20_first_choice_hub_pct": 68.85,
+            "core20_mean_baseline_affinity": 0.5378,
+            "highs_milp_wall_ms": 155.21
+          },
+          {
+            "core20_equity_multiplier": 1.8,
+            "weighted_objective": 716.3595,
+            "unweighted_baseline_utility": 604.4179,
+            "unweighted_efficiency_retained_pct": 99.7148,
+            "price_of_equity_pct": 0.2852,
+            "core20_first_choice_hub_pct": 69.23,
+            "core20_mean_baseline_affinity": 0.5382,
+            "highs_milp_wall_ms": 154.3
+          },
+          {
+            "core20_equity_multiplier": 1.9,
+            "weighted_objective": 730.3786,
+            "unweighted_baseline_utility": 604.0856,
+            "unweighted_efficiency_retained_pct": 99.6599,
+            "price_of_equity_pct": 0.3401,
+            "core20_first_choice_hub_pct": 70.77,
+            "core20_mean_baseline_affinity": 0.5397,
+            "highs_milp_wall_ms": 154.61
+          },
+          {
+            "core20_equity_multiplier": 2.0,
+            "weighted_objective": 744.4372,
+            "unweighted_baseline_utility": 603.6337,
+            "unweighted_efficiency_retained_pct": 99.5854,
+            "price_of_equity_pct": 0.4146,
+            "core20_first_choice_hub_pct": 72.31,
+            "core20_mean_baseline_affinity": 0.5416,
+            "highs_milp_wall_ms": 155.4
+          }
+        ]
+      }
+    }
+  },
+  "receipt_sha256": "193bddf943723b3d3253cb33c5d9f99895727731a62fda8a7aee9b4bed70188b"
 }

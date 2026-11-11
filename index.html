@@ -104,7 +104,7 @@
             </div>
             <div class="track-actions">
               <a class="btn btn-primary btn-sm" href="#paper">📖 Read Both Papers</a>
-              <a class="btn btn-sm" href="downloads/Focused_Clinical_Informatics_Social_Prescribing.pdf" download="Focused_Clinical_Informatics_Social_Prescribing.pdf">⬇ Empirical PDF (1.88 MB)</a>
+              <a class="btn btn-sm" href="downloads/Focused_Clinical_Informatics_Social_Prescribing.pdf" download="Focused_Clinical_Informatics_Social_Prescribing.pdf">⬇ Empirical PDF (1.97 MB)</a>
               <a class="btn btn-ghost btn-sm" href="https://samskrift.com/view/e6628414-9373-4a34-accd-cc8b6d46e0ce/7c7a2c96-238a-4e05-9d8d-230d04da8440" target="_blank" rel="noopener">Samskrift Live ↗</a>
             </div>
           </div>
@@ -190,7 +190,7 @@
         <p class="kicker">01 · Compiled Samskrift Cloud Publications (Empirical Clinical-Informatics Study + Exploratory Monograph)</p>
         <h2>Dual-Paper Interactive Reader: Real NHS Cohort Study (8 pp.) &amp; Full Monograph (10 pp.)</h2>
         <p class="lead">
-          Use the document tabs below to switch seamlessly between <strong>(1) the Focused Empirical Clinical-Informatics Paper</strong> calibrated on <strong>6,105 English GP practices</strong> (NHS DES + OHID Fingertips, <code>143</code> Mid &amp; South Essex practices, ELSA Wave 10 &amp; CPRD Aurum; <code>1,878,040 bytes</code> · SHA-256 <code>2e53a3baa3d75a54…</code>) and <strong>(2) the Full 10-Page Exploratory QSPM Monograph</strong> (<code>2,568,145 bytes</code> · SHA-256 <code>885d23c54fdcfafa…</code>).
+          Use the document tabs below to switch seamlessly between <strong>(1) the Focused Empirical Clinical-Informatics Paper</strong> calibrated on <strong>6,105 English GP practices</strong> (NHS DES + OHID Fingertips, <code>143</code> Mid &amp; South Essex practices, ELSA Wave 10 &amp; CPRD Aurum; <code>1,972,150 bytes</code> · SHA-256 <code>48311fbca98b332f…</code>) and <strong>(2) the Full 10-Page Exploratory QSPM Monograph</strong> (<code>2,568,145 bytes</code> · SHA-256 <code>885d23c54fdcfafa…</code>).
         </p>
 
         <div id="paper-preview-panel" class="reader-panel" role="region" aria-label="Interactive Monograph Preview Panel">
@@ -561,23 +561,23 @@
             <img src="figures_focused/fig2_empirical_hubo_haiqu_milp.png" alt="Empirical Cubic Synergies and Haiqu SDK v1.7.1 vs Rosenberg HiGHS MILP Benchmark" loading="lazy" data-open-fig="figures_focused/fig2_empirical_hubo_haiqu_milp.png" />
             <figcaption>
               <div>
-                <strong>Empirical Fig. 2 — Real NHS Cubic (<em>k</em>=3) Synergies &amp; Core20 HUBO Solvers:</strong> <code>Core20 × Clin. Pharm × Shared Dec.</code> lifts SP acceptance <strong>+9.90 pp</strong> (<code>p = 1.13e-3</code>); Rosenberg + HiGHS MILP proves exact <code>11100000</code> (<code>E₀ = −1.7181</code>) in <strong>19.19 ms</strong> vs Haiqu <code>−94.47%</code> depth cut.
+                <strong>Empirical Fig. 2 — Real NHS Cubic (<em>k</em>=3) Synergies &amp; Core20 HUBO Solvers:</strong> <code>Core20 × Clin. Pharm × Shared Dec.</code> lifts SP acceptance <strong>+9.90 pp</strong> (<code>p = 1.13e-3</code>); Rosenberg + HiGHS MILP proves exact <code>11100000</code> in <strong>19.19 ms</strong>, invariant across a <strong>4.2×</strong> ARRS cost plateau (<code>0.40×–1.68×</code>).
               </div>
               <div class="figcap-footer">
-                <span style="font-family:var(--font-mono);font-size:0.7rem;color:var(--ink-dim)">N = 6,031 GPs · Haiqu v1.7.1 · HiGHS MILP</span>
+                <span style="font-family:var(--font-mono);font-size:0.7rem;color:var(--ink-dim)">N = 6,031 GPs · Haiqu v1.7.1 · 4.2× Cost Plateau</span>
                 <button type="button" class="fig-zoom-btn" data-open-fig="figures_focused/fig2_empirical_hubo_haiqu_milp.png">🔍 300-DPI Print Fig</button>
               </div>
             </figcaption>
           </figure>
 
           <figure class="emp-fig-card">
-            <img src="figures_focused/fig3_attrition_cadence_mse_allocation.png" alt="Empirical Link-Worker Cadence Trajectory, BIC Parsimony, and Real NHS Caseload Routing" loading="lazy" data-open-fig="figures_focused/fig3_attrition_cadence_mse_allocation.png" />
+            <img src="figures_focused/fig3_attrition_cadence_mse_allocation.png" alt="Within-Practice GP Fixed-Effects Panel, 3-Wave SMR Trajectory, National PCN Routing, and Core20 Pareto Frontier" loading="lazy" data-open-fig="figures_focused/fig3_attrition_cadence_mse_allocation.png" />
             <figcaption>
               <div>
-                <strong>Empirical Fig. 3 — Link-Worker Cadence U-Curve &amp; National PCN Routing:</strong> Non-GP consults drop <strong>−65.5%</strong> at moderate cadence (<code>O5</code>, quadratic <code>p = 4.06e-19</code>); classical GLM wins BIC (<code>−5199.6</code>); HiGHS MILP routes all <strong>1,296 English PCNs</strong> in <strong>200.95 ms</strong>.
+                <strong>Empirical Fig. 3 — Within-Practice GP-FE Panel &amp; Core20 Pareto Frontier:</strong> Cross-sectional cadence U-curve attenuates to null under GP fixed effects (<code>p = 0.986</code>); 3-wave SMR panel (<code>17,340</code> obs) confirms Pharmacist buffering (<code>p = 1.64e-6</code>); <code>1.50×</code> Core20 weight gains <strong>+12.69 pp</strong> hub access at <strong>99.81%</strong> efficiency.
               </div>
               <div class="figcap-footer">
-                <span style="font-family:var(--font-mono);font-size:0.7rem;color:var(--ink-dim)">MSE 28 PCNs / 143 GPs · England 1,296 PCNs</span>
+                <span style="font-family:var(--font-mono);font-size:0.7rem;color:var(--ink-dim)">17,340 Panel Obs · 1,296 PCNs · Core20 Pareto</span>
                 <button type="button" class="fig-zoom-btn" data-open-fig="figures_focused/fig3_attrition_cadence_mse_allocation.png">🔍 300-DPI Print Fig</button>
               </div>
             </figcaption>
@@ -774,8 +774,8 @@
               <a class="resource-card" href="downloads/Focused_Clinical_Informatics_Social_Prescribing.pdf" download="Focused_Clinical_Informatics_Social_Prescribing.pdf">
                 <span class="resource-icon">⬇</span>
                 <div>
-                  <div class="resource-title">Download Focused Empirical Paper PDF (1.88 MB)</div>
-                  <div class="resource-slug">SHA-256: 2e53a3baa3d75a54… (0 unresolved refs)</div>
+                  <div class="resource-title">Download Focused Empirical Paper PDF (1.97 MB)</div>
+                  <div class="resource-slug">SHA-256: 48311fbca98b332f… (0 unresolved refs)</div>
                 </div>
                 <span class="resource-ext">PDF</span>
               </a>
