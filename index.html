@@ -71,11 +71,11 @@
     <section class="hero">
       <div class="container">
         <div class="hero-badges">
-          <span class="pill pill-signal">Live Quantinuum Nexus Helios-1E-lite (6,144 Shots) &amp; H2-Emulator</span>
-          <span class="pill pill-amber">Haiqu SDK v1.7.1 (−94.19% Depth) + OpenJij 120-Var QUBO</span>
-          <span class="pill pill-signal">Modal + Hugging Face 4q QSPMLM (99.79% Acc)</span>
-          <span class="pill">HQS · QProtSim · AlphaGenome · Text2WetLab</span>
-          <span class="pill pill-ember">NHS DCB0129 · 0 Physical QPU Shots · 4 Open Hazards</span>
+          <span class="pill pill-signal">Empirical NHS Cohort: 6,105 GPs · 143 MSE GPs · ELSA Wave 10</span>
+          <span class="pill pill-signal">Live Quantinuum Nexus Helios-1E-lite (7,168 Shots · 4 Jobs) &amp; H2-Emulator</span>
+          <span class="pill pill-amber">Haiqu v1.7.1 (−94.47% Depth) vs HiGHS MILP (19.2 ms Exact)</span>
+          <span class="pill">Modal + HF 4q QSPMLM · HQS · QProtSim · AlphaGenome</span>
+          <span class="pill pill-ember">NHS DCB0129 · 0 Physical QPU Shots · 10 SHA-256 Receipts</span>
         </div>
 
         <p class="kicker">Integrated Neighbourhood Care · Community Pharmacy SMR · Quantum Algorithms &amp; Biophysical Grounding</p>
@@ -98,14 +98,14 @@
         <div class="tracks-grid" aria-label="Research Entry Tracks">
           <div class="track-card">
             <div>
-              <div class="track-role">Track 01 · Full Typeset Monograph</div>
-              <div class="track-title">10-Page Samskrift Paper</div>
-              <p class="track-desc">Complete explicit Hamiltonians/Lindbladians, 5 multi-panel 300-DPI figures, 33 live-verified references, and all 9 SHA-256 receipt tables (incl. live Nexus <code>Helios-1E-lite</code> UUIDs).</p>
+              <div class="track-role">Track 01 · Dual Samskrift Papers (Empirical + Full)</div>
+              <div class="track-title">8-Page NHS Study &amp; 10-Page Monograph</div>
+              <p class="track-desc">Switch live between the <strong>8-Page Focused Empirical NHS Clinical-Informatics Study</strong> (<code>6,105</code> English GPs, <code>143</code> MSE GPs, ELSA W10 &amp; CPRD) and the <strong>10-Page Full QSPM Monograph</strong>.</p>
             </div>
             <div class="track-actions">
-              <a class="btn btn-primary btn-sm" href="#paper">📖 Read in Panel</a>
-              <a class="btn btn-sm" href="downloads/Quantum_Social_Prescribing.pdf" download="Quantum_Social_Prescribing.pdf">⬇ PDF (2.57 MB)</a>
-              <a class="btn btn-ghost btn-sm" href="https://samskrift.com/view/0db305b3-9a91-4fdb-ada8-b760beda1ec5/668cdf7d-9840-478a-9101-88989e408c54" target="_blank" rel="noopener">Samskrift Live ↗</a>
+              <a class="btn btn-primary btn-sm" href="#paper">📖 Read Both Papers</a>
+              <a class="btn btn-sm" href="downloads/Focused_Clinical_Informatics_Social_Prescribing.pdf" download="Focused_Clinical_Informatics_Social_Prescribing.pdf">⬇ Empirical PDF (1.88 MB)</a>
+              <a class="btn btn-ghost btn-sm" href="https://samskrift.com/view/e6628414-9373-4a34-accd-cc8b6d46e0ce/7c7a2c96-238a-4e05-9d8d-230d04da8440" target="_blank" rel="noopener">Samskrift Live ↗</a>
             </div>
           </div>
 
@@ -178,26 +178,27 @@
         </div>
 
         <div class="honesty-banner" role="note">
-          <strong>Epistemic Demarcation, Gate G4 Classical Baselines &amp; NHS DCB0129 Disclosure:</strong>
-          <strong>Zero physical QPU hardware shots (0)</strong> and <strong>zero patient or wet-lab biological samples (0)</strong> are claimed (<code>synthetic_payload: true</code>). Trapped-ion results come from <strong>3 live Quantinuum Nexus <code>Helios-1E-lite</code> jobs</strong>—Quantinuum’s 26-qubit <em>Emulator for Quantinuum’s Helios-1 system with full error modelling, hosted on lightweight classical compute</em> (<code>HeliosConfig</code> / <code>HeliosRuntime</code>, <code>StatevectorSimulator</code> + <code>QSystemErrorModel="alpha"</code>, <code>0.00 HQC</code>; <code>6,144</code> shots in project <code>Quantum-Social-Prescribing</code>)—plus 3 remote jobs on <code>aqora:nexus:H2-Emulator</code> (26-qubit H2 full-error-model emulator; <code>1,536</code> shots) and local Selene <code>HeliosInterface</code> (<code>3,072</code> shots). Applying Rosenberg quadratization + HiGHS MILP solves sparse socio-clinical 3-body HUBOs up to <code>n_path = 60</code> in <code>≤ 1.32 s</code> (and 4-bit Kempe swaps solve the 120-var caseload QUBO to 100% optimality in <code>8.72 ms</code>); projected active-QEC FTQC crossover applies strictly to open-system <code>O(n_spin · 4^n_spin)</code> Lindbladian dynamics at <code>n_spin ≥ 12–16</code>. All 4 clinical safety hazards remain <strong>OPEN</strong> with mandatory human Pharmacist/GP and Link-Worker authority.
+          <strong>Epistemic Demarcation, Real NHS Public-Cohort Calibration &amp; NHS DCB0129 Disclosure:</strong>
+          <strong>Zero physical QPU hardware shots (0)</strong>, <strong>zero individual patient-identifiable EHRs (0)</strong>, and <strong>zero wet-lab biological samples (0)</strong> are claimed. Empirical calibration uses open NHS England GP Contract Services DES + OHID Fingertips practice statistics (<code>6,105</code> active English GP practices, <code>61.83M</code> patients; <code>143</code> Mid &amp; South Essex practices, OGL v3.0) paired with published ELSA Wave 10 &amp; CPRD Aurum benchmarks. Trapped-ion results come from <strong>4 live Quantinuum Nexus <code>Helios-1E-lite</code> jobs</strong>—Quantinuum’s 26-qubit <em>Emulator for Quantinuum’s Helios-1 system with full error modelling, hosted on lightweight classical compute</em> (<code>HeliosConfig</code> / <code>HeliosRuntime</code>, <code>StatevectorSimulator</code> + <code>QSystemErrorModel="alpha"</code>, <code>0.00 HQC</code>; <code>7,168</code> shots in project <code>Quantum-Social-Prescribing</code>)—plus 3 remote jobs on <code>aqora:nexus:H2-Emulator</code> (<code>1,536</code> shots) and local Selene <code>HeliosInterface</code> (<code>3,072</code> shots). Applying Rosenberg quadratization + HiGHS MILP solves the empirically fitted Core20 3-body HUBO in <code>19.19 ms</code> and routes all <code>1,296</code> English PCNs in <code>200.95 ms</code> (and solves sparse HUBOs up to <code>n_path = 60</code> in <code>≤ 1.32 s</code>); projected active-QEC FTQC crossover applies strictly to open-system <code>O(n_spin · 4^n_spin)</code> Lindbladian dynamics at <code>n_spin ≥ 12–16</code>. All clinical safety hazards remain <strong>OPEN</strong> with mandatory human Pharmacist/GP and Link-Worker authority.
         </div>
       </div>
     </section>
 
-    <!-- Section 01: Samskrift Monograph & Live In-Page PDF.js Reader -->
+    <!-- Section 01: Dual Samskrift Papers & Live In-Page PDF.js Reader -->
     <section id="paper" class="band band-alt">
       <div class="container">
-        <p class="kicker">01 · Compiled Samskrift Cloud Monograph</p>
-        <h2>10-Page Typeset Paper &amp; Interactive In-Page Reader</h2>
+        <p class="kicker">01 · Compiled Samskrift Cloud Publications (Empirical Clinical-Informatics Study + Exploratory Monograph)</p>
+        <h2>Dual-Paper Interactive Reader: Real NHS Cohort Study (8 pp.) &amp; Full Monograph (10 pp.)</h2>
         <p class="lead">
-          Compiled deterministically on <strong>Samskrift Cloud</strong> from the 9 SHA-256-sealed experimental receipts in <code>receipts/</code> with zero unresolved citations or references (<code>2,568,145 bytes</code> · SHA-256 <code>885d23c54fdcfafa…</code>).
+          Use the document tabs below to switch seamlessly between <strong>(1) the Focused Empirical Clinical-Informatics Paper</strong> calibrated on <strong>6,105 English GP practices</strong> (NHS DES + OHID Fingertips, <code>143</code> Mid &amp; South Essex practices, ELSA Wave 10 &amp; CPRD Aurum; <code>1,878,040 bytes</code> · SHA-256 <code>2e53a3baa3d75a54…</code>) and <strong>(2) the Full 10-Page Exploratory QSPM Monograph</strong> (<code>2,568,145 bytes</code> · SHA-256 <code>885d23c54fdcfafa…</code>).
         </p>
 
         <div id="paper-preview-panel" class="reader-panel" role="region" aria-label="Interactive Monograph Preview Panel">
           <div class="reader-doc-tabs">
-            <div class="reader-doc-pills">
-              <span class="reader-doc-btn active">📘 Quantum Social Prescribing Monograph (10 Pages · Samskrift Build)</span>
-              <a class="reader-icon-btn" href="https://samskrift.com/view/0db305b3-9a91-4fdb-ada8-b760beda1ec5/668cdf7d-9840-478a-9101-88989e408c54" target="_blank" rel="noopener">🌐 Open on Samskrift Cloud ↗</a>
+            <div class="reader-doc-pills" role="tablist" aria-label="Select publication document">
+              <button type="button" class="reader-doc-btn active" data-paper-doc="focused" role="tab" aria-selected="true">📗 Focused Empirical NHS Clinical-Informatics Paper (8 Pages · 6,105 GPs &amp; ELSA W10)</button>
+              <button type="button" class="reader-doc-btn" data-paper-doc="monograph" role="tab" aria-selected="false">📘 Full Exploratory QSPM Monograph (10 Pages · Tier 1–3 Architecture)</button>
+              <a id="reader-samskrift-link" class="reader-icon-btn" href="https://samskrift.com/view/e6628414-9373-4a34-accd-cc8b6d46e0ce/7c7a2c96-238a-4e05-9d8d-230d04da8440" target="_blank" rel="noopener">🌐 Open on Samskrift Cloud ↗</a>
             </div>
             <div class="reader-controls-group">
               <button id="reader-tall-btn" type="button" class="reader-icon-btn" title="Toggle taller reading viewport">↕ Tall</button>
@@ -210,8 +211,8 @@
             <div class="reader-controls-group">
               <button id="reader-prev-page" type="button" class="reader-icon-btn" aria-label="Previous page">◀ Prev</button>
               <span style="color:var(--ink-muted)">
-                Page <input id="reader-page-input" type="number" min="1" max="10" value="1" class="reader-page-input" aria-label="Page number" />
-                of <strong id="reader-page-count" style="color:var(--ink)">10</strong>
+                Page <input id="reader-page-input" type="number" min="1" max="8" value="1" class="reader-page-input" aria-label="Page number" />
+                of <strong id="reader-page-count" style="color:var(--ink)">8</strong>
               </span>
               <button id="reader-next-page" type="button" class="reader-icon-btn" aria-label="Next page">Next ▶</button>
             </div>
@@ -224,8 +225,8 @@
             </div>
 
             <div class="reader-controls-group">
-              <a class="reader-icon-btn" href="downloads/Quantum_Social_Prescribing.pdf" target="_blank" rel="noopener">↗ Open PDF Tab</a>
-              <a class="btn btn-primary btn-sm" href="downloads/Quantum_Social_Prescribing.pdf" download="Quantum_Social_Prescribing.pdf">⬇ Download PDF</a>
+              <a id="reader-open-pdf" class="reader-icon-btn" href="downloads/Focused_Clinical_Informatics_Social_Prescribing.pdf" target="_blank" rel="noopener">↗ Open PDF Tab</a>
+              <a id="reader-dl-pdf" class="btn btn-primary btn-sm" href="downloads/Focused_Clinical_Informatics_Social_Prescribing.pdf" download="Focused_Clinical_Informatics_Social_Prescribing.pdf">⬇ Download PDF</a>
             </div>
           </div>
 
@@ -233,7 +234,7 @@
 
           <div id="reader-viewport" class="reader-viewport">
             <div id="reader-canvas-stream" class="reader-canvas-stream">
-              <div class="pdf-loading-msg">Loading typeset 10-page Samskrift monograph…</div>
+              <div class="pdf-loading-msg">Loading typeset Samskrift publication…</div>
             </div>
           </div>
         </div>
@@ -532,6 +533,69 @@
             </div>
           </figcaption>
         </figure>
+
+        <!-- Empirical NHS England (6,105 GPs), Mid & South Essex ICB (143 GPs) & ELSA Wave 10 300-DPI Gallery -->
+        <div style="margin-top:2.1rem">
+          <p class="kicker" style="margin-bottom:0.25rem">Focused Clinical-Informatics Study · Real Public Cohort Calibration (Receipt 10)</p>
+          <h3 style="margin:0 0 0.35rem">Empirical NHS England (6,105 GPs), Mid &amp; South Essex ICB (143 GPs) &amp; ELSA Wave 10 Figures</h3>
+          <p style="margin:0;font-size:0.86rem;color:var(--ink-muted)">
+            Generated directly from <code>receipts/nhs_empirical_cohort_calibration_receipt.json</code> (Open Government Licence v3.0 + CC BY published ELSA Wave 10 / CPRD Aurum benchmarks; 0 patient-identifiable records). Click any figure or button to inspect at 300 DPI.
+          </p>
+        </div>
+
+        <div class="emp-fig-grid">
+          <figure class="emp-fig-card">
+            <img src="figures_focused/fig1_nhs_elsa_epidemiology.png" alt="National NHS DES, CPRD Aurum, and ELSA Wave 10 Epidemiological Calibration" loading="lazy" data-open-fig="figures_focused/fig1_nhs_elsa_epidemiology.png" />
+            <figcaption>
+              <div>
+                <strong>Empirical Fig. 1 — Core20 Opioid–SMR Gap &amp; Refusal Triangulation:</strong> Across <code>6,105</code> English GPs, Core20 opioids rise <strong>+51.0%</strong> while SMRs stay flat; practice-median refusal (<strong>21.93%</strong>) replicates CPRD Aurum (<strong>22.30%</strong>; deprivation conditional null <code>p = 0.755</code>).
+              </div>
+              <div class="figcap-footer">
+                <span style="font-family:var(--font-mono);font-size:0.7rem;color:var(--ink-dim)">NHS DES · OHID Fingertips · ELSA W10 · CPRD</span>
+                <button type="button" class="fig-zoom-btn" data-open-fig="figures_focused/fig1_nhs_elsa_epidemiology.png">🔍 300-DPI Print Fig</button>
+              </div>
+            </figcaption>
+          </figure>
+
+          <figure class="emp-fig-card">
+            <img src="figures_focused/fig2_empirical_hubo_haiqu_milp.png" alt="Empirical Cubic Synergies and Haiqu SDK v1.7.1 vs Rosenberg HiGHS MILP Benchmark" loading="lazy" data-open-fig="figures_focused/fig2_empirical_hubo_haiqu_milp.png" />
+            <figcaption>
+              <div>
+                <strong>Empirical Fig. 2 — Real NHS Cubic (<em>k</em>=3) Synergies &amp; Core20 HUBO Solvers:</strong> <code>Core20 × Clin. Pharm × Shared Dec.</code> lifts SP acceptance <strong>+9.90 pp</strong> (<code>p = 1.13e-3</code>); Rosenberg + HiGHS MILP proves exact <code>11100000</code> (<code>E₀ = −1.7181</code>) in <strong>19.19 ms</strong> vs Haiqu <code>−94.47%</code> depth cut.
+              </div>
+              <div class="figcap-footer">
+                <span style="font-family:var(--font-mono);font-size:0.7rem;color:var(--ink-dim)">N = 6,031 GPs · Haiqu v1.7.1 · HiGHS MILP</span>
+                <button type="button" class="fig-zoom-btn" data-open-fig="figures_focused/fig2_empirical_hubo_haiqu_milp.png">🔍 300-DPI Print Fig</button>
+              </div>
+            </figcaption>
+          </figure>
+
+          <figure class="emp-fig-card">
+            <img src="figures_focused/fig3_attrition_cadence_mse_allocation.png" alt="Empirical Link-Worker Cadence Trajectory, BIC Parsimony, and Real NHS Caseload Routing" loading="lazy" data-open-fig="figures_focused/fig3_attrition_cadence_mse_allocation.png" />
+            <figcaption>
+              <div>
+                <strong>Empirical Fig. 3 — Link-Worker Cadence U-Curve &amp; National PCN Routing:</strong> Non-GP consults drop <strong>−65.5%</strong> at moderate cadence (<code>O5</code>, quadratic <code>p = 4.06e-19</code>); classical GLM wins BIC (<code>−5199.6</code>); HiGHS MILP routes all <strong>1,296 English PCNs</strong> in <strong>200.95 ms</strong>.
+              </div>
+              <div class="figcap-footer">
+                <span style="font-family:var(--font-mono);font-size:0.7rem;color:var(--ink-dim)">MSE 28 PCNs / 143 GPs · England 1,296 PCNs</span>
+                <button type="button" class="fig-zoom-btn" data-open-fig="figures_focused/fig3_attrition_cadence_mse_allocation.png">🔍 300-DPI Print Fig</button>
+              </div>
+            </figcaption>
+          </figure>
+
+          <figure class="emp-fig-card">
+            <img src="figures_focused/fig4_oos_qml_nexus_jev_governance.png" alt="Held-Out 80/20 NHS Triage, Live Nexus Helios-1E-lite Readout on Y02177, and TypeSafe Jev 1.14 Audit" loading="lazy" data-open-fig="figures_focused/fig4_oos_qml_nexus_jev_governance.png" />
+            <figcaption>
+              <div>
+                <strong>Empirical Fig. 4 — Held-Out NHS Triage, Live Nexus <code>af987c9a</code> &amp; Jev 1.14 Audit:</strong> Classical <code>LogReg</code> (AUROC <strong>0.6964</strong>, <code>2.51 ms</code>) &amp; <code>RF</code> (<strong>0.6155</strong>) beat 4q VQC (<code>0.5869</code> / <code>0.5465</code>); live Nexus <code>Helios-1E-lite</code> readout on Southend Core20 <code>Y02177</code>; Jev <code>P_auto = 0.00</code>.
+              </div>
+              <div class="figcap-footer">
+                <span style="font-family:var(--font-mono);font-size:0.7rem;color:var(--ink-dim)">Nexus Job af987c9a · ML-DSA-65 · Jev 1.14</span>
+                <button type="button" class="fig-zoom-btn" data-open-fig="figures_focused/fig4_oos_qml_nexus_jev_governance.png">🔍 300-DPI Print Fig</button>
+              </div>
+            </figcaption>
+          </figure>
+        </div>
       </div>
     </section>
 
@@ -554,12 +618,12 @@
           </div>
         </div>
         <p class="lead">
-          Unifies <strong>56 ontology nodes</strong> and <strong>86 typed semantic edges</strong> across 7 classes (1 connected component, diameter <code>8</code>, mean shortest path <code>3.66</code>): NHS DAPB4066 &amp; Core20PLUS5 clinical standards, 8 socio-clinical HUBO care pathways + 5 VCFSE hubs, 12 quantum emulators &amp; Gate G4 classical engines (incl. Quantinuum Nexus <code>Helios-1E-lite</code> &amp; Rosenberg/HiGHS MILP), 9 Kashefi Primitives Atlas v0.4 contracts, 6 phenomenological PNI/genomic/structural loci, 5 TypeSafe Jev 1.14 / NHS DCB0129 hazards, and all 9 SHA-256 receipts.
+          Unifies <strong>60 ontology nodes</strong> and <strong>98 typed semantic edges</strong> across 7 classes (1 connected component, diameter <code>8</code>, mean shortest path <code>3.54</code>): real NHS England DES + OHID Fingertips (<code>6,105</code> GPs), Mid &amp; South Essex ICB (<code>143</code> GPs / <code>28</code> PCNs), &amp; ELSA Wave 10 / CPRD benchmarks alongside HUBO pathways, quantum emulators &amp; HiGHS MILP, Kashefi Atlas v0.4 contracts, PNI/genomic loci, TypeSafe Jev 1.14 hazards, and all <strong>10 SHA-256 receipts</strong>.
         </p>
 
         <div class="kg-toolbar">
-          <input id="kg-search" type="search" class="search-input" style="margin:0" placeholder="Search 56 nodes by label, ID, SNOMED CT, Ensembl, Helios-1E-lite, or SHA-256…" aria-label="Search knowledge graph nodes" />
-          <span id="kg-status-pill" class="pill pill-signal">56 / 56 Nodes · 86 Edges</span>
+          <input id="kg-search" type="search" class="search-input" style="margin:0" placeholder="Search 60 nodes by label, ID, NHS DES, Mid & South Essex, ELSA, Helios-1E-lite, or SHA-256…" aria-label="Search knowledge graph nodes" />
+          <span id="kg-status-pill" class="pill pill-signal">60 / 60 Nodes · 98 Edges</span>
         </div>
 
         <div id="kg-cat-chips" class="kg-chip-row" aria-label="Filter knowledge graph categories"></div>
@@ -571,9 +635,9 @@
           <select id="kg-path-dst" class="kg-select" aria-label="Target node"></select>
           <button type="button" id="kg-trace-btn" class="btn btn-primary btn-sm">Trace Path</button>
           <button type="button" id="kg-clear-path-btn" class="btn btn-ghost btn-sm">Clear</button>
+          <button type="button" class="preset-chip" data-kg-preset="NHS_DES_FINGERTIPS_6105|NEXUS_HELIOS_1E_LITE">NHS 6,105 GPs → MSE → Helios Job af987c9a</button>
           <button type="button" class="preset-chip" data-kg-preset="LONELINESS_ISOLATION|HAZARD_H04_DEMARCATION">Cohort → Helios → Demarcation</button>
           <button type="button" class="preset-chip" data-kg-preset="PHARMACY_SMR|ROSENBERG_HIGHS_MILP">SMR → Haiqu → HiGHS MILP</button>
-          <button type="button" class="preset-chip" data-kg-preset="PATH_x5_PEER|TEXT2WETLAB_OT2">Peer → OXTR → OT-2 ELISA</button>
         </div>
 
         <div id="kg-path-ribbon" class="kg-path-ribbon" role="status"></div>
@@ -698,20 +762,38 @@
             </p>
 
             <div class="resource-list">
-              <a class="resource-card" href="https://samskrift.com/view/0db305b3-9a91-4fdb-ada8-b760beda1ec5/668cdf7d-9840-478a-9101-88989e408c54" target="_blank" rel="noopener">
-                <span class="resource-icon">📄</span>
+              <a class="resource-card" href="https://samskrift.com/view/e6628414-9373-4a34-accd-cc8b6d46e0ce/7c7a2c96-238a-4e05-9d8d-230d04da8440" target="_blank" rel="noopener">
+                <span class="resource-icon">📗</span>
                 <div>
-                  <div class="resource-title">Samskrift Cloud Live Paper (10 Pages)</div>
+                  <div class="resource-title">Focused Empirical NHS Paper on Samskrift (8 Pages)</div>
+                  <div class="resource-slug">6,105 English GPs · 143 MSE GPs · ELSA Wave 10 &amp; CPRD</div>
+                </div>
+                <span class="resource-ext">↗</span>
+              </a>
+
+              <a class="resource-card" href="downloads/Focused_Clinical_Informatics_Social_Prescribing.pdf" download="Focused_Clinical_Informatics_Social_Prescribing.pdf">
+                <span class="resource-icon">⬇</span>
+                <div>
+                  <div class="resource-title">Download Focused Empirical Paper PDF (1.88 MB)</div>
+                  <div class="resource-slug">SHA-256: 2e53a3baa3d75a54… (0 unresolved refs)</div>
+                </div>
+                <span class="resource-ext">PDF</span>
+              </a>
+
+              <a class="resource-card" href="https://samskrift.com/view/0db305b3-9a91-4fdb-ada8-b760beda1ec5/668cdf7d-9840-478a-9101-88989e408c54" target="_blank" rel="noopener">
+                <span class="resource-icon">📘</span>
+                <div>
+                  <div class="resource-title">Full Exploratory QSPM Monograph (10 Pages)</div>
                   <div class="resource-slug">samskrift.com/view/0db305b3-9a91-4fdb-ada8-b760beda1ec5</div>
                 </div>
                 <span class="resource-ext">↗</span>
               </a>
 
-              <a class="resource-card" href="receipts/direct_nexus_helios_jobs_receipt.json" target="_blank" rel="noopener">
+              <a class="resource-card" href="receipts/nhs_empirical_cohort_calibration_receipt.json" target="_blank" rel="noopener">
                 <span class="resource-icon">⚛</span>
                 <div>
-                  <div class="resource-title">Live Quantinuum Nexus Helios-1E-lite Receipt (6,144 Shots)</div>
-                  <div class="resource-slug">Jobs b813e944 · 295cb111 · 6cc7b395 (Project Quantum-Social-Prescribing)</div>
+                  <div class="resource-title">NHS Empirical Calibration + Nexus Job af987c9a Receipt</div>
+                  <div class="resource-slug">6,105 GPs · HiGHS MILP 19.19 ms · Southend Y02177</div>
                 </div>
                 <span class="resource-ext">JSON</span>
               </a>
@@ -719,28 +801,10 @@
               <a class="resource-card" href="https://huggingface.co/spaces/socialprescribing/quantinuum-social-prescribing" target="_blank" rel="noopener">
                 <span class="resource-icon">🤗</span>
                 <div>
-                  <div class="resource-title">Hugging Face Interactive QSPMLM Space</div>
-                  <div class="resource-slug">spaces/socialprescribing/quantinuum-social-prescribing</div>
-                </div>
-                <span class="resource-ext">↗</span>
-              </a>
-
-              <a class="resource-card" href="https://huggingface.co/socialprescribing/quantinuum-social-prescribing" target="_blank" rel="noopener">
-                <span class="resource-icon">📦</span>
-                <div>
-                  <div class="resource-title">Hugging Face Model Hub (Weights, HUGR &amp; Receipts)</div>
+                  <div class="resource-title">Hugging Face Interactive QSPMLM Space &amp; Hub</div>
                   <div class="resource-slug">socialprescribing/quantinuum-social-prescribing</div>
                 </div>
                 <span class="resource-ext">↗</span>
-              </a>
-
-              <a class="resource-card" href="downloads/Quantum_Social_Prescribing.pdf" download="Quantum_Social_Prescribing.pdf">
-                <span class="resource-icon">⬇</span>
-                <div>
-                  <div class="resource-title">Download Full Monograph PDF (2.57 MB)</div>
-                  <div class="resource-slug">SHA-256: 885d23c54fdcfafa… (0 unresolved refs)</div>
-                </div>
-                <span class="resource-ext">PDF</span>
               </a>
             </div>
           </div>
@@ -755,9 +819,10 @@
             </div>
 
             <div class="lang-pills" style="margin-top:0.65rem">
-              <button type="button" class="lang-btn active" data-bib-tab="monograph">Samskrift Monograph (2026)</button>
-              <button type="button" class="lang-btn" data-bib-tab="qspmlm">QSPMLM Hugging Face Model</button>
-              <button type="button" class="lang-btn" data-bib-tab="isppa">Pharmacy SP (PLOS ONE 2024)</button>
+              <button type="button" class="lang-btn active" data-bib-tab="focused">Focused NHS Paper (2026)</button>
+              <button type="button" class="lang-btn" data-bib-tab="monograph">Full Monograph (2026)</button>
+              <button type="button" class="lang-btn" data-bib-tab="qspmlm">QSPMLM HF Model</button>
+              <button type="button" class="lang-btn" data-bib-tab="isppa">Pharmacy SP (2024)</button>
             </div>
 
             <pre id="bibtex-code" class="code-block wrap-lines"></pre>
@@ -765,7 +830,7 @@
         </div>
 
         <div class="honesty-banner" style="margin-top:1.35rem;border-left-color:var(--signal)">
-          <strong>Acknowledgments:</strong> This work was supported in part by complimentary access to Google Antigravity and Gemini 4 Argon to accelerate scientific workflows.
+          <strong>Acknowledgments &amp; Open-Data Attribution:</strong> This work was supported in part by complimentary access to Google Antigravity and Gemini 4 Argon to accelerate scientific workflows. Public NHS England Network Contract DES MI &amp; OHID Fingertips data are reused under the Open Government Licence v3.0; published ELSA Wave 10 &amp; CPRD Aurum benchmark statistics are cited under CC BY via <a href="https://europepmc.org/" target="_blank" rel="noopener">Europe PMC</a> (<a href="https://doi.org/10.1177/17579139251330767" target="_blank" rel="noopener">PMC12322337</a>, <a href="https://doi.org/10.1093/pubmed/fdaf143" target="_blank" rel="noopener">PMC13017203</a>, <a href="https://doi.org/10.1371/journal.pone.0350842" target="_blank" rel="noopener">PMC13245770</a>).
         </div>
       </div>
     </section>

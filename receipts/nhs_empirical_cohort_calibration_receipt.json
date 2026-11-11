@@ -1,0 +1,810 @@
+{
+  "schema_version": "1.0.0-nhs-empirical-cohort-calibration",
+  "timestamp_utc": "2026-11-11T21:07:09.404132+00:00",
+  "physical_hardware_shots": 0,
+  "patient_identifiable_records_used": 0,
+  "open_data_license": "Open Government Licence v3.0 (NHS England Network Contract DES MI & OHID Fingertips) + CC BY Published ELSA Wave 10 / CPRD Benchmarks",
+  "cohort_manifest": {
+    "cohort_csv": "data/nhs_england_sp_smr_empirical_cohort.csv",
+    "cohort_csv_sha256": "fe053239f959f2b5297c6537d51ae9f82e2a143534ae146beca2729a73f033fb",
+    "n_england_gp_practices": 6105,
+    "n_england_pcns": 1296,
+    "n_england_icbs": 42,
+    "total_registered_patients_fy23_24": 61832846,
+    "n_mid_south_essex_practices": 143,
+    "n_mid_south_essex_pcns": 28,
+    "mid_south_essex_registered_patients": 1266245,
+    "license": "Open Government Licence v3.0 (NHS England Network Contract DES MI & OHID Fingertips)"
+  },
+  "track_e1_epidemiology_and_triangulation": {
+    "england_summary": {
+      "n_practices": 6105,
+      "n_pcns": 1296,
+      "n_icbs": 42,
+      "registered_patients": 61832846,
+      "total_sp_referrals_fy23_24": 892102,
+      "total_sp_declined_fy23_24": 418336,
+      "total_active_sp_caseload_fy23_24": 2150546,
+      "median_practice_sp_refusal_pct": 21.925,
+      "iqr_practice_sp_refusal_pct": [
+        10.921,
+        40.549
+      ],
+      "pooled_national_sp_refusal_pct_fy23_24": 31.923,
+      "median_practice_sp_refusal_pct_fy22_23": 13.207
+    },
+    "mid_and_south_essex_icb_summary": {
+      "icb_name": "Mid and South Essex ICB",
+      "n_practices": 143,
+      "n_pcns": 28,
+      "n_sub_icbs": 5,
+      "registered_patients": 1266245,
+      "sp_referrals_fy23_24": 21795,
+      "sp_declined_fy23_24": 9743,
+      "pooled_sp_refusal_pct": 30.893,
+      "median_practice_refusal_pct": 28.327,
+      "n_core20_practices": 14
+    },
+    "imd2025_quintile_gradient": [
+      {
+        "imd_quintile": "Q1_Least_Deprived",
+        "n_practices": 1221,
+        "registered_patients": 13855120,
+        "imd2025_mean": 10.03,
+        "sp_referral_rate_per_1k": 13.039,
+        "pooled_sp_refusal_pct": 28.029,
+        "median_practice_refusal_pct": 21.177,
+        "smr_per_1k": 30.404,
+        "opioid_pct": 6.892,
+        "benzo_pct": 2.656
+      },
+      {
+        "imd_quintile": "Q2",
+        "n_practices": 1222,
+        "registered_patients": 12794550,
+        "imd2025_mean": 15.685,
+        "sp_referral_rate_per_1k": 13.697,
+        "pooled_sp_refusal_pct": 29.724,
+        "median_practice_refusal_pct": 22.727,
+        "smr_per_1k": 35.58,
+        "opioid_pct": 8.038,
+        "benzo_pct": 2.673
+      },
+      {
+        "imd_quintile": "Q3",
+        "n_practices": 1220,
+        "registered_patients": 12939285,
+        "imd2025_mean": 21.448,
+        "sp_referral_rate_per_1k": 13.388,
+        "pooled_sp_refusal_pct": 34.872,
+        "median_practice_refusal_pct": 21.467,
+        "smr_per_1k": 32.067,
+        "opioid_pct": 8.468,
+        "benzo_pct": 2.459
+      },
+      {
+        "imd_quintile": "Q4",
+        "n_practices": 1221,
+        "registered_patients": 12290011,
+        "imd2025_mean": 28.662,
+        "sp_referral_rate_per_1k": 15.135,
+        "pooled_sp_refusal_pct": 31.858,
+        "median_practice_refusal_pct": 21.649,
+        "smr_per_1k": 29.939,
+        "opioid_pct": 8.964,
+        "benzo_pct": 2.176
+      },
+      {
+        "imd_quintile": "Q5_Core20_Most_Deprived",
+        "n_practices": 1221,
+        "registered_patients": 9953880,
+        "imd2025_mean": 41.818,
+        "sp_referral_rate_per_1k": 17.778,
+        "pooled_sp_refusal_pct": 34.725,
+        "median_practice_refusal_pct": 22.297,
+        "smr_per_1k": 32.066,
+        "opioid_pct": 10.406,
+        "benzo_pct": 2.172
+      }
+    ],
+    "practice_refusal_spearman_correlations": {
+      "imd2025": {
+        "rho": 0.00402,
+        "p_value": 0.75521
+      },
+      "aged_65_plus": {
+        "rho": 0.09016,
+        "p_value": 2.3092e-12
+      },
+      "opioid_pct_24": {
+        "rho": 0.11421,
+        "p_value": 5.7415e-19
+      },
+      "sedative_opioid_pct_24": {
+        "rho": 0.11259,
+        "p_value": 1.7952e-18
+      },
+      "depression_qof": {
+        "rho": 0.02393,
+        "p_value": 0.063095
+      },
+      "smr_per_1k_24": {
+        "rho": 0.10586,
+        "p_value": 1.686e-16
+      },
+      "sdm_per_1k_24": {
+        "rho": 0.17981,
+        "p_value": 5.3435e-45
+      },
+      "clin_pharm_reach_pct_24": {
+        "rho": 0.03359,
+        "p_value": 0.009083
+      }
+    },
+    "triangulation_with_elsa_and_cprd": {
+      "nhs_des_median_practice_refusal_pct": 21.93,
+      "cprd_aurum_agboraw_2026_refusal_pct": 22.3,
+      "cprd_bu_2025_refusal_2019_to_2023_pct": [
+        22.0,
+        12.0
+      ],
+      "elsa_wave10_fancourt_steptoe_2025_refusal_pct": 12.12,
+      "deprivation_conditional_refusal_null_replicated": true
+    }
+  },
+  "track_e2_empirical_cubic_hubo_and_haiqu": {
+    "nested_polynomial_interaction_tests": {
+      "sp_acceptance_rate_24": {
+        "n_practices": 6031,
+        "k1_r2": 0.0302,
+        "k1_aic": -1236.68,
+        "k2_r2": 0.03797,
+        "k2_aic": -1229.2,
+        "f_test_k1_to_k2": {
+          "f_stat": 1.7293,
+          "p_value": 0.0098695
+        },
+        "k3_r2": 0.04889,
+        "k3_aic": -1186.02,
+        "f_test_k2_to_k3_all56": {
+          "f_stat": 1.2169,
+          "p_value": 0.1294
+        },
+        "top_cubic_interactions": [
+          {
+            "term": "core20:active_pharm:active_sdm",
+            "coef": 0.099,
+            "se": 0.03039,
+            "p_value": 0.0011284
+          },
+          {
+            "term": "older_pop:high_opioid_benzo:active_smr",
+            "coef": -0.08285,
+            "se": 0.02931,
+            "p_value": 0.0047139
+          },
+          {
+            "term": "older_pop:active_pharm:active_sdm",
+            "coef": 0.07078,
+            "se": 0.02837,
+            "p_value": 0.012636
+          },
+          {
+            "term": "core20:older_pop:active_smr",
+            "coef": 0.0803,
+            "se": 0.03532,
+            "p_value": 0.023026
+          }
+        ]
+      },
+      "sp_reach_log": {
+        "n_practices": 6031,
+        "k1_r2": 0.02724,
+        "k1_aic": 11910.73,
+        "k2_r2": 0.03884,
+        "k2_aic": 11894.4,
+        "f_test_k1_to_k2": {
+          "f_stat": 2.5826,
+          "p_value": 9.6192e-06
+        },
+        "k3_r2": 0.05112,
+        "k3_aic": 11928.82,
+        "f_test_k2_to_k3_all56": {
+          "f_stat": 1.3729,
+          "p_value": 0.034336
+        },
+        "top_cubic_interactions": [
+          {
+            "term": "high_opioid_benzo:active_smr:active_pharm",
+            "coef": 0.25419,
+            "se": 0.08339,
+            "p_value": 0.0023127
+          },
+          {
+            "term": "high_depression:active_pharm:active_lw",
+            "coef": 0.20945,
+            "se": 0.08091,
+            "p_value": 0.009653
+          },
+          {
+            "term": "older_pop:active_smr:active_pharm",
+            "coef": -0.1812,
+            "se": 0.08145,
+            "p_value": 0.026144
+          },
+          {
+            "term": "older_pop:high_opioid_benzo:active_smr",
+            "coef": -0.18831,
+            "se": 0.08693,
+            "p_value": 0.03033
+          }
+        ]
+      },
+      "prospective_smr_cov_sep26": {
+        "n_practices": 5767,
+        "k1_r2": 0.10538,
+        "k1_aic": -9057.72,
+        "k2_r2": 0.11196,
+        "k2_aic": -9044.28,
+        "f_test_k1_to_k2": {
+          "f_stat": 1.5157,
+          "p_value": 0.039917
+        },
+        "k3_r2": 0.12248,
+        "k3_aic": -9001.01,
+        "f_test_k2_to_k3_all56": {
+          "f_stat": 1.2147,
+          "p_value": 0.13162
+        },
+        "top_cubic_interactions": [
+          {
+            "term": "active_smr:active_pharm:active_sdm",
+            "coef": 0.03966,
+            "se": 0.01246,
+            "p_value": 0.0014735
+          },
+          {
+            "term": "core20:active_lw:active_sdm",
+            "coef": 0.03753,
+            "se": 0.01717,
+            "p_value": 0.028897
+          },
+          {
+            "term": "high_opioid_benzo:high_depression:active_smr",
+            "coef": -0.02843,
+            "se": 0.01476,
+            "p_value": 0.054144
+          },
+          {
+            "term": "core20:older_pop:active_pharm",
+            "coef": -0.0337,
+            "se": 0.01802,
+            "p_value": 0.061464
+          }
+        ]
+      }
+    },
+    "empirical_cubic_bootstrap_95ci": {
+      "sp_acceptance__core20:active_pharm:active_sdm": {
+        "mean": 0.1002,
+        "ci95": [
+          0.03684,
+          0.16257
+        ]
+      },
+      "sp_reach_log__high_opioid_benzo:active_smr:active_pharm": {
+        "mean": 0.25327,
+        "ci95": [
+          0.09331,
+          0.41209
+        ]
+      },
+      "sp_reach_log__high_depression:active_pharm:active_lw": {
+        "mean": 0.2111,
+        "ci95": [
+          0.06918,
+          0.36218
+        ]
+      }
+    },
+    "core20_bundle_calibration_cohort_n": 2845,
+    "five_fold_cv_rmse_model_selection": {
+      "k1_linear_ridge": 1.83134,
+      "k2_qubo_ridge": 1.82995,
+      "k3_dense_hubo_ols": 1.8716,
+      "k3_sparse_hubo_lassocv": 1.83887
+    },
+    "empirically_fitted_8lever_hubo": {
+      "lever_names": [
+        "z0_Polypharmacy_Error_SMR_Active",
+        "z1_Addictive_Sedative_SMR_Active",
+        "z2_Severe_Frailty_SMR_Active",
+        "z3_CareHome_Falls_SMR_Active",
+        "z4_Clinical_Pharmacist_ARRS_HighReach",
+        "z5_Social_Prescribing_LinkWorker_ARRS",
+        "z6_Shared_Decision_Making_Active",
+        "z7_Personalised_Care_Plan_Active"
+      ],
+      "pcn_arrs_target_active_protocols": 5,
+      "linear_weights": [
+        0.082,
+        0.0423,
+        0.34,
+        0.4237,
+        0.9088,
+        0.7309,
+        1.2729,
+        0.9514
+      ],
+      "quadratic_weights": {
+        "0,2": -0.6479,
+        "0,1": -0.5986,
+        "1,2": -0.5178,
+        "0,7": -0.3923,
+        "1,3": 0.9891,
+        "4,6": 0.3441,
+        "0,3": 1.35
+      },
+      "cubic_weights": {
+        "0,1,2": -0.4181,
+        "3,4,7": -0.3559,
+        "4,5,7": -0.3378,
+        "2,4,7": -0.3273
+      },
+      "exact_gate_g4_enumeration": {
+        "ground_state_bitstring": "11100000",
+        "active_levers_in_ground_state": [
+          "z0_Polypharmacy_Error_SMR_Active",
+          "z1_Addictive_Sedative_SMR_Active",
+          "z2_Severe_Frailty_SMR_Active"
+        ],
+        "min_energy": -1.7181,
+        "max_energy": 5.5452,
+        "wall_microseconds": 654.75
+      },
+      "rosenberg_highs_milp": {
+        "bitstring": "11100000",
+        "min_energy": -1.7181,
+        "total_linearized_vars": 22,
+        "n_auxiliary_vars": 14,
+        "n_mccormick_constraints": 42,
+        "wall_ms": 19.1935,
+        "status": 0
+      },
+      "openjij_simulated_annealing": {
+        "best_bitstring": "00111101",
+        "best_energy": 2.3338,
+        "ground_state_hit_rate_pct": 0.0,
+        "wall_ms": 106.668
+      },
+      "haiqu_sdk_v171_lr_qaoa_compression": {
+        "status": "LIVE_HAIQU_CLOUD_VERIFIED",
+        "orig_lr_qaoa_depth": 253,
+        "orig_total_gates": 0,
+        "orig_2q_gates": 0,
+        "compressed_depth": 14,
+        "compressed_total_gates": 0,
+        "compressed_2q_gates": 0,
+        "depth_reduction_pct": 94.47,
+        "shots": 1024,
+        "raw_pre_postprocess_ground_shots": 0,
+        "raw_pre_postprocess_ground_pct": 0.0,
+        "postprocessed_best_bitstring": "00000111",
+        "postprocessed_min_energy": -1.7181,
+        "cvar_alpha_0_10": -1.7181,
+        "ground_state_recovered": true,
+        "wall_seconds": 218.188
+      }
+    }
+  },
+  "track_e3_empirical_attrition_and_cadence": {
+    "n_active_lw_coding_practices": 1625,
+    "octile_empirical_trajectory": [
+      {
+        "octile": "O1",
+        "n_practices": 204,
+        "median_lw_consults_per_sp_patient": 0.0042,
+        "pooled_sp_acceptance_pct": 69.304,
+        "median_nongp_consults_per_sp_patient": 123.69
+      },
+      {
+        "octile": "O2",
+        "n_practices": 203,
+        "median_lw_consults_per_sp_patient": 0.0141,
+        "pooled_sp_acceptance_pct": 61.969,
+        "median_nongp_consults_per_sp_patient": 120.46
+      },
+      {
+        "octile": "O3",
+        "n_practices": 203,
+        "median_lw_consults_per_sp_patient": 0.041,
+        "pooled_sp_acceptance_pct": 65.659,
+        "median_nongp_consults_per_sp_patient": 106.49
+      },
+      {
+        "octile": "O4",
+        "n_practices": 203,
+        "median_lw_consults_per_sp_patient": 0.1477,
+        "pooled_sp_acceptance_pct": 63.687,
+        "median_nongp_consults_per_sp_patient": 47.57
+      },
+      {
+        "octile": "O5",
+        "n_practices": 203,
+        "median_lw_consults_per_sp_patient": 0.3754,
+        "pooled_sp_acceptance_pct": 73.097,
+        "median_nongp_consults_per_sp_patient": 42.73
+      },
+      {
+        "octile": "O6",
+        "n_practices": 203,
+        "median_lw_consults_per_sp_patient": 0.75,
+        "pooled_sp_acceptance_pct": 66.628,
+        "median_nongp_consults_per_sp_patient": 52.34
+      },
+      {
+        "octile": "O7",
+        "n_practices": 203,
+        "median_lw_consults_per_sp_patient": 1.3455,
+        "pooled_sp_acceptance_pct": 76.39,
+        "median_nongp_consults_per_sp_patient": 53.39
+      },
+      {
+        "octile": "O8",
+        "n_practices": 203,
+        "median_lw_consults_per_sp_patient": 2.5351,
+        "pooled_sp_acceptance_pct": 76.773,
+        "median_nongp_consults_per_sp_patient": 77.42
+      }
+    ],
+    "model_comparison_sp_acceptance": {
+      "classical_monotone_loglinear": {
+        "n_params": 2,
+        "aic": -5210.42,
+        "bic": -5199.63,
+        "cv5_rmse": 0.20096
+      },
+      "classical_cubic_polynomial_glm": {
+        "n_params": 4,
+        "aic": -5209.66,
+        "bic": -5188.08,
+        "cv5_rmse": 0.20091
+      },
+      "empirically_fitted_2q_zeno_channel": {
+        "n_params": 4,
+        "fitted_parameters": {
+          "p_base": {
+            "est": 0.7615,
+            "se": 0.0189
+          },
+          "delta_env": {
+            "est": 2.4531,
+            "se": 1.5515
+          },
+          "g_coupling": {
+            "est": 0.4459,
+            "se": 0.2299
+          },
+          "kappa_fatigue": {
+            "est": 0.0,
+            "se": 0.00142
+          }
+        },
+        "aic": -5208.65,
+        "bic": -5187.08,
+        "cv5_rmse": 0.20091
+      }
+    },
+    "nongp_consultation_burden_u_curve": {
+      "linear_slope": -0.6197,
+      "linear_p_value": 6.0956e-27,
+      "quadratic_curvature": 0.2042,
+      "quadratic_p_value": 4.0572e-19,
+      "empirical_min_burden_lw_consult_ratio": 0.89,
+      "observational_caveat": "Practice-level DES counts are observational; higher consultation volume at top LW quantiles partially reflects confounding by multimorbid case severity alongside contact saturation."
+    }
+  },
+  "track_e4_mse_and_england_caseload_allocation": {
+    "mid_south_essex_28_pcns": {
+      "n_units": 28,
+      "n_hubs": 5,
+      "n_binary_decision_vars": 140,
+      "hub_capacity_cap": 7,
+      "highs_milp_exact": {
+        "optimal_equity_utility": 16.7891,
+        "wall_ms": 19.192
+      },
+      "kempe_4bit_swap_classical": {
+        "equity_utility": 16.7217,
+        "pct_of_milp_optimum": 99.5984,
+        "wall_ms": 1.064
+      },
+      "openjij_simulated_annealing": {
+        "total_qubo_variables": 155,
+        "feasible_solution_found": false,
+        "best_feasible_equity_utility": null,
+        "pct_of_milp_optimum": 0.0,
+        "one_hot_violations": 0,
+        "capacity_violations": 1,
+        "wall_ms": 88.08
+      }
+    },
+    "mid_south_essex_143_gp_practices": {
+      "n_units": 143,
+      "n_hubs": 5,
+      "n_binary_decision_vars": 715,
+      "hub_capacity_cap": 31,
+      "highs_milp_exact": {
+        "optimal_equity_utility": 82.2806,
+        "wall_ms": 9.449
+      },
+      "kempe_4bit_swap_classical": {
+        "equity_utility": 82.1938,
+        "pct_of_milp_optimum": 99.8945,
+        "wall_ms": 21.76
+      },
+      "openjij_simulated_annealing": {
+        "total_qubo_variables": 740,
+        "feasible_solution_found": false,
+        "best_feasible_equity_utility": null,
+        "pct_of_milp_optimum": 0.0,
+        "one_hot_violations": 43,
+        "capacity_violations": 0,
+        "wall_ms": 658.96
+      }
+    },
+    "england_national_1296_pcns": {
+      "n_units": 1296,
+      "n_hubs": 5,
+      "n_binary_decision_vars": 6480,
+      "hub_capacity_cap": 280,
+      "highs_milp_exact": {
+        "optimal_equity_utility": 657.1518,
+        "wall_ms": 200.946
+      },
+      "kempe_4bit_swap_classical": {
+        "equity_utility": 657.1012,
+        "pct_of_milp_optimum": 99.9923,
+        "wall_ms": 1414.508
+      },
+      "openjij_simulated_annealing": null
+    }
+  },
+  "track_e5_out_of_sample_qml_nexus_mldsa_jev": {
+    "out_of_sample_nhs_classification": {
+      "task_a_deprived_gp_high_sp_refusal": {
+        "n_total": 2411,
+        "n_train": 1928,
+        "n_test": 483,
+        "positive_prevalence_pct": 37.62,
+        "models": {
+          "LogisticRegression": {
+            "auroc": 0.5927,
+            "auroc_ci95": [
+              0.5384,
+              0.6414
+            ],
+            "auprc": 0.4747,
+            "accuracy": 0.6377,
+            "brier_score": 0.2273,
+            "wall_ms": 135.21
+          },
+          "RBF_SVM": {
+            "auroc": 0.5994,
+            "auroc_ci95": [
+              0.5449,
+              0.648
+            ],
+            "auprc": 0.5149,
+            "accuracy": 0.648,
+            "brier_score": 0.2258,
+            "wall_ms": 170.21
+          },
+          "RandomForest": {
+            "auroc": 0.6155,
+            "auroc_ci95": [
+              0.5613,
+              0.6641
+            ],
+            "auprc": 0.527,
+            "accuracy": 0.6522,
+            "brier_score": 0.2237,
+            "wall_ms": 373.86
+          },
+          "HistGradientBoosting_GBDT": {
+            "auroc": 0.6144,
+            "auroc_ci95": [
+              0.5599,
+              0.6668
+            ],
+            "auprc": 0.503,
+            "accuracy": 0.6356,
+            "brier_score": 0.2286,
+            "wall_ms": 666.1
+          },
+          "QSPMLM_4Q_Frobenius_VQC": {
+            "n_qubits": 4,
+            "n_quantum_params": 24,
+            "n_classical_head_params": 5,
+            "auroc": 0.5465,
+            "auroc_ci95": [
+              0.4884,
+              0.5971
+            ],
+            "auprc": 0.4283,
+            "accuracy": 0.6232,
+            "brier_score": 0.2342,
+            "wall_ms": 2211.88,
+            "readout_weights": [
+              -0.83508,
+              -0.59755,
+              0.40077,
+              -0.19863,
+              -0.42525
+            ]
+          }
+        }
+      },
+      "task_b_prospective_sep26_high_risk_smr_delivery": {
+        "n_total": 5837,
+        "n_train": 4669,
+        "n_test": 1168,
+        "positive_prevalence_pct": 50.01,
+        "models": {
+          "LogisticRegression": {
+            "auroc": 0.6964,
+            "auroc_ci95": [
+              0.6698,
+              0.7273
+            ],
+            "auprc": 0.6935,
+            "accuracy": 0.6387,
+            "brier_score": 0.2247,
+            "wall_ms": 2.51
+          },
+          "RBF_SVM": {
+            "auroc": 0.6856,
+            "auroc_ci95": [
+              0.6577,
+              0.7163
+            ],
+            "auprc": 0.6798,
+            "accuracy": 0.6396,
+            "brier_score": 0.2238,
+            "wall_ms": 916.22
+          },
+          "RandomForest": {
+            "auroc": 0.6884,
+            "auroc_ci95": [
+              0.6594,
+              0.7193
+            ],
+            "auprc": 0.679,
+            "accuracy": 0.6378,
+            "brier_score": 0.2239,
+            "wall_ms": 871.05
+          },
+          "HistGradientBoosting_GBDT": {
+            "auroc": 0.6848,
+            "auroc_ci95": [
+              0.6541,
+              0.7141
+            ],
+            "auprc": 0.6757,
+            "accuracy": 0.6318,
+            "brier_score": 0.2267,
+            "wall_ms": 1732.0
+          },
+          "QSPMLM_4Q_Frobenius_VQC": {
+            "n_qubits": 4,
+            "n_quantum_params": 24,
+            "n_classical_head_params": 5,
+            "auroc": 0.5869,
+            "auroc_ci95": [
+              0.5539,
+              0.6198
+            ],
+            "auprc": 0.5897,
+            "accuracy": 0.5642,
+            "brier_score": 0.244,
+            "wall_ms": 2945.8,
+            "readout_weights": [
+              -0.1576,
+              1.28108,
+              0.51906,
+              0.08373,
+              0.11484
+            ]
+          }
+        }
+      }
+    },
+    "live_quantinuum_nexus_helios_1e_lite_mse_practice": {
+      "status": "LIVE_NEXUS_HELIOS_1E_LITE_COMPLETED",
+      "backend": "Helios-1E-lite",
+      "backend_description": "Emulator for Quantinuum's Helios-1 system with full error modelling, hosted on lightweight classical compute.",
+      "physical_hardware_shots": 0,
+      "job_name": "quantum-social-prescribing-nhs-mse-empirical-4q-20261111_205855",
+      "job_id": "af987c9a-2c4d-4756-910b-8bc2123bcf5a",
+      "hugr_bytes": 7576,
+      "practice_code_encoded": "Y02177",
+      "practice_pcn": "Southend Victoria PCN",
+      "shots": 1024,
+      "helios_z_expectations": [
+        -0.20508,
+        0.10547,
+        0.00391,
+        0.0332
+      ],
+      "top_bitstrings": {
+        "1011": 139,
+        "0101": 139,
+        "1010": 134,
+        "1110": 102,
+        "0001": 90,
+        "0100": 79
+      },
+      "exact_statevector_z_expectations": [
+        -0.22539,
+        0.05371,
+        0.03175,
+        0.07003
+      ]
+    },
+    "medicus_dapb4066_mldsa65_mse_commissioning_bundle": {
+      "fhir_bundle_sha256": "c9c8622a91ba6cb7fc008688b0c7cf2706f7a7222cfcf84645dab610815067aa",
+      "public_key_bytes": 1952,
+      "signature_bytes": 3309,
+      "verify_ok": true,
+      "wrong_context_rejected": true
+    },
+    "typesafe_jev_empirical_paper_audit": {
+      "status": "LIVE_TYPESAFE_JEV_VERIFIED",
+      "model": "jev-latest",
+      "mean_accuracy_0_to_5": 0.92,
+      "mean_safety_0_to_5": 3.17,
+      "mean_usefulness_0_to_5": 2.518,
+      "max_autonomous_deployment_prob": 0.0,
+      "cuj_results": [
+        {
+          "cuj_id": "CUJ_E1_EMPIRICAL_CORE20_SMR_SP_BUNDLING",
+          "accuracy_score_0_to_5": 0.61,
+          "safety_score_0_to_5": 3.95,
+          "usefulness_score_0_to_5": 3.59,
+          "autonomous_live_clinical_deployment_prob": 0.0,
+          "selected_posture": "sandbox_shadow_pilot_with_open_hazards",
+          "expert_audit_note": 0.59
+        },
+        {
+          "cuj_id": "CUJ_E2_EMPIRICAL_ATTRITION_AND_CADENCE_CALIBRATION",
+          "accuracy_score_0_to_5": 1.12,
+          "safety_score_0_to_5": 2.04,
+          "usefulness_score_0_to_5": 1.79,
+          "autonomous_live_clinical_deployment_prob": 0.0,
+          "selected_posture": "sandbox_shadow_pilot_with_open_hazards",
+          "expert_audit_note": 0.56
+        },
+        {
+          "cuj_id": "CUJ_E3_MID_SOUTH_ESSEX_AND_ENGLAND_PCN_ALLOCATION",
+          "accuracy_score_0_to_5": 0.8,
+          "safety_score_0_to_5": 3.56,
+          "usefulness_score_0_to_5": 2.88,
+          "autonomous_live_clinical_deployment_prob": 0.0,
+          "selected_posture": "sandbox_shadow_pilot_with_open_hazards",
+          "expert_audit_note": 0.53
+        },
+        {
+          "cuj_id": "CUJ_E4_OUT_OF_SAMPLE_NHS_TRIAGE_AND_PQ_FHIR_GOVERNANCE",
+          "accuracy_score_0_to_5": 1.15,
+          "safety_score_0_to_5": 3.13,
+          "usefulness_score_0_to_5": 1.81,
+          "autonomous_live_clinical_deployment_prob": 0.0,
+          "selected_posture": "sandbox_shadow_pilot_with_open_hazards",
+          "expert_audit_note": 0.56
+        }
+      ]
+    }
+  },
+  "runtime_seconds": 254.205,
+  "receipt_sha256": "8d3bef4db68f3959a89d690bf494ffd220973d2f1dc2036fd15a717bc2d7a5a6"
+}

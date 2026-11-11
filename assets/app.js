@@ -103,6 +103,16 @@ const DISCOPY_STEPS = [
 ];
 
 const BIBTEX_ENTRIES = {
+  focused: `@article{nadarasa2026nhsempirical,
+  title   = {Higher-Order Combinatorial Optimization, Longitudinal Referral-Attrition Calibration, and Post-Quantum Safety Governance for Integrated Pharmacy and Social Prescribing Across 6,105 English General Practices},
+  author  = {Nadarasa, Arun},
+  year    = {2026},
+  month   = nov,
+  journal = {Samskrift Clinical Informatics Preprint (Mid and South Essex NHS Foundation Trust \& ISPPA)},
+  pages   = {1--8},
+  url     = {https://samskrift.com/view/e6628414-9373-4a34-accd-cc8b6d46e0ce/7c7a2c96-238a-4e05-9d8d-230d04da8440},
+  note    = {Calibrated on 6,105 active English GP practices (NHS DES + OHID Fingertips, OGL v3.0), 143 Mid \& South Essex practices, ELSA Wave 10, and CPRD Aurum; Rosenberg HiGHS MILP 19.19 ms vs Haiqu v1.7.1 -94.47\% HUBO compression; live Quantinuum Nexus Helios-1E-lite Job af987c9a}
+}`,
   monograph: `@article{nadarasa2026qspm,
   title   = {Quantum Social Prescribing: Multi-Scale Quantum Algorithms, Psychoneuroimmunological Grounding, and Multi-Method Health {AI} Governance for Integrated Neighbourhood Care},
   author  = {Nadarasa, Arun},
@@ -111,7 +121,7 @@ const BIBTEX_ENTRIES = {
   journal = {Samskrift Open Monograph Preprint (Mid and South Essex NHS Foundation Trust \& ISPPA)},
   pages   = {1--10},
   url     = {https://arunnadarasa.github.io/quantum-social-prescribing/},
-  note    = {0 physical QPU shots claimed; 9 SHA-256-verified receipts across Quantinuum Nexus Helios-1E-lite, H2-Emulator, Haiqu SDK v1.7.1, OpenJij, HiGHS MILP, Modal, Hugging Face, HQS, QProtSim, AlphaGenome, Text2WetLab, and TypeSafe Jev 1.14}
+  note    = {0 physical QPU shots claimed; 10 SHA-256-verified receipts across Quantinuum Nexus Helios-1E-lite, H2-Emulator, Haiqu SDK v1.7.1, OpenJij, HiGHS MILP, Modal, Hugging Face, HQS, QProtSim, AlphaGenome, Text2WetLab, and TypeSafe Jev 1.14}
 }`,
   qspmlm: `@misc{nadarasa2026qspmlm,
   title        = {{QSPMLM}: 4-Qubit Frobenius Multi-Task Variational Quantum Classifier for Holistic Social Prescribing Triage \& Safety Escalation},
@@ -119,7 +129,7 @@ const BIBTEX_ENTRIES = {
   year         = {2026},
   howpublished = {Hugging Face Model Hub \& Space},
   url          = {https://huggingface.co/socialprescribing/quantinuum-social-prescribing},
-  note         = {60 quantum + 99 classical params; 99.79\% Regime A test accuracy, 65.21\% vs 32.71\% LogReg on Cubic k=3 Synergy cohort, 4.44e-16 PyTorch/NumPy parity}
+  note         = {60 quantum + 99 classical params; 99.79\% Regime A test accuracy, 65.21\% vs 32.71\% LogReg on Cubic k=3 Synergy cohort, and 80/20 held-out real NHS benchmark (Nexus Job af987c9a)}
 }`,
   isppa: `@article{rathbone2024pharmacy,
   title   = {'You don't get side effects from social prescribing'---A qualitative study exploring community pharmacists' attitudes to social prescribing},
@@ -182,62 +192,107 @@ function initNav() {
   if (topBtn) topBtn.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
 }
 
-/* ── 2. In-Page PDF.js Reader (with High-DPI Page PNG Stream Fallback) ── */
+/* ── 2. In-Page PDF.js Reader (Dual Paper Switcher + High-DPI Page PNG Stream Fallback) ── */
 async function initPdfReader() {
   const stream = document.getElementById("reader-canvas-stream");
   const viewportEl = document.getElementById("reader-viewport");
   const pageInput = document.getElementById("reader-page-input");
+  const pageCountEl = document.getElementById("reader-page-count");
   const zoomLabel = document.getElementById("reader-zoom-label");
   const bmWrap = document.getElementById("reader-bookmarks");
   const panel = document.getElementById("paper-preview-panel");
+  const samskriftLink = document.getElementById("reader-samskrift-link");
+  const openPdfLink = document.getElementById("reader-open-pdf");
+  const dlPdfLink = document.getElementById("reader-dl-pdf");
   if (!stream || !viewportEl) return;
 
-  let zoom = 1.0;
-  const totalPages = 10;
+  const PAPER_DOCS = {
+    focused: {
+      pdfUrl: "downloads/Focused_Clinical_Informatics_Social_Prescribing.pdf",
+      pdfFilename: "Focused_Clinical_Informatics_Social_Prescribing.pdf",
+      pagesDir: "pages_focused",
+      totalPages: 8,
+      altTitle: "Focused Empirical NHS Clinical-Informatics Study",
+      samskriftUrl: "https://samskrift.com/view/e6628414-9373-4a34-accd-cc8b6d46e0ce/7c7a2c96-238a-4e05-9d8d-230d04da8440",
+      bookmarks: [
+        { label: "p.1 · Abstract & NHS Context", page: 1 },
+        { label: "p.2 · 6,105 GPs & ELSA W10", page: 2 },
+        { label: "p.3 · Cubic k=3 HUBO vs MILP", page: 3 },
+        { label: "p.5 · Attrition, Cadence & MSE", page: 5 },
+        { label: "p.6 · Held-Out NHS VQC & Nexus", page: 6 },
+        { label: "p.7 · ML-DSA-65, DCB0129 & Jev", page: 7 },
+        { label: "p.8 · Limitations & References", page: 8 }
+      ]
+    },
+    monograph: {
+      pdfUrl: "downloads/Quantum_Social_Prescribing.pdf",
+      pdfFilename: "Quantum_Social_Prescribing.pdf",
+      pagesDir: "pages",
+      totalPages: 10,
+      altTitle: "Quantum Social Prescribing Monograph",
+      samskriftUrl: "https://samskrift.com/view/0db305b3-9a91-4fdb-ada8-b760beda1ec5/668cdf7d-9840-478a-9101-88989e408c54",
+      bookmarks: BOOKMARKS
+    }
+  };
 
-  BOOKMARKS.forEach((bm, idx) => {
-    const btn = document.createElement("button");
-    btn.type = "button";
-    btn.className = "bookmark-chip" + (idx === 0 ? " active" : "");
-    btn.textContent = bm.label;
-    btn.addEventListener("click", () => {
-      document.querySelectorAll(".bookmark-chip").forEach(c => c.classList.remove("active"));
-      btn.classList.add("active");
-      scrollToPage(bm.page);
+  let activeDocKey = "focused";
+  let zoom = 1.0;
+  let renderEpoch = 0;
+
+  function currentDoc() {
+    return PAPER_DOCS[activeDocKey] || PAPER_DOCS.focused;
+  }
+
+  function renderBookmarks() {
+    const doc = currentDoc();
+    bmWrap.innerHTML = "";
+    doc.bookmarks.forEach((bm, idx) => {
+      const btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "bookmark-chip" + (idx === 0 ? " active" : "");
+      btn.textContent = bm.label;
+      btn.addEventListener("click", () => {
+        document.querySelectorAll(".bookmark-chip").forEach(c => c.classList.remove("active"));
+        btn.classList.add("active");
+        scrollToPage(bm.page);
+      });
+      bmWrap.appendChild(btn);
     });
-    bmWrap.appendChild(btn);
-  });
+  }
 
   function scrollToPage(p) {
-    const clamped = Math.min(totalPages, Math.max(1, p));
+    const doc = currentDoc();
+    const clamped = Math.min(doc.totalPages, Math.max(1, p));
     pageInput.value = String(clamped);
     const slot = stream.querySelector(`[data-page="${clamped}"]`);
     if (slot) slot.scrollIntoView({ behavior: "smooth", block: "start" });
   }
 
   function renderFallbackImages() {
+    const doc = currentDoc();
     stream.innerHTML = "";
     const baseW = Math.min(860, viewportEl.clientWidth - 36) * zoom;
-    for (let p = 1; p <= totalPages; p++) {
+    for (let p = 1; p <= doc.totalPages; p++) {
       const slot = document.createElement("div");
       slot.className = "pdf-page-slot";
       slot.dataset.page = String(p);
       slot.style.width = `${Math.max(300, baseW)}px`;
       const img = document.createElement("img");
       img.className = "pdf-fallback-img";
-      img.src = `pages/page_${p}.png`;
-      img.alt = `Quantum Social Prescribing Monograph — Page ${p} of 10`;
+      img.src = `${doc.pagesDir}/page_${p}.png`;
+      img.alt = `${doc.altTitle} — Page ${p} of ${doc.totalPages}`;
       img.loading = p <= 2 ? "eager" : "lazy";
       const badge = document.createElement("span");
       badge.className = "pdf-page-badge";
-      badge.textContent = `Page ${p} / ${totalPages}`;
+      badge.textContent = `Page ${p} / ${doc.totalPages}`;
       slot.appendChild(img);
       slot.appendChild(badge);
       stream.appendChild(slot);
     }
   }
 
-  async function renderPdfJs() {
+  async function renderPdfJs(epoch) {
+    const doc = currentDoc();
     if (!window.pdfjsLib) {
       renderFallbackImages();
       return;
@@ -245,12 +300,15 @@ async function initPdfReader() {
     try {
       window.pdfjsLib.GlobalWorkerOptions.workerSrc =
         "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
-      const pdf = await window.pdfjsLib.getDocument("downloads/Quantum_Social_Prescribing.pdf").promise;
+      const pdf = await window.pdfjsLib.getDocument(doc.pdfUrl).promise;
+      if (epoch !== renderEpoch) return;
       stream.innerHTML = "";
       const dpr = Math.min(window.devicePixelRatio || 1, 2);
       const targetW = Math.max(310, Math.min(860, viewportEl.clientWidth - 36) * zoom);
       for (let p = 1; p <= pdf.numPages; p++) {
+        if (epoch !== renderEpoch) return;
         const page = await pdf.getPage(p);
+        if (epoch !== renderEpoch) return;
         const vp0 = page.getViewport({ scale: 1 });
         const scale = targetW / vp0.width;
         const vp = page.getViewport({ scale: scale * dpr });
@@ -271,12 +329,44 @@ async function initPdfReader() {
         await page.render({ canvasContext: canvas.getContext("2d"), viewport: vp }).promise;
       }
     } catch (_) {
-      renderFallbackImages();
+      if (epoch === renderEpoch) renderFallbackImages();
     }
   }
 
-  renderFallbackImages();
-  setTimeout(renderPdfJs, 350);
+  function applyDocument(docKey) {
+    if (!PAPER_DOCS[docKey]) return;
+    activeDocKey = docKey;
+    renderEpoch++;
+    const epoch = renderEpoch;
+    const doc = currentDoc();
+
+    document.querySelectorAll("[data-paper-doc]").forEach(btn => {
+      const isAct = btn.dataset.paperDoc === docKey;
+      btn.classList.toggle("active", isAct);
+      btn.setAttribute("aria-selected", String(isAct));
+    });
+
+    pageInput.max = String(doc.totalPages);
+    pageInput.value = "1";
+    if (pageCountEl) pageCountEl.textContent = String(doc.totalPages);
+    if (samskriftLink) samskriftLink.href = doc.samskriftUrl;
+    if (openPdfLink) openPdfLink.href = doc.pdfUrl;
+    if (dlPdfLink) {
+      dlPdfLink.href = doc.pdfUrl;
+      dlPdfLink.setAttribute("download", doc.pdfFilename);
+    }
+
+    renderBookmarks();
+    renderFallbackImages();
+    viewportEl.scrollTop = 0;
+    setTimeout(() => renderPdfJs(epoch), 300);
+  }
+
+  document.querySelectorAll("[data-paper-doc]").forEach(btn => {
+    btn.addEventListener("click", () => applyDocument(btn.dataset.paperDoc));
+  });
+
+  applyDocument("focused");
 
   document.getElementById("reader-prev-page")?.addEventListener("click", () => scrollToPage(Number(pageInput.value) - 1));
   document.getElementById("reader-next-page")?.addEventListener("click", () => scrollToPage(Number(pageInput.value) + 1));
@@ -775,7 +865,7 @@ function initChartsAndLightbox() {
     lb.classList.add("open");
   }
 
-  cards.forEach(card => {
+  [...cards, ...document.querySelectorAll("#benchmarks .emp-fig-card")].forEach(card => {
     card.addEventListener("click", (e) => {
       if (e.target.closest("[data-open-fig]")) return;
       if (card.classList.contains("interactive-mode")) return;
@@ -789,9 +879,9 @@ function initChartsAndLightbox() {
   document.querySelectorAll("[data-open-fig]").forEach(btn => {
     btn.addEventListener("click", (e) => {
       e.stopPropagation();
-      const card = btn.closest(".fig-card");
+      const card = btn.closest("figure");
       const img = card?.querySelector("img");
-      const capText = card?.querySelector("figcaption > div")?.innerText || "";
+      const capText = card?.querySelector("figcaption > div")?.innerText || card?.querySelector("figcaption")?.innerText || "";
       openLightbox(btn.dataset.openFig, img?.alt, capText);
     });
   });
@@ -1085,8 +1175,8 @@ function initTablesAndCitations() {
   modal?.addEventListener("click", e => { if (e.target === modal) modal.classList.remove("open"); });
 
   const bibPre = document.getElementById("bibtex-code");
-  let activeBib = "monograph";
-  if (bibPre) bibPre.textContent = BIBTEX_ENTRIES.monograph;
+  let activeBib = "focused";
+  if (bibPre) bibPre.textContent = BIBTEX_ENTRIES.focused;
   document.querySelectorAll("[data-bib-tab]").forEach(btn => {
     btn.addEventListener("click", () => {
       document.querySelectorAll("[data-bib-tab]").forEach(b => b.classList.remove("active"));

@@ -531,7 +531,7 @@ h3 {
 .papers-grid {
   margin-top: 1.6rem;
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1.1rem;
 }
 @media (max-width: 980px) {
@@ -2256,4 +2256,40 @@ h1 code, h2 code, h3 code {
 }
 .kg-edge-btn:hover {
   border-color: var(--signal);
+}
+.reader-doc-btn {
+  cursor: pointer;
+}
+.emp-fig-grid {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.15rem;
+}
+@media (max-width: 900px) {
+  .emp-fig-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.emp-fig-card {
+  margin: 0;
+  padding: 0.85rem;
+  border-radius: var(--radius);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+.emp-fig-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  background: #ffffff;
+  cursor: zoom-in;
+}
+.emp-fig-card figcaption {
+  font-size: 0.82rem;
+  color: var(--ink-muted);
+  line-height: 1.5;
 }
