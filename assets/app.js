@@ -1641,16 +1641,319 @@ function initKnowledgeGraph() {
   mountKg();
 }
 
+/* ── Free Non-Commercial NHS PCN & ICB Core20PLUS5 Equity Allocator ── */
+function initNhsPcnEquityTool(dirData) {
+  const scopeSel = document.getElementById("pcn-scope-select");
+  const lamSlider = document.getElementById("pcn-lam-slider");
+  const slackSlider = document.getElementById("pcn-slack-slider");
+  const searchInput = document.getElementById("pcn-search-input");
+  const tbody = document.getElementById("pcn-plan-tbody");
+  if (!scopeSel || !dirData || !tbody) return;
+
+  function minmaxArr(arr) {
+    let mn = Infinity, mx = -Infinity;
+    for (const v of arr) { if (v < mn) mn = v; if (v > mx) mx = v; }
+    const span = mx - mn;
+    return span < 1e-9 ? arr.map(() => 0) : arr.map(v => (v - mn) / span);
+  }
+
+  function solveExact5HubPortal(U, capH) {
+    const t0 = performance.now();
+    const nU = U.length, nH = 5;
+    const assign = new Int32Array(nU);
+    const loads = new Int32Array(nH);
+    const order = Array.from({ length: nU }, (_, i) => i).sort((a, b) => Math.max(...U[b]) - Math.max(...U[a]));
+    for (const i of order) {
+      const prefs = [0, 1, 2, 3, 4].sort((a, b) => U[i][b] - U[i][a]);
+      for (const h of prefs) {
+        if (loads[h] < capH) { assign[i] = h; loads[h]++; break; }
+      }
+    }
+    const eps = 1e-11;
+    while (true) {
+      const W = Array.from({ length: nH }, () => new Float64Array(nH).fill(-1e18));
+      const bestIdx = Array.from({ length: nH }, () => new Int32Array(nH).fill(-1));
+      for (let i = 0; i < nU; i++) {
+        const u = assign[i], ui = U[i][u];
+        for (let v = 0; v < nH; v++) {
+          if (v !== u) {
+            const g = U[i][v] - ui;
+            if (g > W[u][v]) { W[u][v] = g; bestIdx[u][v] = i; }
+          }
+        }
+      }
+      let improved = false;
+      if (loads.some(l => l < capH)) {
+        let bestGain = eps, bestPath = null;
+        function dfsPath(cur, mask, gain, path) {
+          if (path.length >= 2 && loads[cur] < capH && gain > bestGain) { bestGain = gain; bestPath = path.slice(); }
+          if (path.length === nH) return;
+          for (let nxt = 0; nxt < nH; nxt++) {
+            if (!(mask & (1 << nxt)) && bestIdx[cur][nxt] >= 0) {
+              path.push(nxt); dfsPath(nxt, mask | (1 << nxt), gain + W[cur][nxt], path); path.pop();
+            }
+          }
+        }
+        for (let s = 0; s < nH; s++) if (loads[s] > 0) dfsPath(s, 1 << s, 0, [s]);
+        if (bestPath) {
+          const moves = [];
+          for (let k = 0; k < bestPath.length - 1; k++) moves.push([bestIdx[bestPath[k]][bestPath[k + 1]], bestPath[k + 1]]);
+          for (const [ui, vn] of moves) assign[ui] = vn;
+          loads[bestPath[0]]--; loads[bestPath[bestPath.length - 1]]++;
+          improved = true;
+        }
+      }
+      if (improved) continue;
+      let bestCycGain = eps, bestCyc = null;
+      function dfsCyc(start, cur, mask, gain, path) {
+        if (path.length >= 2 && bestIdx[cur][start] >= 0) {
+          const tot = gain + W[cur][start];
+          if (tot > bestCycGain) { bestCycGain = tot; bestCyc = path.concat([start]); }
+        }
+        if (path.length === nH) return;
+        for (let nxt = start + 1; nxt < nH; nxt++) {
+          if (!(mask & (1 << nxt)) && bestIdx[cur][nxt] >= 0) {
+            path.push(nxt); dfsCyc(start, nxt, mask | (1 << nxt), gain + W[cur][nxt], path); path.pop();
+          }
+        }
+      }
+      for (let s = 0; s < nH; s++) if (loads[s] > 0) dfsCyc(s, s, 1 << s, 0, [s]);
+      if (bestCyc) {
+        const moves = [];
+        for (let k = 0; k < bestCyc.length - 1; k++) moves.push([bestIdx[bestCyc[k]][bestCyc[k + 1]], bestCyc[k + 1]]);
+        for (const [ui, vn] of moves) assign[ui] = vn;
+        improved = true;
+      }
+      if (!improved) break;
+    }
+    return { assign, loads, ms: performance.now() - t0 };
+  }
+
+  let customUnits = null;
+  let latestPlan = [];
+
+  const scopeOptions = [
+    { val: "ENG_ALL", label: "All England National — All 1,296 PCNs (42 ICBs · 61.83M Patients)" },
+    { val: "MSE_PCN", label: "Mid and South Essex ICB — All 28 PCNs (1.27M Patients)" },
+    { val: "MSE_GP", label: "Mid and South Essex ICB — All 143 GP Practices" },
+    ...dirData.icbs.map(icb => ({ val: "ICB:" + icb, label: icb }))
+  ];
+  scopeOptions.forEach(o => {
+    const opt = document.createElement("option");
+    opt.value = o.val;
+    opt.textContent = o.label;
+    scopeSel.appendChild(opt);
+  });
+
+  function getActiveUnits() {
+    const v = scopeSel.value;
+    if (v === "CUSTOM" && customUnits) return customUnits;
+    if (v === "MSE_GP") return dirData.mse_gp_practices;
+    if (v === "MSE_PCN") return dirData.england_pcns.filter(r => r.icb.toLowerCase().includes("mid and south essex"));
+    if (v === "ENG_ALL") return dirData.england_pcns;
+    if (v.startsWith("ICB:")) {
+      const target = v.slice(4);
+      return dirData.england_pcns.filter(r => r.icb === target);
+    }
+    return dirData.england_pcns;
+  }
+
+  function escHtml(s) {
+    return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+  }
+
+  function renderPlanTable() {
+    const q = (searchInput?.value || "").trim().toLowerCase();
+    const filtered = q
+      ? latestPlan.filter(r =>
+          r.code.toLowerCase().includes(q) ||
+          r.name.toLowerCase().includes(q) ||
+          r.icb.toLowerCase().includes(q) ||
+          r.hubShort.toLowerCase().includes(q)
+        )
+      : latestPlan;
+    const shown = filtered.slice(0, 220);
+    tbody.innerHTML = shown.map(r => `
+      <tr>
+        <td><code>${escHtml(r.code)}</code></td>
+        <td><strong>${escHtml(r.name)}</strong>${r.c20 ? ' <span class="pill pill-signal" style="font-size:0.65rem;padding:0.06rem 0.42rem">Core20</span>' : ''}</td>
+        <td style="color:var(--ink-muted)">${escHtml(r.icb)}</td>
+        <td>${r.pts.toLocaleString()}</td>
+        <td>${r.imd.toFixed(1)}</td>
+        <td>${r.sed.toFixed(1)}%</td>
+        <td>${r.ref.toFixed(1)}%</td>
+        <td><strong style="color:var(--signal)">${escHtml(r.hubShort)}</strong></td>
+        <td>${r.firstMatch ? "✓ 1st" : "↔ Eq."}</td>
+        <td style="color:var(--ink-muted);font-size:0.75rem">${escHtml(r.action)}</td>
+      </tr>
+    `).join("");
+  }
+
+  function recomputePlan() {
+    const units = getActiveUnits();
+    if (!units.length) return;
+    const lam = Number(lamSlider.value) / 100;
+    const slack = Number(slackSlider.value) / 100;
+    const lamLbl = document.getElementById("pcn-lam-val");
+    const slackLbl = document.getElementById("pcn-slack-val");
+    if (lamLbl) lamLbl.textContent = lam.toFixed(2) + "×" + (Math.abs(lam - 1.5) < 0.01 ? " (Recommended)" : "");
+    if (slackLbl) slackLbl.textContent = "+" + Math.round(slack * 100) + "%";
+
+    document.querySelectorAll("[data-pcn-preset]").forEach(btn => {
+      btn.classList.toggle("active", btn.dataset.pcnPreset === scopeSel.value);
+    });
+
+    const capH = Math.ceil((1 + slack) * units.length / 5);
+    const imdN = minmaxArr(units.map(u => u.imd));
+    const sedN = minmaxArr(units.map(u => u.sed));
+    const ageN = minmaxArr(units.map(u => u.age));
+    const depN = minmaxArr(units.map(u => u.dep));
+    const spN = minmaxArr(units.map(u => u.sp));
+
+    const Ubase = units.map((_, i) => [
+      0.55 * sedN[i] + 0.45 * ageN[i],
+      0.70 * imdN[i] + 0.30 * spN[i],
+      0.65 * depN[i] + 0.35 * spN[i],
+      0.50 * spN[i] + 0.30 * (1 - ageN[i]) + 0.20 * depN[i],
+      0.65 * ageN[i] + 0.35 * sedN[i]
+    ]);
+    const topChoice = Ubase.map(row => row.indexOf(Math.max(...row)));
+    const res1x = solveExact5HubPortal(Ubase, capH);
+    let base1xSum = 0;
+    for (let i = 0; i < units.length; i++) base1xSum += Ubase[i][res1x.assign[i]];
+
+    const Uw = Ubase.map((row, i) => {
+      const mult = units[i].c20 === 1 ? lam : (imdN[i] >= 0.60 ? 1 + 0.5 * (lam - 1) : 1.0);
+      return row.map(v => v * mult);
+    });
+    const res = solveExact5HubPortal(Uw, capH);
+
+    let baseNowSum = 0, c20Tot = 0, c20Hit1x = 0, c20HitNow = 0;
+    for (let i = 0; i < units.length; i++) {
+      baseNowSum += Ubase[i][res.assign[i]];
+      if (units[i].c20 === 1) {
+        c20Tot++;
+        if (res1x.assign[i] === topChoice[i]) c20Hit1x++;
+        if (res.assign[i] === topChoice[i]) c20HitNow++;
+      }
+    }
+    const effPct = base1xSum > 0 ? (100 * baseNowSum / base1xSum) : 100;
+    const c20Pct = c20Tot > 0 ? (100 * c20HitNow / c20Tot) : 100;
+    const gainPp = c20Tot > 0 ? (100 * (c20HitNow - c20Hit1x) / c20Tot) : 0;
+    let capViol = 0;
+    for (const ld of res.loads) if (ld > capH) capViol += (ld - capH);
+
+    const kC20 = document.getElementById("pcn-kpi-core20");
+    const kEff = document.getElementById("pcn-kpi-eff");
+    const kViol = document.getElementById("pcn-kpi-viol");
+    const kMs = document.getElementById("pcn-kpi-ms");
+    const metaEl = document.getElementById("pcn-summary-meta");
+    if (kC20) kC20.textContent = c20Tot > 0 ? `${c20Pct.toFixed(1)}% (${gainPp >= 0 ? "+" : ""}${gainPp.toFixed(2)} pp)` : "N/A (0 Core20)";
+    if (kEff) kEff.textContent = effPct.toFixed(2) + "%";
+    if (kViol) kViol.textContent = String(capViol);
+    if (kMs) kMs.textContent = res.ms.toFixed(2) + " ms";
+    if (metaEl) metaEl.textContent = `${units.length} NHS Units · ${c20Tot} Core20 · Cap ${capH}/hub · OGL v3.0`;
+
+    const hubsWrap = document.getElementById("pcn-hubs-cards");
+    if (hubsWrap) {
+      hubsWrap.innerHTML = dirData.hubs.map((h, idx) => {
+        const ld = res.loads[idx];
+        const pct = Math.min(100, Math.round(100 * ld / capH));
+        return `<div class="pcn-hub-card">
+          <div style="display:flex;justify-content:space-between;font-size:0.78rem;font-weight:700">
+            <span>${escHtml(h.short)}</span>
+            <code style="color:var(--signal)">${ld} / ${capH}</code>
+          </div>
+          <div class="pw-track" style="margin-top:0.42rem"><div class="pw-fill" style="width:${pct}%"></div></div>
+        </div>`;
+      }).join("");
+    }
+
+    latestPlan = units.map((u, i) => {
+      const h = dirData.hubs[res.assign[i]];
+      return {
+        code: u.c, name: u.n, icb: u.icb, pts: u.pts, imd: u.imd, c20: u.c20,
+        sed: u.sed, ref: u.ref, hubCode: h.code, hubShort: h.short,
+        firstMatch: res.assign[i] === topChoice[i], action: h.smr_bundle
+      };
+    });
+    renderPlanTable();
+  }
+
+  document.querySelectorAll("[data-pcn-preset]").forEach(btn => {
+    btn.addEventListener("click", () => {
+      scopeSel.value = btn.dataset.pcnPreset;
+      recomputePlan();
+    });
+  });
+  scopeSel.addEventListener("change", recomputePlan);
+  lamSlider.addEventListener("input", recomputePlan);
+  slackSlider.addEventListener("input", recomputePlan);
+  searchInput?.addEventListener("input", renderPlanTable);
+
+  document.getElementById("pcn-export-csv-btn")?.addEventListener("click", () => {
+    const hdr = ["unit_code","unit_name","icb_name","registered_patients","imd2025","is_core20","sedative_opioid_pct","sp_refusal_pct","assigned_hub_code","assigned_hub_name","attained_first_choice","advisory_smr_action"];
+    const lines = [hdr.join(",")].concat(latestPlan.map(r => [
+      r.code, `"${r.name.replace(/"/g, '""')}"`, `"${r.icb.replace(/"/g, '""')}"`, r.pts, r.imd, r.c20, r.sed, r.ref, r.hubCode, `"${r.hubShort}"`, r.firstMatch, `"${r.action.replace(/"/g, '""')}"`
+    ].join(",")));
+    const blob = new Blob([lines.join("\n")], { type: "text/csv;charset=utf-8" });
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = "nhs_pcn_core20_equity_commissioning_plan.csv";
+    a.click();
+    showToast("Exported NHS PCN Core20 commissioning plan (.csv)");
+  });
+
+  document.getElementById("pcn-upload-csv-input")?.addEventListener("change", async (e) => {
+    const f = e.target.files?.[0];
+    if (!f) return;
+    const txt = await f.text();
+    const lines = txt.trim().split(/\r?\n/);
+    const cols = lines[0].split(",").map(s => s.trim());
+    const idx = k => cols.indexOf(k);
+    customUnits = lines.slice(1).map((ln, k) => {
+      const p = ln.split(",");
+      const imd = parseFloat(p[idx("imd2025")] ?? "20") || 20;
+      return {
+        c: p[idx("pcn_code")] || p[idx("practice_code")] || ("U" + (k + 1)),
+        n: p[idx("pcn_name")] || p[idx("practice_name")] || ("Unit " + (k + 1)),
+        icb: p[idx("icb_name")] || "Custom Uploaded Cohort",
+        pts: parseInt(p[idx("list_size_24")] || "8000", 10) || 8000,
+        imd,
+        c20: p[idx("is_core20")] !== undefined ? Number(p[idx("is_core20")]) : (imd >= 30 ? 1 : 0),
+        sed: parseFloat(p[idx("sedative_opioid_pct_24")] ?? "11") || 11,
+        age: parseFloat(p[idx("aged_65_plus")] ?? "18") || 18,
+        dep: parseFloat(p[idx("depression_qof")] ?? "14") || 14,
+        sp: parseFloat(p[idx("sp_referral_rate_per_1k_24")] ?? "15") || 15,
+        ref: (parseFloat(p[idx("sp_refusal_rate_24")] ?? "0.22") || 0.22) * 100
+      };
+    });
+    if (![...scopeSel.options].some(o => o.value === "CUSTOM")) {
+      const opt = document.createElement("option");
+      opt.value = "CUSTOM";
+      opt.textContent = `Uploaded CSV (${customUnits.length} units · Local Browser Only)`;
+      scopeSel.prepend(opt);
+    }
+    scopeSel.value = "CUSTOM";
+    recomputePlan();
+    showToast(`Loaded ${customUnits.length} units locally (0 data transmitted)`);
+  });
+
+  recomputePlan();
+}
+
 async function boot() {
   initNav();
   initPdfReader();
   initBlochAndDisCoPy();
-  const [dataRes, weightsRes] = await Promise.all([
+  const [dataRes, weightsRes, nhsDirRes] = await Promise.all([
     fetch("assets/data.json").then(r => r.json()),
-    fetch("receipts/qspmlm_weights.json").then(r => r.json())
+    fetch("receipts/qspmlm_weights.json").then(r => r.json()),
+    fetch("assets/nhs_pcn_directory.json").then(r => r.json()).catch(() => null)
   ]);
   PORTAL_DATA = dataRes;
   QSP_WEIGHTS = weightsRes;
+  if (nhsDirRes) initNhsPcnEquityTool(nhsDirRes);
   initQSPMLMSimulator();
   initChartsAndLightbox();
   initKnowledgeGraph();
