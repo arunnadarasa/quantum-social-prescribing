@@ -1,0 +1,1436 @@
+{
+  "experiment": "Live AlphaGenome 2 (v2.0.0) Cell-State SMR Pharmacogenomics, Neuroimmune CpG Methylation & 1-Mb E2G Attribution",
+  "timestamp_utc": "2026-11-12T06:19:33.666574+00:00",
+  "tier_classification": "Tier 2 \u2014 Exploratory Pharmacogenomic & Psychoneuroimmunological Sequence-to-Function Hypothesis Generation",
+  "strict_demarcation_guardrail": {
+    "included_in_10page_exploratory_monograph": true,
+    "included_in_8page_empirical_nhs_paper": false,
+    "research_use_only_terms_url": "https://deepmind.google.com/science/alphagenome/",
+    "alphagenome_2_reference": "Gayoso et al., 'AlphaGenome 2 predicts regulatory activity and variant effects across cell states', Google DeepMind (2026)",
+    "clinical_diagnostic_claims": 0,
+    "autonomous_prescribing_authority": false
+  },
+  "physical_hardware_shots": 0,
+  "wet_lab_experiments_performed": 0,
+  "sdk_and_server_manifest": {
+    "alphagenome_pypi_version": "2.0.0",
+    "api_namespace": "alphagenome.models.v2",
+    "model_version": "ModelVersion.ALL_FOLDS",
+    "sequence_context_bp": 1048576,
+    "supported_human_conditions_count": 2799,
+    "evaluated_conditions": {
+      "liver_hepatocyte": {
+        "condition_curie": "UBERON:0002107_CL:0000182",
+        "biosample_name": "liver hepatocyte",
+        "biosample_type": "primary_cell",
+        "sc_gene_expression": "observed",
+        "sc_atac": "observed",
+        "methylation": "observed",
+        "rna_seq": "imputed_supported",
+        "splice_site_usage": "imputed_exploratory"
+      },
+      "blood_cd14_monocyte": {
+        "condition_curie": "UBERON:0000178_CL:0001054",
+        "biosample_name": "blood CD14-positive monocyte",
+        "biosample_type": "primary_cell",
+        "sc_gene_expression": "observed",
+        "sc_atac": "observed",
+        "methylation": "observed",
+        "rna_seq": "observed",
+        "splice_site_usage": "observed"
+      },
+      "cortical_microglia": {
+        "condition_curie": "UBERON:0001384_CL:0000129",
+        "biosample_name": "primary motor cortex microglial cell",
+        "biosample_type": "primary_cell",
+        "sc_gene_expression": "observed",
+        "sc_atac": "observed",
+        "methylation": "imputed_supported",
+        "rna_seq": "imputed_supported",
+        "splice_site_usage": "imputed_exploratory"
+      },
+      "blood_t_cell": {
+        "condition_curie": "UBERON:0000178_CL:0000084",
+        "biosample_name": "blood T cell",
+        "biosample_type": "primary_cell",
+        "sc_gene_expression": "imputed_supported",
+        "sc_atac": "imputed_supported",
+        "methylation": "observed",
+        "rna_seq": "observed",
+        "splice_site_usage": "observed"
+      }
+    },
+    "total_1mb_variant_condition_scorings": 36,
+    "total_1mb_e2g_gradient_maps": 9,
+    "total_wall_seconds": 84.31,
+    "variant_scoring_wall_seconds": 47.84
+  },
+  "gate_g4_classical_baseline": {
+    "method": "Precomputed CPIC / GENCODE v46 / AlphaGenome Atlas AVI Lookup Table",
+    "local_lookup_wall_ms": 0.0364,
+    "entries": {
+      "CYP2C19_star17_rs12248560": {
+        "cpic_or_literature_annotation": "5'-upstream promoter rapid/ultrarapid metabolizer allele (SSRI/tricyclic SMR dosing context)",
+        "avi_phred_precomputed": 0.5301,
+        "tss_signed_distance_bp": -780
+      },
+      "CYP2C19_star2_rs4244285": {
+        "cpic_or_literature_annotation": "Exon-5 cryptic splice-donor activation loss-of-function allele (antidepressant/clopidogrel SMR context)",
+        "avi_phred_precomputed": 22.326,
+        "tss_signed_distance_bp": 19179
+      },
+      "CYP2D6_star4_rs3892097": {
+        "cpic_or_literature_annotation": "Intron-3/exon-4 canonical splice-acceptor loss-of-function allele (codeine/tramadol/anticholinergic SMR context)",
+        "avi_phred_precomputed": 25.1469,
+        "tss_signed_distance_bp": -1865
+      },
+      "CYP2D6_star41_rs28371725": {
+        "cpic_or_literature_annotation": "Intron-6 splicing-efficiency reducer intermediate-metabolizer allele",
+        "avi_phred_precomputed": 11.6701,
+        "tss_signed_distance_bp": -3007
+      },
+      "IL6_promoter_rs1800795": {
+        "cpic_or_literature_annotation": "Canonical proximal promoter regulatory polymorphism upstream of IL6 TSS",
+        "avi_phred_precomputed": 17.6425,
+        "tss_signed_distance_bp": -173
+      },
+      "IL6_exon1_donor_hotspot": {
+        "cpic_or_literature_annotation": "Top AVI saturation-mutagenesis splice-donor hotspot in IL6 601-bp promoter/exon-1 scan",
+        "avi_phred_precomputed": 34.7514,
+        "tss_signed_distance_bp": 83
+      },
+      "FKBP5_intron2_GRE_rs1360780": {
+        "cpic_or_literature_annotation": "Intron-2 glucocorticoid-response element linked to stress-associated CpG methylation & HPA feedback",
+        "avi_phred_precomputed": 7.467,
+        "tss_signed_distance_bp": -49121
+      },
+      "NR3C1_BclI_rs41423247": {
+        "cpic_or_literature_annotation": "Common intronic glucocorticoid receptor sensitivity polymorphism downstream of exon 2",
+        "avi_phred_precomputed": 5.3291,
+        "tss_signed_distance_bp": -4676
+      },
+      "NR3C1_exon1_donor_hotspot": {
+        "cpic_or_literature_annotation": "Top AVI saturation-mutagenesis hotspot across NR3C1 CpG promoter / exon-1 island (2,403 SNVs scanned)",
+        "avi_phred_precomputed": 35.2863,
+        "tss_signed_distance_bp": -476
+      }
+    },
+    "honest_comparison_verdict": "For known CPIC star alleles (CYP2C19*2, CYP2C19*17, CYP2D6*4, CYP2D6*41), deterministic curated allele tables resolve metabolizer phenotypes in <1 ms; AlphaGenome 2's value lies in de-novo non-coding/intronic variant interpretation, primary-cell CpG methylation deltas, and condition-specific distal enhancer-gene (E2G) attribution across unseen or rare cell states."
+  },
+  "headline_biological_specificity_findings": {
+    "cyp2c19_star2_hepatocyte_splice_usage_delta": 0.22099,
+    "cyp2c19_star2_hepatocyte_vs_tcell_sc_lfc_ratio": 0.9,
+    "cyp2d6_star4_hepatocyte_splice_usage_delta": 0.02615,
+    "il6_rs1800795_monocyte_vs_hepatocyte_sc_lfc": {
+      "blood_cd14_monocyte_peak_lfc": 0.526084,
+      "cortical_microglia_peak_lfc": -0.000307,
+      "liver_hepatocyte_peak_lfc": -0.021585
+    },
+    "fkbp5_rs1360780_cpg_methylation_and_expression": {
+      "blood_cd14_monocyte_cpg_peak_delta": -0.025438,
+      "cortical_microglia_cpg_peak_delta": 0.007403,
+      "blood_cd14_monocyte_sc_peak_lfc": -0.000147
+    },
+    "il6_distal_e2g_active_tiles_monocyte_vs_hepatocyte": {
+      "blood_cd14_monocyte_active_tiles": 122,
+      "cortical_microglia_active_tiles": 100,
+      "liver_hepatocyte_active_tiles": 89
+    },
+    "cyp2c19_distal_e2g_active_tiles_hepatocyte_vs_monocyte": {
+      "liver_hepatocyte_active_tiles": 50,
+      "blood_cd14_monocyte_active_tiles": 52
+    }
+  },
+  "variants_multimodal_cell_state_panel": [
+    {
+      "panel": "SMR_Pharmacogenomics",
+      "id": "CYP2C19_star17_rs12248560",
+      "rsid": "rs12248560",
+      "star_allele": "CYP2C19*17",
+      "gene_name": "CYP2C19",
+      "gene_id_no_ver": "ENSG00000165841",
+      "vcf": "chr10:94761900:C>T",
+      "mechanism_context": "5'-upstream promoter rapid/ultrarapid metabolizer allele (SSRI/tricyclic SMR dosing context)",
+      "atlas_biosample": "HepG2",
+      "gencode_v46_tss": 94762680,
+      "distance_to_mane_tss_bp": -780,
+      "atlas_deep_link": "https://deepmind.google.com/science/alphagenome/atlas?q=chr10:94761900:C%3ET&m=variant&lItems=avi,section:RNA_SEQ,section:DNASE,section:CHIP_TF&f=BIOSAMPLE_NAME:HepG2",
+      "atlas_avi_precomputed": {
+        "avi_phred": 0.5301,
+        "avi_raw": -0.0655,
+        "top_percentile": 88.5092,
+        "top_modality": "Cactus",
+        "fi_splicing": 0.05043,
+        "fi_rna_seq": 0.00435,
+        "fi_dnase": 0.00302,
+        "fi_chip_histone": 0.00797,
+        "fi_cactus_241way": -0.09555,
+        "batch_query_wall_ms": 3354.89
+      },
+      "ag2_v2_cell_state_scores": {
+        "liver_hepatocyte": {
+          "sc_gene_expression_mean_lfc": 0.006771,
+          "sc_gene_expression_peak_lfc": 0.008939,
+          "sc_gene_expression_peak_track": "UBERON:0002107_CL:0000182_scRNA-seq 10X 3-star_solo-nuclear",
+          "sc_gene_expression_imputation_mode": "observed",
+          "sc_gene_expression_n_tracks": 7,
+          "rna_seq_mean_lfc": 0.01144,
+          "rna_seq_peak_lfc": 0.013642,
+          "splice_site_usage_max_delta": 0.0,
+          "splice_sites_max_delta": 0.0,
+          "sc_atac_mean_diff_log2": 0.057183,
+          "sc_atac_peak_diff_log2": 0.068363,
+          "cpg_methylation_mean_delta": -0.072615,
+          "cpg_methylation_peak_delta": -0.166285,
+          "cpg_methylation_peak_position": 94761927,
+          "cpg_methylation_imputation_mode": "observed",
+          "cpg_sites_evaluated": 20
+        },
+        "blood_cd14_monocyte": {
+          "sc_gene_expression_mean_lfc": 0.000475,
+          "sc_gene_expression_peak_lfc": 0.000475,
+          "sc_gene_expression_peak_track": "UBERON:0000178_CL:0001054_scRNA-seq 10X 5-cellranger-cell",
+          "sc_gene_expression_imputation_mode": "observed",
+          "sc_gene_expression_n_tracks": 7,
+          "rna_seq_mean_lfc": -1.3e-05,
+          "rna_seq_peak_lfc": -8.6e-05,
+          "splice_site_usage_max_delta": 0.0,
+          "splice_sites_max_delta": 0.0,
+          "sc_atac_mean_diff_log2": -0.006468,
+          "sc_atac_peak_diff_log2": -0.007587,
+          "cpg_methylation_mean_delta": 0.011729,
+          "cpg_methylation_peak_delta": 0.040036,
+          "cpg_methylation_peak_position": 94761860,
+          "cpg_methylation_imputation_mode": "imputed_supported",
+          "cpg_sites_evaluated": 20
+        },
+        "cortical_microglia": {
+          "sc_gene_expression_mean_lfc": -0.005092,
+          "sc_gene_expression_peak_lfc": -0.005092,
+          "sc_gene_expression_peak_track": "UBERON:0001384_CL:0000129_scRNA-seq 10X 3-cellranger-nuclear",
+          "sc_gene_expression_imputation_mode": "observed",
+          "sc_gene_expression_n_tracks": 7,
+          "rna_seq_mean_lfc": -0.000471,
+          "rna_seq_peak_lfc": -0.000624,
+          "splice_site_usage_max_delta": 0.0,
+          "splice_sites_max_delta": 0.0,
+          "sc_atac_mean_diff_log2": -0.009485,
+          "sc_atac_peak_diff_log2": -0.011938,
+          "cpg_methylation_mean_delta": 0.006623,
+          "cpg_methylation_peak_delta": 0.018597,
+          "cpg_methylation_peak_position": 94761927,
+          "cpg_methylation_imputation_mode": "imputed_supported",
+          "cpg_sites_evaluated": 20
+        },
+        "blood_t_cell": {
+          "sc_gene_expression_mean_lfc": -0.001862,
+          "sc_gene_expression_peak_lfc": -0.004343,
+          "sc_gene_expression_peak_track": "UBERON:0000178_CL:0000084_EasySci-easy_sci-nuclear",
+          "sc_gene_expression_imputation_mode": "imputed_supported",
+          "sc_gene_expression_n_tracks": 7,
+          "rna_seq_mean_lfc": 2.8e-05,
+          "rna_seq_peak_lfc": 0.000101,
+          "splice_site_usage_max_delta": 0.0,
+          "splice_sites_max_delta": 0.0,
+          "sc_atac_mean_diff_log2": -0.00925,
+          "sc_atac_peak_diff_log2": -0.010398,
+          "cpg_methylation_mean_delta": 0.0069,
+          "cpg_methylation_peak_delta": 0.022212,
+          "cpg_methylation_peak_position": 94762401,
+          "cpg_methylation_imputation_mode": "observed",
+          "cpg_sites_evaluated": 20
+        }
+      },
+      "ag2_4condition_wall_ms": 4671.12
+    },
+    {
+      "panel": "SMR_Pharmacogenomics",
+      "id": "CYP2C19_star2_rs4244285",
+      "rsid": "rs4244285",
+      "star_allele": "CYP2C19*2",
+      "gene_name": "CYP2C19",
+      "gene_id_no_ver": "ENSG00000165841",
+      "vcf": "chr10:94781859:G>A",
+      "mechanism_context": "Exon-5 cryptic splice-donor activation loss-of-function allele (antidepressant/clopidogrel SMR context)",
+      "atlas_biosample": "HepG2",
+      "gencode_v46_tss": 94762680,
+      "distance_to_mane_tss_bp": 19179,
+      "atlas_deep_link": "https://deepmind.google.com/science/alphagenome/atlas?q=chr10:94781859:G%3EA&m=variant&lItems=avi,section:RNA_SEQ,section:DNASE,section:CHIP_TF&f=BIOSAMPLE_NAME:HepG2",
+      "atlas_avi_precomputed": {
+        "avi_phred": 22.326,
+        "avi_raw": 0.73504,
+        "top_percentile": 0.5853,
+        "top_modality": "Splicing",
+        "fi_splicing": 0.77416,
+        "fi_rna_seq": 0.0037,
+        "fi_dnase": 0.00608,
+        "fi_chip_histone": 0.00269,
+        "fi_cactus_241way": -0.02407,
+        "batch_query_wall_ms": 3354.89
+      },
+      "ag2_v2_cell_state_scores": {
+        "liver_hepatocyte": {
+          "sc_gene_expression_mean_lfc": 0.005321,
+          "sc_gene_expression_peak_lfc": 0.006895,
+          "sc_gene_expression_peak_track": "UBERON:0002107_CL:0000182_SHARE-seq-share_seq-nuclear",
+          "sc_gene_expression_imputation_mode": "observed",
+          "sc_gene_expression_n_tracks": 7,
+          "rna_seq_mean_lfc": -0.015372,
+          "rna_seq_peak_lfc": -0.020668,
+          "splice_site_usage_max_delta": 0.22099,
+          "splice_sites_max_delta": 0.378272,
+          "sc_atac_mean_diff_log2": -0.015193,
+          "sc_atac_peak_diff_log2": -0.022194,
+          "cpg_methylation_mean_delta": -0.016232,
+          "cpg_methylation_peak_delta": -0.050542,
+          "cpg_methylation_peak_position": 94781958,
+          "cpg_methylation_imputation_mode": "imputed_supported",
+          "cpg_sites_evaluated": 10
+        },
+        "blood_cd14_monocyte": {
+          "sc_gene_expression_mean_lfc": -0.002366,
+          "sc_gene_expression_peak_lfc": -0.002366,
+          "sc_gene_expression_peak_track": "UBERON:0000178_CL:0001054_scRNA-seq 10X 5-cellranger-cell",
+          "sc_gene_expression_imputation_mode": "observed",
+          "sc_gene_expression_n_tracks": 7,
+          "rna_seq_mean_lfc": -0.000127,
+          "rna_seq_peak_lfc": -0.000377,
+          "splice_site_usage_max_delta": 0.001144,
+          "splice_sites_max_delta": 0.003848,
+          "sc_atac_mean_diff_log2": -0.003076,
+          "sc_atac_peak_diff_log2": -0.004425,
+          "cpg_methylation_mean_delta": -0.010518,
+          "cpg_methylation_peak_delta": -0.071212,
+          "cpg_methylation_peak_position": 94782035,
+          "cpg_methylation_imputation_mode": "observed",
+          "cpg_sites_evaluated": 10
+        },
+        "cortical_microglia": {
+          "sc_gene_expression_mean_lfc": 0.007267,
+          "sc_gene_expression_peak_lfc": 0.007267,
+          "sc_gene_expression_peak_track": "UBERON:0001384_CL:0000129_scRNA-seq 10X 3-cellranger-nuclear",
+          "sc_gene_expression_imputation_mode": "observed",
+          "sc_gene_expression_n_tracks": 7,
+          "rna_seq_mean_lfc": 0.000462,
+          "rna_seq_peak_lfc": 0.001149,
+          "splice_site_usage_max_delta": 3.5e-05,
+          "splice_sites_max_delta": 3e-06,
+          "sc_atac_mean_diff_log2": -0.008065,
+          "sc_atac_peak_diff_log2": -0.008959,
+          "cpg_methylation_mean_delta": -0.016832,
+          "cpg_methylation_peak_delta": -0.029666,
+          "cpg_methylation_peak_position": 94782035,
+          "cpg_methylation_imputation_mode": "imputed_supported",
+          "cpg_sites_evaluated": 10
+        },
+        "blood_t_cell": {
+          "sc_gene_expression_mean_lfc": 7e-05,
+          "sc_gene_expression_peak_lfc": -0.007657,
+          "sc_gene_expression_peak_track": "UBERON:0000178_CL:0000084_SHARE-seq-share_seq-nuclear",
+          "sc_gene_expression_imputation_mode": "imputed_supported",
+          "sc_gene_expression_n_tracks": 7,
+          "rna_seq_mean_lfc": 0.000618,
+          "rna_seq_peak_lfc": 0.001328,
+          "splice_site_usage_max_delta": 0.001606,
+          "splice_sites_max_delta": 0.006088,
+          "sc_atac_mean_diff_log2": 0.001152,
+          "sc_atac_peak_diff_log2": 0.002783,
+          "cpg_methylation_mean_delta": -0.012717,
+          "cpg_methylation_peak_delta": -0.04519,
+          "cpg_methylation_peak_position": 94782072,
+          "cpg_methylation_imputation_mode": "observed",
+          "cpg_sites_evaluated": 10
+        }
+      },
+      "ag2_4condition_wall_ms": 4886.95
+    },
+    {
+      "panel": "SMR_Pharmacogenomics",
+      "id": "CYP2D6_star4_rs3892097",
+      "rsid": "rs3892097",
+      "star_allele": "CYP2D6*4",
+      "gene_name": "CYP2D6",
+      "gene_id_no_ver": "ENSG00000100197",
+      "vcf": "chr22:42128945:C>T",
+      "mechanism_context": "Intron-3/exon-4 canonical splice-acceptor loss-of-function allele (codeine/tramadol/anticholinergic SMR context)",
+      "atlas_biosample": "HepG2",
+      "gencode_v46_tss": 42130810,
+      "distance_to_mane_tss_bp": -1865,
+      "atlas_deep_link": "https://deepmind.google.com/science/alphagenome/atlas?q=chr22:42128945:C%3ET&m=variant&lItems=avi,section:RNA_SEQ,section:DNASE,section:CHIP_TF&f=BIOSAMPLE_NAME:HepG2",
+      "atlas_avi_precomputed": {
+        "avi_phred": 25.1469,
+        "avi_raw": 1.14311,
+        "top_percentile": 0.3057,
+        "top_modality": "Splicing",
+        "fi_splicing": 0.59966,
+        "fi_rna_seq": 0.00933,
+        "fi_dnase": 0.00442,
+        "fi_chip_histone": 0.004,
+        "fi_cactus_241way": 0.39322,
+        "batch_query_wall_ms": 3354.89
+      },
+      "ag2_v2_cell_state_scores": {
+        "liver_hepatocyte": {
+          "sc_gene_expression_mean_lfc": 0.03507,
+          "sc_gene_expression_peak_lfc": 0.047392,
+          "sc_gene_expression_peak_track": "UBERON:0002107_CL:0000182_SHARE-seq-share_seq-nuclear",
+          "sc_gene_expression_imputation_mode": "observed",
+          "sc_gene_expression_n_tracks": 7,
+          "rna_seq_mean_lfc": -0.011852,
+          "rna_seq_peak_lfc": -0.020533,
+          "splice_site_usage_max_delta": 0.02615,
+          "splice_sites_max_delta": 0.021535,
+          "sc_atac_mean_diff_log2": 0.003333,
+          "sc_atac_peak_diff_log2": 0.009344,
+          "cpg_methylation_mean_delta": -0.022466,
+          "cpg_methylation_peak_delta": 0.240628,
+          "cpg_methylation_peak_position": 42128940,
+          "cpg_methylation_imputation_mode": "observed",
+          "cpg_sites_evaluated": 134
+        },
+        "blood_cd14_monocyte": {
+          "sc_gene_expression_mean_lfc": 0.000977,
+          "sc_gene_expression_peak_lfc": 0.000977,
+          "sc_gene_expression_peak_track": "UBERON:0000178_CL:0001054_scRNA-seq 10X 5-cellranger-cell",
+          "sc_gene_expression_imputation_mode": "observed",
+          "sc_gene_expression_n_tracks": 7,
+          "rna_seq_mean_lfc": -0.009931,
+          "rna_seq_peak_lfc": -0.024845,
+          "splice_site_usage_max_delta": 0.009621,
+          "splice_sites_max_delta": 0.094414,
+          "sc_atac_mean_diff_log2": 0.001521,
+          "sc_atac_peak_diff_log2": 0.011562,
+          "cpg_methylation_mean_delta": -0.019636,
+          "cpg_methylation_peak_delta": -0.242575,
+          "cpg_methylation_peak_position": 42128905,
+          "cpg_methylation_imputation_mode": "observed",
+          "cpg_sites_evaluated": 134
+        },
+        "cortical_microglia": {
+          "sc_gene_expression_mean_lfc": -0.001314,
+          "sc_gene_expression_peak_lfc": -0.001314,
+          "sc_gene_expression_peak_track": "UBERON:0001384_CL:0000129_scRNA-seq 10X 3-cellranger-nuclear",
+          "sc_gene_expression_imputation_mode": "observed",
+          "sc_gene_expression_n_tracks": 7,
+          "rna_seq_mean_lfc": -0.006279,
+          "rna_seq_peak_lfc": -0.011854,
+          "splice_site_usage_max_delta": 5.4e-05,
+          "splice_sites_max_delta": 8e-06,
+          "sc_atac_mean_diff_log2": 0.003874,
+          "sc_atac_peak_diff_log2": 0.010039,
+          "cpg_methylation_mean_delta": 0.010171,
+          "cpg_methylation_peak_delta": 0.049597,
+          "cpg_methylation_peak_position": 42129003,
+          "cpg_methylation_imputation_mode": "imputed_supported",
+          "cpg_sites_evaluated": 134
+        },
+        "blood_t_cell": {
+          "sc_gene_expression_mean_lfc": 0.009352,
+          "sc_gene_expression_peak_lfc": 0.019424,
+          "sc_gene_expression_peak_track": "UBERON:0000178_CL:0000084_SHARE-seq-share_seq-nuclear",
+          "sc_gene_expression_imputation_mode": "imputed_supported",
+          "sc_gene_expression_n_tracks": 7,
+          "rna_seq_mean_lfc": 0.009357,
+          "rna_seq_peak_lfc": 0.018732,
+          "splice_site_usage_max_delta": 0.064335,
+          "splice_sites_max_delta": 0.357083,
+          "sc_atac_mean_diff_log2": 0.005571,
+          "sc_atac_peak_diff_log2": 0.017175,
+          "cpg_methylation_mean_delta": -0.004216,
+          "cpg_methylation_peak_delta": -0.211407,
+          "cpg_methylation_peak_position": 42128905,
+          "cpg_methylation_imputation_mode": "observed",
+          "cpg_sites_evaluated": 134
+        }
+      },
+      "ag2_4condition_wall_ms": 5845.41
+    },
+    {
+      "panel": "SMR_Pharmacogenomics",
+      "id": "CYP2D6_star41_rs28371725",
+      "rsid": "rs28371725",
+      "star_allele": "CYP2D6*41",
+      "gene_name": "CYP2D6",
+      "gene_id_no_ver": "ENSG00000100197",
+      "vcf": "chr22:42127803:C>T",
+      "mechanism_context": "Intron-6 splicing-efficiency reducer intermediate-metabolizer allele",
+      "atlas_biosample": "HepG2",
+      "gencode_v46_tss": 42130810,
+      "distance_to_mane_tss_bp": -3007,
+      "atlas_deep_link": "https://deepmind.google.com/science/alphagenome/atlas?q=chr22:42127803:C%3ET&m=variant&lItems=avi,section:RNA_SEQ,section:DNASE,section:CHIP_TF&f=BIOSAMPLE_NAME:HepG2",
+      "atlas_avi_precomputed": {
+        "avi_phred": 11.6701,
+        "avi_raw": 0.20608,
+        "top_percentile": 6.8075,
+        "top_modality": "Splicing",
+        "fi_splicing": 0.18128,
+        "fi_rna_seq": 0.00122,
+        "fi_dnase": 0.0027,
+        "fi_chip_histone": 0.00153,
+        "fi_cactus_241way": -0.0109,
+        "batch_query_wall_ms": 3354.89
+      },
+      "ag2_v2_cell_state_scores": {
+        "liver_hepatocyte": {
+          "sc_gene_expression_mean_lfc": 0.01006,
+          "sc_gene_expression_peak_lfc": 0.013816,
+          "sc_gene_expression_peak_track": "UBERON:0002107_CL:0000182_SHARE-seq-share_seq-nuclear",
+          "sc_gene_expression_imputation_mode": "observed",
+          "sc_gene_expression_n_tracks": 7,
+          "rna_seq_mean_lfc": -0.00475,
+          "rna_seq_peak_lfc": -0.007382,
+          "splice_site_usage_max_delta": 0.004609,
+          "splice_sites_max_delta": 0.003349,
+          "sc_atac_mean_diff_log2": -0.012048,
+          "sc_atac_peak_diff_log2": -0.015684,
+          "cpg_methylation_mean_delta": 0.001613,
+          "cpg_methylation_peak_delta": 0.080399,
+          "cpg_methylation_peak_position": 42127893,
+          "cpg_methylation_imputation_mode": "observed",
+          "cpg_sites_evaluated": 80
+        },
+        "blood_cd14_monocyte": {
+          "sc_gene_expression_mean_lfc": -0.005029,
+          "sc_gene_expression_peak_lfc": -0.005029,
+          "sc_gene_expression_peak_track": "UBERON:0000178_CL:0001054_scRNA-seq 10X 5-cellranger-cell",
+          "sc_gene_expression_imputation_mode": "observed",
+          "sc_gene_expression_n_tracks": 7,
+          "rna_seq_mean_lfc": -0.00236,
+          "rna_seq_peak_lfc": -0.005531,
+          "splice_site_usage_max_delta": 0.003,
+          "splice_sites_max_delta": 0.028134,
+          "sc_atac_mean_diff_log2": -0.003479,
+          "sc_atac_peak_diff_log2": -0.008529,
+          "cpg_methylation_mean_delta": 0.011213,
+          "cpg_methylation_peak_delta": 0.141389,
+          "cpg_methylation_peak_position": 42127789,
+          "cpg_methylation_imputation_mode": "observed",
+          "cpg_sites_evaluated": 80
+        },
+        "cortical_microglia": {
+          "sc_gene_expression_mean_lfc": 0.001725,
+          "sc_gene_expression_peak_lfc": 0.001725,
+          "sc_gene_expression_peak_track": "UBERON:0001384_CL:0000129_scRNA-seq 10X 3-cellranger-nuclear",
+          "sc_gene_expression_imputation_mode": "observed",
+          "sc_gene_expression_n_tracks": 7,
+          "rna_seq_mean_lfc": 0.001469,
+          "rna_seq_peak_lfc": 0.002681,
+          "splice_site_usage_max_delta": 8e-06,
+          "splice_sites_max_delta": 0.0,
+          "sc_atac_mean_diff_log2": -0.007055,
+          "sc_atac_peak_diff_log2": -0.008769,
+          "cpg_methylation_mean_delta": 0.010478,
+          "cpg_methylation_peak_delta": 0.064458,
+          "cpg_methylation_peak_position": 42127789,
+          "cpg_methylation_imputation_mode": "imputed_supported",
+          "cpg_sites_evaluated": 80
+        },
+        "blood_t_cell": {
+          "sc_gene_expression_mean_lfc": -0.004261,
+          "sc_gene_expression_peak_lfc": -0.006268,
+          "sc_gene_expression_peak_track": "UBERON:0000178_CL:0000084_scRNA-seq 10X 3-cellranger-cell",
+          "sc_gene_expression_imputation_mode": "imputed_supported",
+          "sc_gene_expression_n_tracks": 7,
+          "rna_seq_mean_lfc": 0.000431,
+          "rna_seq_peak_lfc": 0.002485,
+          "splice_site_usage_max_delta": 0.007158,
+          "splice_sites_max_delta": 0.042702,
+          "sc_atac_mean_diff_log2": -0.010137,
+          "sc_atac_peak_diff_log2": -0.012425,
+          "cpg_methylation_mean_delta": 0.004507,
+          "cpg_methylation_peak_delta": -0.138501,
+          "cpg_methylation_peak_position": 42127809,
+          "cpg_methylation_imputation_mode": "imputed_supported",
+          "cpg_sites_evaluated": 80
+        }
+      },
+      "ag2_4condition_wall_ms": 5756.78
+    },
+    {
+      "panel": "Neuroimmune_Stress_Epigenetics",
+      "id": "IL6_promoter_rs1800795",
+      "rsid": "rs1800795",
+      "star_allele": "IL6 -174C>G",
+      "gene_name": "IL6",
+      "gene_id_no_ver": "ENSG00000136244",
+      "vcf": "chr7:22727026:C>G",
+      "mechanism_context": "Canonical proximal promoter regulatory polymorphism upstream of IL6 TSS",
+      "atlas_biosample": "CD14-positive_monocyte",
+      "gencode_v46_tss": 22727199,
+      "distance_to_mane_tss_bp": -173,
+      "atlas_deep_link": "https://deepmind.google.com/science/alphagenome/atlas?q=chr7:22727026:C%3EG&m=variant&lItems=avi,section:RNA_SEQ,section:DNASE,section:CHIP_TF&f=BIOSAMPLE_NAME:CD14-positive_monocyte",
+      "atlas_avi_precomputed": {
+        "avi_phred": 17.6425,
+        "avi_raw": 0.43486,
+        "top_percentile": 1.7209,
+        "top_modality": "PhastCons 470",
+        "fi_splicing": 0.04112,
+        "fi_rna_seq": 0.04221,
+        "fi_dnase": 0.01922,
+        "fi_chip_histone": 0.01877,
+        "fi_cactus_241way": 0.138,
+        "batch_query_wall_ms": 3354.89
+      },
+      "ag2_v2_cell_state_scores": {
+        "liver_hepatocyte": {
+          "sc_gene_expression_mean_lfc": -0.02026,
+          "sc_gene_expression_peak_lfc": -0.021585,
+          "sc_gene_expression_peak_track": "UBERON:0002107_CL:0000182_SHARE-seq-share_seq-nuclear",
+          "sc_gene_expression_imputation_mode": "observed",
+          "sc_gene_expression_n_tracks": 7,
+          "rna_seq_mean_lfc": -0.007106,
+          "rna_seq_peak_lfc": -0.010771,
+          "splice_site_usage_max_delta": 3.2e-05,
+          "splice_sites_max_delta": 4e-06,
+          "sc_atac_mean_diff_log2": -0.049203,
+          "sc_atac_peak_diff_log2": -0.061177,
+          "cpg_methylation_mean_delta": -0.093343,
+          "cpg_methylation_peak_delta": -0.164376,
+          "cpg_methylation_peak_position": 22726708,
+          "cpg_methylation_imputation_mode": "observed",
+          "cpg_sites_evaluated": 60
+        },
+        "blood_cd14_monocyte": {
+          "sc_gene_expression_mean_lfc": 0.526084,
+          "sc_gene_expression_peak_lfc": 0.526084,
+          "sc_gene_expression_peak_track": "UBERON:0000178_CL:0001054_scRNA-seq 10X 5-cellranger-cell",
+          "sc_gene_expression_imputation_mode": "observed",
+          "sc_gene_expression_n_tracks": 7,
+          "rna_seq_mean_lfc": 0.409262,
+          "rna_seq_peak_lfc": 0.522266,
+          "splice_site_usage_max_delta": 0.061812,
+          "splice_sites_max_delta": 0.072698,
+          "sc_atac_mean_diff_log2": 0.189195,
+          "sc_atac_peak_diff_log2": 0.199854,
+          "cpg_methylation_mean_delta": -0.023581,
+          "cpg_methylation_peak_delta": -0.102045,
+          "cpg_methylation_peak_position": 22727037,
+          "cpg_methylation_imputation_mode": "imputed_supported",
+          "cpg_sites_evaluated": 60
+        },
+        "cortical_microglia": {
+          "sc_gene_expression_mean_lfc": -0.000307,
+          "sc_gene_expression_peak_lfc": -0.000307,
+          "sc_gene_expression_peak_track": "UBERON:0001384_CL:0000129_scRNA-seq 10X 3-cellranger-nuclear",
+          "sc_gene_expression_imputation_mode": "observed",
+          "sc_gene_expression_n_tracks": 7,
+          "rna_seq_mean_lfc": 0.015079,
+          "rna_seq_peak_lfc": 0.018442,
+          "splice_site_usage_max_delta": 0.000126,
+          "splice_sites_max_delta": 2.6e-05,
+          "sc_atac_mean_diff_log2": -0.006705,
+          "sc_atac_peak_diff_log2": -0.006875,
+          "cpg_methylation_mean_delta": -0.038998,
+          "cpg_methylation_peak_delta": -0.09002,
+          "cpg_methylation_peak_position": 22726773,
+          "cpg_methylation_imputation_mode": "imputed_supported",
+          "cpg_sites_evaluated": 60
+        },
+        "blood_t_cell": {
+          "sc_gene_expression_mean_lfc": 0.122627,
+          "sc_gene_expression_peak_lfc": 0.228476,
+          "sc_gene_expression_peak_track": "UBERON:0000178_CL:0000084_scRNA-seq 10X 5-cellranger-cell",
+          "sc_gene_expression_imputation_mode": "imputed_supported",
+          "sc_gene_expression_n_tracks": 7,
+          "rna_seq_mean_lfc": 0.181213,
+          "rna_seq_peak_lfc": 0.210708,
+          "splice_site_usage_max_delta": 0.037284,
+          "splice_sites_max_delta": 0.062743,
+          "sc_atac_mean_diff_log2": 0.13684,
+          "sc_atac_peak_diff_log2": 0.149886,
+          "cpg_methylation_mean_delta": -0.075919,
+          "cpg_methylation_peak_delta": -0.234969,
+          "cpg_methylation_peak_position": 22726972,
+          "cpg_methylation_imputation_mode": "imputed_supported",
+          "cpg_sites_evaluated": 60
+        }
+      },
+      "ag2_4condition_wall_ms": 5074.16
+    },
+    {
+      "panel": "Neuroimmune_Stress_Epigenetics",
+      "id": "IL6_exon1_donor_hotspot",
+      "rsid": null,
+      "star_allele": "IL6 Exon-1 Donor +1G>T",
+      "gene_name": "IL6",
+      "gene_id_no_ver": "ENSG00000136244",
+      "vcf": "chr7:22727282:G>T",
+      "mechanism_context": "Top AVI saturation-mutagenesis splice-donor hotspot in IL6 601-bp promoter/exon-1 scan",
+      "atlas_biosample": "CD14-positive_monocyte",
+      "gencode_v46_tss": 22727199,
+      "distance_to_mane_tss_bp": 83,
+      "atlas_deep_link": "https://deepmind.google.com/science/alphagenome/atlas?q=chr7:22727282:G%3ET&m=variant&lItems=avi,section:RNA_SEQ,section:DNASE,section:CHIP_TF&f=BIOSAMPLE_NAME:CD14-positive_monocyte",
+      "atlas_avi_precomputed": {
+        "avi_phred": 34.7514,
+        "avi_raw": 1.99158,
+        "top_percentile": 0.0335,
+        "top_modality": "Splicing",
+        "fi_splicing": 0.94307,
+        "fi_rna_seq": 0.13429,
+        "fi_dnase": 0.0197,
+        "fi_chip_histone": 0.03985,
+        "fi_cactus_241way": 0.54006,
+        "batch_query_wall_ms": 3354.89
+      },
+      "ag2_v2_cell_state_scores": {
+        "liver_hepatocyte": {
+          "sc_gene_expression_mean_lfc": -0.349952,
+          "sc_gene_expression_peak_lfc": -0.545586,
+          "sc_gene_expression_peak_track": "UBERON:0002107_CL:0000182_scRNA-seq 10X 3-star_solo-nuclear",
+          "sc_gene_expression_imputation_mode": "observed",
+          "sc_gene_expression_n_tracks": 7,
+          "rna_seq_mean_lfc": -0.323295,
+          "rna_seq_peak_lfc": -0.444837,
+          "splice_site_usage_max_delta": 0.000443,
+          "splice_sites_max_delta": 0.000129,
+          "sc_atac_mean_diff_log2": -0.055145,
+          "sc_atac_peak_diff_log2": -0.116916,
+          "cpg_methylation_mean_delta": 0.039869,
+          "cpg_methylation_peak_delta": 0.163565,
+          "cpg_methylation_peak_position": 22727209,
+          "cpg_methylation_imputation_mode": "imputed_supported",
+          "cpg_sites_evaluated": 66
+        },
+        "blood_cd14_monocyte": {
+          "sc_gene_expression_mean_lfc": -1.385427,
+          "sc_gene_expression_peak_lfc": -1.385427,
+          "sc_gene_expression_peak_track": "UBERON:0000178_CL:0001054_scRNA-seq 10X 5-cellranger-cell",
+          "sc_gene_expression_imputation_mode": "observed",
+          "sc_gene_expression_n_tracks": 7,
+          "rna_seq_mean_lfc": -1.242718,
+          "rna_seq_peak_lfc": -1.574001,
+          "splice_site_usage_max_delta": 0.208408,
+          "splice_sites_max_delta": 0.667338,
+          "sc_atac_mean_diff_log2": -0.163147,
+          "sc_atac_peak_diff_log2": -0.167933,
+          "cpg_methylation_mean_delta": 0.06035,
+          "cpg_methylation_peak_delta": 0.465399,
+          "cpg_methylation_peak_position": 22727444,
+          "cpg_methylation_imputation_mode": "observed",
+          "cpg_sites_evaluated": 66
+        },
+        "cortical_microglia": {
+          "sc_gene_expression_mean_lfc": -0.310053,
+          "sc_gene_expression_peak_lfc": -0.310053,
+          "sc_gene_expression_peak_track": "UBERON:0001384_CL:0000129_scRNA-seq 10X 3-cellranger-nuclear",
+          "sc_gene_expression_imputation_mode": "observed",
+          "sc_gene_expression_n_tracks": 7,
+          "rna_seq_mean_lfc": -0.296689,
+          "rna_seq_peak_lfc": -0.357846,
+          "splice_site_usage_max_delta": 0.00231,
+          "splice_sites_max_delta": 0.000525,
+          "sc_atac_mean_diff_log2": -0.029041,
+          "sc_atac_peak_diff_log2": -0.032515,
+          "cpg_methylation_mean_delta": 0.044174,
+          "cpg_methylation_peak_delta": 0.118514,
+          "cpg_methylation_peak_position": 22727224,
+          "cpg_methylation_imputation_mode": "imputed_supported",
+          "cpg_sites_evaluated": 66
+        },
+        "blood_t_cell": {
+          "sc_gene_expression_mean_lfc": -0.566728,
+          "sc_gene_expression_peak_lfc": -0.851277,
+          "sc_gene_expression_peak_track": "UBERON:0000178_CL:0000084_scRNA-seq 10X 5-cellranger-cell",
+          "sc_gene_expression_imputation_mode": "imputed_supported",
+          "sc_gene_expression_n_tracks": 7,
+          "rna_seq_mean_lfc": -0.710128,
+          "rna_seq_peak_lfc": -0.91868,
+          "splice_site_usage_max_delta": 0.1239,
+          "splice_sites_max_delta": 0.293619,
+          "sc_atac_mean_diff_log2": -0.150598,
+          "sc_atac_peak_diff_log2": -0.162058,
+          "cpg_methylation_mean_delta": 0.163016,
+          "cpg_methylation_peak_delta": 0.612208,
+          "cpg_methylation_peak_position": 22727209,
+          "cpg_methylation_imputation_mode": "observed",
+          "cpg_sites_evaluated": 66
+        }
+      },
+      "ag2_4condition_wall_ms": 5332.06
+    },
+    {
+      "panel": "Neuroimmune_Stress_Epigenetics",
+      "id": "FKBP5_intron2_GRE_rs1360780",
+      "rsid": "rs1360780",
+      "star_allele": "FKBP5 Intron-2 GRE",
+      "gene_name": "FKBP5",
+      "gene_id_no_ver": "ENSG00000096060",
+      "vcf": "chr6:35639794:T>C",
+      "mechanism_context": "Intron-2 glucocorticoid-response element linked to stress-associated CpG methylation & HPA feedback",
+      "atlas_biosample": "CD14-positive_monocyte",
+      "gencode_v46_tss": 35688915,
+      "distance_to_mane_tss_bp": -49121,
+      "atlas_deep_link": "https://deepmind.google.com/science/alphagenome/atlas?q=chr6:35639794:T%3EC&m=variant&lItems=avi,section:RNA_SEQ,section:DNASE,section:CHIP_TF&f=BIOSAMPLE_NAME:CD14-positive_monocyte",
+      "atlas_avi_precomputed": {
+        "avi_phred": 7.467,
+        "avi_raw": 0.08125,
+        "top_percentile": 17.9183,
+        "top_modality": "PhastCons 470",
+        "fi_splicing": 0.01743,
+        "fi_rna_seq": 0.00231,
+        "fi_dnase": 0.00626,
+        "fi_chip_histone": 0.00294,
+        "fi_cactus_241way": -0.00538,
+        "batch_query_wall_ms": 3354.89
+      },
+      "ag2_v2_cell_state_scores": {
+        "liver_hepatocyte": {
+          "sc_gene_expression_mean_lfc": -0.000521,
+          "sc_gene_expression_peak_lfc": -0.001074,
+          "sc_gene_expression_peak_track": "UBERON:0002107_CL:0000182_SHARE-seq-share_seq-nuclear",
+          "sc_gene_expression_imputation_mode": "observed",
+          "sc_gene_expression_n_tracks": 7,
+          "rna_seq_mean_lfc": 0.000356,
+          "rna_seq_peak_lfc": 0.000706,
+          "splice_site_usage_max_delta": 0.002423,
+          "splice_sites_max_delta": 0.003155,
+          "sc_atac_mean_diff_log2": 0.006173,
+          "sc_atac_peak_diff_log2": 0.011483,
+          "cpg_methylation_mean_delta": -0.001575,
+          "cpg_methylation_peak_delta": 0.015191,
+          "cpg_methylation_peak_position": 35640190,
+          "cpg_methylation_imputation_mode": "observed",
+          "cpg_sites_evaluated": 12
+        },
+        "blood_cd14_monocyte": {
+          "sc_gene_expression_mean_lfc": -0.000147,
+          "sc_gene_expression_peak_lfc": -0.000147,
+          "sc_gene_expression_peak_track": "UBERON:0000178_CL:0001054_scRNA-seq 10X 5-cellranger-cell",
+          "sc_gene_expression_imputation_mode": "observed",
+          "sc_gene_expression_n_tracks": 7,
+          "rna_seq_mean_lfc": -0.000695,
+          "rna_seq_peak_lfc": -0.001026,
+          "splice_site_usage_max_delta": 0.005535,
+          "splice_sites_max_delta": 0.006953,
+          "sc_atac_mean_diff_log2": 0.003912,
+          "sc_atac_peak_diff_log2": 0.006182,
+          "cpg_methylation_mean_delta": -0.007018,
+          "cpg_methylation_peak_delta": -0.025438,
+          "cpg_methylation_peak_position": 35640243,
+          "cpg_methylation_imputation_mode": "observed",
+          "cpg_sites_evaluated": 12
+        },
+        "cortical_microglia": {
+          "sc_gene_expression_mean_lfc": -4e-05,
+          "sc_gene_expression_peak_lfc": -4e-05,
+          "sc_gene_expression_peak_track": "UBERON:0001384_CL:0000129_scRNA-seq 10X 3-cellranger-nuclear",
+          "sc_gene_expression_imputation_mode": "observed",
+          "sc_gene_expression_n_tracks": 7,
+          "rna_seq_mean_lfc": 0.000576,
+          "rna_seq_peak_lfc": 0.000655,
+          "splice_site_usage_max_delta": 0.002143,
+          "splice_sites_max_delta": 0.001151,
+          "sc_atac_mean_diff_log2": 0.003016,
+          "sc_atac_peak_diff_log2": 0.003382,
+          "cpg_methylation_mean_delta": 0.001932,
+          "cpg_methylation_peak_delta": 0.007403,
+          "cpg_methylation_peak_position": 35639535,
+          "cpg_methylation_imputation_mode": "imputed_supported",
+          "cpg_sites_evaluated": 12
+        },
+        "blood_t_cell": {
+          "sc_gene_expression_mean_lfc": -0.000498,
+          "sc_gene_expression_peak_lfc": -0.001315,
+          "sc_gene_expression_peak_track": "UBERON:0000178_CL:0000084_SHARE-seq-share_seq-nuclear",
+          "sc_gene_expression_imputation_mode": "imputed_supported",
+          "sc_gene_expression_n_tracks": 7,
+          "rna_seq_mean_lfc": -5.8e-05,
+          "rna_seq_peak_lfc": -0.00014,
+          "splice_site_usage_max_delta": 0.004172,
+          "splice_sites_max_delta": 0.005254,
+          "sc_atac_mean_diff_log2": 0.004423,
+          "sc_atac_peak_diff_log2": 0.00523,
+          "cpg_methylation_mean_delta": 0.000795,
+          "cpg_methylation_peak_delta": 0.020297,
+          "cpg_methylation_peak_position": 35640125,
+          "cpg_methylation_imputation_mode": "observed",
+          "cpg_sites_evaluated": 12
+        }
+      },
+      "ag2_4condition_wall_ms": 5110.69
+    },
+    {
+      "panel": "Neuroimmune_Stress_Epigenetics",
+      "id": "NR3C1_BclI_rs41423247",
+      "rsid": "rs41423247",
+      "star_allele": "NR3C1 BclI Intron-2",
+      "gene_name": "NR3C1",
+      "gene_id_no_ver": "ENSG00000113580",
+      "vcf": "chr5:143399010:G>C",
+      "mechanism_context": "Common intronic glucocorticoid receptor sensitivity polymorphism downstream of exon 2",
+      "atlas_biosample": "CD14-positive_monocyte",
+      "gencode_v46_tss": 143403686,
+      "distance_to_mane_tss_bp": -4676,
+      "atlas_deep_link": "https://deepmind.google.com/science/alphagenome/atlas?q=chr5:143399010:G%3EC&m=variant&lItems=avi,section:RNA_SEQ,section:DNASE,section:CHIP_TF&f=BIOSAMPLE_NAME:CD14-positive_monocyte",
+      "atlas_avi_precomputed": {
+        "avi_phred": 5.3291,
+        "avi_raw": 0.03603,
+        "top_percentile": 29.315,
+        "top_modality": "DNASE-seq",
+        "fi_splicing": 0.00708,
+        "fi_rna_seq": 0.00093,
+        "fi_dnase": 0.02225,
+        "fi_chip_histone": 0.00316,
+        "fi_cactus_241way": 0.01266,
+        "batch_query_wall_ms": 3354.89
+      },
+      "ag2_v2_cell_state_scores": {
+        "liver_hepatocyte": {
+          "sc_gene_expression_mean_lfc": 0.001589,
+          "sc_gene_expression_peak_lfc": 0.002349,
+          "sc_gene_expression_peak_track": "UBERON:0002107_CL:0000182_SHARE-seq-share_seq-nuclear",
+          "sc_gene_expression_imputation_mode": "observed",
+          "sc_gene_expression_n_tracks": 7,
+          "rna_seq_mean_lfc": 0.000719,
+          "rna_seq_peak_lfc": 0.000974,
+          "splice_site_usage_max_delta": 0.000793,
+          "splice_sites_max_delta": 0.000924,
+          "sc_atac_mean_diff_log2": 0.013386,
+          "sc_atac_peak_diff_log2": 0.021803,
+          "cpg_methylation_mean_delta": 0.002694,
+          "cpg_methylation_peak_delta": 0.025922,
+          "cpg_methylation_peak_position": 143398768,
+          "cpg_methylation_imputation_mode": "observed",
+          "cpg_sites_evaluated": 22
+        },
+        "blood_cd14_monocyte": {
+          "sc_gene_expression_mean_lfc": 0.002335,
+          "sc_gene_expression_peak_lfc": 0.002335,
+          "sc_gene_expression_peak_track": "UBERON:0000178_CL:0001054_scRNA-seq 10X 5-cellranger-cell",
+          "sc_gene_expression_imputation_mode": "observed",
+          "sc_gene_expression_n_tracks": 7,
+          "rna_seq_mean_lfc": 0.001097,
+          "rna_seq_peak_lfc": 0.001573,
+          "splice_site_usage_max_delta": 0.00403,
+          "splice_sites_max_delta": 0.003682,
+          "sc_atac_mean_diff_log2": 0.132756,
+          "sc_atac_peak_diff_log2": 0.143539,
+          "cpg_methylation_mean_delta": -0.016747,
+          "cpg_methylation_peak_delta": -0.193179,
+          "cpg_methylation_peak_position": 143398956,
+          "cpg_methylation_imputation_mode": "observed",
+          "cpg_sites_evaluated": 22
+        },
+        "cortical_microglia": {
+          "sc_gene_expression_mean_lfc": 0.002447,
+          "sc_gene_expression_peak_lfc": 0.002447,
+          "sc_gene_expression_peak_track": "UBERON:0001384_CL:0000129_scRNA-seq 10X 3-cellranger-nuclear",
+          "sc_gene_expression_imputation_mode": "observed",
+          "sc_gene_expression_n_tracks": 7,
+          "rna_seq_mean_lfc": 0.001174,
+          "rna_seq_peak_lfc": 0.001416,
+          "splice_site_usage_max_delta": 0.001479,
+          "splice_sites_max_delta": 0.001779,
+          "sc_atac_mean_diff_log2": 0.021074,
+          "sc_atac_peak_diff_log2": 0.02425,
+          "cpg_methylation_mean_delta": -0.014466,
+          "cpg_methylation_peak_delta": -0.059999,
+          "cpg_methylation_peak_position": 143398956,
+          "cpg_methylation_imputation_mode": "imputed_supported",
+          "cpg_sites_evaluated": 22
+        },
+        "blood_t_cell": {
+          "sc_gene_expression_mean_lfc": 0.001656,
+          "sc_gene_expression_peak_lfc": 0.002441,
+          "sc_gene_expression_peak_track": "UBERON:0000178_CL:0000084_scRNA-seq 10X 5-cellranger-cell",
+          "sc_gene_expression_imputation_mode": "imputed_supported",
+          "sc_gene_expression_n_tracks": 7,
+          "rna_seq_mean_lfc": 0.001272,
+          "rna_seq_peak_lfc": 0.001755,
+          "splice_site_usage_max_delta": 0.00463,
+          "splice_sites_max_delta": 0.004834,
+          "sc_atac_mean_diff_log2": 0.079147,
+          "sc_atac_peak_diff_log2": 0.094623,
+          "cpg_methylation_mean_delta": -0.017082,
+          "cpg_methylation_peak_delta": -0.061926,
+          "cpg_methylation_peak_position": 143398956,
+          "cpg_methylation_imputation_mode": "observed",
+          "cpg_sites_evaluated": 22
+        }
+      },
+      "ag2_4condition_wall_ms": 5811.27
+    },
+    {
+      "panel": "Neuroimmune_Stress_Epigenetics",
+      "id": "NR3C1_exon1_donor_hotspot",
+      "rsid": null,
+      "star_allele": "NR3C1 Exon-1 Donor Hotspot",
+      "gene_name": "NR3C1",
+      "gene_id_no_ver": "ENSG00000113580",
+      "vcf": "chr5:143403210:C>T",
+      "mechanism_context": "Top AVI saturation-mutagenesis hotspot across NR3C1 CpG promoter / exon-1 island (2,403 SNVs scanned)",
+      "atlas_biosample": "CD14-positive_monocyte",
+      "gencode_v46_tss": 143403686,
+      "distance_to_mane_tss_bp": -476,
+      "atlas_deep_link": "https://deepmind.google.com/science/alphagenome/atlas?q=chr5:143403210:C%3ET&m=variant&lItems=avi,section:RNA_SEQ,section:DNASE,section:CHIP_TF&f=BIOSAMPLE_NAME:CD14-positive_monocyte",
+      "atlas_avi_precomputed": {
+        "avi_phred": 35.2863,
+        "avi_raw": 2.05531,
+        "top_percentile": 0.0296,
+        "top_modality": "Splicing",
+        "fi_splicing": 1.04022,
+        "fi_rna_seq": 0.04743,
+        "fi_dnase": 0.0573,
+        "fi_chip_histone": 0.05541,
+        "fi_cactus_241way": 0.51134,
+        "batch_query_wall_ms": 3354.89
+      },
+      "ag2_v2_cell_state_scores": {
+        "liver_hepatocyte": {
+          "sc_gene_expression_mean_lfc": -0.029067,
+          "sc_gene_expression_peak_lfc": -0.041175,
+          "sc_gene_expression_peak_track": "UBERON:0002107_CL:0000182_scRNA-seq 10X 3-star_solo-nuclear",
+          "sc_gene_expression_imputation_mode": "observed",
+          "sc_gene_expression_n_tracks": 7,
+          "rna_seq_mean_lfc": -0.056139,
+          "rna_seq_peak_lfc": -0.067071,
+          "splice_site_usage_max_delta": 0.022162,
+          "splice_sites_max_delta": 0.016758,
+          "sc_atac_mean_diff_log2": 0.082093,
+          "sc_atac_peak_diff_log2": 0.18414,
+          "cpg_methylation_mean_delta": 0.027938,
+          "cpg_methylation_peak_delta": 0.138874,
+          "cpg_methylation_peak_position": 143403601,
+          "cpg_methylation_imputation_mode": "observed",
+          "cpg_sites_evaluated": 278
+        },
+        "blood_cd14_monocyte": {
+          "sc_gene_expression_mean_lfc": -0.197889,
+          "sc_gene_expression_peak_lfc": -0.197889,
+          "sc_gene_expression_peak_track": "UBERON:0000178_CL:0001054_scRNA-seq 10X 5-cellranger-cell",
+          "sc_gene_expression_imputation_mode": "observed",
+          "sc_gene_expression_n_tracks": 7,
+          "rna_seq_mean_lfc": -0.077258,
+          "rna_seq_peak_lfc": -0.102079,
+          "splice_site_usage_max_delta": 0.545363,
+          "splice_sites_max_delta": 0.79258,
+          "sc_atac_mean_diff_log2": 0.020402,
+          "sc_atac_peak_diff_log2": 0.02415,
+          "cpg_methylation_mean_delta": -0.010714,
+          "cpg_methylation_peak_delta": -0.270113,
+          "cpg_methylation_peak_position": 143403225,
+          "cpg_methylation_imputation_mode": "imputed_supported",
+          "cpg_sites_evaluated": 278
+        },
+        "cortical_microglia": {
+          "sc_gene_expression_mean_lfc": -0.012377,
+          "sc_gene_expression_peak_lfc": -0.012377,
+          "sc_gene_expression_peak_track": "UBERON:0001384_CL:0000129_scRNA-seq 10X 3-cellranger-nuclear",
+          "sc_gene_expression_imputation_mode": "observed",
+          "sc_gene_expression_n_tracks": 7,
+          "rna_seq_mean_lfc": 0.000111,
+          "rna_seq_peak_lfc": 0.002055,
+          "splice_site_usage_max_delta": 0.014472,
+          "splice_sites_max_delta": 0.005913,
+          "sc_atac_mean_diff_log2": 0.017007,
+          "sc_atac_peak_diff_log2": 0.022766,
+          "cpg_methylation_mean_delta": 0.021941,
+          "cpg_methylation_peak_delta": 0.148612,
+          "cpg_methylation_peak_position": 143403426,
+          "cpg_methylation_imputation_mode": "imputed_supported",
+          "cpg_sites_evaluated": 278
+        },
+        "blood_t_cell": {
+          "sc_gene_expression_mean_lfc": -0.017565,
+          "sc_gene_expression_peak_lfc": -0.044973,
+          "sc_gene_expression_peak_track": "UBERON:0000178_CL:0000084_scRNA-seq 10X 5-cellranger-cell",
+          "sc_gene_expression_imputation_mode": "imputed_supported",
+          "sc_gene_expression_n_tracks": 7,
+          "rna_seq_mean_lfc": -0.026667,
+          "rna_seq_peak_lfc": -0.047809,
+          "splice_site_usage_max_delta": 0.623961,
+          "splice_sites_max_delta": 0.856413,
+          "sc_atac_mean_diff_log2": 0.00726,
+          "sc_atac_peak_diff_log2": 0.009244,
+          "cpg_methylation_mean_delta": 0.037012,
+          "cpg_methylation_peak_delta": -0.345273,
+          "cpg_methylation_peak_position": 143403225,
+          "cpg_methylation_imputation_mode": "imputed_supported",
+          "cpg_sites_evaluated": 278
+        }
+      },
+      "ag2_4condition_wall_ms": 5346.34
+    }
+  ],
+  "distal_enhancer_gene_e2g_1mb_gradients": [
+    {
+      "gene_name": "CYP2C19",
+      "gene_id": "ENSG00000165841",
+      "mane_transcript_id": "ENST00000371321.9",
+      "condition_id": "liver_hepatocyte",
+      "condition_curie": "UBERON:0002107_CL:0000182",
+      "biosample_name": "liver hepatocyte",
+      "interval_1mb": "chr10:94238392-95286968",
+      "total_500bp_tiles_scored": 4193,
+      "official_ag2_sc_gradient_threshold": 0.0012,
+      "active_distal_enhancer_tiles_ge_2kb": 50,
+      "peak_distal_gradient_score": 0.016949,
+      "max_active_distal_enhancer_distance_kb": 176.71,
+      "top_5_distal_enhancer_tiles": [
+        {
+          "tile_interval": "chr10:94760392-94760892",
+          "gradient_score": 0.016949,
+          "distance_to_tss_bp": 2038
+        },
+        {
+          "tile_interval": "chr10:94747892-94748392",
+          "gradient_score": 0.010658,
+          "distance_to_tss_bp": 14538
+        },
+        {
+          "tile_interval": "chr10:94747642-94748142",
+          "gradient_score": 0.010508,
+          "distance_to_tss_bp": 14788
+        },
+        {
+          "tile_interval": "chr10:94760142-94760642",
+          "gradient_score": 0.009051,
+          "distance_to_tss_bp": 2288
+        },
+        {
+          "tile_interval": "chr10:94747392-94747892",
+          "gradient_score": 0.007834,
+          "distance_to_tss_bp": 15038
+        }
+      ],
+      "wall_ms": 2496.96
+    },
+    {
+      "gene_name": "CYP2C19",
+      "gene_id": "ENSG00000165841",
+      "mane_transcript_id": "ENST00000371321.9",
+      "condition_id": "blood_cd14_monocyte",
+      "condition_curie": "UBERON:0000178_CL:0001054",
+      "biosample_name": "blood CD14-positive monocyte",
+      "interval_1mb": "chr10:94238392-95286968",
+      "total_500bp_tiles_scored": 4193,
+      "official_ag2_sc_gradient_threshold": 0.0012,
+      "active_distal_enhancer_tiles_ge_2kb": 52,
+      "peak_distal_gradient_score": 0.004263,
+      "max_active_distal_enhancer_distance_kb": 274.96,
+      "top_5_distal_enhancer_tiles": [
+        {
+          "tile_interval": "chr10:94682642-94683142",
+          "gradient_score": 0.004263,
+          "distance_to_tss_bp": 79788
+        },
+        {
+          "tile_interval": "chr10:94682892-94683392",
+          "gradient_score": 0.004242,
+          "distance_to_tss_bp": 79538
+        },
+        {
+          "tile_interval": "chr10:94640642-94641142",
+          "gradient_score": 0.004187,
+          "distance_to_tss_bp": 121788
+        },
+        {
+          "tile_interval": "chr10:94640392-94640892",
+          "gradient_score": 0.003899,
+          "distance_to_tss_bp": 122038
+        },
+        {
+          "tile_interval": "chr10:94775142-94775642",
+          "gradient_score": 0.003549,
+          "distance_to_tss_bp": 12712
+        }
+      ],
+      "wall_ms": 2565.94
+    },
+    {
+      "gene_name": "IL6",
+      "gene_id": "ENSG00000136244",
+      "mane_transcript_id": "ENST00000258743.10",
+      "condition_id": "blood_cd14_monocyte",
+      "condition_curie": "UBERON:0000178_CL:0001054",
+      "biosample_name": "blood CD14-positive monocyte",
+      "interval_1mb": "chr7:22202911-23251487",
+      "total_500bp_tiles_scored": 4193,
+      "official_ag2_sc_gradient_threshold": 0.0012,
+      "active_distal_enhancer_tiles_ge_2kb": 122,
+      "peak_distal_gradient_score": 0.024792,
+      "max_active_distal_enhancer_distance_kb": 198.04,
+      "top_5_distal_enhancer_tiles": [
+        {
+          "tile_interval": "chr7:22661911-22662411",
+          "gradient_score": 0.024792,
+          "distance_to_tss_bp": 65038
+        },
+        {
+          "tile_interval": "chr7:22662161-22662661",
+          "gradient_score": 0.020733,
+          "distance_to_tss_bp": 64788
+        },
+        {
+          "tile_interval": "chr7:22663161-22663661",
+          "gradient_score": 0.018125,
+          "distance_to_tss_bp": 63788
+        },
+        {
+          "tile_interval": "chr7:22723411-22723911",
+          "gradient_score": 0.017456,
+          "distance_to_tss_bp": 3538
+        },
+        {
+          "tile_interval": "chr7:22723161-22723661",
+          "gradient_score": 0.016411,
+          "distance_to_tss_bp": 3788
+        }
+      ],
+      "wall_ms": 2481.33
+    },
+    {
+      "gene_name": "IL6",
+      "gene_id": "ENSG00000136244",
+      "mane_transcript_id": "ENST00000258743.10",
+      "condition_id": "cortical_microglia",
+      "condition_curie": "UBERON:0001384_CL:0000129",
+      "biosample_name": "primary motor cortex microglial cell",
+      "interval_1mb": "chr7:22202911-23251487",
+      "total_500bp_tiles_scored": 4193,
+      "official_ag2_sc_gradient_threshold": 0.0012,
+      "active_distal_enhancer_tiles_ge_2kb": 100,
+      "peak_distal_gradient_score": 0.023925,
+      "max_active_distal_enhancer_distance_kb": 167.29,
+      "top_5_distal_enhancer_tiles": [
+        {
+          "tile_interval": "chr7:22723161-22723661",
+          "gradient_score": 0.023925,
+          "distance_to_tss_bp": 3788
+        },
+        {
+          "tile_interval": "chr7:22577661-22578161",
+          "gradient_score": 0.023058,
+          "distance_to_tss_bp": 149288
+        },
+        {
+          "tile_interval": "chr7:22722911-22723411",
+          "gradient_score": 0.022041,
+          "distance_to_tss_bp": 4038
+        },
+        {
+          "tile_interval": "chr7:22577411-22577911",
+          "gradient_score": 0.020907,
+          "distance_to_tss_bp": 149538
+        },
+        {
+          "tile_interval": "chr7:22723411-22723911",
+          "gradient_score": 0.018443,
+          "distance_to_tss_bp": 3538
+        }
+      ],
+      "wall_ms": 2469.84
+    },
+    {
+      "gene_name": "IL6",
+      "gene_id": "ENSG00000136244",
+      "mane_transcript_id": "ENST00000258743.10",
+      "condition_id": "liver_hepatocyte",
+      "condition_curie": "UBERON:0002107_CL:0000182",
+      "biosample_name": "liver hepatocyte",
+      "interval_1mb": "chr7:22202911-23251487",
+      "total_500bp_tiles_scored": 4193,
+      "official_ag2_sc_gradient_threshold": 0.0012,
+      "active_distal_enhancer_tiles_ge_2kb": 89,
+      "peak_distal_gradient_score": 0.00573,
+      "max_active_distal_enhancer_distance_kb": 163.79,
+      "top_5_distal_enhancer_tiles": [
+        {
+          "tile_interval": "chr7:22680411-22680911",
+          "gradient_score": 0.00573,
+          "distance_to_tss_bp": 46538
+        },
+        {
+          "tile_interval": "chr7:22731411-22731911",
+          "gradient_score": 0.005416,
+          "distance_to_tss_bp": 4462
+        },
+        {
+          "tile_interval": "chr7:22680661-22681161",
+          "gradient_score": 0.005079,
+          "distance_to_tss_bp": 46288
+        },
+        {
+          "tile_interval": "chr7:22731161-22731661",
+          "gradient_score": 0.004684,
+          "distance_to_tss_bp": 4212
+        },
+        {
+          "tile_interval": "chr7:22731661-22732161",
+          "gradient_score": 0.004614,
+          "distance_to_tss_bp": 4712
+        }
+      ],
+      "wall_ms": 2564.54
+    },
+    {
+      "gene_name": "FKBP5",
+      "gene_id": "ENSG00000096060",
+      "mane_transcript_id": "ENST00000357266.9",
+      "condition_id": "blood_cd14_monocyte",
+      "condition_curie": "UBERON:0000178_CL:0001054",
+      "biosample_name": "blood CD14-positive monocyte",
+      "interval_1mb": "chr6:35164640-36213216",
+      "total_500bp_tiles_scored": 4193,
+      "official_ag2_sc_gradient_threshold": 0.0012,
+      "active_distal_enhancer_tiles_ge_2kb": 78,
+      "peak_distal_gradient_score": 0.013272,
+      "max_active_distal_enhancer_distance_kb": 194.78,
+      "top_5_distal_enhancer_tiles": [
+        {
+          "tile_interval": "chr6:35719640-35720140",
+          "gradient_score": 0.013272,
+          "distance_to_tss_bp": 30975
+        },
+        {
+          "tile_interval": "chr6:35719890-35720390",
+          "gradient_score": 0.010908,
+          "distance_to_tss_bp": 31225
+        },
+        {
+          "tile_interval": "chr6:35616390-35616890",
+          "gradient_score": 0.010455,
+          "distance_to_tss_bp": 72275
+        },
+        {
+          "tile_interval": "chr6:35616140-35616640",
+          "gradient_score": 0.009895,
+          "distance_to_tss_bp": 72525
+        },
+        {
+          "tile_interval": "chr6:35719390-35719890",
+          "gradient_score": 0.00963,
+          "distance_to_tss_bp": 30725
+        }
+      ],
+      "wall_ms": 2514.27
+    },
+    {
+      "gene_name": "FKBP5",
+      "gene_id": "ENSG00000096060",
+      "mane_transcript_id": "ENST00000357266.9",
+      "condition_id": "cortical_microglia",
+      "condition_curie": "UBERON:0001384_CL:0000129",
+      "biosample_name": "primary motor cortex microglial cell",
+      "interval_1mb": "chr6:35164640-36213216",
+      "total_500bp_tiles_scored": 4193,
+      "official_ag2_sc_gradient_threshold": 0.0012,
+      "active_distal_enhancer_tiles_ge_2kb": 41,
+      "peak_distal_gradient_score": 0.014516,
+      "max_active_distal_enhancer_distance_kb": 98.53,
+      "top_5_distal_enhancer_tiles": [
+        {
+          "tile_interval": "chr6:35725640-35726140",
+          "gradient_score": 0.014516,
+          "distance_to_tss_bp": 36975
+        },
+        {
+          "tile_interval": "chr6:35725390-35725890",
+          "gradient_score": 0.013128,
+          "distance_to_tss_bp": 36725
+        },
+        {
+          "tile_interval": "chr6:35691140-35691640",
+          "gradient_score": 0.010114,
+          "distance_to_tss_bp": 2475
+        },
+        {
+          "tile_interval": "chr6:35691390-35691890",
+          "gradient_score": 0.009895,
+          "distance_to_tss_bp": 2725
+        },
+        {
+          "tile_interval": "chr6:35727890-35728390",
+          "gradient_score": 0.009037,
+          "distance_to_tss_bp": 39225
+        }
+      ],
+      "wall_ms": 2498.42
+    },
+    {
+      "gene_name": "NR3C1",
+      "gene_id": "ENSG00000113580",
+      "mane_transcript_id": "ENST00000394464.7",
+      "condition_id": "blood_cd14_monocyte",
+      "condition_curie": "UBERON:0000178_CL:0001054",
+      "biosample_name": "blood CD14-positive monocyte",
+      "interval_1mb": "chr5:142879594-143928170",
+      "total_500bp_tiles_scored": 4193,
+      "official_ag2_sc_gradient_threshold": 0.0012,
+      "active_distal_enhancer_tiles_ge_2kb": 14,
+      "peak_distal_gradient_score": 0.00471,
+      "max_active_distal_enhancer_distance_kb": 401.34,
+      "top_5_distal_enhancer_tiles": [
+        {
+          "tile_interval": "chr5:143002594-143003094",
+          "gradient_score": 0.00471,
+          "distance_to_tss_bp": 400842
+        },
+        {
+          "tile_interval": "chr5:143002344-143002844",
+          "gradient_score": 0.003887,
+          "distance_to_tss_bp": 401092
+        },
+        {
+          "tile_interval": "chr5:143002844-143003344",
+          "gradient_score": 0.003577,
+          "distance_to_tss_bp": 400592
+        },
+        {
+          "tile_interval": "chr5:143435094-143435594",
+          "gradient_score": 0.0028,
+          "distance_to_tss_bp": 31658
+        },
+        {
+          "tile_interval": "chr5:143435344-143435844",
+          "gradient_score": 0.002472,
+          "distance_to_tss_bp": 31908
+        }
+      ],
+      "wall_ms": 2791.55
+    },
+    {
+      "gene_name": "NR3C1",
+      "gene_id": "ENSG00000113580",
+      "mane_transcript_id": "ENST00000394464.7",
+      "condition_id": "cortical_microglia",
+      "condition_curie": "UBERON:0001384_CL:0000129",
+      "biosample_name": "primary motor cortex microglial cell",
+      "interval_1mb": "chr5:142879594-143928170",
+      "total_500bp_tiles_scored": 4193,
+      "official_ag2_sc_gradient_threshold": 0.0012,
+      "active_distal_enhancer_tiles_ge_2kb": 20,
+      "peak_distal_gradient_score": 0.006299,
+      "max_active_distal_enhancer_distance_kb": 401.34,
+      "top_5_distal_enhancer_tiles": [
+        {
+          "tile_interval": "chr5:143063094-143063594",
+          "gradient_score": 0.006299,
+          "distance_to_tss_bp": 340342
+        },
+        {
+          "tile_interval": "chr5:143063344-143063844",
+          "gradient_score": 0.005865,
+          "distance_to_tss_bp": 340092
+        },
+        {
+          "tile_interval": "chr5:143002594-143003094",
+          "gradient_score": 0.005434,
+          "distance_to_tss_bp": 400842
+        },
+        {
+          "tile_interval": "chr5:143002844-143003344",
+          "gradient_score": 0.004183,
+          "distance_to_tss_bp": 400592
+        },
+        {
+          "tile_interval": "chr5:143002344-143002844",
+          "gradient_score": 0.00418,
+          "distance_to_tss_bp": 401092
+        }
+      ],
+      "wall_ms": 2517.56
+    }
+  ],
+  "receipt_sha256": "ce76d1616ca760cb3bc23f218b4e280905472e831216af0086ac49a847a9f438"
+}

@@ -7,9 +7,9 @@
     "pdb": "https://identifiers.org/pdb:"
   },
   "@type": "Dataset",
-  "schema_version": "1.0.0-qspm-knowledge-graph",
-  "name": "Quantum Social Prescribing Multi-Tier Knowledge Graph (QSPM-KG v1.0)",
-  "timestamp_utc": "2026-11-11T22:02:50.757057+00:00",
+  "schema_version": "1.2.0-qspm-knowledge-graph",
+  "name": "Quantum Social Prescribing Multi-Tier Knowledge Graph (QSPM-KG v1.2)",
+  "timestamp_utc": "2026-11-12T06:49:42.642159+00:00",
   "physical_hardware_shots": 0,
   "wet_lab_experiments_performed": 0,
   "synthetic_payload": true,
@@ -65,21 +65,21 @@
     }
   ],
   "topology_metrics": {
-    "node_count": 60,
-    "edge_count": 98,
+    "node_count": 64,
+    "edge_count": 108,
     "connected_components": 1,
     "is_fully_connected": true,
-    "network_density": 0.0554,
+    "network_density": 0.0536,
     "undirected_diameter": 8,
-    "mean_shortest_path_length": 3.539,
+    "mean_shortest_path_length": 3.568,
     "category_counts": {
       "clinical_standard": 8,
       "care_pathway": 10,
-      "quantum_platform": 12,
+      "quantum_platform": 13,
       "atlas_primitive": 9,
-      "biophysical_target": 6,
+      "biophysical_target": 8,
       "governance_hazard": 5,
-      "provenance_receipt": 10
+      "provenance_receipt": 11
     },
     "relation_counts": {
       "ENCODED_IN_FHIR_STANDARD": 1,
@@ -133,7 +133,7 @@
       "REQUIRES_ICB_GRANT_PAIRING": 1,
       "REQUIRES_CPRD_CALIBRATION": 1,
       "DEMARCATES_METAPHOR_VS_RCT": 1,
-      "VERIFIED_BY_RECEIPT": 19,
+      "VERIFIED_BY_RECEIPT": 22,
       "TRIANGULATES_REFUSAL_RATE": 1,
       "IMPLEMENTS_SNOMED_OFFERS": 1,
       "QUANTIFIES_OPIOID_SMR_GAP": 1,
@@ -143,7 +143,14 @@
       "ROUTED_EXACTLY_BY_MILP": 1,
       "EXECUTES_JOB_AF987C9A": 1,
       "SIGNED_MSE_FHIR_BUNDLE": 1,
-      "AUDITS_EMPIRICAL_CUJ_E1_E4": 1
+      "AUDITS_EMPIRICAL_CUJ_E1_E4": 1,
+      "INTERPRETS_CYP_METABOLIZER": 1,
+      "SCORES_HEPATOCYTE_S2F": 1,
+      "SCORES_MONOCYTE_LFC_E2G": 1,
+      "SCORES_MONOCYTE_CPG_E2G": 1,
+      "SCORES_GRE_CPG_E2G": 1,
+      "REGULATES_HPA_COCHAPERONE": 1,
+      "ENFORCES_RESEARCH_USE_ONLY": 1
     },
     "top_bridge_hubs": [
       {
@@ -151,56 +158,56 @@
         "label": "2-Qubit Non-Markovian Zeno/Anti-Zeno Channel",
         "category": "biophysical_target",
         "total_degree": 7,
-        "betweenness_centrality": 0.2124
+        "betweenness_centrality": 0.2141
       },
       {
         "id": "LINK_WORKER_WMTY",
         "label": "Link-Worker 'What Matters To You' Co-Production",
         "category": "clinical_standard",
         "total_degree": 10,
-        "betweenness_centrality": 0.2069
+        "betweenness_centrality": 0.1835
       },
       {
         "id": "HQS_STRUQTURE_QOQO",
         "label": "HQS struqture-py + qoqo 4-Spin Lindbladian",
         "category": "quantum_platform",
         "total_degree": 8,
-        "betweenness_centrality": 0.1879
+        "betweenness_centrality": 0.1663
       },
       {
         "id": "ROSENBERG_HIGHS_MILP",
         "label": "Rosenberg + HiGHS MILP & 4-Bit Kempe Swaps (Gate G4)",
         "category": "quantum_platform",
         "total_degree": 5,
-        "betweenness_centrality": 0.1715
+        "betweenness_centrality": 0.1515
+      },
+      {
+        "id": "HAZARD_H04_DEMARCATION",
+        "label": "H-QSPM-04 [OPEN]: Over-Interpreting Zeno/PNI Curves",
+        "category": "governance_hazard",
+        "total_degree": 4,
+        "betweenness_centrality": 0.1431
       },
       {
         "id": "HAIQU_SDK_V171",
         "label": "Haiqu SDK v1.7.1 (LR-QAOA + TN Compression + OBP)",
         "category": "quantum_platform",
         "total_degree": 6,
-        "betweenness_centrality": 0.1474
-      },
-      {
-        "id": "NEXUS_HELIOS_1E_LITE",
-        "label": "Quantinuum Nexus Helios-1E-lite (26q Emulator)",
-        "category": "quantum_platform",
-        "total_degree": 6,
-        "betweenness_centrality": 0.1161
+        "betweenness_centrality": 0.1396
       },
       {
         "id": "PATH_x0_SMR",
         "label": "x0: Pharmacy SMR Deprescribing",
         "category": "care_pathway",
         "total_degree": 6,
-        "betweenness_centrality": 0.1124
+        "betweenness_centrality": 0.1147
       },
       {
-        "id": "HAZARD_H04_DEMARCATION",
-        "label": "H-QSPM-04 [OPEN]: Over-Interpreting Zeno/PNI Curves",
-        "category": "governance_hazard",
-        "total_degree": 3,
-        "betweenness_centrality": 0.1079
+        "id": "NEXUS_HELIOS_1E_LITE",
+        "label": "Quantinuum Nexus Helios-1E-lite (26q Emulator)",
+        "category": "quantum_platform",
+        "total_degree": 6,
+        "betweenness_centrality": 0.1086
       }
     ]
   },
@@ -216,9 +223,9 @@
       "in_degree": 2,
       "out_degree": 3,
       "total_degree": 5,
-      "degree_centrality": 0.0847,
-      "betweenness_centrality": 0.0682,
-      "closeness_centrality": 0.3391
+      "degree_centrality": 0.0794,
+      "betweenness_centrality": 0.0686,
+      "closeness_centrality": 0.3387
     },
     {
       "id": "PHARMACY_SMR",
@@ -229,11 +236,11 @@
       "metric": "Walk-in ACB & sedative polypharmacy deprescribing coupled with VCFSE referral",
       "epistemic_status": "Peer-reviewed clinical pathway (PLOS ONE 2024)",
       "in_degree": 1,
-      "out_degree": 2,
-      "total_degree": 3,
-      "degree_centrality": 0.0508,
-      "betweenness_centrality": 0.0131,
-      "closeness_centrality": 0.298
+      "out_degree": 3,
+      "total_degree": 4,
+      "degree_centrality": 0.0635,
+      "betweenness_centrality": 0.0496,
+      "closeness_centrality": 0.3119
     },
     {
       "id": "LINK_WORKER_WMTY",
@@ -246,9 +253,9 @@
       "in_degree": 2,
       "out_degree": 8,
       "total_degree": 10,
-      "degree_centrality": 0.1695,
-      "betweenness_centrality": 0.2069,
-      "closeness_centrality": 0.3806
+      "degree_centrality": 0.1587,
+      "betweenness_centrality": 0.1835,
+      "closeness_centrality": 0.3728
     },
     {
       "id": "LONELINESS_ISOLATION",
@@ -261,9 +268,9 @@
       "in_degree": 0,
       "out_degree": 3,
       "total_degree": 3,
-      "degree_centrality": 0.0508,
-      "betweenness_centrality": 0.0287,
-      "closeness_centrality": 0.2892
+      "degree_centrality": 0.0476,
+      "betweenness_centrality": 0.0273,
+      "closeness_centrality": 0.2864
     },
     {
       "id": "CORE20PLUS5_IMD",
@@ -276,9 +283,9 @@
       "in_degree": 2,
       "out_degree": 1,
       "total_degree": 3,
-      "degree_centrality": 0.0508,
-      "betweenness_centrality": 0.0287,
-      "closeness_centrality": 0.2921
+      "degree_centrality": 0.0476,
+      "betweenness_centrality": 0.0255,
+      "closeness_centrality": 0.2864
     },
     {
       "id": "NIST_ML_DSA_65",
@@ -291,9 +298,9 @@
       "in_degree": 2,
       "out_degree": 1,
       "total_degree": 3,
-      "degree_centrality": 0.0508,
-      "betweenness_centrality": 0.0281,
-      "closeness_centrality": 0.3073
+      "degree_centrality": 0.0476,
+      "betweenness_centrality": 0.0243,
+      "closeness_centrality": 0.3043
     },
     {
       "id": "PATH_x0_SMR",
@@ -306,9 +313,9 @@
       "in_degree": 3,
       "out_degree": 3,
       "total_degree": 6,
-      "degree_centrality": 0.1017,
-      "betweenness_centrality": 0.1124,
-      "closeness_centrality": 0.343
+      "degree_centrality": 0.0952,
+      "betweenness_centrality": 0.1147,
+      "closeness_centrality": 0.3424
     },
     {
       "id": "PATH_x1_GREEN",
@@ -321,9 +328,9 @@
       "in_degree": 2,
       "out_degree": 2,
       "total_degree": 4,
-      "degree_centrality": 0.0678,
-      "betweenness_centrality": 0.0237,
-      "closeness_centrality": 0.3315
+      "degree_centrality": 0.0635,
+      "betweenness_centrality": 0.021,
+      "closeness_centrality": 0.3264
     },
     {
       "id": "PATH_x2_ZEITGEBER",
@@ -336,9 +343,9 @@
       "in_degree": 2,
       "out_degree": 2,
       "total_degree": 4,
-      "degree_centrality": 0.0678,
-      "betweenness_centrality": 0.038,
-      "closeness_centrality": 0.3189
+      "degree_centrality": 0.0635,
+      "betweenness_centrality": 0.0322,
+      "closeness_centrality": 0.3182
     },
     {
       "id": "PATH_x3_WELFARE",
@@ -351,9 +358,9 @@
       "in_degree": 2,
       "out_degree": 1,
       "total_degree": 3,
-      "degree_centrality": 0.0508,
-      "betweenness_centrality": 0.0224,
-      "closeness_centrality": 0.3315
+      "degree_centrality": 0.0476,
+      "betweenness_centrality": 0.0191,
+      "closeness_centrality": 0.3247
     },
     {
       "id": "PATH_x4_CHOIR",
@@ -366,9 +373,9 @@
       "in_degree": 2,
       "out_degree": 1,
       "total_degree": 3,
-      "degree_centrality": 0.0508,
-      "betweenness_centrality": 0.0014,
-      "closeness_centrality": 0.3041
+      "degree_centrality": 0.0476,
+      "betweenness_centrality": 0.0012,
+      "closeness_centrality": 0.2972
     },
     {
       "id": "PATH_x5_PEER",
@@ -381,9 +388,9 @@
       "in_degree": 3,
       "out_degree": 1,
       "total_degree": 4,
-      "degree_centrality": 0.0678,
-      "betweenness_centrality": 0.0528,
-      "closeness_centrality": 0.3207
+      "degree_centrality": 0.0635,
+      "betweenness_centrality": 0.0459,
+      "closeness_centrality": 0.3166
     },
     {
       "id": "PATH_x6_ACB_HAZARD",
@@ -396,9 +403,9 @@
       "in_degree": 3,
       "out_degree": 1,
       "total_degree": 4,
-      "degree_centrality": 0.0678,
-      "betweenness_centrality": 0.0188,
-      "closeness_centrality": 0.2892
+      "degree_centrality": 0.0635,
+      "betweenness_centrality": 0.0183,
+      "closeness_centrality": 0.2917
     },
     {
       "id": "PATH_x7_OVERLOAD",
@@ -411,9 +418,9 @@
       "in_degree": 2,
       "out_degree": 1,
       "total_degree": 3,
-      "degree_centrality": 0.0508,
-      "betweenness_centrality": 0.0348,
-      "closeness_centrality": 0.2921
+      "degree_centrality": 0.0476,
+      "betweenness_centrality": 0.0318,
+      "closeness_centrality": 0.289
     },
     {
       "id": "VCFSE_5_HUBS",
@@ -426,9 +433,9 @@
       "in_degree": 2,
       "out_degree": 2,
       "total_degree": 4,
-      "degree_centrality": 0.0678,
-      "betweenness_centrality": 0.0727,
-      "closeness_centrality": 0.298
+      "degree_centrality": 0.0635,
+      "betweenness_centrality": 0.0661,
+      "closeness_centrality": 0.2903
     },
     {
       "id": "NEXUS_HELIOS_1E_LITE",
@@ -441,9 +448,9 @@
       "in_degree": 3,
       "out_degree": 3,
       "total_degree": 6,
-      "degree_centrality": 0.1017,
-      "betweenness_centrality": 0.1161,
-      "closeness_centrality": 0.3333
+      "degree_centrality": 0.0952,
+      "betweenness_centrality": 0.1086,
+      "closeness_centrality": 0.3281
     },
     {
       "id": "CLOUD_H2_EMULATOR",
@@ -456,9 +463,9 @@
       "in_degree": 1,
       "out_degree": 3,
       "total_degree": 4,
-      "degree_centrality": 0.0678,
+      "degree_centrality": 0.0635,
       "betweenness_centrality": 0.0328,
-      "closeness_centrality": 0.2935
+      "closeness_centrality": 0.2917
     },
     {
       "id": "GUPPY_HUGR_SELENE",
@@ -471,9 +478,9 @@
       "in_degree": 1,
       "out_degree": 3,
       "total_degree": 4,
-      "degree_centrality": 0.0678,
-      "betweenness_centrality": 0.0232,
-      "closeness_centrality": 0.285
+      "degree_centrality": 0.0635,
+      "betweenness_centrality": 0.0201,
+      "closeness_centrality": 0.2788
     },
     {
       "id": "HAIQU_SDK_V171",
@@ -486,9 +493,9 @@
       "in_degree": 1,
       "out_degree": 5,
       "total_degree": 6,
-      "degree_centrality": 0.1017,
-      "betweenness_centrality": 0.1474,
-      "closeness_centrality": 0.3172
+      "degree_centrality": 0.0952,
+      "betweenness_centrality": 0.1396,
+      "closeness_centrality": 0.3119
     },
     {
       "id": "OPENJIJ_QUBO",
@@ -501,9 +508,9 @@
       "in_degree": 1,
       "out_degree": 2,
       "total_degree": 3,
-      "degree_centrality": 0.0508,
-      "betweenness_centrality": 0.0375,
-      "closeness_centrality": 0.2448
+      "degree_centrality": 0.0476,
+      "betweenness_centrality": 0.0349,
+      "closeness_centrality": 0.2395
     },
     {
       "id": "ROSENBERG_HIGHS_MILP",
@@ -516,9 +523,9 @@
       "in_degree": 3,
       "out_degree": 2,
       "total_degree": 5,
-      "degree_centrality": 0.0847,
-      "betweenness_centrality": 0.1715,
-      "closeness_centrality": 0.3576
+      "degree_centrality": 0.0794,
+      "betweenness_centrality": 0.1515,
+      "closeness_centrality": 0.3462
     },
     {
       "id": "MODAL_HF_QSPMLM",
@@ -531,9 +538,9 @@
       "in_degree": 1,
       "out_degree": 3,
       "total_degree": 4,
-      "degree_centrality": 0.0678,
-      "betweenness_centrality": 0.0466,
-      "closeness_centrality": 0.2719
+      "degree_centrality": 0.0635,
+      "betweenness_centrality": 0.0431,
+      "closeness_centrality": 0.2681
     },
     {
       "id": "DISCOPY_MOTH_Q4",
@@ -546,9 +553,9 @@
       "in_degree": 1,
       "out_degree": 2,
       "total_degree": 3,
-      "degree_centrality": 0.0508,
-      "betweenness_centrality": 0.0359,
-      "closeness_centrality": 0.3026
+      "degree_centrality": 0.0476,
+      "betweenness_centrality": 0.0313,
+      "closeness_centrality": 0.2972
     },
     {
       "id": "RHYME_SYMBOLIC",
@@ -561,9 +568,9 @@
       "in_degree": 1,
       "out_degree": 1,
       "total_degree": 2,
-      "degree_centrality": 0.0339,
-      "betweenness_centrality": 0.0105,
-      "closeness_centrality": 0.2521
+      "degree_centrality": 0.0317,
+      "betweenness_centrality": 0.0094,
+      "closeness_centrality": 0.249
     },
     {
       "id": "HQS_STRUQTURE_QOQO",
@@ -576,9 +583,9 @@
       "in_degree": 1,
       "out_degree": 7,
       "total_degree": 8,
-      "degree_centrality": 0.1356,
-      "betweenness_centrality": 0.1879,
-      "closeness_centrality": 0.3315
+      "degree_centrality": 0.127,
+      "betweenness_centrality": 0.1663,
+      "closeness_centrality": 0.3351
     },
     {
       "id": "TEXT2WETLAB_OT2",
@@ -591,9 +598,9 @@
       "in_degree": 2,
       "out_degree": 1,
       "total_degree": 3,
-      "degree_centrality": 0.0508,
-      "betweenness_centrality": 0.0157,
-      "closeness_centrality": 0.2489
+      "degree_centrality": 0.0476,
+      "betweenness_centrality": 0.0173,
+      "closeness_centrality": 0.2551
     },
     {
       "id": "ACTIVE_D7_FTQC",
@@ -606,9 +613,9 @@
       "in_degree": 2,
       "out_degree": 1,
       "total_degree": 3,
-      "degree_centrality": 0.0508,
-      "betweenness_centrality": 0.0975,
-      "closeness_centrality": 0.3172
+      "degree_centrality": 0.0476,
+      "betweenness_centrality": 0.0905,
+      "closeness_centrality": 0.315
     },
     {
       "id": "ATLAS_P13",
@@ -621,9 +628,9 @@
       "in_degree": 2,
       "out_degree": 0,
       "total_degree": 2,
-      "degree_centrality": 0.0339,
-      "betweenness_centrality": 0.0011,
-      "closeness_centrality": 0.2543
+      "degree_centrality": 0.0317,
+      "betweenness_centrality": 0.001,
+      "closeness_centrality": 0.251
     },
     {
       "id": "ATLAS_P20",
@@ -636,9 +643,9 @@
       "in_degree": 1,
       "out_degree": 0,
       "total_degree": 1,
-      "degree_centrality": 0.0169,
+      "degree_centrality": 0.0159,
       "betweenness_centrality": 0.0,
-      "closeness_centrality": 0.281
+      "closeness_centrality": 0.28
     },
     {
       "id": "ATLAS_A01D",
@@ -651,9 +658,9 @@
       "in_degree": 1,
       "out_degree": 0,
       "total_degree": 1,
-      "degree_centrality": 0.0169,
+      "degree_centrality": 0.0159,
       "betweenness_centrality": 0.0,
-      "closeness_centrality": 0.2418
+      "closeness_centrality": 0.2386
     },
     {
       "id": "ATLAS_P08",
@@ -666,9 +673,9 @@
       "in_degree": 1,
       "out_degree": 0,
       "total_degree": 1,
-      "degree_centrality": 0.0169,
+      "degree_centrality": 0.0159,
       "betweenness_centrality": 0.0,
-      "closeness_centrality": 0.1973
+      "closeness_centrality": 0.1938
     },
     {
       "id": "ATLAS_P09",
@@ -681,9 +688,9 @@
       "in_degree": 1,
       "out_degree": 0,
       "total_degree": 1,
-      "degree_centrality": 0.0169,
+      "degree_centrality": 0.0159,
       "betweenness_centrality": 0.0,
-      "closeness_centrality": 0.2418
+      "closeness_centrality": 0.2386
     },
     {
       "id": "ATLAS_A01G",
@@ -696,9 +703,9 @@
       "in_degree": 1,
       "out_degree": 1,
       "total_degree": 2,
-      "degree_centrality": 0.0339,
-      "betweenness_centrality": 0.0062,
-      "closeness_centrality": 0.2622
+      "degree_centrality": 0.0317,
+      "betweenness_centrality": 0.0055,
+      "closeness_centrality": 0.2582
     },
     {
       "id": "ATLAS_P22",
@@ -711,9 +718,9 @@
       "in_degree": 1,
       "out_degree": 0,
       "total_degree": 1,
-      "degree_centrality": 0.0169,
+      "degree_centrality": 0.0159,
       "betweenness_centrality": 0.0,
-      "closeness_centrality": 0.25
+      "closeness_centrality": 0.252
     },
     {
       "id": "ATLAS_A01H",
@@ -726,9 +733,9 @@
       "in_degree": 1,
       "out_degree": 0,
       "total_degree": 1,
-      "degree_centrality": 0.0169,
+      "degree_centrality": 0.0159,
       "betweenness_centrality": 0.0,
-      "closeness_centrality": 0.1855
+      "closeness_centrality": 0.1869
     },
     {
       "id": "ATLAS_X03",
@@ -741,9 +748,9 @@
       "in_degree": 1,
       "out_degree": 0,
       "total_degree": 1,
-      "degree_centrality": 0.0169,
+      "degree_centrality": 0.0159,
       "betweenness_centrality": 0.0,
-      "closeness_centrality": 0.2418
+      "closeness_centrality": 0.2386
     },
     {
       "id": "ZENO_CADENCE_CHANNEL",
@@ -756,9 +763,9 @@
       "in_degree": 5,
       "out_degree": 2,
       "total_degree": 7,
-      "degree_centrality": 0.1186,
-      "betweenness_centrality": 0.2124,
-      "closeness_centrality": 0.3882
+      "degree_centrality": 0.1111,
+      "betweenness_centrality": 0.2141,
+      "closeness_centrality": 0.3865
     },
     {
       "id": "GENE_BMAL1_SCN",
@@ -771,24 +778,24 @@
       "in_degree": 2,
       "out_degree": 1,
       "total_degree": 3,
-      "degree_centrality": 0.0508,
-      "betweenness_centrality": 0.0227,
-      "closeness_centrality": 0.285
+      "degree_centrality": 0.0476,
+      "betweenness_centrality": 0.0201,
+      "closeness_centrality": 0.2903
     },
     {
       "id": "GENE_NR3C1_HPA",
       "label": "Spin 1: NR3C1 HPA Cortisol Axis (ENSG00000113580.15)",
       "category": "biophysical_target",
       "tier": "Tier 2",
-      "external_id": "GENCODE v46 chr5:143277933-143403686 \u00b7 Cacioppo 2015",
-      "metric": "Simulated HPA excitation P1: 0.6917 -> 0.2485 (-64.08%; 49-pt median -65.0%)",
-      "epistemic_status": "Reference genomic metadata + phenomenological spin",
-      "in_degree": 2,
-      "out_degree": 1,
-      "total_degree": 3,
-      "degree_centrality": 0.0508,
-      "betweenness_centrality": 0.0111,
-      "closeness_centrality": 0.2719
+      "external_id": "GENCODE v46 chr5:143277933-143403686 \u00b7 rs41423247",
+      "metric": "Simulated HPA P1: -64.08%; AG2 v2 BclI rs41423247 CD14+ monocyte CpG -0.1932, SC_ATAC +0.1435 & 401 kb E2G",
+      "epistemic_status": "Live AlphaGenome 2 primary-cell S2F + phenomenological HPA spin",
+      "in_degree": 3,
+      "out_degree": 2,
+      "total_degree": 5,
+      "degree_centrality": 0.0794,
+      "betweenness_centrality": 0.03,
+      "closeness_centrality": 0.2838
     },
     {
       "id": "GENE_OXTR_6TPK",
@@ -801,24 +808,24 @@
       "in_degree": 2,
       "out_degree": 2,
       "total_degree": 4,
-      "degree_centrality": 0.0678,
-      "betweenness_centrality": 0.066,
-      "closeness_centrality": 0.2864
+      "degree_centrality": 0.0635,
+      "betweenness_centrality": 0.0635,
+      "closeness_centrality": 0.2903
     },
     {
       "id": "GENE_IL6_CYTOKINE",
       "label": "Spin 3: IL6 Inflammatory Cytokine (ENSG00000136244.12)",
       "category": "biophysical_target",
       "tier": "Tier 2",
-      "external_id": "GENCODE v46 chr7:22727199-22731998",
-      "metric": "Simulated IL-6 excitation P3: 0.8462 -> 0.1987 (-76.52%; 49-pt grid median -76.6%, span 58.4\u201392.1%)",
-      "epistemic_status": "Phenomenological biomarker hypothesis (prospective OT-2 assay target)",
-      "in_degree": 2,
+      "external_id": "GENCODE v46 chr7:22727199-22731998 \u00b7 rs1800795",
+      "metric": "AG2 v2 rs1800795 CD14+ monocyte SC LFC +0.5261 (24.4x vs hepatocyte), CpG -0.1020, 122 monocyte & 100 microglia E2G tiles",
+      "epistemic_status": "Live AlphaGenome 2 innate/glial S2F + phenomenological spin hypothesis",
+      "in_degree": 3,
       "out_degree": 1,
-      "total_degree": 3,
-      "degree_centrality": 0.0508,
-      "betweenness_centrality": 0.0135,
-      "closeness_centrality": 0.2731
+      "total_degree": 4,
+      "degree_centrality": 0.0635,
+      "betweenness_centrality": 0.0249,
+      "closeness_centrality": 0.2851
     },
     {
       "id": "PEPTIDE_1XY1_QPROTSIM",
@@ -831,9 +838,9 @@
       "in_degree": 1,
       "out_degree": 2,
       "total_degree": 3,
-      "degree_centrality": 0.0508,
-      "betweenness_centrality": 0.0357,
-      "closeness_centrality": 0.2269
+      "degree_centrality": 0.0476,
+      "betweenness_centrality": 0.0333,
+      "closeness_centrality": 0.2291
     },
     {
       "id": "TYPESAFE_JEV_114",
@@ -846,9 +853,9 @@
       "in_degree": 0,
       "out_degree": 6,
       "total_degree": 6,
-      "degree_centrality": 0.1017,
-      "betweenness_centrality": 0.0896,
-      "closeness_centrality": 0.3315
+      "degree_centrality": 0.0952,
+      "betweenness_centrality": 0.0912,
+      "closeness_centrality": 0.3333
     },
     {
       "id": "HAZARD_H01_FALLS",
@@ -861,9 +868,9 @@
       "in_degree": 1,
       "out_degree": 2,
       "total_degree": 3,
-      "degree_centrality": 0.0508,
-      "betweenness_centrality": 0.0249,
-      "closeness_centrality": 0.295
+      "degree_centrality": 0.0476,
+      "betweenness_centrality": 0.0216,
+      "closeness_centrality": 0.2944
     },
     {
       "id": "HAZARD_H02_AUTONOMY",
@@ -876,9 +883,9 @@
       "in_degree": 1,
       "out_degree": 1,
       "total_degree": 2,
-      "degree_centrality": 0.0339,
-      "betweenness_centrality": 0.0157,
-      "closeness_centrality": 0.3089
+      "degree_centrality": 0.0317,
+      "betweenness_centrality": 0.0138,
+      "closeness_centrality": 0.3058
     },
     {
       "id": "HAZARD_H03_DUMPING",
@@ -891,9 +898,9 @@
       "in_degree": 1,
       "out_degree": 1,
       "total_degree": 2,
-      "degree_centrality": 0.0339,
-      "betweenness_centrality": 0.0135,
-      "closeness_centrality": 0.2783
+      "degree_centrality": 0.0317,
+      "betweenness_centrality": 0.0153,
+      "closeness_centrality": 0.2775
     },
     {
       "id": "HAZARD_H04_DEMARCATION",
@@ -904,11 +911,11 @@
       "metric": "P_auto = 0.00; Jev flags uncalibrated Zeno/Lindblad trajectories (0.77/5); requires CPRD & RCT validation",
       "epistemic_status": "OPEN epistemic demarcation hazard",
       "in_degree": 1,
-      "out_degree": 2,
-      "total_degree": 3,
-      "degree_centrality": 0.0508,
-      "betweenness_centrality": 0.1079,
-      "closeness_centrality": 0.343
+      "out_degree": 3,
+      "total_degree": 4,
+      "degree_centrality": 0.0635,
+      "betweenness_centrality": 0.1431,
+      "closeness_centrality": 0.3539
     },
     {
       "id": "REC_DIRECT_NEXUS",
@@ -921,9 +928,9 @@
       "in_degree": 1,
       "out_degree": 0,
       "total_degree": 1,
-      "degree_centrality": 0.0169,
+      "degree_centrality": 0.0159,
       "betweenness_centrality": 0.0,
-      "closeness_centrality": 0.2511
+      "closeness_centrality": 0.248
     },
     {
       "id": "REC_DEEP_REVIEW",
@@ -936,9 +943,9 @@
       "in_degree": 3,
       "out_degree": 0,
       "total_degree": 3,
-      "degree_centrality": 0.0508,
-      "betweenness_centrality": 0.0468,
-      "closeness_centrality": 0.3278
+      "degree_centrality": 0.0476,
+      "betweenness_centrality": 0.043,
+      "closeness_centrality": 0.3231
     },
     {
       "id": "REC_MODAL_HF_QML",
@@ -951,9 +958,9 @@
       "in_degree": 1,
       "out_degree": 0,
       "total_degree": 1,
-      "degree_centrality": 0.0169,
+      "degree_centrality": 0.0159,
       "betweenness_centrality": 0.0,
-      "closeness_centrality": 0.2145
+      "closeness_centrality": 0.2121
     },
     {
       "id": "REC_NEXUS_QSPM",
@@ -966,9 +973,9 @@
       "in_degree": 2,
       "out_degree": 0,
       "total_degree": 2,
-      "degree_centrality": 0.0339,
+      "degree_centrality": 0.0317,
       "betweenness_centrality": 0.0,
-      "closeness_centrality": 0.2379
+      "closeness_centrality": 0.236
     },
     {
       "id": "REC_HAIQU_JIJ",
@@ -981,9 +988,9 @@
       "in_degree": 2,
       "out_degree": 0,
       "total_degree": 2,
-      "degree_centrality": 0.0339,
-      "betweenness_centrality": 0.0152,
-      "closeness_centrality": 0.25
+      "degree_centrality": 0.0317,
+      "betweenness_centrality": 0.0149,
+      "closeness_centrality": 0.2461
     },
     {
       "id": "REC_BIOPHYSICAL",
@@ -996,9 +1003,9 @@
       "in_degree": 2,
       "out_degree": 0,
       "total_degree": 2,
-      "degree_centrality": 0.0339,
-      "betweenness_centrality": 0.0177,
-      "closeness_centrality": 0.2543
+      "degree_centrality": 0.0317,
+      "betweenness_centrality": 0.0158,
+      "closeness_centrality": 0.2561
     },
     {
       "id": "REC_MODAL_RHYME",
@@ -1011,9 +1018,9 @@
       "in_degree": 2,
       "out_degree": 0,
       "total_degree": 2,
-      "degree_centrality": 0.0339,
-      "betweenness_centrality": 0.0142,
-      "closeness_centrality": 0.2599
+      "degree_centrality": 0.0317,
+      "betweenness_centrality": 0.0133,
+      "closeness_centrality": 0.2571
     },
     {
       "id": "REC_TEXT2WETLAB",
@@ -1026,9 +1033,9 @@
       "in_degree": 3,
       "out_degree": 0,
       "total_degree": 3,
-      "degree_centrality": 0.0508,
-      "betweenness_centrality": 0.0277,
-      "closeness_centrality": 0.281
+      "degree_centrality": 0.0476,
+      "betweenness_centrality": 0.0252,
+      "closeness_centrality": 0.2812
     },
     {
       "id": "REC_TYPESAFE_JEV",
@@ -1041,9 +1048,9 @@
       "in_degree": 1,
       "out_degree": 0,
       "total_degree": 1,
-      "degree_centrality": 0.0169,
+      "degree_centrality": 0.0159,
       "betweenness_centrality": 0.0,
-      "closeness_centrality": 0.25
+      "closeness_centrality": 0.251
     },
     {
       "id": "NHS_DES_FINGERTIPS_6105",
@@ -1056,9 +1063,9 @@
       "in_degree": 0,
       "out_degree": 7,
       "total_degree": 7,
-      "degree_centrality": 0.1186,
-      "betweenness_centrality": 0.1072,
-      "closeness_centrality": 0.362
+      "degree_centrality": 0.1111,
+      "betweenness_centrality": 0.0991,
+      "closeness_centrality": 0.3559
     },
     {
       "id": "ELSA_W10_CPRD_BENCHMARK",
@@ -1071,9 +1078,9 @@
       "in_degree": 1,
       "out_degree": 0,
       "total_degree": 1,
-      "degree_centrality": 0.0169,
+      "degree_centrality": 0.0159,
       "betweenness_centrality": 0.0,
-      "closeness_centrality": 0.267
+      "closeness_centrality": 0.2636
     },
     {
       "id": "MSE_ICB_143_GP",
@@ -1086,9 +1093,9 @@
       "in_degree": 1,
       "out_degree": 4,
       "total_degree": 5,
-      "degree_centrality": 0.0847,
-      "betweenness_centrality": 0.0884,
-      "closeness_centrality": 0.3471
+      "degree_centrality": 0.0794,
+      "betweenness_centrality": 0.0774,
+      "closeness_centrality": 0.3351
     },
     {
       "id": "REC_NHS_EMPIRICAL",
@@ -1101,9 +1108,69 @@
       "in_degree": 3,
       "out_degree": 0,
       "total_degree": 3,
-      "degree_centrality": 0.0508,
-      "betweenness_centrality": 0.0156,
-      "closeness_centrality": 0.3138
+      "degree_centrality": 0.0476,
+      "betweenness_centrality": 0.014,
+      "closeness_centrality": 0.3103
+    },
+    {
+      "id": "ALPHAGENOME_2_V2",
+      "label": "Google DeepMind AlphaGenome 2 (v2.0.0 Cell-State S2F)",
+      "category": "quantum_platform",
+      "tier": "Tier 2",
+      "external_id": "alphagenome==2.0.0 \u00b7 2,799 Human Conditions \u00b7 Gayoso et al. 2026",
+      "metric": "36 live 1-Mb conditioned variant scorings + 9 1-Mb E2G gradient maps across Hepatocyte, CD14+ Monocyte, Microglia & T Cell; Gate G4 CPIC < 1 ms",
+      "epistemic_status": "Live Research-Use-Only S2F execution (0 clinical diagnostic claims)",
+      "in_degree": 1,
+      "out_degree": 5,
+      "total_degree": 6,
+      "degree_centrality": 0.0952,
+      "betweenness_centrality": 0.0653,
+      "closeness_centrality": 0.3029
+    },
+    {
+      "id": "SMR_PGX_CYP2C19_CYP2D6",
+      "label": "SMR Pharmacogenes: CYP2C19 (*2, *17) & CYP2D6 (*4, *41)",
+      "category": "biophysical_target",
+      "tier": "Tier 2",
+      "external_id": "rs4244285 \u00b7 rs12248560 \u00b7 rs3892097 \u00b7 rs28371725 \u00b7 Hepatic S2F",
+      "metric": "CYP2C19*2 hepatocyte splice +0.2210 (193x vs monocyte, AVI 22.33); *17 CpG -0.1663; CYP2D6*4 |SC LFC| 0.0474 (48.5x, AVI 25.15)",
+      "epistemic_status": "Hepatic pharmacogenomic mechanism check (CPIC lookup < 1 ms)",
+      "in_degree": 2,
+      "out_degree": 1,
+      "total_degree": 3,
+      "degree_centrality": 0.0476,
+      "betweenness_centrality": 0.0268,
+      "closeness_centrality": 0.28
+    },
+    {
+      "id": "GENE_FKBP5_GRE",
+      "label": "FKBP5 Intron-2 GRE (rs1360780 CpG & 78 Monocyte E2G Tiles)",
+      "category": "biophysical_target",
+      "tier": "Tier 2",
+      "external_id": "GENCODE v46 chr6:35573585-35688915 \u00b7 rs1360780 (chr6:35639794:T>C)",
+      "metric": "CD14+ monocyte CpG delta -0.0254, 78 monocyte & 41 microglia distal E2G enhancer tiles (194.8 kb); steady-state SC LFC -0.00015",
+      "epistemic_status": "Stress-epigenetic hypothesis illustrating unstimulated observational baseline caveat",
+      "in_degree": 2,
+      "out_degree": 1,
+      "total_degree": 3,
+      "degree_centrality": 0.0476,
+      "betweenness_centrality": 0.0019,
+      "closeness_centrality": 0.248
+    },
+    {
+      "id": "REC_ALPHAGENOME2_V2",
+      "label": "Receipt 11: alphagenome2_v2_pharmacogenomics_neuroimmune_receipt.json",
+      "category": "provenance_receipt",
+      "tier": "Tier 2 / 3",
+      "external_id": "SHA-256: ce76d1616ca760cb\u2026",
+      "metric": "Live AlphaGenome 2 (v2.0.0) 9-variant x 4-lineage 1-Mb S2F, CpG methylation, 9 E2G gradient maps & Atlas AVI deep-links",
+      "epistemic_status": "Cryptographically sealed Tier 2 genomic S2F receipt (excluded from 8-page NHS paper)",
+      "in_degree": 3,
+      "out_degree": 0,
+      "total_degree": 3,
+      "degree_centrality": 0.0476,
+      "betweenness_centrality": 0.0025,
+      "closeness_centrality": 0.249
     }
   ],
   "edges": [
@@ -1694,7 +1761,67 @@
       "target": "REC_NHS_EMPIRICAL",
       "relation": "VERIFIED_BY_RECEIPT",
       "weight": "SHA-256"
+    },
+    {
+      "source": "PHARMACY_SMR",
+      "target": "SMR_PGX_CYP2C19_CYP2D6",
+      "relation": "INTERPRETS_CYP_METABOLIZER",
+      "weight": "*2/*17/*4/*41"
+    },
+    {
+      "source": "ALPHAGENOME_2_V2",
+      "target": "SMR_PGX_CYP2C19_CYP2D6",
+      "relation": "SCORES_HEPATOCYTE_S2F",
+      "weight": "193x splice"
+    },
+    {
+      "source": "ALPHAGENOME_2_V2",
+      "target": "GENE_IL6_CYTOKINE",
+      "relation": "SCORES_MONOCYTE_LFC_E2G",
+      "weight": "+0.526 LFC \u00b7 122 E2G"
+    },
+    {
+      "source": "ALPHAGENOME_2_V2",
+      "target": "GENE_NR3C1_HPA",
+      "relation": "SCORES_MONOCYTE_CPG_E2G",
+      "weight": "-0.193 CpG"
+    },
+    {
+      "source": "ALPHAGENOME_2_V2",
+      "target": "GENE_FKBP5_GRE",
+      "relation": "SCORES_GRE_CPG_E2G",
+      "weight": "78 Mono E2G"
+    },
+    {
+      "source": "GENE_NR3C1_HPA",
+      "target": "GENE_FKBP5_GRE",
+      "relation": "REGULATES_HPA_COCHAPERONE",
+      "weight": "Intron-2 GRE"
+    },
+    {
+      "source": "HAZARD_H04_DEMARCATION",
+      "target": "ALPHAGENOME_2_V2",
+      "relation": "ENFORCES_RESEARCH_USE_ONLY",
+      "weight": "0 dx claims"
+    },
+    {
+      "source": "ALPHAGENOME_2_V2",
+      "target": "REC_ALPHAGENOME2_V2",
+      "relation": "VERIFIED_BY_RECEIPT",
+      "weight": "SHA-256"
+    },
+    {
+      "source": "SMR_PGX_CYP2C19_CYP2D6",
+      "target": "REC_ALPHAGENOME2_V2",
+      "relation": "VERIFIED_BY_RECEIPT",
+      "weight": "36 x 1-Mb"
+    },
+    {
+      "source": "GENE_FKBP5_GRE",
+      "target": "REC_ALPHAGENOME2_V2",
+      "relation": "VERIFIED_BY_RECEIPT",
+      "weight": "9 x E2G"
     }
   ],
-  "receipt_sha256": "c6106cf8f983cc9c53d116eeec559a8bf779eba54328b95bf5d0dafe6c881c20"
+  "receipt_sha256": "008d908734ca40e6754e827fa210cbccf2dba30d860da13286496c9d6cb579a1"
 }

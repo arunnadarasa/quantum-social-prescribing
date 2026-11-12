@@ -6,9 +6,11 @@ const BOOKMARKS = [
   { label: "p.4 · Live Nexus Helios-1E & Zeno", page: 4 },
   { label: "p.5 · Haiqu HUBO & OpenJij", page: 5 },
   { label: "p.6 · Modal/HF 4q QSPMLM", page: 6 },
-  { label: "p.7 · HQS, QProtSim & AlphaGenome", page: 7 },
-  { label: "p.8 · Kashefi Atlas & FTQC", page: 8 },
-  { label: "p.9 · Jev 1.14 & References", page: 9 }
+  { label: "p.7 · HQS Lindblad & Fig. 4", page: 7 },
+  { label: "p.8 · Live AlphaGenome 2 & QProtSim", page: 8 },
+  { label: "p.9 · FTQC Scaling & Jev 1.14", page: 9 },
+  { label: "p.10 · DCB0129 & References", page: 10 },
+  { label: "p.11 · Full Bibliography", page: 11 }
 ];
 
 const CLINICAL_PRESETS = [
@@ -119,9 +121,9 @@ const BIBTEX_ENTRIES = {
   year    = {2026},
   month   = nov,
   journal = {Samskrift Open Monograph Preprint (Mid and South Essex NHS Foundation Trust \& ISPPA)},
-  pages   = {1--10},
+  pages   = {1--11},
   url     = {https://arunnadarasa.github.io/quantum-social-prescribing/},
-  note    = {0 physical QPU shots claimed; 10 SHA-256-verified receipts across Quantinuum Nexus Helios-1E-lite, H2-Emulator, Haiqu SDK v1.7.1, OpenJij, HiGHS MILP, Modal, Hugging Face, HQS, QProtSim, AlphaGenome, Text2WetLab, and TypeSafe Jev 1.14}
+  note    = {0 physical QPU shots claimed; 11 SHA-256-verified receipts across Quantinuum Nexus Helios-1E-lite, H2-Emulator, Haiqu SDK v1.7.1, OpenJij, HiGHS MILP, Modal, Hugging Face, HQS, AlphaGenome 2 (v2.0.0), QProtSim, Text2WetLab, and TypeSafe Jev 1.14}
 }`,
   qspmlm: `@misc{nadarasa2026qspmlm,
   title        = {{QSPMLM}: 4-Qubit Frobenius Multi-Task Variational Quantum Classifier for Holistic Social Prescribing Triage \& Safety Escalation},
@@ -228,7 +230,7 @@ async function initPdfReader() {
       pdfUrl: "downloads/Quantum_Social_Prescribing.pdf",
       pdfFilename: "Quantum_Social_Prescribing.pdf",
       pagesDir: "pages",
-      totalPages: 10,
+      totalPages: 11,
       altTitle: "Quantum Social Prescribing Monograph",
       samskriftUrl: "https://samskrift.com/view/0db305b3-9a91-4fdb-ada8-b760beda1ec5/668cdf7d-9840-478a-9101-88989e408c54",
       bookmarks: BOOKMARKS
