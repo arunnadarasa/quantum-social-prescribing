@@ -115,6 +115,16 @@ const BIBTEX_ENTRIES = {
   url     = {https://samskrift.com/view/e6628414-9373-4a34-accd-cc8b6d46e0ce/7c7a2c96-238a-4e05-9d8d-230d04da8440},
   note    = {Calibrated on 6,105 active English GP practices (NHS DES + OHID Fingertips, OGL v3.0), 143 Mid \& South Essex practices, ELSA Wave 10, and CPRD Aurum; Rosenberg HiGHS MILP 19.19 ms vs Haiqu v1.7.1 -94.47\% HUBO compression; live Quantinuum Nexus Helios-1E-lite Job af987c9a}
 }`,
+  quantum_opt: `@article{nadarasa2026integralitywall,
+  title   = {Mapping the Classical {MILP} Integrality Wall in Multi-Horizon Primary-Care Social Prescribing: Polyhedral {McCormick} Symmetry Collapse and {LP}-Warm-Started Bias-Field {QAOA} on {Quantinuum} {Helios-1E-lite}},
+  author  = {Nadarasa, Arun},
+  year    = {2026},
+  month   = nov,
+  journal = {Samskrift Quantum Optimization Technical Note (Mid and South Essex NHS Foundation Trust \& ISPPA)},
+  pages   = {1--6},
+  url     = {https://samskrift.com/view/b2cef0ea-fbe0-4df7-8546-92b62c7498b3/6631fd61-d667-4328-a798-55b12b7a57fd},
+  note    = {75 sparse CSC primary-integrality HiGHS MILP runs + 2,560 raw pre-postprocessing shots across 3 live Quantinuum Nexus Helios-1E-lite HUGR jobs (5a8a78bb, 0813dc16, faf7ccda); 55.57\% (12q) and 83.40\% (16q) Top-5\% concentration (3.09x LP rounding); 0 physical QPU shots}
+}`,
   monograph: `@article{nadarasa2026qspm,
   title   = {Quantum Social Prescribing: Multi-Scale Quantum Algorithms, Psychoneuroimmunological Grounding, and Multi-Method Health {AI} Governance for Integrated Neighbourhood Care},
   author  = {Nadarasa, Arun},
@@ -123,7 +133,7 @@ const BIBTEX_ENTRIES = {
   journal = {Samskrift Open Monograph Preprint (Mid and South Essex NHS Foundation Trust \& ISPPA)},
   pages   = {1--11},
   url     = {https://arunnadarasa.github.io/quantum-social-prescribing/},
-  note    = {0 physical QPU shots claimed; 11 SHA-256-verified receipts across Quantinuum Nexus Helios-1E-lite, H2-Emulator, Haiqu SDK v1.7.1, OpenJij, HiGHS MILP, Modal, Hugging Face, HQS, AlphaGenome 2 (v2.0.0), QProtSim, Text2WetLab, and TypeSafe Jev 1.14}
+  note    = {0 physical QPU shots claimed; 12 SHA-256-verified receipts across Quantinuum Nexus Helios-1E-lite, H2-Emulator, Haiqu SDK v1.7.1, OpenJij, HiGHS MILP, Modal, Hugging Face, HQS, AlphaGenome 2 (v2.0.0), QProtSim, Text2WetLab, and TypeSafe Jev 1.14}
 }`,
   qspmlm: `@misc{nadarasa2026qspmlm,
   title        = {{QSPMLM}: 4-Qubit Frobenius Multi-Task Variational Quantum Classifier for Holistic Social Prescribing Triage \& Safety Escalation},
@@ -224,6 +234,22 @@ async function initPdfReader() {
         { label: "p.6 · Held-Out NHS VQC & Nexus", page: 6 },
         { label: "p.7 · ML-DSA-65, DCB0129 & Jev", page: 7 },
         { label: "p.8 · Limitations & References", page: 8 }
+      ]
+    },
+    quantum_opt: {
+      pdfUrl: "downloads/Integrality_Wall_Quantum_Optimization_Note.pdf",
+      pdfFilename: "Integrality_Wall_Quantum_Optimization_Note.pdf",
+      pagesDir: "pages_quantum_opt",
+      totalPages: 6,
+      altTitle: "Focused Quantum Optimization Technical Note (Integrality Wall & Helios-1E-lite)",
+      samskriftUrl: "https://samskrift.com/view/b2cef0ea-fbe0-4df7-8546-92b62c7498b3/6631fd61-d667-4328-a798-55b12b7a57fd",
+      bookmarks: [
+        { label: "p.1 · Abstract & Retiring Trivial QUBOs", page: 1 },
+        { label: "p.2 · Prop. 1 McCormick Symmetry & 5×5 Wall", page: 2 },
+        { label: "p.3 · Fig. 1 Phase Wall & Core Extraction", page: 3 },
+        { label: "p.4 · Fig. 2 Bias-Field QAOA & HUGR Gadgets", page: 4 },
+        { label: "p.5 · Live Helios-1E-lite Tables 2–3 (12q/16q)", page: 5 },
+        { label: "p.6 · 48–56q H2-1/Helios-1 Protocol & Refs", page: 6 }
       ]
     },
     monograph: {
@@ -368,7 +394,21 @@ async function initPdfReader() {
     btn.addEventListener("click", () => applyDocument(btn.dataset.paperDoc));
   });
 
-  applyDocument("focused");
+  document.querySelectorAll("[data-jump-paper]").forEach(link => {
+    link.addEventListener("click", (e) => {
+      const targetKey = link.dataset.jumpPaper;
+      if (PAPER_DOCS[targetKey]) {
+        e.preventDefault();
+        applyDocument(targetKey);
+        document.getElementById("paper")?.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    });
+  });
+
+  const initialHash = (window.location.hash || "").toLowerCase();
+  if (initialHash.includes("quantum")) applyDocument("quantum_opt");
+  else if (initialHash.includes("monograph")) applyDocument("monograph");
+  else applyDocument("focused");
 
   document.getElementById("reader-prev-page")?.addEventListener("click", () => scrollToPage(Number(pageInput.value) - 1));
   document.getElementById("reader-next-page")?.addEventListener("click", () => scrollToPage(Number(pageInput.value) + 1));

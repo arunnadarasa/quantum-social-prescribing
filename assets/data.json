@@ -1988,6 +1988,13 @@
   },
   "receipts_summary": [
     {
+      "file": "integrality_wall_helios_ws_qaoa_receipt.json",
+      "sha256": "aeda45003f66cae2adc2c96ab720cece32e187c3a4730d0349ed23ea6d6dc88a",
+      "platforms": "Sparse CSC Primary-Integrality HiGHS MILP (75 runs, N=24..120, \u03b1\u2083=0.0..4.5) + Guppy 1.0 -> HUGR + 3 Live Nexus Helios-1E-lite Jobs (2,560 raw shots, 0.00 HQC)",
+      "metrics": "\u03b1\u2083=0: 0.0% MIP gap (10.8\u201319.1 ms); \u03b1\u2083\u22651.5, N\u226548: 14.8%\u2013626.5% MIP gap (x^LP=0.4831; 37.92% gap at 10 s); Nexus 0813dc16 (12q): 55.57% Top-5% (2.29\u00d7 LP rnd, exact GS); Nexus faf7ccda (16q, 176 CX): 83.40% Top-5% (3.09\u00d7 LP rnd, 95.7% ideal retention)",
+      "floor": "15.15 ms LP / 451 ms 96v LP-SA"
+    },
+    {
       "file": "nhs_empirical_cohort_calibration_receipt.json",
       "sha256": "193bddf943723b3d3253cb33c5d9f99895727731a62fda8a7aee9b4bed70188b",
       "platforms": "Real NHS England 3-Wave Panel (6,105 GPs, 17,340 obs, 143 MSE GPs) + ELSA W10 / CPRD + Rosenberg HiGHS MILP + Haiqu v1.7.1 + Nexus Helios-1E-lite + ML-DSA-65 + Jev 1.14",
