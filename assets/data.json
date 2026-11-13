@@ -1988,6 +1988,13 @@
   },
   "receipts_summary": [
     {
+      "file": "jev_quantum_coproduction_pipeline_receipt.json",
+      "sha256": "85db8c6284868286d7319f55fec552b3803ab428306311a0cb3aaeb853a25480",
+      "platforms": "TypeSafe System One (`jev-1.14.0` Speculative Fan-Out, Companion Noul, Noul-Screen) + Guppy 1.0 -> HUGR (Selene HeliosInterface + Nexus Cloud UUIDs 8fd8d08e & 7804f985) + HiGHS MILP vs LP-WS-BF-QAOA Dispatcher",
+      "metrics": "95.0% symbolic routing (100% H-QSPM-01 safety recall, 100% Companion-Noul OOS rejection); 5-fold CV 90.0% (Jev->4q Quantum Kernel) vs 50.0% (TF-IDF+LR); Cubic Brier 0.0570 vs 0.1741; Coherent Superposition P(00)=0.9868 vs 0.3936 collapse; 100% HUBO solver dispatch & 4/4 atomic epistemic + reversed-order pass",
+      "floor": "13.97 ms HiGHS MILP / TF-IDF+LR 50.0%"
+    },
+    {
       "file": "integrality_wall_helios_ws_qaoa_receipt.json",
       "sha256": "aeda45003f66cae2adc2c96ab720cece32e187c3a4730d0349ed23ea6d6dc88a",
       "platforms": "Sparse CSC Primary-Integrality HiGHS MILP (75 runs, N=24..120, \u03b1\u2083=0.0..4.5) + Guppy 1.0 -> HUGR + 3 Live Nexus Helios-1E-lite Jobs (2,560 raw shots, 0.00 HQC)",

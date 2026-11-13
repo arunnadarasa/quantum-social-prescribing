@@ -1,0 +1,1919 @@
+{
+  "schema_version": "2.0.0-jev-system-one-quantum-social-prescribing-pipeline",
+  "timestamp_utc": "2026-11-13T08:01:18.550370+00:00",
+  "non_commercial_scientific_mandate": {
+    "commercial_use": false,
+    "program_compliance": "100% Non-Commercial Scientific Research under Google Antigravity for Scientific Workflows",
+    "acknowledgment": "This work was supported in part by complimentary access to Google Antigravity and Gemini 4 Argon to accelerate scientific workflows."
+  },
+  "epistemic_and_safety_disclosures": {
+    "typesafe_model_resolved": "jev-1.14.0",
+    "quantinuum_nexus_backend": "Helios-1E-lite",
+    "physical_hardware_shots": 0,
+    "patient_identifiable_records_used": 0,
+    "synthetic_payload": true,
+    "free_text_noul_antipattern_eliminated": true,
+    "structured_json_state_enforced": true,
+    "nhs_dcb0129_hazards_status": "OPEN (H-QSPM-01, H-QSPM-02, H-QSPM-03, H-QSPM-04)"
+  },
+  "runtime_seconds": 34.05,
+  "centralized_thresholds": {
+    "urgent_escalation_min_prob": 0.25,
+    "companion_any_hub_fits_min_prob": 0.38,
+    "commit_single_hub_min_confidence": 0.58,
+    "hubo_hyperedge_active_min_prob": 0.55,
+    "hubo_cubic_density_quantum_dispatch": 1.0,
+    "hubo_lp_fractionality_quantum_dispatch": 0.2,
+    "epistemic_assertion_min_prob": 0.75,
+    "epistemic_contradiction_max_prob": 0.25
+  },
+  "figure_path": "figures/fig_jev_system_one_quantum_pipeline.png",
+  "module_1_and_2_hilbert_and_superposition_benchmark": {
+    "n_synthetic_vignettes": 20,
+    "metrics": {
+      "tfidf_logreg_4way_triage_cv_acc": 0.5,
+      "tfidf_gbdt_4way_triage_cv_acc": 0.3,
+      "jev_vector_logreg_4way_triage_cv_acc": 0.9,
+      "jev_4q_pauli_vqc_4way_triage_cv_acc": 0.9,
+      "jev_4q_quantum_kernel_4way_triage_cv_acc": 0.9,
+      "system_one_symbolic_router_exact_match_acc": 0.95,
+      "cubic_k3_synergy_tfidf_f1": 0.0,
+      "cubic_k3_synergy_jev_product_f1": 0.8333,
+      "cubic_k3_synergy_tfidf_brier": 0.1741,
+      "cubic_k3_synergy_jev_product_brier": 0.057,
+      "urgent_safety_h_qspm_01_recall": 1.0,
+      "companion_noul_out_of_scope_rejection_rate": 1.0,
+      "in_scope_reversed_choice_consistency_rate": 1.0
+    },
+    "vignette_evaluations": [
+      {
+        "vignette_id": "VIG_SINGLE_01",
+        "expected_regime": "COMMIT_SINGLE_PATHWAY",
+        "expected_hub": "welfare_debt_housing_first",
+        "cubic_synergy_label": 0,
+        "model": "jev-1.14.0",
+        "hilbert_prob_vector_8d": [
+          0.205,
+          0.2325,
+          0.98,
+          0.7525,
+          0.7225,
+          0.55,
+          0.2475,
+          0.94
+        ],
+        "bloch_ry_angles_rad_8d": [
+          0.9397,
+          1.0063,
+          2.8578,
+          2.1002,
+          2.032,
+          1.671,
+          1.0414,
+          2.6467
+        ],
+        "routing": {
+          "routing_regime": "COMMIT_SINGLE_PATHWAY",
+          "recommended_action": "Co-produce primary referral to `welfare_debt_housing_first` with human Link-Worker sign-off",
+          "urgent_escalation_prob": 0.02,
+          "companion_any_hub_fits_prob": 0.97,
+          "hub_choice_top": "welfare_debt_housing_first",
+          "hub_choice_confidence": 1.0,
+          "hub_choice_probabilities": {
+            "pharmacy_smr_green_nature": 0.0,
+            "welfare_debt_housing_first": 1.0,
+            "group_movement_zeitgeber": 0.0,
+            "peer_befriending_arts_choir": 0.0
+          },
+          "coherent_state_amplitudes": {
+            "pharmacy_smr_green_nature": 0.0,
+            "welfare_debt_housing_first": 1.0,
+            "group_movement_zeitgeber": 0.0,
+            "peer_befriending_arts_choir": 0.0
+          },
+          "pathway_shannon_entropy_bits": -0.0
+        },
+        "reversed_order_hub_top": "welfare_debt_housing_first",
+        "option_order_consistent": true,
+        "synergy_component_probs": {
+          "core20": 0.99,
+          "pharmacist_smr": 0.42,
+          "wmty_ready": 0.21
+        },
+        "jev_cubic_product_prob": 0.0873
+      },
+      {
+        "vignette_id": "VIG_SINGLE_02",
+        "expected_regime": "COMMIT_SINGLE_PATHWAY",
+        "expected_hub": "peer_befriending_arts_choir",
+        "cubic_synergy_label": 0,
+        "model": "jev-1.14.0",
+        "hilbert_prob_vector_8d": [
+          0.715,
+          0.0475,
+          0.02,
+          0.01,
+          0.9425,
+          0.4275,
+          0.2525,
+          0.91
+        ],
+        "bloch_ry_angles_rad_8d": [
+          2.0153,
+          0.4394,
+          0.2838,
+          0.2003,
+          2.6573,
+          1.4253,
+          1.053,
+          2.5322
+        ],
+        "routing": {
+          "routing_regime": "COMMIT_SINGLE_PATHWAY",
+          "recommended_action": "Co-produce primary referral to `peer_befriending_arts_choir` with human Link-Worker sign-off",
+          "urgent_escalation_prob": 0.02,
+          "companion_any_hub_fits_prob": 0.99,
+          "hub_choice_top": "peer_befriending_arts_choir",
+          "hub_choice_confidence": 1.0,
+          "hub_choice_probabilities": {
+            "pharmacy_smr_green_nature": 0.0,
+            "welfare_debt_housing_first": 0.0,
+            "group_movement_zeitgeber": 0.0,
+            "peer_befriending_arts_choir": 1.0
+          },
+          "coherent_state_amplitudes": {
+            "pharmacy_smr_green_nature": 0.0,
+            "welfare_debt_housing_first": 0.0,
+            "group_movement_zeitgeber": 0.0,
+            "peer_befriending_arts_choir": 1.0
+          },
+          "pathway_shannon_entropy_bits": -0.0
+        },
+        "reversed_order_hub_top": "peer_befriending_arts_choir",
+        "option_order_consistent": true,
+        "synergy_component_probs": {
+          "core20": 0.02,
+          "pharmacist_smr": 0.31,
+          "wmty_ready": 0.87
+        },
+        "jev_cubic_product_prob": 0.0054
+      },
+      {
+        "vignette_id": "VIG_SINGLE_03",
+        "expected_regime": "COMMIT_SINGLE_PATHWAY",
+        "expected_hub": "group_movement_zeitgeber",
+        "cubic_synergy_label": 0,
+        "model": "jev-1.14.0",
+        "hilbert_prob_vector_8d": [
+          0.165,
+          0.0075,
+          0.02,
+          0.0125,
+          0.065,
+          0.06,
+          0.5475,
+          0.94
+        ],
+        "bloch_ry_angles_rad_8d": [
+          0.8366,
+          0.1734,
+          0.2838,
+          0.2241,
+          0.5156,
+          0.4949,
+          1.6659,
+          2.6467
+        ],
+        "routing": {
+          "routing_regime": "COMMIT_SINGLE_PATHWAY",
+          "recommended_action": "Co-produce primary referral to `group_movement_zeitgeber` with human Link-Worker sign-off",
+          "urgent_escalation_prob": 0.03,
+          "companion_any_hub_fits_prob": 0.97,
+          "hub_choice_top": "group_movement_zeitgeber",
+          "hub_choice_confidence": 1.0,
+          "hub_choice_probabilities": {
+            "pharmacy_smr_green_nature": 0.0,
+            "welfare_debt_housing_first": 0.0,
+            "group_movement_zeitgeber": 1.0,
+            "peer_befriending_arts_choir": 0.0
+          },
+          "coherent_state_amplitudes": {
+            "pharmacy_smr_green_nature": 0.0,
+            "welfare_debt_housing_first": 0.0,
+            "group_movement_zeitgeber": 1.0,
+            "peer_befriending_arts_choir": 0.0
+          },
+          "pathway_shannon_entropy_bits": -0.0
+        },
+        "reversed_order_hub_top": "group_movement_zeitgeber",
+        "option_order_consistent": true,
+        "synergy_component_probs": {
+          "core20": 0.02,
+          "pharmacist_smr": 0.18,
+          "wmty_ready": 0.32
+        },
+        "jev_cubic_product_prob": 0.0012
+      },
+      {
+        "vignette_id": "VIG_SINGLE_04",
+        "expected_regime": "COMMIT_SINGLE_PATHWAY",
+        "expected_hub": "pharmacy_smr_green_nature",
+        "cubic_synergy_label": 1,
+        "model": "jev-1.14.0",
+        "hilbert_prob_vector_8d": [
+          0.23,
+          0.7425,
+          0.98,
+          0.075,
+          0.71,
+          0.0725,
+          0.6025,
+          0.94
+        ],
+        "bloch_ry_angles_rad_8d": [
+          1.0004,
+          2.0772,
+          2.8578,
+          0.5548,
+          2.0042,
+          0.5452,
+          1.7773,
+          2.6467
+        ],
+        "routing": {
+          "routing_regime": "COMMIT_SINGLE_PATHWAY",
+          "recommended_action": "Co-produce primary referral to `pharmacy_smr_green_nature` with human Link-Worker sign-off",
+          "urgent_escalation_prob": 0.03,
+          "companion_any_hub_fits_prob": 0.98,
+          "hub_choice_top": "pharmacy_smr_green_nature",
+          "hub_choice_confidence": 1.0,
+          "hub_choice_probabilities": {
+            "pharmacy_smr_green_nature": 1.0,
+            "welfare_debt_housing_first": 0.0,
+            "group_movement_zeitgeber": 0.0,
+            "peer_befriending_arts_choir": 0.0
+          },
+          "coherent_state_amplitudes": {
+            "pharmacy_smr_green_nature": 1.0,
+            "welfare_debt_housing_first": 0.0,
+            "group_movement_zeitgeber": 0.0,
+            "peer_befriending_arts_choir": 0.0
+          },
+          "pathway_shannon_entropy_bits": -0.0
+        },
+        "reversed_order_hub_top": "pharmacy_smr_green_nature",
+        "option_order_consistent": true,
+        "synergy_component_probs": {
+          "core20": 0.98,
+          "pharmacist_smr": 0.92,
+          "wmty_ready": 0.93
+        },
+        "jev_cubic_product_prob": 0.8385
+      },
+      {
+        "vignette_id": "VIG_SINGLE_05",
+        "expected_regime": "COMMIT_SINGLE_PATHWAY",
+        "expected_hub": "peer_befriending_arts_choir",
+        "cubic_synergy_label": 0,
+        "model": "jev-1.14.0",
+        "hilbert_prob_vector_8d": [
+          0.3575,
+          0.0675,
+          0.02,
+          0.0125,
+          0.88,
+          0.025,
+          0.2525,
+          0.93
+        ],
+        "bloch_ry_angles_rad_8d": [
+          1.2818,
+          0.5256,
+          0.2838,
+          0.2241,
+          2.4341,
+          0.3176,
+          1.053,
+          2.6061
+        ],
+        "routing": {
+          "routing_regime": "COMMIT_SINGLE_PATHWAY",
+          "recommended_action": "Co-produce primary referral to `peer_befriending_arts_choir` with human Link-Worker sign-off",
+          "urgent_escalation_prob": 0.02,
+          "companion_any_hub_fits_prob": 0.97,
+          "hub_choice_top": "peer_befriending_arts_choir",
+          "hub_choice_confidence": 1.0,
+          "hub_choice_probabilities": {
+            "pharmacy_smr_green_nature": 0.0,
+            "welfare_debt_housing_first": 0.0,
+            "group_movement_zeitgeber": 0.0,
+            "peer_befriending_arts_choir": 1.0
+          },
+          "coherent_state_amplitudes": {
+            "pharmacy_smr_green_nature": 0.0,
+            "welfare_debt_housing_first": 0.0,
+            "group_movement_zeitgeber": 0.0,
+            "peer_befriending_arts_choir": 1.0
+          },
+          "pathway_shannon_entropy_bits": -0.0
+        },
+        "reversed_order_hub_top": "peer_befriending_arts_choir",
+        "option_order_consistent": true,
+        "synergy_component_probs": {
+          "core20": 0.03,
+          "pharmacist_smr": 0.34,
+          "wmty_ready": 0.89
+        },
+        "jev_cubic_product_prob": 0.0091
+      },
+      {
+        "vignette_id": "VIG_SUP_01",
+        "expected_regime": "HOLD_COHERENT_SUPERPOSITION",
+        "expected_hub": "pharmacy_smr_green_nature",
+        "cubic_synergy_label": 1,
+        "model": "jev-1.14.0",
+        "hilbert_prob_vector_8d": [
+          0.73,
+          0.745,
+          0.99,
+          0.745,
+          0.1875,
+          0.7425,
+          0.745,
+          0.83
+        ],
+        "bloch_ry_angles_rad_8d": [
+          2.0488,
+          2.0829,
+          2.9413,
+          2.0829,
+          0.8957,
+          2.0772,
+          2.0829,
+          2.2916
+        ],
+        "routing": {
+          "routing_regime": "HOLD_COHERENT_SUPERPOSITION",
+          "recommended_action": "Hold multi-pathway co-production superposition (welfare_debt_housing_first + pharmacy_smr_green_nature) across N*=6 Link-Worker WMTY check-ins; avoid premature bureaucratic collapse",
+          "urgent_escalation_prob": 0.05,
+          "companion_any_hub_fits_prob": 0.99,
+          "hub_choice_top": "welfare_debt_housing_first",
+          "hub_choice_confidence": 0.36,
+          "hub_choice_probabilities": {
+            "pharmacy_smr_green_nature": 0.31,
+            "welfare_debt_housing_first": 0.52,
+            "group_movement_zeitgeber": 0.01,
+            "peer_befriending_arts_choir": 0.16
+          },
+          "coherent_state_amplitudes": {
+            "pharmacy_smr_green_nature": 0.55678,
+            "welfare_debt_housing_first": 0.72111,
+            "group_movement_zeitgeber": 0.1,
+            "peer_befriending_arts_choir": 0.4
+          },
+          "pathway_shannon_entropy_bits": 1.5038
+        },
+        "reversed_order_hub_top": "welfare_debt_housing_first",
+        "option_order_consistent": true,
+        "synergy_component_probs": {
+          "core20": 0.99,
+          "pharmacist_smr": 0.92,
+          "wmty_ready": 0.41
+        },
+        "jev_cubic_product_prob": 0.3734
+      },
+      {
+        "vignette_id": "VIG_SUP_02",
+        "expected_regime": "HOLD_COHERENT_SUPERPOSITION",
+        "expected_hub": "welfare_debt_housing_first",
+        "cubic_synergy_label": 1,
+        "model": "jev-1.14.0",
+        "hilbert_prob_vector_8d": [
+          0.735,
+          0.74,
+          0.98,
+          0.4775,
+          0.3125,
+          0.7325,
+          0.615,
+          0.85
+        ],
+        "bloch_ry_angles_rad_8d": [
+          2.0601,
+          2.0715,
+          2.8578,
+          1.5258,
+          1.1864,
+          2.0544,
+          1.8029,
+          2.3462
+        ],
+        "routing": {
+          "routing_regime": "HOLD_COHERENT_SUPERPOSITION",
+          "recommended_action": "Hold multi-pathway co-production superposition (peer_befriending_arts_choir + pharmacy_smr_green_nature) across N*=6 Link-Worker WMTY check-ins; avoid premature bureaucratic collapse",
+          "urgent_escalation_prob": 0.04,
+          "companion_any_hub_fits_prob": 0.98,
+          "hub_choice_top": "peer_befriending_arts_choir",
+          "hub_choice_confidence": 0.43,
+          "hub_choice_probabilities": {
+            "pharmacy_smr_green_nature": 0.26,
+            "welfare_debt_housing_first": 0.09,
+            "group_movement_zeitgeber": 0.08,
+            "peer_befriending_arts_choir": 0.57
+          },
+          "coherent_state_amplitudes": {
+            "pharmacy_smr_green_nature": 0.5099,
+            "welfare_debt_housing_first": 0.3,
+            "group_movement_zeitgeber": 0.28284,
+            "peer_befriending_arts_choir": 0.75498
+          },
+          "pathway_shannon_entropy_bits": 1.5717
+        },
+        "reversed_order_hub_top": "peer_befriending_arts_choir",
+        "option_order_consistent": true,
+        "synergy_component_probs": {
+          "core20": 0.97,
+          "pharmacist_smr": 0.89,
+          "wmty_ready": 0.84
+        },
+        "jev_cubic_product_prob": 0.7252
+      },
+      {
+        "vignette_id": "VIG_SUP_03",
+        "expected_regime": "HOLD_COHERENT_SUPERPOSITION",
+        "expected_hub": "group_movement_zeitgeber",
+        "cubic_synergy_label": 1,
+        "model": "jev-1.14.0",
+        "hilbert_prob_vector_8d": [
+          0.545,
+          0.7375,
+          0.98,
+          0.4925,
+          0.1075,
+          0.5675,
+          0.745,
+          0.89
+        ],
+        "bloch_ry_angles_rad_8d": [
+          1.6609,
+          2.0658,
+          2.8578,
+          1.5558,
+          0.6681,
+          1.7062,
+          2.0829,
+          2.4655
+        ],
+        "routing": {
+          "routing_regime": "HOLD_COHERENT_SUPERPOSITION",
+          "recommended_action": "Hold multi-pathway co-production superposition (pharmacy_smr_green_nature + group_movement_zeitgeber) across N*=6 Link-Worker WMTY check-ins; avoid premature bureaucratic collapse",
+          "urgent_escalation_prob": 0.04,
+          "companion_any_hub_fits_prob": 0.98,
+          "hub_choice_top": "pharmacy_smr_green_nature",
+          "hub_choice_confidence": 0.19,
+          "hub_choice_probabilities": {
+            "pharmacy_smr_green_nature": 0.39,
+            "welfare_debt_housing_first": 0.27,
+            "group_movement_zeitgeber": 0.31,
+            "peer_befriending_arts_choir": 0.03
+          },
+          "coherent_state_amplitudes": {
+            "pharmacy_smr_green_nature": 0.6245,
+            "welfare_debt_housing_first": 0.51962,
+            "group_movement_zeitgeber": 0.55678,
+            "peer_befriending_arts_choir": 0.17321
+          },
+          "pathway_shannon_entropy_bits": 1.7154
+        },
+        "reversed_order_hub_top": "pharmacy_smr_green_nature",
+        "option_order_consistent": true,
+        "synergy_component_probs": {
+          "core20": 0.98,
+          "pharmacist_smr": 0.91,
+          "wmty_ready": 0.86
+        },
+        "jev_cubic_product_prob": 0.7669
+      },
+      {
+        "vignette_id": "VIG_SUP_04",
+        "expected_regime": "HOLD_COHERENT_SUPERPOSITION",
+        "expected_hub": "peer_befriending_arts_choir",
+        "cubic_synergy_label": 1,
+        "model": "jev-1.14.0",
+        "hilbert_prob_vector_8d": [
+          0.6125,
+          0.73,
+          0.98,
+          0.61,
+          0.6075,
+          0.4825,
+          0.61,
+          0.91
+        ],
+        "bloch_ry_angles_rad_8d": [
+          1.7977,
+          2.0488,
+          2.8578,
+          1.7926,
+          1.7875,
+          1.5358,
+          1.7926,
+          2.5322
+        ],
+        "routing": {
+          "routing_regime": "HOLD_COHERENT_SUPERPOSITION",
+          "recommended_action": "Hold multi-pathway co-production superposition (pharmacy_smr_green_nature + welfare_debt_housing_first) across N*=6 Link-Worker WMTY check-ins; avoid premature bureaucratic collapse",
+          "urgent_escalation_prob": 0.03,
+          "companion_any_hub_fits_prob": 0.98,
+          "hub_choice_top": "pharmacy_smr_green_nature",
+          "hub_choice_confidence": 0.51,
+          "hub_choice_probabilities": {
+            "pharmacy_smr_green_nature": 0.63,
+            "welfare_debt_housing_first": 0.24,
+            "group_movement_zeitgeber": 0.0,
+            "peer_befriending_arts_choir": 0.13
+          },
+          "coherent_state_amplitudes": {
+            "pharmacy_smr_green_nature": 0.79373,
+            "welfare_debt_housing_first": 0.4899,
+            "group_movement_zeitgeber": 0.0,
+            "peer_befriending_arts_choir": 0.36056
+          },
+          "pathway_shannon_entropy_bits": 1.2967
+        },
+        "reversed_order_hub_top": "pharmacy_smr_green_nature",
+        "option_order_consistent": true,
+        "synergy_component_probs": {
+          "core20": 0.98,
+          "pharmacist_smr": 0.82,
+          "wmty_ready": 0.92
+        },
+        "jev_cubic_product_prob": 0.7393
+      },
+      {
+        "vignette_id": "VIG_SUP_05",
+        "expected_regime": "HOLD_COHERENT_SUPERPOSITION",
+        "expected_hub": "group_movement_zeitgeber",
+        "cubic_synergy_label": 0,
+        "model": "jev-1.14.0",
+        "hilbert_prob_vector_8d": [
+          0.555,
+          0.2475,
+          0.03,
+          0.6525,
+          0.3575,
+          0.4775,
+          0.6125,
+          0.85
+        ],
+        "bloch_ry_angles_rad_8d": [
+          1.681,
+          1.0414,
+          0.3482,
+          1.8807,
+          1.2818,
+          1.5258,
+          1.7977,
+          2.3462
+        ],
+        "routing": {
+          "routing_regime": "COMMIT_SINGLE_PATHWAY",
+          "recommended_action": "Co-produce primary referral to `group_movement_zeitgeber` with human Link-Worker sign-off",
+          "urgent_escalation_prob": 0.03,
+          "companion_any_hub_fits_prob": 0.98,
+          "hub_choice_top": "group_movement_zeitgeber",
+          "hub_choice_confidence": 0.83,
+          "hub_choice_probabilities": {
+            "pharmacy_smr_green_nature": 0.01,
+            "welfare_debt_housing_first": 0.04,
+            "group_movement_zeitgeber": 0.87,
+            "peer_befriending_arts_choir": 0.08
+          },
+          "coherent_state_amplitudes": {
+            "pharmacy_smr_green_nature": 0.1,
+            "welfare_debt_housing_first": 0.2,
+            "group_movement_zeitgeber": 0.93274,
+            "peer_befriending_arts_choir": 0.28284
+          },
+          "pathway_shannon_entropy_bits": 0.7185
+        },
+        "reversed_order_hub_top": "group_movement_zeitgeber",
+        "option_order_consistent": true,
+        "synergy_component_probs": {
+          "core20": 0.04,
+          "pharmacist_smr": 0.51,
+          "wmty_ready": 0.81
+        },
+        "jev_cubic_product_prob": 0.0165
+      },
+      {
+        "vignette_id": "VIG_URGENT_01",
+        "expected_regime": "URGENT_CLINICAL_ESCALATION",
+        "expected_hub": "pharmacy_smr_green_nature",
+        "cubic_synergy_label": 0,
+        "model": "jev-1.14.0",
+        "hilbert_prob_vector_8d": [
+          0.35,
+          0.99,
+          0.98,
+          0.17,
+          0.52,
+          0.2875,
+          0.725,
+          0.04
+        ],
+        "bloch_ry_angles_rad_8d": [
+          1.2661,
+          2.9413,
+          2.8578,
+          0.85,
+          1.6108,
+          1.1318,
+          2.0376,
+          0.4027
+        ],
+        "routing": {
+          "routing_regime": "URGENT_CLINICAL_ESCALATION",
+          "recommended_action": "Immediate Pharmacist/GP clinical review (Hazard H-QSPM-01 safeguard) prior to VCFSE signposting",
+          "urgent_escalation_prob": 0.99,
+          "companion_any_hub_fits_prob": 0.86,
+          "hub_choice_top": "pharmacy_smr_green_nature",
+          "hub_choice_confidence": 0.91,
+          "hub_choice_probabilities": {
+            "pharmacy_smr_green_nature": 0.93,
+            "welfare_debt_housing_first": 0.0,
+            "group_movement_zeitgeber": 0.07,
+            "peer_befriending_arts_choir": 0.0
+          },
+          "coherent_state_amplitudes": {
+            "pharmacy_smr_green_nature": 0.96437,
+            "welfare_debt_housing_first": 0.0,
+            "group_movement_zeitgeber": 0.26458,
+            "peer_befriending_arts_choir": 0.0
+          },
+          "pathway_shannon_entropy_bits": 0.3659
+        },
+        "reversed_order_hub_top": "pharmacy_smr_green_nature",
+        "option_order_consistent": true,
+        "synergy_component_probs": {
+          "core20": 0.98,
+          "pharmacist_smr": 0.92,
+          "wmty_ready": 0.59
+        },
+        "jev_cubic_product_prob": 0.5319
+      },
+      {
+        "vignette_id": "VIG_URGENT_02",
+        "expected_regime": "URGENT_CLINICAL_ESCALATION",
+        "expected_hub": "group_movement_zeitgeber",
+        "cubic_synergy_label": 0,
+        "model": "jev-1.14.0",
+        "hilbert_prob_vector_8d": [
+          0.535,
+          0.51,
+          0.98,
+          0.39,
+          0.3625,
+          0.6375,
+          0.145,
+          0.04
+        ],
+        "bloch_ry_angles_rad_8d": [
+          1.6409,
+          1.5908,
+          2.8578,
+          1.349,
+          1.2922,
+          1.8494,
+          0.7813,
+          0.4027
+        ],
+        "routing": {
+          "routing_regime": "URGENT_CLINICAL_ESCALATION",
+          "recommended_action": "Immediate Pharmacist/GP clinical review (Hazard H-QSPM-01 safeguard) prior to VCFSE signposting",
+          "urgent_escalation_prob": 0.99,
+          "companion_any_hub_fits_prob": 0.45,
+          "hub_choice_top": "group_movement_zeitgeber",
+          "hub_choice_confidence": 0.57,
+          "hub_choice_probabilities": {
+            "pharmacy_smr_green_nature": 0.29,
+            "welfare_debt_housing_first": 0.02,
+            "group_movement_zeitgeber": 0.68,
+            "peer_befriending_arts_choir": 0.01
+          },
+          "coherent_state_amplitudes": {
+            "pharmacy_smr_green_nature": 0.53852,
+            "welfare_debt_housing_first": 0.14142,
+            "group_movement_zeitgeber": 0.82462,
+            "peer_befriending_arts_choir": 0.1
+          },
+          "pathway_shannon_entropy_bits": 1.0756
+        },
+        "reversed_order_hub_top": "group_movement_zeitgeber",
+        "option_order_consistent": true,
+        "synergy_component_probs": {
+          "core20": 0.98,
+          "pharmacist_smr": 0.73,
+          "wmty_ready": 0.67
+        },
+        "jev_cubic_product_prob": 0.4793
+      },
+      {
+        "vignette_id": "VIG_URGENT_03",
+        "expected_regime": "URGENT_CLINICAL_ESCALATION",
+        "expected_hub": "pharmacy_smr_green_nature",
+        "cubic_synergy_label": 0,
+        "model": "jev-1.14.0",
+        "hilbert_prob_vector_8d": [
+          0.2,
+          0.0875,
+          0.05,
+          0.055,
+          0.5225,
+          0.16,
+          0.7475,
+          0.04
+        ],
+        "bloch_ry_angles_rad_8d": [
+          0.9273,
+          0.6006,
+          0.451,
+          0.4735,
+          1.6158,
+          0.823,
+          2.0886,
+          0.4027
+        ],
+        "routing": {
+          "routing_regime": "URGENT_CLINICAL_ESCALATION",
+          "recommended_action": "Immediate Pharmacist/GP clinical review (Hazard H-QSPM-01 safeguard) prior to VCFSE signposting",
+          "urgent_escalation_prob": 0.98,
+          "companion_any_hub_fits_prob": 0.53,
+          "hub_choice_top": "pharmacy_smr_green_nature",
+          "hub_choice_confidence": 0.81,
+          "hub_choice_probabilities": {
+            "pharmacy_smr_green_nature": 0.86,
+            "welfare_debt_housing_first": 0.01,
+            "group_movement_zeitgeber": 0.06,
+            "peer_befriending_arts_choir": 0.07
+          },
+          "coherent_state_amplitudes": {
+            "pharmacy_smr_green_nature": 0.92736,
+            "welfare_debt_housing_first": 0.1,
+            "group_movement_zeitgeber": 0.24495,
+            "peer_befriending_arts_choir": 0.26458
+          },
+          "pathway_shannon_entropy_bits": 0.7657
+        },
+        "reversed_order_hub_top": "pharmacy_smr_green_nature",
+        "option_order_consistent": true,
+        "synergy_component_probs": {
+          "core20": 0.07,
+          "pharmacist_smr": 0.43,
+          "wmty_ready": 0.75
+        },
+        "jev_cubic_product_prob": 0.0226
+      },
+      {
+        "vignette_id": "VIG_URGENT_04",
+        "expected_regime": "URGENT_CLINICAL_ESCALATION",
+        "expected_hub": "peer_befriending_arts_choir",
+        "cubic_synergy_label": 0,
+        "model": "jev-1.14.0",
+        "hilbert_prob_vector_8d": [
+          0.435,
+          0.5,
+          0.98,
+          0.245,
+          0.2525,
+          0.855,
+          0.055,
+          0.11
+        ],
+        "bloch_ry_angles_rad_8d": [
+          1.4404,
+          1.5708,
+          2.8578,
+          1.0356,
+          1.053,
+          2.3603,
+          0.4735,
+          0.6761
+        ],
+        "routing": {
+          "routing_regime": "URGENT_CLINICAL_ESCALATION",
+          "recommended_action": "Immediate Pharmacist/GP clinical review (Hazard H-QSPM-01 safeguard) prior to VCFSE signposting",
+          "urgent_escalation_prob": 0.99,
+          "companion_any_hub_fits_prob": 0.34,
+          "hub_choice_top": "pharmacy_smr_green_nature",
+          "hub_choice_confidence": 0.2,
+          "hub_choice_probabilities": {
+            "pharmacy_smr_green_nature": 0.4,
+            "welfare_debt_housing_first": 0.25,
+            "group_movement_zeitgeber": 0.22,
+            "peer_befriending_arts_choir": 0.13
+          },
+          "coherent_state_amplitudes": {
+            "pharmacy_smr_green_nature": 0.63246,
+            "welfare_debt_housing_first": 0.5,
+            "group_movement_zeitgeber": 0.46904,
+            "peer_befriending_arts_choir": 0.36056
+          },
+          "pathway_shannon_entropy_bits": 1.892
+        },
+        "reversed_order_hub_top": "pharmacy_smr_green_nature",
+        "option_order_consistent": true,
+        "synergy_component_probs": {
+          "core20": 0.97,
+          "pharmacist_smr": 0.58,
+          "wmty_ready": 0.07
+        },
+        "jev_cubic_product_prob": 0.0394
+      },
+      {
+        "vignette_id": "VIG_URGENT_05",
+        "expected_regime": "URGENT_CLINICAL_ESCALATION",
+        "expected_hub": "group_movement_zeitgeber",
+        "cubic_synergy_label": 0,
+        "model": "jev-1.14.0",
+        "hilbert_prob_vector_8d": [
+          0.325,
+          0.99,
+          0.05,
+          0.1525,
+          0.19,
+          0.39,
+          0.7025,
+          0.03
+        ],
+        "bloch_ry_angles_rad_8d": [
+          1.2132,
+          2.9413,
+          0.451,
+          0.8024,
+          0.9021,
+          1.349,
+          1.9878,
+          0.3482
+        ],
+        "routing": {
+          "routing_regime": "URGENT_CLINICAL_ESCALATION",
+          "recommended_action": "Immediate Pharmacist/GP clinical review (Hazard H-QSPM-01 safeguard) prior to VCFSE signposting",
+          "urgent_escalation_prob": 0.98,
+          "companion_any_hub_fits_prob": 0.38,
+          "hub_choice_top": "pharmacy_smr_green_nature",
+          "hub_choice_confidence": 0.81,
+          "hub_choice_probabilities": {
+            "pharmacy_smr_green_nature": 0.86,
+            "welfare_debt_housing_first": 0.02,
+            "group_movement_zeitgeber": 0.11,
+            "peer_befriending_arts_choir": 0.01
+          },
+          "coherent_state_amplitudes": {
+            "pharmacy_smr_green_nature": 0.92736,
+            "welfare_debt_housing_first": 0.14142,
+            "group_movement_zeitgeber": 0.33166,
+            "peer_befriending_arts_choir": 0.1
+          },
+          "pathway_shannon_entropy_bits": 0.7167
+        },
+        "reversed_order_hub_top": "pharmacy_smr_green_nature",
+        "option_order_consistent": true,
+        "synergy_component_probs": {
+          "core20": 0.06,
+          "pharmacist_smr": 0.87,
+          "wmty_ready": 0.23
+        },
+        "jev_cubic_product_prob": 0.012
+      },
+      {
+        "vignette_id": "VIG_OOS_01",
+        "expected_regime": "REJECT_OUT_OF_SCOPE",
+        "expected_hub": "none",
+        "cubic_synergy_label": 0,
+        "model": "jev-1.14.0",
+        "hilbert_prob_vector_8d": [
+          0.015,
+          0.005,
+          0.02,
+          0.0075,
+          0.7775,
+          0.0375,
+          0.0025,
+          0.96
+        ],
+        "bloch_ry_angles_rad_8d": [
+          0.2456,
+          0.1415,
+          0.2838,
+          0.1734,
+          2.1592,
+          0.3898,
+          0.1,
+          2.7389
+        ],
+        "routing": {
+          "routing_regime": "REJECT_OUT_OF_SCOPE",
+          "recommended_action": "Do not refer to VCFSE social prescribing (Companion Noul blocked forced-choice noise); route to admin/primary-care desk",
+          "urgent_escalation_prob": 0.01,
+          "companion_any_hub_fits_prob": 0.01,
+          "hub_choice_top": "pharmacy_smr_green_nature",
+          "hub_choice_confidence": 0.59,
+          "hub_choice_probabilities": {
+            "pharmacy_smr_green_nature": 0.69,
+            "welfare_debt_housing_first": 0.15,
+            "group_movement_zeitgeber": 0.06,
+            "peer_befriending_arts_choir": 0.1
+          },
+          "coherent_state_amplitudes": {
+            "pharmacy_smr_green_nature": 0.83066,
+            "welfare_debt_housing_first": 0.3873,
+            "group_movement_zeitgeber": 0.24495,
+            "peer_befriending_arts_choir": 0.31623
+          },
+          "pathway_shannon_entropy_bits": 1.3557
+        },
+        "reversed_order_hub_top": "pharmacy_smr_green_nature",
+        "option_order_consistent": true,
+        "synergy_component_probs": {
+          "core20": 0.02,
+          "pharmacist_smr": 0.22,
+          "wmty_ready": 0.05
+        },
+        "jev_cubic_product_prob": 0.0002
+      },
+      {
+        "vignette_id": "VIG_OOS_02",
+        "expected_regime": "REJECT_OUT_OF_SCOPE",
+        "expected_hub": "none",
+        "cubic_synergy_label": 0,
+        "model": "jev-1.14.0",
+        "hilbert_prob_vector_8d": [
+          0.0275,
+          0.005,
+          0.03,
+          0.01,
+          0.7925,
+          0.0075,
+          0.0025,
+          0.9
+        ],
+        "bloch_ry_angles_rad_8d": [
+          0.3332,
+          0.1415,
+          0.3482,
+          0.2003,
+          2.1957,
+          0.1734,
+          0.1,
+          2.4981
+        ],
+        "routing": {
+          "routing_regime": "REJECT_OUT_OF_SCOPE",
+          "recommended_action": "Do not refer to VCFSE social prescribing (Companion Noul blocked forced-choice noise); route to admin/primary-care desk",
+          "urgent_escalation_prob": 0.02,
+          "companion_any_hub_fits_prob": 0.02,
+          "hub_choice_top": "group_movement_zeitgeber",
+          "hub_choice_confidence": 0.33,
+          "hub_choice_probabilities": {
+            "pharmacy_smr_green_nature": 0.25,
+            "welfare_debt_housing_first": 0.16,
+            "group_movement_zeitgeber": 0.5,
+            "peer_befriending_arts_choir": 0.09
+          },
+          "coherent_state_amplitudes": {
+            "pharmacy_smr_green_nature": 0.5,
+            "welfare_debt_housing_first": 0.4,
+            "group_movement_zeitgeber": 0.70711,
+            "peer_befriending_arts_choir": 0.3
+          },
+          "pathway_shannon_entropy_bits": 1.7357
+        },
+        "reversed_order_hub_top": "group_movement_zeitgeber",
+        "option_order_consistent": true,
+        "synergy_component_probs": {
+          "core20": 0.03,
+          "pharmacist_smr": 0.17,
+          "wmty_ready": 0.06
+        },
+        "jev_cubic_product_prob": 0.0003
+      },
+      {
+        "vignette_id": "VIG_OOS_03",
+        "expected_regime": "REJECT_OUT_OF_SCOPE",
+        "expected_hub": "none",
+        "cubic_synergy_label": 0,
+        "model": "jev-1.14.0",
+        "hilbert_prob_vector_8d": [
+          0.0175,
+          0.0075,
+          0.03,
+          0.035,
+          0.605,
+          0.01,
+          0.045,
+          0.95
+        ],
+        "bloch_ry_angles_rad_8d": [
+          0.2654,
+          0.1734,
+          0.3482,
+          0.3764,
+          1.7824,
+          0.2003,
+          0.4275,
+          2.6906
+        ],
+        "routing": {
+          "routing_regime": "REJECT_OUT_OF_SCOPE",
+          "recommended_action": "Do not refer to VCFSE social prescribing (Companion Noul blocked forced-choice noise); route to admin/primary-care desk",
+          "urgent_escalation_prob": 0.02,
+          "companion_any_hub_fits_prob": 0.02,
+          "hub_choice_top": "pharmacy_smr_green_nature",
+          "hub_choice_confidence": 0.56,
+          "hub_choice_probabilities": {
+            "pharmacy_smr_green_nature": 0.67,
+            "welfare_debt_housing_first": 0.27,
+            "group_movement_zeitgeber": 0.03,
+            "peer_befriending_arts_choir": 0.03
+          },
+          "coherent_state_amplitudes": {
+            "pharmacy_smr_green_nature": 0.81854,
+            "welfare_debt_housing_first": 0.51962,
+            "group_movement_zeitgeber": 0.17321,
+            "peer_befriending_arts_choir": 0.17321
+          },
+          "pathway_shannon_entropy_bits": 1.2007
+        },
+        "reversed_order_hub_top": "pharmacy_smr_green_nature",
+        "option_order_consistent": true,
+        "synergy_component_probs": {
+          "core20": 0.03,
+          "pharmacist_smr": 0.18,
+          "wmty_ready": 0.04
+        },
+        "jev_cubic_product_prob": 0.0002
+      },
+      {
+        "vignette_id": "VIG_OOS_04",
+        "expected_regime": "REJECT_OUT_OF_SCOPE",
+        "expected_hub": "none",
+        "cubic_synergy_label": 0,
+        "model": "jev-1.14.0",
+        "hilbert_prob_vector_8d": [
+          0.0225,
+          0.005,
+          0.02,
+          0.01,
+          0.66,
+          0.005,
+          0.0025,
+          0.93
+        ],
+        "bloch_ry_angles_rad_8d": [
+          0.3011,
+          0.1415,
+          0.2838,
+          0.2003,
+          1.8965,
+          0.1415,
+          0.1,
+          2.6061
+        ],
+        "routing": {
+          "routing_regime": "REJECT_OUT_OF_SCOPE",
+          "recommended_action": "Do not refer to VCFSE social prescribing (Companion Noul blocked forced-choice noise); route to admin/primary-care desk",
+          "urgent_escalation_prob": 0.01,
+          "companion_any_hub_fits_prob": 0.01,
+          "hub_choice_top": "peer_befriending_arts_choir",
+          "hub_choice_confidence": 0.27,
+          "hub_choice_probabilities": {
+            "pharmacy_smr_green_nature": 0.21,
+            "welfare_debt_housing_first": 0.17,
+            "group_movement_zeitgeber": 0.17,
+            "peer_befriending_arts_choir": 0.45
+          },
+          "coherent_state_amplitudes": {
+            "pharmacy_smr_green_nature": 0.45826,
+            "welfare_debt_housing_first": 0.41231,
+            "group_movement_zeitgeber": 0.41231,
+            "peer_befriending_arts_choir": 0.67082
+          },
+          "pathway_shannon_entropy_bits": 1.8604
+        },
+        "reversed_order_hub_top": "peer_befriending_arts_choir",
+        "option_order_consistent": true,
+        "synergy_component_probs": {
+          "core20": 0.02,
+          "pharmacist_smr": 0.25,
+          "wmty_ready": 0.07
+        },
+        "jev_cubic_product_prob": 0.0004
+      },
+      {
+        "vignette_id": "VIG_OOS_05",
+        "expected_regime": "REJECT_OUT_OF_SCOPE",
+        "expected_hub": "none",
+        "cubic_synergy_label": 0,
+        "model": "jev-1.14.0",
+        "hilbert_prob_vector_8d": [
+          0.025,
+          0.005,
+          0.03,
+          0.025,
+          0.56,
+          0.0275,
+          0.0025,
+          0.78
+        ],
+        "bloch_ry_angles_rad_8d": [
+          0.3176,
+          0.1415,
+          0.3482,
+          0.3176,
+          1.6911,
+          0.3332,
+          0.1,
+          2.1652
+        ],
+        "routing": {
+          "routing_regime": "REJECT_OUT_OF_SCOPE",
+          "recommended_action": "Do not refer to VCFSE social prescribing (Companion Noul blocked forced-choice noise); route to admin/primary-care desk",
+          "urgent_escalation_prob": 0.01,
+          "companion_any_hub_fits_prob": 0.01,
+          "hub_choice_top": "pharmacy_smr_green_nature",
+          "hub_choice_confidence": 0.41,
+          "hub_choice_probabilities": {
+            "pharmacy_smr_green_nature": 0.56,
+            "welfare_debt_housing_first": 0.17,
+            "group_movement_zeitgeber": 0.09,
+            "peer_befriending_arts_choir": 0.18
+          },
+          "coherent_state_amplitudes": {
+            "pharmacy_smr_green_nature": 0.74833,
+            "welfare_debt_housing_first": 0.41231,
+            "group_movement_zeitgeber": 0.3,
+            "peer_befriending_arts_choir": 0.42426
+          },
+          "pathway_shannon_entropy_bits": 1.661
+        },
+        "reversed_order_hub_top": "pharmacy_smr_green_nature",
+        "option_order_consistent": true,
+        "synergy_component_probs": {
+          "core20": 0.03,
+          "pharmacist_smr": 0.36,
+          "wmty_ready": 0.04
+        },
+        "jev_cubic_product_prob": 0.0004
+      }
+    ]
+  },
+  "live_quantinuum_nexus_helios_1e_lite_execution": {
+    "backend": "Helios-1E-lite",
+    "shot_execution_surface": "Quantinuum Selene HeliosInterface (alpha trapped-ion error model; Nexus Cloud UUID queued)",
+    "backend_disclosure": "Quantinuum 26-qubit noisy trapped-ion emulator (alpha error model) hosted on classical compute; 0 physical QPU hardware shots claimed.",
+    "physical_hardware_shots": 0,
+    "total_emulator_shots": 4096,
+    "project_name": "Quantum-Social-Prescribing",
+    "project_id": "2d5eb5c3-14f5-4b0a-9efd-50e49f7897d4",
+    "encoded_vignette_id": "VIG_SUP_01",
+    "job_1_jev_hilbert_4q_vqc": {
+      "job_id": "8fd8d08e-8650-4f4c-b5c3-31f69fc96b8c",
+      "nexus_cloud_status": "JobStatusEnum.SUBMITTED",
+      "hugr_ref_id": "uploaded-with-existing-nexus-job",
+      "hugr_sha256": "ae2568a207d183282bbb8f914295b8f07c8f94ac6ef9d96312117279976c9cfc",
+      "hugr_bytes": 7557,
+      "shots": 2048,
+      "jev_input_probabilities_8d": [
+        0.73,
+        0.745,
+        0.99,
+        0.745,
+        0.1875,
+        0.7425,
+        0.745,
+        0.83
+      ],
+      "bloch_ry_angles_rad_8d": [
+        2.0488,
+        2.0829,
+        2.9413,
+        2.0829,
+        0.8957,
+        2.0772,
+        2.0829,
+        2.2916
+      ],
+      "exact_statevector_pauli_10d": [
+        0.0549,
+        0.186,
+        0.486,
+        0.2393,
+        0.3709,
+        0.3849,
+        0.46,
+        0.3048,
+        0.5247,
+        0.0763
+      ],
+      "helios_1e_lite_pauli_10d": [
+        0.0986,
+        0.1963,
+        0.5068,
+        0.248,
+        0.3906,
+        0.4141,
+        0.4561,
+        0.3105,
+        0.5439,
+        0.1104
+      ],
+      "pauli_mae_vs_exact_statevector": 0.01955
+    },
+    "job_2_jev_superposition_vs_premature_collapse": {
+      "job_id": "7804f985-191e-4485-8a0c-b838aafc985b",
+      "nexus_cloud_status": "JobStatusEnum.SUBMITTED",
+      "shot_execution_surface": "Quantinuum Selene HeliosInterface (alpha trapped-ion error model; Nexus Cloud UUID queued)",
+      "hugr_ref_id": "uploaded-with-existing-nexus-job",
+      "hugr_sha256": "1edfc8f9b84913a157db0d5c3c201a98a2fdf87285688898e87d9b8195733831",
+      "hugr_bytes": 7130,
+      "shots": 2048,
+      "jev_hub_probabilities": {
+        "pharmacy_smr_green_nature": 0.31,
+        "welfare_debt_housing_first": 0.52,
+        "group_movement_zeitgeber": 0.01,
+        "peer_befriending_arts_choir": 0.16
+      },
+      "coherent_coproduction_return_p00": 0.98682,
+      "premature_collapse_return_p00": 0.39355,
+      "coherence_advantage_delta_p00": 0.59326
+    }
+  },
+  "module_3_noul_screen_hubo_solver_dispatcher": {
+    "n_mdt_batches": 4,
+    "dispatcher_accuracy": 1.0,
+    "batches": [
+      {
+        "batch_id": "MDT_BATCH_01_ROUTINE_PAIRWISE",
+        "expected_solver": "CLASSICAL_HIGHS_MILP",
+        "dispatched_solver": "CLASSICAL_HIGHS_MILP",
+        "dispatcher_exact_match": true,
+        "n_vars": 10,
+        "candidate_triples_screened": 3,
+        "active_cubic_hyperedges": 0,
+        "extracted_cubic_density_alpha3": 0.0,
+        "mccormick_and_highs": {
+          "x_lp": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "lp_objective": -7.65,
+          "lp_wall_ms": 5.67,
+          "lp_fractional_var_ratio": 0.0,
+          "x_milp_opt": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "milp_exact_objective": -7.65,
+          "milp_wall_ms": 13.967,
+          "relative_mccormick_lp_gap": 0.0
+        },
+        "qaoa_vs_rounding": null,
+        "screened_triples": [
+          {
+            "triple_id": "t_0_1_2",
+            "vars": [
+              0,
+              1,
+              2
+            ],
+            "polarity": "conflict_plus_J",
+            "jev_noul_prob": 0.06,
+            "accepted": false
+          },
+          {
+            "triple_id": "t_3_4_5",
+            "vars": [
+              3,
+              4,
+              5
+            ],
+            "polarity": "synergy_minus_J",
+            "jev_noul_prob": 0.03,
+            "accepted": false
+          },
+          {
+            "triple_id": "t_6_7_8",
+            "vars": [
+              6,
+              7,
+              8
+            ],
+            "polarity": "conflict_plus_J",
+            "jev_noul_prob": 0.07,
+            "accepted": false
+          }
+        ]
+      },
+      {
+        "batch_id": "MDT_BATCH_02_SINGLE_BUNDLE_SPARSE",
+        "expected_solver": "CLASSICAL_HIGHS_MILP",
+        "dispatched_solver": "CLASSICAL_HIGHS_MILP",
+        "dispatcher_exact_match": true,
+        "n_vars": 10,
+        "candidate_triples_screened": 3,
+        "active_cubic_hyperedges": 1,
+        "extracted_cubic_density_alpha3": 0.1,
+        "mccormick_and_highs": {
+          "x_lp": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "lp_objective": -9.062,
+          "lp_wall_ms": 3.194,
+          "lp_fractional_var_ratio": 0.0,
+          "x_milp_opt": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "milp_exact_objective": -9.062,
+          "milp_wall_ms": 16.677,
+          "relative_mccormick_lp_gap": 0.0
+        },
+        "qaoa_vs_rounding": null,
+        "screened_triples": [
+          {
+            "triple_id": "t_0_1_2",
+            "vars": [
+              0,
+              1,
+              2
+            ],
+            "polarity": "synergy_minus_J",
+            "jev_noul_prob": 0.59,
+            "accepted": true
+          },
+          {
+            "triple_id": "t_3_5_7",
+            "vars": [
+              3,
+              5,
+              7
+            ],
+            "polarity": "conflict_plus_J",
+            "jev_noul_prob": 0.05,
+            "accepted": false
+          },
+          {
+            "triple_id": "t_4_6_9",
+            "vars": [
+              4,
+              6,
+              9
+            ],
+            "polarity": "conflict_plus_J",
+            "jev_noul_prob": 0.04,
+            "accepted": false
+          }
+        ]
+      },
+      {
+        "batch_id": "MDT_BATCH_03_FRUSTRATED_CORE20_HUB",
+        "expected_solver": "QUANTUM_LP_WS_BF_QAOA",
+        "dispatched_solver": "QUANTUM_LP_WS_BF_QAOA",
+        "dispatcher_exact_match": true,
+        "n_vars": 10,
+        "candidate_triples_screened": 14,
+        "active_cubic_hyperedges": 14,
+        "extracted_cubic_density_alpha3": 1.4,
+        "mccormick_and_highs": {
+          "x_lp": [
+            0.6667,
+            0.6667,
+            0.6667,
+            0.6667,
+            0.6667,
+            0.6667,
+            0.6667,
+            0.6667,
+            0.6667,
+            0.6667
+          ],
+          "lp_objective": -1.54967,
+          "lp_wall_ms": 3.497,
+          "lp_fractional_var_ratio": 1.0,
+          "x_milp_opt": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "milp_exact_objective": 0.0,
+          "milp_wall_ms": 18.271,
+          "relative_mccormick_lp_gap": 1549666.6667
+        },
+        "qaoa_vs_rounding": {
+          "exact_ground_energy": 0.0,
+          "lp_independent_rounding_top5pct_prob": 0.01458,
+          "lp_independent_rounding_exact_opt_prob": 2e-05,
+          "lp_independent_rounding_expected_energy": 8.11875,
+          "lp_ws_qaoa_p2_top5pct_prob": 0.37945,
+          "lp_ws_qaoa_p2_exact_opt_prob": 0.02066,
+          "lp_ws_qaoa_p2_expected_energy": 2.57147,
+          "top5pct_enrichment_ratio_vs_lp_rounding": 26.03,
+          "optimal_qaoa_angles_gamma_beta": [
+            1.05,
+            0.6,
+            1.35,
+            0.45
+          ]
+        },
+        "screened_triples": [
+          {
+            "triple_id": "s1",
+            "vars": [
+              0,
+              1,
+              2
+            ],
+            "polarity": "synergy_minus_J",
+            "jev_noul_prob": 0.93,
+            "accepted": true
+          },
+          {
+            "triple_id": "s2",
+            "vars": [
+              1,
+              3,
+              5
+            ],
+            "polarity": "synergy_minus_J",
+            "jev_noul_prob": 0.92,
+            "accepted": true
+          },
+          {
+            "triple_id": "s3",
+            "vars": [
+              2,
+              4,
+              6
+            ],
+            "polarity": "synergy_minus_J",
+            "jev_noul_prob": 0.93,
+            "accepted": true
+          },
+          {
+            "triple_id": "s4",
+            "vars": [
+              0,
+              4,
+              8
+            ],
+            "polarity": "synergy_minus_J",
+            "jev_noul_prob": 0.93,
+            "accepted": true
+          },
+          {
+            "triple_id": "s5",
+            "vars": [
+              3,
+              6,
+              9
+            ],
+            "polarity": "synergy_minus_J",
+            "jev_noul_prob": 0.93,
+            "accepted": true
+          },
+          {
+            "triple_id": "s6",
+            "vars": [
+              5,
+              7,
+              8
+            ],
+            "polarity": "synergy_minus_J",
+            "jev_noul_prob": 0.92,
+            "accepted": true
+          },
+          {
+            "triple_id": "c1",
+            "vars": [
+              0,
+              2,
+              5
+            ],
+            "polarity": "conflict_plus_J",
+            "jev_noul_prob": 0.95,
+            "accepted": true
+          },
+          {
+            "triple_id": "c2",
+            "vars": [
+              1,
+              4,
+              7
+            ],
+            "polarity": "conflict_plus_J",
+            "jev_noul_prob": 0.96,
+            "accepted": true
+          },
+          {
+            "triple_id": "c3",
+            "vars": [
+              2,
+              6,
+              8
+            ],
+            "polarity": "conflict_plus_J",
+            "jev_noul_prob": 0.95,
+            "accepted": true
+          },
+          {
+            "triple_id": "c4",
+            "vars": [
+              3,
+              5,
+              9
+            ],
+            "polarity": "conflict_plus_J",
+            "jev_noul_prob": 0.95,
+            "accepted": true
+          },
+          {
+            "triple_id": "c5",
+            "vars": [
+              0,
+              6,
+              7
+            ],
+            "polarity": "conflict_plus_J",
+            "jev_noul_prob": 0.95,
+            "accepted": true
+          },
+          {
+            "triple_id": "c6",
+            "vars": [
+              1,
+              8,
+              9
+            ],
+            "polarity": "conflict_plus_J",
+            "jev_noul_prob": 0.94,
+            "accepted": true
+          },
+          {
+            "triple_id": "c7",
+            "vars": [
+              0,
+              3,
+              7
+            ],
+            "polarity": "conflict_plus_J",
+            "jev_noul_prob": 0.96,
+            "accepted": true
+          },
+          {
+            "triple_id": "c8",
+            "vars": [
+              4,
+              5,
+              8
+            ],
+            "polarity": "conflict_plus_J",
+            "jev_noul_prob": 0.96,
+            "accepted": true
+          }
+        ]
+      },
+      {
+        "batch_id": "MDT_BATCH_04_FRUSTRATED_WINTER_SURGE",
+        "expected_solver": "QUANTUM_LP_WS_BF_QAOA",
+        "dispatched_solver": "QUANTUM_LP_WS_BF_QAOA",
+        "dispatcher_exact_match": true,
+        "n_vars": 10,
+        "candidate_triples_screened": 14,
+        "active_cubic_hyperedges": 14,
+        "extracted_cubic_density_alpha3": 1.4,
+        "mccormick_and_highs": {
+          "x_lp": [
+            0.6667,
+            0.6667,
+            0.6667,
+            0.6667,
+            0.6667,
+            0.6667,
+            0.6667,
+            0.6667,
+            0.6667,
+            0.6667
+          ],
+          "lp_objective": -2.435,
+          "lp_wall_ms": 4.019,
+          "lp_fractional_var_ratio": 1.0,
+          "x_milp_opt": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "milp_exact_objective": 0.0,
+          "milp_wall_ms": 39.87,
+          "relative_mccormick_lp_gap": 2435000.0
+        },
+        "qaoa_vs_rounding": {
+          "exact_ground_energy": 0.0,
+          "lp_independent_rounding_top5pct_prob": 0.0139,
+          "lp_independent_rounding_exact_opt_prob": 2e-05,
+          "lp_independent_rounding_expected_energy": 7.22188,
+          "lp_ws_qaoa_p2_top5pct_prob": 0.32312,
+          "lp_ws_qaoa_p2_exact_opt_prob": 0.00611,
+          "lp_ws_qaoa_p2_expected_energy": 2.5832,
+          "top5pct_enrichment_ratio_vs_lp_rounding": 23.246,
+          "optimal_qaoa_angles_gamma_beta": [
+            0.75,
+            0.6,
+            1.35,
+            0.45
+          ]
+        },
+        "screened_triples": [
+          {
+            "triple_id": "w_s1",
+            "vars": [
+              0,
+              2,
+              4
+            ],
+            "polarity": "synergy_minus_J",
+            "jev_noul_prob": 0.82,
+            "accepted": true
+          },
+          {
+            "triple_id": "w_s2",
+            "vars": [
+              1,
+              3,
+              6
+            ],
+            "polarity": "synergy_minus_J",
+            "jev_noul_prob": 0.88,
+            "accepted": true
+          },
+          {
+            "triple_id": "w_s3",
+            "vars": [
+              2,
+              5,
+              8
+            ],
+            "polarity": "synergy_minus_J",
+            "jev_noul_prob": 0.82,
+            "accepted": true
+          },
+          {
+            "triple_id": "w_s4",
+            "vars": [
+              0,
+              5,
+              9
+            ],
+            "polarity": "synergy_minus_J",
+            "jev_noul_prob": 0.9,
+            "accepted": true
+          },
+          {
+            "triple_id": "w_s5",
+            "vars": [
+              3,
+              4,
+              7
+            ],
+            "polarity": "synergy_minus_J",
+            "jev_noul_prob": 0.89,
+            "accepted": true
+          },
+          {
+            "triple_id": "w_s6",
+            "vars": [
+              1,
+              7,
+              9
+            ],
+            "polarity": "synergy_minus_J",
+            "jev_noul_prob": 0.87,
+            "accepted": true
+          },
+          {
+            "triple_id": "w_s7",
+            "vars": [
+              4,
+              6,
+              8
+            ],
+            "polarity": "synergy_minus_J",
+            "jev_noul_prob": 0.89,
+            "accepted": true
+          },
+          {
+            "triple_id": "w_c1",
+            "vars": [
+              0,
+              1,
+              5
+            ],
+            "polarity": "conflict_plus_J",
+            "jev_noul_prob": 0.96,
+            "accepted": true
+          },
+          {
+            "triple_id": "w_c2",
+            "vars": [
+              2,
+              3,
+              7
+            ],
+            "polarity": "conflict_plus_J",
+            "jev_noul_prob": 0.97,
+            "accepted": true
+          },
+          {
+            "triple_id": "w_c3",
+            "vars": [
+              4,
+              8,
+              9
+            ],
+            "polarity": "conflict_plus_J",
+            "jev_noul_prob": 0.97,
+            "accepted": true
+          },
+          {
+            "triple_id": "w_c4",
+            "vars": [
+              0,
+              6,
+              8
+            ],
+            "polarity": "conflict_plus_J",
+            "jev_noul_prob": 0.97,
+            "accepted": true
+          },
+          {
+            "triple_id": "w_c5",
+            "vars": [
+              1,
+              2,
+              9
+            ],
+            "polarity": "conflict_plus_J",
+            "jev_noul_prob": 0.96,
+            "accepted": true
+          },
+          {
+            "triple_id": "w_c6",
+            "vars": [
+              3,
+              5,
+              6
+            ],
+            "polarity": "conflict_plus_J",
+            "jev_noul_prob": 0.97,
+            "accepted": true
+          },
+          {
+            "triple_id": "w_c7",
+            "vars": [
+              1,
+              4,
+              8
+            ],
+            "polarity": "conflict_plus_J",
+            "jev_noul_prob": 0.97,
+            "accepted": true
+          }
+        ]
+      }
+    ]
+  },
+  "module_4_atomic_epistemic_and_order_consistency_audit": {
+    "n_artefacts_audited": 4,
+    "all_artefacts_passed": true,
+    "option_order_consistency_rate": 1.0,
+    "mean_epistemic_rigor_score_out_of_5": 4.135,
+    "artefact_audits": [
+      {
+        "artefact_id": "FOCUSED_8PAGE_EMPIRICAL_NHS_PAPER",
+        "title": "8-Page Focused Empirical NHS Primary Care & Community Pharmacy Study",
+        "atomic_noul_assertions": {
+          "asserts_zero_physical_qpu_shots": 0.98,
+          "reports_gate_g4_classical_floor": 0.96,
+          "keeps_nhs_dcb0129_hazards_open": 0.95,
+          "preserves_human_clinical_and_link_worker_authority": 0.95,
+          "complies_with_noncommercial_open_science_mandate": 0.98,
+          "contains_unverified_supremacy_or_rct_claim": 0.03
+        },
+        "forward_governance_posture": "compliant_zero_hype_research_sandbox",
+        "reversed_governance_posture": "compliant_zero_hype_research_sandbox",
+        "option_order_consistent": true,
+        "epistemic_rigor_score_out_of_5": 4.15,
+        "all_atomic_verifiers_passed": true
+      },
+      {
+        "artefact_id": "FULL_11PAGE_QSPM_MONOGRAPH",
+        "title": "11-Page Three-Tier Quantum Social Prescribing Research Monograph",
+        "atomic_noul_assertions": {
+          "asserts_zero_physical_qpu_shots": 0.98,
+          "reports_gate_g4_classical_floor": 0.96,
+          "keeps_nhs_dcb0129_hazards_open": 0.96,
+          "preserves_human_clinical_and_link_worker_authority": 0.89,
+          "complies_with_noncommercial_open_science_mandate": 0.98,
+          "contains_unverified_supremacy_or_rct_claim": 0.05
+        },
+        "forward_governance_posture": "compliant_zero_hype_research_sandbox",
+        "reversed_governance_posture": "compliant_zero_hype_research_sandbox",
+        "option_order_consistent": true,
+        "epistemic_rigor_score_out_of_5": 4.19,
+        "all_atomic_verifiers_passed": true
+      },
+      {
+        "artefact_id": "INTEGRALITY_WALL_6PAGE_QUANTUM_OPT_NOTE",
+        "title": "6-Page McCormick LP Integrality-Wall & LP-Warm-Started QAOA Technical Note",
+        "atomic_noul_assertions": {
+          "asserts_zero_physical_qpu_shots": 0.97,
+          "reports_gate_g4_classical_floor": 0.97,
+          "keeps_nhs_dcb0129_hazards_open": 0.96,
+          "preserves_human_clinical_and_link_worker_authority": 0.96,
+          "complies_with_noncommercial_open_science_mandate": 0.98,
+          "contains_unverified_supremacy_or_rct_claim": 0.03
+        },
+        "forward_governance_posture": "compliant_zero_hype_research_sandbox",
+        "reversed_governance_posture": "compliant_zero_hype_research_sandbox",
+        "option_order_consistent": true,
+        "epistemic_rigor_score_out_of_5": 4.3,
+        "all_atomic_verifiers_passed": true
+      },
+      {
+        "artefact_id": "FREE_NHS_PCN_CORE20_EQUITY_ALLOCATOR",
+        "title": "Free Open-Access NHS PCN & ICB Core20PLUS5 Neighbourhood Equity Allocator (1,296 PCNs)",
+        "atomic_noul_assertions": {
+          "asserts_zero_physical_qpu_shots": 0.98,
+          "reports_gate_g4_classical_floor": 0.97,
+          "keeps_nhs_dcb0129_hazards_open": 0.92,
+          "preserves_human_clinical_and_link_worker_authority": 0.89,
+          "complies_with_noncommercial_open_science_mandate": 0.98,
+          "contains_unverified_supremacy_or_rct_claim": 0.03
+        },
+        "forward_governance_posture": "compliant_zero_hype_research_sandbox",
+        "reversed_governance_posture": "compliant_zero_hype_research_sandbox",
+        "option_order_consistent": true,
+        "epistemic_rigor_score_out_of_5": 3.9,
+        "all_atomic_verifiers_passed": true
+      }
+    ]
+  },
+  "receipt_sha256": "85db8c6284868286d7319f55fec552b3803ab428306311a0cb3aaeb853a25480"
+}
