@@ -1,0 +1,652 @@
+{
+  "schema_version": "1.0.0",
+  "experiment_id": "qsp_world_model_v01_benchmark",
+  "model_name": "QSP-WM v0.1 (Counterfactual Neighbourhood Co-Production World Model)",
+  "generated_at_utc": "2026-11-13T22:54:16.375708+00:00",
+  "skill_invoked": "antigravity-jev-social-prescribing-quantum",
+  "persona_active": "Aletheia-QSPM",
+  "non_commercial_scientific_mandate": {
+    "commercial_use": false,
+    "scope": "100% Non-Commercial Scientific Research & Free Public-Good NHS Primary-Care Software",
+    "acknowledgment": "This work was supported in part by complimentary access to Google Antigravity and Gemini 4 Argon to accelerate scientific workflows."
+  },
+  "epistemic_and_safety_disclosures": {
+    "typesafe_model_resolved": "jev-1.14.0",
+    "physical_hardware_shots": 0,
+    "total_emulator_shots": 12288,
+    "patient_identifiable_records_used": 0,
+    "gate_g4_classical_pomdp_and_highs_reported_first": true,
+    "nhs_dcb0129_open_hazards": [
+      "H-QSPM-01",
+      "H-QSPM-02",
+      "H-QSPM-03",
+      "H-QSPM-04"
+    ]
+  },
+  "headline_summary": {
+    "layer1_closed_loop_perception_accuracy": 1.0,
+    "layer1_emergent_3step_coproduction_sequence": "WPG",
+    "layer1_option_order_invariance_on_valid_steps": 1.0,
+    "layer2_commutator_frobenius_norm_G_W": 1.73402,
+    "layer2_wpg_noisy_hugr_adherence_prob": 0.9751,
+    "layer2_gpw_noisy_hugr_adherence_prob": 0.05566,
+    "layer2_static_week0_ggg_adherence_prob": 0.70188,
+    "layer2_causal_order_adherence_gain_wpg_minus_gpw": 0.91944,
+    "layer2_hugr_vs_exact_mae": 0.00979,
+    "layer2_order_blind_markov_brier_loss": 0.10799,
+    "layer3_mpc_12var_qaoa_top5_enrichment_vs_lp": 11.197,
+    "layer3_h1_static_highs_milp_ms": 26.37,
+    "layer3_h6_rolling_120var_highs_mip_gap": 2.73909,
+    "epistemic_audit_passed": true,
+    "total_wall_seconds": 20.79
+  },
+  "layer_1_closed_loop_jev_perception": [
+    {
+      "step_id": "WM_STEP0_WEEK0_INTAKE",
+      "expected_gate": "VALID_TRAJECTORY_STEP",
+      "predicted_gate": "VALID_TRAJECTORY_STEP",
+      "expected_action": "stabilize_welfare_fuel_debt",
+      "selected_action": "stabilize_welfare_fuel_debt",
+      "action_code": "W",
+      "choice_fwd": "stabilize_welfare_fuel_debt",
+      "choice_rev": "stabilize_welfare_fuel_debt",
+      "choice_confidence": 0.99,
+      "option_order_invariant": true,
+      "urgent_escalation_prob": 0.07,
+      "companion_valid_prob": 0.96,
+      "material_barrier_prob": 0.98,
+      "sedative_acb_barrier_prob": 0.93,
+      "readiness_score_0_4": 0.07,
+      "contact_fatigue_score_0_4": 1.9,
+      "matched_expected": true
+    },
+    {
+      "step_id": "WM_STEP1_WEEK4_POST_WELFARE",
+      "expected_gate": "VALID_TRAJECTORY_STEP",
+      "predicted_gate": "VALID_TRAJECTORY_STEP",
+      "expected_action": "pharmacist_smr_deprescribing",
+      "selected_action": "pharmacist_smr_deprescribing",
+      "action_code": "P",
+      "choice_fwd": "pharmacist_smr_deprescribing",
+      "choice_rev": "pharmacist_smr_deprescribing",
+      "choice_confidence": 0.99,
+      "option_order_invariant": true,
+      "urgent_escalation_prob": 0.04,
+      "companion_valid_prob": 0.97,
+      "material_barrier_prob": 0.04,
+      "sedative_acb_barrier_prob": 0.97,
+      "readiness_score_0_4": 1.73,
+      "contact_fatigue_score_0_4": 0.4,
+      "matched_expected": true
+    },
+    {
+      "step_id": "WM_STEP2_WEEK8_POST_SMR",
+      "expected_gate": "VALID_TRAJECTORY_STEP",
+      "predicted_gate": "VALID_TRAJECTORY_STEP",
+      "expected_action": "supervised_green_social_hub",
+      "selected_action": "supervised_green_social_hub",
+      "action_code": "G",
+      "choice_fwd": "supervised_green_social_hub",
+      "choice_rev": "supervised_green_social_hub",
+      "choice_confidence": 0.99,
+      "option_order_invariant": true,
+      "urgent_escalation_prob": 0.02,
+      "companion_valid_prob": 0.98,
+      "material_barrier_prob": 0.03,
+      "sedative_acb_barrier_prob": 0.03,
+      "readiness_score_0_4": 2.94,
+      "contact_fatigue_score_0_4": 0.14,
+      "matched_expected": true
+    },
+    {
+      "step_id": "WM_STEP3_WEEK12_CONSOLIDATION",
+      "expected_gate": "VALID_TRAJECTORY_STEP",
+      "predicted_gate": "VALID_TRAJECTORY_STEP",
+      "expected_action": "light_touch_consolidation_rest",
+      "selected_action": "light_touch_consolidation_rest",
+      "action_code": "R",
+      "choice_fwd": "light_touch_consolidation_rest",
+      "choice_rev": "light_touch_consolidation_rest",
+      "choice_confidence": 0.97,
+      "option_order_invariant": true,
+      "urgent_escalation_prob": 0.02,
+      "companion_valid_prob": 0.97,
+      "material_barrier_prob": 0.03,
+      "sedative_acb_barrier_prob": 0.03,
+      "readiness_score_0_4": 3.84,
+      "contact_fatigue_score_0_4": 2.78,
+      "matched_expected": true
+    },
+    {
+      "step_id": "WM_SAFETY_MIDROLLOUT_SYNCOPE",
+      "expected_gate": "URGENT_CLINICAL_ESCALATION",
+      "predicted_gate": "URGENT_CLINICAL_ESCALATION",
+      "expected_action": "URGENT_GP_PHARMACIST_HALT",
+      "selected_action": "URGENT_GP_PHARMACIST_HALT",
+      "action_code": "HALT",
+      "choice_fwd": "pharmacist_smr_deprescribing",
+      "choice_rev": "pharmacist_smr_deprescribing",
+      "choice_confidence": 0.96,
+      "option_order_invariant": true,
+      "urgent_escalation_prob": 0.97,
+      "companion_valid_prob": 0.87,
+      "material_barrier_prob": 0.12,
+      "sedative_acb_barrier_prob": 0.8,
+      "readiness_score_0_4": 0.03,
+      "contact_fatigue_score_0_4": 0.57,
+      "matched_expected": true
+    },
+    {
+      "step_id": "WM_OOS_ADMIN_NOISE",
+      "expected_gate": "REJECT_OUT_OF_SCOPE",
+      "predicted_gate": "REJECT_OUT_OF_SCOPE",
+      "expected_action": "REJECT_NON_SP_NOISE",
+      "selected_action": "REJECT_NON_SP_NOISE",
+      "action_code": "HALT",
+      "choice_fwd": "light_touch_consolidation_rest",
+      "choice_rev": "light_touch_consolidation_rest",
+      "choice_confidence": 0.89,
+      "option_order_invariant": true,
+      "urgent_escalation_prob": 0.02,
+      "companion_valid_prob": 0.09,
+      "material_barrier_prob": 0.02,
+      "sedative_acb_barrier_prob": 0.03,
+      "readiness_score_0_4": 1.86,
+      "contact_fatigue_score_0_4": 0.67,
+      "matched_expected": true
+    }
+  ],
+  "layer_2_noncommuting_hqmm_vs_markov": {
+    "commutators": {
+      "commutator_norm_G_W": 1.73402,
+      "commutator_norm_P_W": 3.3582,
+      "commutator_norm_G_P": 1.89308
+    },
+    "permutations": {
+      "WPG": {
+        "sequence": "WPG",
+        "init_bloch_angles_rad": [
+          2.8578,
+          2.60607,
+          0.28379
+        ],
+        "final_sustained_adherence_prob": 0.98748,
+        "final_barrier_free_thriving_p001": 0.9868,
+        "step_trace": [
+          {
+            "step": 1,
+            "action": "W",
+            "p_material_barrier_active": 0.01193,
+            "p_acb_barrier_active": 0.93,
+            "p_sustained_adherence": 0.05474
+          },
+          {
+            "step": 2,
+            "action": "P",
+            "p_material_barrier_active": 0.01193,
+            "p_acb_barrier_active": 0.01136,
+            "p_sustained_adherence": 0.0958
+          },
+          {
+            "step": 3,
+            "action": "G",
+            "p_material_barrier_active": 0.01193,
+            "p_acb_barrier_active": 0.01136,
+            "p_sustained_adherence": 0.98748
+          }
+        ],
+        "classical_exact_8state_wall_ms": 0.615
+      },
+      "WGP": {
+        "sequence": "WGP",
+        "init_bloch_angles_rad": [
+          2.8578,
+          2.60607,
+          0.28379
+        ],
+        "final_sustained_adherence_prob": 0.34712,
+        "final_barrier_free_thriving_p001": 0.33124,
+        "step_trace": [
+          {
+            "step": 1,
+            "action": "W",
+            "p_material_barrier_active": 0.01193,
+            "p_acb_barrier_active": 0.93,
+            "p_sustained_adherence": 0.05474
+          },
+          {
+            "step": 2,
+            "action": "G",
+            "p_material_barrier_active": 0.01193,
+            "p_acb_barrier_active": 0.93,
+            "p_sustained_adherence": 0.2834
+          },
+          {
+            "step": 3,
+            "action": "P",
+            "p_material_barrier_active": 0.01193,
+            "p_acb_barrier_active": 0.06935,
+            "p_sustained_adherence": 0.34712
+          }
+        ],
+        "classical_exact_8state_wall_ms": 0.3005
+      },
+      "PWG": {
+        "sequence": "PWG",
+        "init_bloch_angles_rad": [
+          2.8578,
+          2.60607,
+          0.28379
+        ],
+        "final_sustained_adherence_prob": 0.34485,
+        "final_barrier_free_thriving_p001": 0.08335,
+        "step_trace": [
+          {
+            "step": 1,
+            "action": "P",
+            "p_material_barrier_active": 0.98,
+            "p_acb_barrier_active": 0.91141,
+            "p_sustained_adherence": 0.04781
+          },
+          {
+            "step": 2,
+            "action": "W",
+            "p_material_barrier_active": 0.0626,
+            "p_acb_barrier_active": 0.91141,
+            "p_sustained_adherence": 0.0958
+          },
+          {
+            "step": 3,
+            "action": "G",
+            "p_material_barrier_active": 0.0626,
+            "p_acb_barrier_active": 0.91141,
+            "p_sustained_adherence": 0.34485
+          }
+        ],
+        "classical_exact_8state_wall_ms": 0.2861
+      },
+      "PGW": {
+        "sequence": "PGW",
+        "init_bloch_angles_rad": [
+          2.8578,
+          2.60607,
+          0.28379
+        ],
+        "final_sustained_adherence_prob": 0.06946,
+        "final_barrier_free_thriving_p001": 0.05894,
+        "step_trace": [
+          {
+            "step": 1,
+            "action": "P",
+            "p_material_barrier_active": 0.98,
+            "p_acb_barrier_active": 0.91141,
+            "p_sustained_adherence": 0.04781
+          },
+          {
+            "step": 2,
+            "action": "G",
+            "p_material_barrier_active": 0.98,
+            "p_acb_barrier_active": 0.91141,
+            "p_sustained_adherence": 0.08178
+          },
+          {
+            "step": 3,
+            "action": "W",
+            "p_material_barrier_active": 0.06596,
+            "p_acb_barrier_active": 0.91141,
+            "p_sustained_adherence": 0.06946
+          }
+        ],
+        "classical_exact_8state_wall_ms": 0.2664
+      },
+      "GWP": {
+        "sequence": "GWP",
+        "init_bloch_angles_rad": [
+          2.8578,
+          2.60607,
+          0.28379
+        ],
+        "final_sustained_adherence_prob": 0.0565,
+        "final_barrier_free_thriving_p001": 0.00026,
+        "step_trace": [
+          {
+            "step": 1,
+            "action": "G",
+            "p_material_barrier_active": 0.98,
+            "p_acb_barrier_active": 0.93,
+            "p_sustained_adherence": 0.0881
+          },
+          {
+            "step": 2,
+            "action": "W",
+            "p_material_barrier_active": 0.02544,
+            "p_acb_barrier_active": 0.93,
+            "p_sustained_adherence": 0.06445
+          },
+          {
+            "step": 3,
+            "action": "P",
+            "p_material_barrier_active": 0.02544,
+            "p_acb_barrier_active": 0.08112,
+            "p_sustained_adherence": 0.0565
+          }
+        ],
+        "classical_exact_8state_wall_ms": 0.2715
+      },
+      "GPW": {
+        "sequence": "GPW",
+        "init_bloch_angles_rad": [
+          2.8578,
+          2.60607,
+          0.28379
+        ],
+        "final_sustained_adherence_prob": 0.0565,
+        "final_barrier_free_thriving_p001": 0.05198,
+        "step_trace": [
+          {
+            "step": 1,
+            "action": "G",
+            "p_material_barrier_active": 0.98,
+            "p_acb_barrier_active": 0.93,
+            "p_sustained_adherence": 0.0881
+          },
+          {
+            "step": 2,
+            "action": "P",
+            "p_material_barrier_active": 0.98,
+            "p_acb_barrier_active": 0.91258,
+            "p_sustained_adherence": 0.06733
+          },
+          {
+            "step": 3,
+            "action": "W",
+            "p_material_barrier_active": 0.04889,
+            "p_acb_barrier_active": 0.91258,
+            "p_sustained_adherence": 0.0565
+          }
+        ],
+        "classical_exact_8state_wall_ms": 0.2611
+      }
+    },
+    "optimal_causal_sequence": "WPG",
+    "optimal_adherence_prob": 0.98748,
+    "worst_premature_sequence": "GWP",
+    "worst_adherence_prob": 0.0565,
+    "causal_order_adherence_swing": 0.93098,
+    "order_blind_additive_markov_pred": 0.31032,
+    "order_blind_permutation_brier_loss": 0.10799
+  },
+  "layer_2_noisy_trapped_ion_hugr_permutations": {
+    "execution_surface": "Quantinuum Guppy 1.0 -> HUGR on Selene HeliosInterface (3-qubit alpha trapped-ion noise)",
+    "physical_hardware_shots": 0,
+    "total_emulator_shots": 12288,
+    "nexus_uploaded_wpg_hugr_ref_id": "82563d26-9424-49df-9995-cb957c64497b",
+    "mean_abs_error_vs_exact_statevector": 0.00979,
+    "noisy_wpg_vs_gpw_adherence_gain": 0.91944,
+    "permutations": {
+      "WPG": {
+        "exact_sustained_adherence_prob": 0.98748,
+        "noisy_hugr_sustained_adherence_prob": 0.9751,
+        "exact_barrier_free_thriving_p001": 0.9868,
+        "noisy_hugr_barrier_free_thriving_p001": 0.96729,
+        "abs_diff_vs_exact": 0.01238,
+        "hugr_sha256": "038ebd02390a17c281ec3638704d4a3b0c46333da0842354e5905cc2b556dfa5",
+        "hugr_bytes": 6184,
+        "shots": 2048
+      },
+      "WGP": {
+        "exact_sustained_adherence_prob": 0.34712,
+        "noisy_hugr_sustained_adherence_prob": 0.32617,
+        "exact_barrier_free_thriving_p001": 0.33124,
+        "noisy_hugr_barrier_free_thriving_p001": 0.30566,
+        "abs_diff_vs_exact": 0.02095,
+        "hugr_sha256": "4fc304dfe80f86fcbbab1fd389b4e94f644d0ff58aa5a4adb2bcb68c671b8ffa",
+        "hugr_bytes": 6170,
+        "shots": 2048
+      },
+      "PWG": {
+        "exact_sustained_adherence_prob": 0.34485,
+        "noisy_hugr_sustained_adherence_prob": 0.32666,
+        "exact_barrier_free_thriving_p001": 0.08335,
+        "noisy_hugr_barrier_free_thriving_p001": 0.07715,
+        "abs_diff_vs_exact": 0.01819,
+        "hugr_sha256": "ee3dbe6af40b3ccca19a8bfb26f0b76df8eae4f670b8c919abdbd731c52207ff",
+        "hugr_bytes": 6188,
+        "shots": 2048
+      },
+      "PGW": {
+        "exact_sustained_adherence_prob": 0.06946,
+        "noisy_hugr_sustained_adherence_prob": 0.07373,
+        "exact_barrier_free_thriving_p001": 0.05894,
+        "noisy_hugr_barrier_free_thriving_p001": 0.05469,
+        "abs_diff_vs_exact": 0.00427,
+        "hugr_sha256": "8fb748182bcba88c4e9eb67127ac8fd2c143c51c633e70f6209ed7a3b56e11c6",
+        "hugr_bytes": 6183,
+        "shots": 2048
+      },
+      "GWP": {
+        "exact_sustained_adherence_prob": 0.0565,
+        "noisy_hugr_sustained_adherence_prob": 0.05859,
+        "exact_barrier_free_thriving_p001": 0.00026,
+        "noisy_hugr_barrier_free_thriving_p001": 0.00635,
+        "abs_diff_vs_exact": 0.00209,
+        "hugr_sha256": "19736d5acd01f5e9e9cbc0d27208f50c586f5d43fa8aa778be25eda1201a0583",
+        "hugr_bytes": 6167,
+        "shots": 2048
+      },
+      "GPW": {
+        "exact_sustained_adherence_prob": 0.0565,
+        "noisy_hugr_sustained_adherence_prob": 0.05566,
+        "exact_barrier_free_thriving_p001": 0.05198,
+        "noisy_hugr_barrier_free_thriving_p001": 0.0459,
+        "abs_diff_vs_exact": 0.00084,
+        "hugr_sha256": "33d817acbdb8f89de4c25642952dc6563b3ed10136591cb9eae9c44c64c6e621",
+        "hugr_bytes": 6169,
+        "shots": 2048
+      }
+    }
+  },
+  "layer_2_static_signposting_ggg_baseline": {
+    "sequence": "GGG",
+    "init_bloch_angles_rad": [
+      2.8578,
+      2.60607,
+      0.28379
+    ],
+    "final_sustained_adherence_prob": 0.70188,
+    "final_barrier_free_thriving_p001": 0.00081,
+    "step_trace": [
+      {
+        "step": 1,
+        "action": "G",
+        "p_material_barrier_active": 0.98,
+        "p_acb_barrier_active": 0.93,
+        "p_sustained_adherence": 0.0881
+      },
+      {
+        "step": 2,
+        "action": "G",
+        "p_material_barrier_active": 0.98,
+        "p_acb_barrier_active": 0.93,
+        "p_sustained_adherence": 0.37565
+      },
+      {
+        "step": 3,
+        "action": "G",
+        "p_material_barrier_active": 0.98,
+        "p_acb_barrier_active": 0.93,
+        "p_sustained_adherence": 0.70188
+      }
+    ],
+    "classical_exact_8state_wall_ms": 0.5025
+  },
+  "layer_3a_spatiotemporal_mpc_12var": {
+    "dispatched_solver": "QUANTUM_LP_WS_BF_QAOA",
+    "cubic_hyperedges_active": 14,
+    "cubic_density_alpha3": 1.1667,
+    "mccormick_and_highs": {
+      "x_lp": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "lp_objective": -1.38,
+      "lp_wall_ms": 12.61,
+      "lp_fractional_var_ratio": 1.0,
+      "x_milp_opt": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "milp_exact_objective": -0.22,
+      "milp_wall_ms": 28.827,
+      "relative_mccormick_lp_gap": 5.2727
+    },
+    "qaoa_vs_rounding": {
+      "exact_ground_energy": -0.22,
+      "lp_independent_rounding_top5pct_prob": 0.05029,
+      "lp_ws_qaoa_p2_top5pct_prob": 0.56313,
+      "top5pct_enrichment_ratio_vs_lp_rounding": 11.197,
+      "lp_ws_qaoa_p2_expected_energy": 2.38094
+    }
+  },
+  "layer_3b_rolling_horizon_scaling_h1_to_h6": [
+    {
+      "n_vars": 20,
+      "cubic_clauses": 1,
+      "alpha_3": 0.05,
+      "lp_wall_ms": 0.98,
+      "lp_fractional_var_ratio": 0.0,
+      "highs_milp_wall_ms": 26.37,
+      "highs_hit_time_limit": false,
+      "highs_remaining_mip_gap": 0.0,
+      "highs_best_integer_obj": 0.0,
+      "ftqc_8_3_2_logical_qubits": 20,
+      "ftqc_8_3_2_code_blocks": 7,
+      "ftqc_8_3_2_physical_qubits_est": 70,
+      "qaoa_p2_two_qubit_gates": 8,
+      "horizon_biweekly_steps": 1,
+      "regime_note": "Static H=1 snapshot (Classical HiGHS MILP sovereign)"
+    },
+    {
+      "n_vars": 40,
+      "cubic_clauses": 100,
+      "alpha_3": 2.5,
+      "lp_wall_ms": 2.73,
+      "lp_fractional_var_ratio": 1.0,
+      "highs_milp_wall_ms": 751.65,
+      "highs_hit_time_limit": true,
+      "highs_remaining_mip_gap": 0.52245,
+      "highs_best_integer_obj": -22.8606,
+      "ftqc_8_3_2_logical_qubits": 40,
+      "ftqc_8_3_2_code_blocks": 14,
+      "ftqc_8_3_2_physical_qubits_est": 140,
+      "qaoa_p2_two_qubit_gates": 800,
+      "horizon_biweekly_steps": 2,
+      "regime_note": "Rolling 4-week causal MPC rollout"
+    },
+    {
+      "n_vars": 60,
+      "cubic_clauses": 150,
+      "alpha_3": 2.5,
+      "lp_wall_ms": 10.25,
+      "lp_fractional_var_ratio": 0.9833,
+      "highs_milp_wall_ms": 752.68,
+      "highs_hit_time_limit": true,
+      "highs_remaining_mip_gap": 0.35281,
+      "highs_best_integer_obj": -44.08,
+      "ftqc_8_3_2_logical_qubits": 60,
+      "ftqc_8_3_2_code_blocks": 20,
+      "ftqc_8_3_2_physical_qubits_est": 200,
+      "qaoa_p2_two_qubit_gates": 1200,
+      "horizon_biweekly_steps": 3,
+      "regime_note": "Rolling 6-week causal MPC rollout"
+    },
+    {
+      "n_vars": 80,
+      "cubic_clauses": 200,
+      "alpha_3": 2.5,
+      "lp_wall_ms": 5.28,
+      "lp_fractional_var_ratio": 0.975,
+      "highs_milp_wall_ms": 752.44,
+      "highs_hit_time_limit": true,
+      "highs_remaining_mip_gap": 0.83589,
+      "highs_best_integer_obj": -45.2996,
+      "ftqc_8_3_2_logical_qubits": 80,
+      "ftqc_8_3_2_code_blocks": 27,
+      "ftqc_8_3_2_physical_qubits_est": 270,
+      "qaoa_p2_two_qubit_gates": 1600,
+      "horizon_biweekly_steps": 4,
+      "regime_note": "Rolling 8-week causal MPC rollout"
+    },
+    {
+      "n_vars": 100,
+      "cubic_clauses": 250,
+      "alpha_3": 2.5,
+      "lp_wall_ms": 7.1,
+      "lp_fractional_var_ratio": 0.99,
+      "highs_milp_wall_ms": 753.89,
+      "highs_hit_time_limit": true,
+      "highs_remaining_mip_gap": 1.26538,
+      "highs_best_integer_obj": -43.5063,
+      "ftqc_8_3_2_logical_qubits": 100,
+      "ftqc_8_3_2_code_blocks": 34,
+      "ftqc_8_3_2_physical_qubits_est": 340,
+      "qaoa_p2_two_qubit_gates": 2000,
+      "horizon_biweekly_steps": 5,
+      "regime_note": "Rolling 10-week causal MPC rollout"
+    },
+    {
+      "n_vars": 120,
+      "cubic_clauses": 300,
+      "alpha_3": 2.5,
+      "lp_wall_ms": 10.59,
+      "lp_fractional_var_ratio": 0.975,
+      "highs_milp_wall_ms": 755.26,
+      "highs_hit_time_limit": true,
+      "highs_remaining_mip_gap": 2.73909,
+      "highs_best_integer_obj": -34.4563,
+      "ftqc_8_3_2_logical_qubits": 120,
+      "ftqc_8_3_2_code_blocks": 40,
+      "ftqc_8_3_2_physical_qubits_est": 400,
+      "qaoa_p2_two_qubit_gates": 2400,
+      "horizon_biweekly_steps": 6,
+      "regime_note": "Rolling 12-week causal MPC rollout"
+    }
+  ],
+  "epistemic_governance_audit": {
+    "atomic_noul_assertions": {
+      "asserts_zero_physical_qpu_shots": 0.98,
+      "reports_gate_g4_classical_floor": 0.91,
+      "keeps_nhs_dcb0129_hazards_open": 0.95,
+      "preserves_human_clinical_and_link_worker_authority": 0.82,
+      "complies_with_noncommercial_open_science_mandate": 0.99,
+      "contains_unverified_supremacy_or_rct_claim": 0.03
+    },
+    "forward_governance_posture": "compliant_zero_hype_research_sandbox",
+    "reversed_governance_posture": "compliant_zero_hype_research_sandbox",
+    "option_order_consistent": true,
+    "epistemic_rigor_score_out_of_5": 3.88,
+    "all_atomic_verifiers_passed": true
+  },
+  "figure_path": "figures/fig_qsp_world_model_v01.png",
+  "receipt_sha256": "87b17c6915e274c0489e5b2dba7a088405c372fcab0c4203bd52f765006d3019"
+}

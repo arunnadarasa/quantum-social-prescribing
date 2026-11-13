@@ -1988,6 +1988,13 @@
   },
   "receipts_summary": [
     {
+      "file": "qsp_world_model_v01_receipt.json",
+      "sha256": "87b17c6915e274c0489e5b2dba7a088405c372fcab0c4203bd52f765006d3019",
+      "platforms": "Counterfactual Quantum Social Prescribing World Model (`QSP-WM v0.1`) via `antigravity-jev-social-prescribing-quantum` (`jev-1.14.0` closed-loop perception) + 6 Non-Commuting 3q Guppy 1.0 -> HUGR Permutations (12,288 Selene shots + Nexus HUGR 82563d26) + 4x3 Spatiotemporal MPC & H=1..6 Horizon Wall",
+      "metrics": "Layer 1 (E_Jev): 6/6 (100%) closed-loop perception & 100% option-order invariance (emergent W->P->G policy); Layer 2 (T_HQMM): ||[U_G, U_W]||_F = 1.734, noisy 3q HUGR WPG 97.51% (exact 98.75%) vs premature GPW 5.57% (+91.94 pp causal order gain, MAE=0.00979), Order-Blind Additive Markov flat 31.03% (Brier=0.1080); Layer 3 (P_MPC): 4x3 MPC 56.31% Top-5% vs 5.03% LP rounding (11.20x), static H=1 HiGHS 26.37 ms (0% gap) vs H=6 (V=120) 273.9% MIP gap (40 [[8,3,2]] blocks)",
+      "floor": "0.26\u20130.62 ms Exact 8-State POMDP / 26.37 ms H=1 HiGHS"
+    },
+    {
       "file": "jev_10_quantum_sp_use_cases_receipt.json",
       "sha256": "0a4965578521928ccddcb754d2cc9d8f536a1958cc6dee0f840e2ce011a461d5",
       "platforms": "10 NHS Social Prescribing Use Cases (`UC-01..UC-10`) via `antigravity-jev-social-prescribing-quantum` (`jev-1.14.0`) + 5 Guppy 1.0 -> HUGR Circuits (10,240 Selene alpha-noise shots) + HiGHS MILP vs LP-WS-BF-QAOA + [[8,3,2]] Crossover",
