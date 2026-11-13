@@ -1988,6 +1988,13 @@
   },
   "receipts_summary": [
     {
+      "file": "jev_10_quantum_sp_use_cases_receipt.json",
+      "sha256": "0a4965578521928ccddcb754d2cc9d8f536a1958cc6dee0f840e2ce011a461d5",
+      "platforms": "10 NHS Social Prescribing Use Cases (`UC-01..UC-10`) via `antigravity-jev-social-prescribing-quantum` (`jev-1.14.0`) + 5 Guppy 1.0 -> HUGR Circuits (10,240 Selene alpha-noise shots) + HiGHS MILP vs LP-WS-BF-QAOA + [[8,3,2]] Crossover",
+      "metrics": "Pillar I (UC-01..05): 8.63x mean p=2 LP-WS-QAOA top-5% enrichment on frustrated k=3 HUBOs (LP frac 0.80\u20131.00) vs 5.84 ms classical HiGHS MILP on pairwise UC-05a; Pillar II (UC-06..08): HUGR coherence P(00)=0.9893 vs 0.3643 collapse, 100% Zeno N* in {2,4,6} cadence match (noisy 2q HUGR N=6: 57.18% vs exact 57.69%), 100% H-QSPM-01 & Companion-Noul shield; Pillar III (UC-09..10): N=16 cold-start 4q Quantum Kernel 93.75% (Jev-8D 100%) vs TF-IDF+LR 50.0%, N>=48 HiGHS 0.75s MIP-gap wall (64.4%\u2013249.1%)",
+      "floor": "5.84 ms HiGHS MILP (UC-05a) / TF-IDF 50.0% (UC-09)"
+    },
+    {
       "file": "jev_quantum_coproduction_pipeline_receipt.json",
       "sha256": "85db8c6284868286d7319f55fec552b3803ab428306311a0cb3aaeb853a25480",
       "platforms": "TypeSafe System One (`jev-1.14.0` Speculative Fan-Out, Companion Noul, Noul-Screen) + Guppy 1.0 -> HUGR (Selene HeliosInterface + Nexus Cloud UUIDs 8fd8d08e & 7804f985) + HiGHS MILP vs LP-WS-BF-QAOA Dispatcher",

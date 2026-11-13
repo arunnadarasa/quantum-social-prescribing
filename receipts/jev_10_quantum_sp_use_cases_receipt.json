@@ -1,0 +1,1470 @@
+{
+  "schema_version": "1.0.0",
+  "experiment_id": "jev_10_quantum_sp_use_cases_roadmap",
+  "generated_at_utc": "2026-11-13T08:25:28.980290+00:00",
+  "skill_invoked": "antigravity-jev-social-prescribing-quantum",
+  "persona_active": "Aletheia-QSPM",
+  "non_commercial_scientific_mandate": {
+    "commercial_use": false,
+    "scope": "100% Non-Commercial Scientific Research & Free Public-Good NHS Primary-Care Software",
+    "acknowledgment": "This work was supported in part by complimentary access to Google Antigravity and Gemini 4 Argon to accelerate scientific workflows."
+  },
+  "epistemic_and_safety_disclosures": {
+    "typesafe_model_resolved": "jev-1.14.0",
+    "physical_hardware_shots": 0,
+    "total_emulator_shots": 10240,
+    "patient_identifiable_records_used": 0,
+    "centralized_questions_registry_enforced": true,
+    "zero_molecular_or_wetlab_offscope_metaphors": true,
+    "nhs_dcb0129_open_hazards": [
+      "H-QSPM-01",
+      "H-QSPM-02",
+      "H-QSPM-03",
+      "H-QSPM-04"
+    ]
+  },
+  "headline_summary": {
+    "use_cases_completed": 10,
+    "pillar_1_frustrated_hubo_mean_qaoa_top5_enrichment": 8.628,
+    "pillar_1_uc05a_pairwise_classical_highs_ms": 5.838,
+    "pillar_2_uc06_hugr_coherence_delta_p00": 0.625,
+    "pillar_2_uc07_zeno_cadence_accuracy": 1.0,
+    "pillar_2_uc08_h_qspm_01_safety_recall": 1.0,
+    "pillar_2_uc08_companion_noul_rejection_rate": 1.0,
+    "pillar_3_uc09_coldstart_4q_quantum_kernel_acc": 0.9375,
+    "pillar_3_uc09_coldstart_tfidf_logreg_acc": 0.5,
+    "pillar_3_uc10_epistemic_audit_passed": true,
+    "total_wall_seconds": 19.47
+  },
+  "quantum_hugr_execution": {
+    "execution_surface": "Quantinuum Guppy 1.0 -> HUGR on Selene HeliosInterface (alpha trapped-ion error model)",
+    "physical_hardware_shots": 0,
+    "total_emulator_shots": 10240,
+    "nexus_cloud_jobs_tracked": [],
+    "uc06_superposition_hugr": {
+      "coherent_return_p00": 0.98926,
+      "premature_collapse_return_p00": 0.36426,
+      "coherence_gain_delta_p00": 0.625,
+      "hugr_sha256": "fb006c8fedf4b4883ad7f512d060c3b7f70ab29f56a188b7469875feec11df64",
+      "hugr_bytes": 7181,
+      "shots": 2048
+    },
+    "uc07_zeno_comb_hugr": {
+      "N=1": {
+        "noisy_hugr_retention_prob": 0.19775,
+        "exact_noiseless_retention_prob": 0.18693,
+        "hugr_sha256": "996f00bb89c14d26dd795fb1b28668e18776e61bea1f0195b05cd870693f520f",
+        "hugr_bytes": 3946,
+        "shots": 2048
+      },
+      "N=6": {
+        "noisy_hugr_retention_prob": 0.57178,
+        "exact_noiseless_retention_prob": 0.57685,
+        "hugr_sha256": "54f42b7d2a098f76b7211ba79647a3974381dea41c6d0d523c95a53a3dc02ced",
+        "hugr_bytes": 7288,
+        "shots": 2048
+      },
+      "N=12": {
+        "noisy_hugr_retention_prob": 0.4458,
+        "exact_noiseless_retention_prob": 0.46161,
+        "hugr_sha256": "ffdc924a60117fe890d05fc324495eaf03c8a0625ddc312cb55898a25c5c9968",
+        "hugr_bytes": 10523,
+        "shots": 2048
+      }
+    },
+    "uc09_coldstart_4q_vqc_hugr": {
+      "pauli_mae_vs_exact_statevector": 0.0192,
+      "exact_pauli_10d": [
+        0.3078,
+        0.052,
+        0.3474,
+        -0.0185,
+        -0.0218,
+        0.6035,
+        -0.0835,
+        -0.0585,
+        0.6721,
+        -0.0418
+      ],
+      "noisy_hugr_pauli_10d": [
+        0.3447,
+        0.0186,
+        0.3623,
+        -0.0547,
+        -0.0254,
+        0.6211,
+        -0.0986,
+        -0.0762,
+        0.6729,
+        -0.0576
+      ],
+      "hugr_sha256": "44210cd26667879290a73aa27d678bdf52c9c695b07ae8574100d8d6b6c760bb",
+      "hugr_bytes": 7677,
+      "shots": 2048
+    }
+  },
+  "pillar_1_hubo_details": {
+    "UC-01": {
+      "noul_screen_accuracy": 0.9286,
+      "candidates_evaluated": 14,
+      "dispatch": {
+        "dispatched_solver": "QUANTUM_LP_WS_BF_QAOA",
+        "cubic_hyperedges_active": 11,
+        "cubic_density_alpha3": 1.1,
+        "mccormick_and_highs": {
+          "x_lp": [
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5
+          ],
+          "lp_objective": -0.85,
+          "lp_wall_ms": 12.059,
+          "lp_fractional_var_ratio": 1.0,
+          "x_milp_opt": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "milp_exact_objective": 0.0,
+          "milp_wall_ms": 21.086,
+          "relative_mccormick_lp_gap": 850000.0
+        },
+        "qaoa_vs_rounding": {
+          "exact_ground_energy": 0.0,
+          "lp_independent_rounding_top5pct_prob": 0.0498,
+          "lp_ws_qaoa_p2_top5pct_prob": 0.55064,
+          "top5pct_enrichment_ratio_vs_lp_rounding": 11.056,
+          "lp_ws_qaoa_p2_expected_energy": 1.92143
+        }
+      },
+      "screen_details": [
+        {
+          "triple_id": "UC-01_SYN_00",
+          "noul_prob": 0.8,
+          "active": true,
+          "expected_active": true
+        },
+        {
+          "triple_id": "UC-01_SYN_01",
+          "noul_prob": 0.73,
+          "active": true,
+          "expected_active": true
+        },
+        {
+          "triple_id": "UC-01_SYN_02",
+          "noul_prob": 0.21,
+          "active": false,
+          "expected_active": true
+        },
+        {
+          "triple_id": "UC-01_SYN_03",
+          "noul_prob": 0.87,
+          "active": true,
+          "expected_active": true
+        },
+        {
+          "triple_id": "UC-01_SYN_04",
+          "noul_prob": 0.59,
+          "active": true,
+          "expected_active": true
+        },
+        {
+          "triple_id": "UC-01_SYN_05",
+          "noul_prob": 0.72,
+          "active": true,
+          "expected_active": true
+        },
+        {
+          "triple_id": "UC-01_CON_00",
+          "noul_prob": 0.97,
+          "active": true,
+          "expected_active": true
+        },
+        {
+          "triple_id": "UC-01_CON_01",
+          "noul_prob": 0.97,
+          "active": true,
+          "expected_active": true
+        },
+        {
+          "triple_id": "UC-01_CON_02",
+          "noul_prob": 0.9,
+          "active": true,
+          "expected_active": true
+        },
+        {
+          "triple_id": "UC-01_CON_03",
+          "noul_prob": 0.84,
+          "active": true,
+          "expected_active": true
+        },
+        {
+          "triple_id": "UC-01_CON_04",
+          "noul_prob": 0.72,
+          "active": true,
+          "expected_active": true
+        },
+        {
+          "triple_id": "UC-01_CON_05",
+          "noul_prob": 0.94,
+          "active": true,
+          "expected_active": true
+        },
+        {
+          "triple_id": "UC-01_BENIGN_00",
+          "noul_prob": 0.04,
+          "active": false,
+          "expected_active": false
+        },
+        {
+          "triple_id": "UC-01_BENIGN_01",
+          "noul_prob": 0.04,
+          "active": false,
+          "expected_active": false
+        }
+      ]
+    },
+    "UC-02": {
+      "noul_screen_accuracy": 0.9286,
+      "candidates_evaluated": 14,
+      "dispatch": {
+        "dispatched_solver": "QUANTUM_LP_WS_BF_QAOA",
+        "cubic_hyperedges_active": 11,
+        "cubic_density_alpha3": 1.1,
+        "mccormick_and_highs": {
+          "x_lp": [
+            0.6667,
+            0.6667,
+            0.6667,
+            0.6667,
+            0.6667,
+            0.6667,
+            0.0,
+            0.6667,
+            0.6667,
+            0.6667
+          ],
+          "lp_objective": -1.64,
+          "lp_wall_ms": 1.36,
+          "lp_fractional_var_ratio": 0.9,
+          "x_milp_opt": [
+            0,
+            1,
+            1,
+            0,
+            1,
+            1,
+            0,
+            1,
+            0,
+            1
+          ],
+          "milp_exact_objective": -0.49,
+          "milp_wall_ms": 19.139,
+          "relative_mccormick_lp_gap": 2.3469
+        },
+        "qaoa_vs_rounding": {
+          "exact_ground_energy": -0.49,
+          "lp_independent_rounding_top5pct_prob": 0.04107,
+          "lp_ws_qaoa_p2_top5pct_prob": 0.486,
+          "top5pct_enrichment_ratio_vs_lp_rounding": 11.834,
+          "lp_ws_qaoa_p2_expected_energy": 2.18116
+        }
+      },
+      "screen_details": [
+        {
+          "triple_id": "UC-02_SYN_00",
+          "noul_prob": 0.88,
+          "active": true,
+          "expected_active": true
+        },
+        {
+          "triple_id": "UC-02_SYN_01",
+          "noul_prob": 0.65,
+          "active": true,
+          "expected_active": true
+        },
+        {
+          "triple_id": "UC-02_SYN_02",
+          "noul_prob": 0.76,
+          "active": true,
+          "expected_active": true
+        },
+        {
+          "triple_id": "UC-02_SYN_03",
+          "noul_prob": 0.65,
+          "active": true,
+          "expected_active": true
+        },
+        {
+          "triple_id": "UC-02_SYN_04",
+          "noul_prob": 0.22,
+          "active": false,
+          "expected_active": true
+        },
+        {
+          "triple_id": "UC-02_SYN_05",
+          "noul_prob": 0.87,
+          "active": true,
+          "expected_active": true
+        },
+        {
+          "triple_id": "UC-02_CON_00",
+          "noul_prob": 0.95,
+          "active": true,
+          "expected_active": true
+        },
+        {
+          "triple_id": "UC-02_CON_01",
+          "noul_prob": 0.86,
+          "active": true,
+          "expected_active": true
+        },
+        {
+          "triple_id": "UC-02_CON_02",
+          "noul_prob": 0.9,
+          "active": true,
+          "expected_active": true
+        },
+        {
+          "triple_id": "UC-02_CON_03",
+          "noul_prob": 0.81,
+          "active": true,
+          "expected_active": true
+        },
+        {
+          "triple_id": "UC-02_CON_04",
+          "noul_prob": 0.87,
+          "active": true,
+          "expected_active": true
+        },
+        {
+          "triple_id": "UC-02_CON_05",
+          "noul_prob": 0.92,
+          "active": true,
+          "expected_active": true
+        },
+        {
+          "triple_id": "UC-02_BENIGN_00",
+          "noul_prob": 0.03,
+          "active": false,
+          "expected_active": false
+        },
+        {
+          "triple_id": "UC-02_BENIGN_01",
+          "noul_prob": 0.04,
+          "active": false,
+          "expected_active": false
+        }
+      ]
+    },
+    "UC-03": {
+      "noul_screen_accuracy": 0.9231,
+      "candidates_evaluated": 13,
+      "dispatch": {
+        "dispatched_solver": "QUANTUM_LP_WS_BF_QAOA",
+        "cubic_hyperedges_active": 11,
+        "cubic_density_alpha3": 1.1,
+        "mccormick_and_highs": {
+          "x_lp": [
+            0.6667,
+            0.6667,
+            0.6667,
+            0.6667,
+            0.6667,
+            0.0,
+            0.6667,
+            0.6667,
+            0.6667,
+            0.6667
+          ],
+          "lp_objective": -1.52333,
+          "lp_wall_ms": 0.998,
+          "lp_fractional_var_ratio": 0.9,
+          "x_milp_opt": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "milp_exact_objective": 0.0,
+          "milp_wall_ms": 8.081,
+          "relative_mccormick_lp_gap": 1523333.3333
+        },
+        "qaoa_vs_rounding": {
+          "exact_ground_energy": 0.0,
+          "lp_independent_rounding_top5pct_prob": 0.04671,
+          "lp_ws_qaoa_p2_top5pct_prob": 0.4574,
+          "top5pct_enrichment_ratio_vs_lp_rounding": 9.793,
+          "lp_ws_qaoa_p2_expected_energy": 2.41366
+        }
+      },
+      "screen_details": [
+        {
+          "triple_id": "UC-03_SYN_00",
+          "noul_prob": 0.79,
+          "active": true,
+          "expected_active": true
+        },
+        {
+          "triple_id": "UC-03_SYN_01",
+          "noul_prob": 0.56,
+          "active": true,
+          "expected_active": true
+        },
+        {
+          "triple_id": "UC-03_SYN_02",
+          "noul_prob": 0.31,
+          "active": false,
+          "expected_active": true
+        },
+        {
+          "triple_id": "UC-03_SYN_03",
+          "noul_prob": 0.73,
+          "active": true,
+          "expected_active": true
+        },
+        {
+          "triple_id": "UC-03_SYN_04",
+          "noul_prob": 0.57,
+          "active": true,
+          "expected_active": true
+        },
+        {
+          "triple_id": "UC-03_SYN_05",
+          "noul_prob": 0.75,
+          "active": true,
+          "expected_active": true
+        },
+        {
+          "triple_id": "UC-03_CON_00",
+          "noul_prob": 0.9,
+          "active": true,
+          "expected_active": true
+        },
+        {
+          "triple_id": "UC-03_CON_01",
+          "noul_prob": 0.71,
+          "active": true,
+          "expected_active": true
+        },
+        {
+          "triple_id": "UC-03_CON_02",
+          "noul_prob": 0.74,
+          "active": true,
+          "expected_active": true
+        },
+        {
+          "triple_id": "UC-03_CON_03",
+          "noul_prob": 0.82,
+          "active": true,
+          "expected_active": true
+        },
+        {
+          "triple_id": "UC-03_CON_04",
+          "noul_prob": 0.7,
+          "active": true,
+          "expected_active": true
+        },
+        {
+          "triple_id": "UC-03_CON_05",
+          "noul_prob": 0.86,
+          "active": true,
+          "expected_active": true
+        },
+        {
+          "triple_id": "UC-03_BENIGN_00",
+          "noul_prob": 0.04,
+          "active": false,
+          "expected_active": false
+        }
+      ]
+    },
+    "UC-04": {
+      "noul_screen_accuracy": 0.8462,
+      "candidates_evaluated": 13,
+      "dispatch": {
+        "dispatched_solver": "QUANTUM_LP_WS_BF_QAOA",
+        "cubic_hyperedges_active": 10,
+        "cubic_density_alpha3": 1.0,
+        "mccormick_and_highs": {
+          "x_lp": [
+            0.6667,
+            0.6667,
+            0.6667,
+            0.6667,
+            0.6667,
+            0.6667,
+            0.6667,
+            0.0,
+            0.6667,
+            0.0
+          ],
+          "lp_objective": -0.94667,
+          "lp_wall_ms": 0.923,
+          "lp_fractional_var_ratio": 0.8,
+          "x_milp_opt": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "milp_exact_objective": 0.0,
+          "milp_wall_ms": 7.069,
+          "relative_mccormick_lp_gap": 946666.6667
+        },
+        "qaoa_vs_rounding": {
+          "exact_ground_energy": 0.0,
+          "lp_independent_rounding_top5pct_prob": 0.15925,
+          "lp_ws_qaoa_p2_top5pct_prob": 0.69356,
+          "top5pct_enrichment_ratio_vs_lp_rounding": 4.355,
+          "lp_ws_qaoa_p2_expected_energy": 1.61622
+        }
+      },
+      "screen_details": [
+        {
+          "triple_id": "UC-04_SYN_00",
+          "noul_prob": 0.58,
+          "active": true,
+          "expected_active": true
+        },
+        {
+          "triple_id": "UC-04_SYN_01",
+          "noul_prob": 0.56,
+          "active": true,
+          "expected_active": true
+        },
+        {
+          "triple_id": "UC-04_SYN_02",
+          "noul_prob": 0.6,
+          "active": true,
+          "expected_active": true
+        },
+        {
+          "triple_id": "UC-04_SYN_03",
+          "noul_prob": 0.54,
+          "active": false,
+          "expected_active": true
+        },
+        {
+          "triple_id": "UC-04_SYN_04",
+          "noul_prob": 0.32,
+          "active": false,
+          "expected_active": true
+        },
+        {
+          "triple_id": "UC-04_SYN_05",
+          "noul_prob": 0.64,
+          "active": true,
+          "expected_active": true
+        },
+        {
+          "triple_id": "UC-04_CON_00",
+          "noul_prob": 0.87,
+          "active": true,
+          "expected_active": true
+        },
+        {
+          "triple_id": "UC-04_CON_01",
+          "noul_prob": 0.72,
+          "active": true,
+          "expected_active": true
+        },
+        {
+          "triple_id": "UC-04_CON_02",
+          "noul_prob": 0.75,
+          "active": true,
+          "expected_active": true
+        },
+        {
+          "triple_id": "UC-04_CON_03",
+          "noul_prob": 0.7,
+          "active": true,
+          "expected_active": true
+        },
+        {
+          "triple_id": "UC-04_CON_04",
+          "noul_prob": 0.8,
+          "active": true,
+          "expected_active": true
+        },
+        {
+          "triple_id": "UC-04_CON_05",
+          "noul_prob": 0.68,
+          "active": true,
+          "expected_active": true
+        },
+        {
+          "triple_id": "UC-04_BENIGN_00",
+          "noul_prob": 0.05,
+          "active": false,
+          "expected_active": false
+        }
+      ]
+    },
+    "UC-05a": {
+      "noul_screen_accuracy": 0.8,
+      "candidates_evaluated": 5,
+      "dispatch": {
+        "dispatched_solver": "CLASSICAL_HIGHS_MILP",
+        "cubic_hyperedges_active": 0,
+        "cubic_density_alpha3": 0.0,
+        "mccormick_and_highs": {
+          "x_lp": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "lp_objective": -7.36,
+          "lp_wall_ms": 0.772,
+          "lp_fractional_var_ratio": 0.0,
+          "x_milp_opt": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "milp_exact_objective": -7.36,
+          "milp_wall_ms": 5.838,
+          "relative_mccormick_lp_gap": 0.0
+        },
+        "qaoa_vs_rounding": null
+      },
+      "screen_details": [
+        {
+          "triple_id": "UC-05a_SYN_00",
+          "noul_prob": 0.44,
+          "active": false,
+          "expected_active": true
+        },
+        {
+          "triple_id": "UC-05a_BENIGN_00",
+          "noul_prob": 0.05,
+          "active": false,
+          "expected_active": false
+        },
+        {
+          "triple_id": "UC-05a_BENIGN_01",
+          "noul_prob": 0.05,
+          "active": false,
+          "expected_active": false
+        },
+        {
+          "triple_id": "UC-05a_BENIGN_02",
+          "noul_prob": 0.03,
+          "active": false,
+          "expected_active": false
+        },
+        {
+          "triple_id": "UC-05a_BENIGN_03",
+          "noul_prob": 0.05,
+          "active": false,
+          "expected_active": false
+        }
+      ]
+    },
+    "UC-05b": {
+      "noul_screen_accuracy": 1.0,
+      "candidates_evaluated": 13,
+      "dispatch": {
+        "dispatched_solver": "QUANTUM_LP_WS_BF_QAOA",
+        "cubic_hyperedges_active": 12,
+        "cubic_density_alpha3": 1.2,
+        "mccormick_and_highs": {
+          "x_lp": [
+            0.6667,
+            0.6667,
+            0.6667,
+            0.6667,
+            0.6667,
+            0.3333,
+            0.6667,
+            0.6667,
+            0.3333,
+            0.6667
+          ],
+          "lp_objective": -2.42333,
+          "lp_wall_ms": 0.839,
+          "lp_fractional_var_ratio": 1.0,
+          "x_milp_opt": [
+            0,
+            0,
+            1,
+            1,
+            1,
+            0,
+            1,
+            1,
+            0,
+            1
+          ],
+          "milp_exact_objective": -0.77,
+          "milp_wall_ms": 10.471,
+          "relative_mccormick_lp_gap": 2.1472
+        },
+        "qaoa_vs_rounding": {
+          "exact_ground_energy": -0.77,
+          "lp_independent_rounding_top5pct_prob": 0.10194,
+          "lp_ws_qaoa_p2_top5pct_prob": 0.62177,
+          "top5pct_enrichment_ratio_vs_lp_rounding": 6.1,
+          "lp_ws_qaoa_p2_expected_energy": 1.31199
+        }
+      },
+      "screen_details": [
+        {
+          "triple_id": "UC-05b_SYN_00",
+          "noul_prob": 0.81,
+          "active": true,
+          "expected_active": true
+        },
+        {
+          "triple_id": "UC-05b_SYN_01",
+          "noul_prob": 0.81,
+          "active": true,
+          "expected_active": true
+        },
+        {
+          "triple_id": "UC-05b_SYN_02",
+          "noul_prob": 0.77,
+          "active": true,
+          "expected_active": true
+        },
+        {
+          "triple_id": "UC-05b_SYN_03",
+          "noul_prob": 0.6,
+          "active": true,
+          "expected_active": true
+        },
+        {
+          "triple_id": "UC-05b_SYN_04",
+          "noul_prob": 0.8,
+          "active": true,
+          "expected_active": true
+        },
+        {
+          "triple_id": "UC-05b_SYN_05",
+          "noul_prob": 0.73,
+          "active": true,
+          "expected_active": true
+        },
+        {
+          "triple_id": "UC-05b_CON_00",
+          "noul_prob": 0.88,
+          "active": true,
+          "expected_active": true
+        },
+        {
+          "triple_id": "UC-05b_CON_01",
+          "noul_prob": 0.82,
+          "active": true,
+          "expected_active": true
+        },
+        {
+          "triple_id": "UC-05b_CON_02",
+          "noul_prob": 0.81,
+          "active": true,
+          "expected_active": true
+        },
+        {
+          "triple_id": "UC-05b_CON_03",
+          "noul_prob": 0.79,
+          "active": true,
+          "expected_active": true
+        },
+        {
+          "triple_id": "UC-05b_CON_04",
+          "noul_prob": 0.82,
+          "active": true,
+          "expected_active": true
+        },
+        {
+          "triple_id": "UC-05b_CON_05",
+          "noul_prob": 0.81,
+          "active": true,
+          "expected_active": true
+        },
+        {
+          "triple_id": "UC-05b_BENIGN_00",
+          "noul_prob": 0.04,
+          "active": false,
+          "expected_active": false
+        }
+      ]
+    }
+  },
+  "pillar_1_uc03_discharge_cases": [
+    {
+      "case_id": "DISC_3WAY_01",
+      "expected_choice": "synchronized_3way_home_first_bundle",
+      "forward_choice": "synchronized_3way_home_first_bundle",
+      "reversed_choice": "synchronized_3way_home_first_bundle",
+      "choice_confidence": 1.0,
+      "medically_fit_prob": 0.92,
+      "sync_3way_prob": 0.83,
+      "readmission_risk_score_0_4": 3.01,
+      "matched_expected": true,
+      "option_order_invariant": true
+    },
+    {
+      "case_id": "DISC_SINGLE_02",
+      "expected_choice": "standard_single_service_signpost",
+      "forward_choice": "standard_single_service_signpost",
+      "reversed_choice": "standard_single_service_signpost",
+      "choice_confidence": 1.0,
+      "medically_fit_prob": 0.31,
+      "sync_3way_prob": 0.04,
+      "readmission_risk_score_0_4": 0.09,
+      "matched_expected": true,
+      "option_order_invariant": true
+    },
+    {
+      "case_id": "DISC_HOLD_03",
+      "expected_choice": "hold_inpatient_medical_stabilization",
+      "forward_choice": "hold_inpatient_medical_stabilization",
+      "reversed_choice": "hold_inpatient_medical_stabilization",
+      "choice_confidence": 1.0,
+      "medically_fit_prob": 0.02,
+      "sync_3way_prob": 0.07,
+      "readmission_risk_score_0_4": 3.61,
+      "matched_expected": true,
+      "option_order_invariant": true
+    }
+  ],
+  "use_cases": [
+    {
+      "use_case_id": "UC-01",
+      "pillar": "Pillar I: 3-Body Frustrated HUBO Integrality Wall",
+      "title": "Community Pharmacy SMR Deprescribing x Supervised Green Walk x Accessible Transport",
+      "nhs_clinical_context": "Older primary-care residents on high anticholinergic/sedative load (ACB >= 3, DAPB4066 SMR) require synchronized pharmacist taper before outdoor walking plus scarce accessible minibus seats.",
+      "gate_g4_classical_floor": "Exact McCormick LP + HiGHS MILP reported first; McCormick LP stalls at fractional x^LP ~ 0.48 (>=80% fractional variables) when 3-way synergies (-K_ijk) compete with minibus/sedative clashes (+K_ijk).",
+      "quantum_advantage_mechanism": "Jev 1.14 Noul-Screen compiles MDT notes into k=3 HUBO -> p=2 LP-Warm-Started Bias-Field QAOA (theta_q = 2*arcsin(sqrt(x_q^LP))) concentrates sampling mass onto top-5% integer co-production schedules.",
+      "dcb0129_open_hazards": [
+        "H-QSPM-01",
+        "H-QSPM-03"
+      ],
+      "live_metrics": {
+        "noul_screen_accuracy": 0.9286,
+        "dispatched_solver": "QUANTUM_LP_WS_BF_QAOA",
+        "cubic_density_alpha3": 1.1,
+        "lp_fractional_var_ratio": 1.0,
+        "highs_milp_wall_ms": 21.086,
+        "qaoa_p2_top5pct_enrichment_vs_lp_rounding": 11.056
+      }
+    },
+    {
+      "use_case_id": "UC-02",
+      "pillar": "Pillar I: 3-Body Frustrated HUBO Integrality Wall",
+      "title": "Core20PLUS5 Winter Fuel-Poverty Grant x Damp/Mould Housing x Respiratory Rehab Bundle",
+      "nhs_clinical_context": "IMD Decile 1-2 COPD/asthma cohorts suffer winter A&E readmissions if pulmonary rehab is offered without simultaneous emergency heating credit and damp/mould remediation under seasonal budget caps.",
+      "gate_g4_classical_floor": "Pairwise approximations miss irreducible 3-way winter bundle value; McCormick LP exhibits high integrality gap while independent Bernoulli(x^LP) rounding rarely samples conflict-free bundles.",
+      "quantum_advantage_mechanism": "Jev Core20 Score/Noul + Noul-Screen 3-body hypergraph extraction -> LP-WS-BF-QAOA coherent phase interference across frustrated winter resource hyperedges.",
+      "dcb0129_open_hazards": [
+        "H-QSPM-02",
+        "H-QSPM-03"
+      ],
+      "live_metrics": {
+        "noul_screen_accuracy": 0.9286,
+        "dispatched_solver": "QUANTUM_LP_WS_BF_QAOA",
+        "cubic_density_alpha3": 1.1,
+        "lp_fractional_var_ratio": 0.9,
+        "highs_milp_wall_ms": 19.139,
+        "qaoa_p2_top5pct_enrichment_vs_lp_rounding": 11.834
+      }
+    },
+    {
+      "use_case_id": "UC-03",
+      "pillar": "Pillar I: 3-Body Frustrated HUBO Integrality Wall",
+      "title": "'Home First' 48h Hospital Discharge Step-Down (Pharmacist Meds-Rec x VCFSE Meal x Reablement)",
+      "nhs_clinical_context": "Medically Fit For Discharge (MFFD) multimorbid older adults living alone require 48-hour co-occurrence of DAPB4066 discharge medicines reconciliation, VCFSE warm-meal check-in, and reablement.",
+      "gate_g4_classical_floor": "Exact HiGHS MILP solves small N=10 clinic slices in milliseconds, establishing ground-truth energy against which LP-WS-BF-QAOA sampling enrichment over classical LP rounding is verified.",
+      "quantum_advantage_mechanism": "Option-order-verified Jev discharge Choice + Noul-Screen rural travel-window collision compiler feeding p=2 LP-WS-BF-QAOA.",
+      "dcb0129_open_hazards": [
+        "H-QSPM-01",
+        "H-QSPM-03"
+      ],
+      "live_metrics": {
+        "discharge_choice_accuracy": 1.0,
+        "discharge_option_order_invariance": 1.0,
+        "noul_screen_accuracy": 0.9231,
+        "dispatched_solver": "QUANTUM_LP_WS_BF_QAOA",
+        "lp_fractional_var_ratio": 0.9,
+        "qaoa_p2_top5pct_enrichment_vs_lp_rounding": 9.793
+      }
+    },
+    {
+      "use_case_id": "UC-04",
+      "pillar": "Pillar I: 3-Body Frustrated HUBO Integrality Wall",
+      "title": "Unpaid Carer Respite x Replacement Sitting Cover x Dyadic Care-Recipient Safe Slot",
+      "nhs_clinical_context": "Exhausted unpaid carers refuse social prescribing unless replacement sitting cover AND a safe simultaneous care-recipient activity slot co-occur without domiciliary rota collisions.",
+      "gate_g4_classical_floor": "Strict 3-variable synchronization hyperedges induce maximal McCormick LP fractionality (80-100% non-integral variables), defeating naive LP rounding.",
+      "quantum_advantage_mechanism": "Jev HPA carer-strain Score + Noul-Screen dyadic 3-body compiler -> LP-WS-BF-QAOA top-5% enrichment.",
+      "dcb0129_open_hazards": [
+        "H-QSPM-02",
+        "H-QSPM-04"
+      ],
+      "live_metrics": {
+        "noul_screen_accuracy": 0.8462,
+        "dispatched_solver": "QUANTUM_LP_WS_BF_QAOA",
+        "cubic_density_alpha3": 1.0,
+        "lp_fractional_var_ratio": 0.8,
+        "highs_milp_wall_ms": 7.069,
+        "qaoa_p2_top5pct_enrichment_vs_lp_rounding": 4.355
+      }
+    },
+    {
+      "use_case_id": "UC-05",
+      "pillar": "Pillar I: 3-Body Frustrated HUBO Integrality Wall",
+      "title": "Honest Crossover Dispatcher (Pairwise PCN <20ms HiGHS Control vs Shared Bilingual 3-Body Surge)",
+      "nhs_clinical_context": "Contrasts routine pairwise PCN hub capacity balancing (UC-05a) against multi-hub contention for scarce bilingual link workers, consulting rooms, and interpreter transport (UC-05b + N=72 scaling).",
+      "gate_g4_classical_floor": "UC-05a (alpha_3 = 0.10, LP fractionality 0.0) routes to <20 ms classical HiGHS MILP with ZERO quantum overhead; N=72 frustrated cubic instance documents finite-budget HiGHS MIP gap stall.",
+      "quantum_advantage_mechanism": "Automated Noul-Screen density/fractionality gate activates LP-WS-BF-QAOA strictly above the alpha_3 >= 1.0 & LP-fractionality >= 0.20 crossover boundary.",
+      "dcb0129_open_hazards": [
+        "H-QSPM-02",
+        "H-QSPM-03"
+      ],
+      "live_metrics": {
+        "uc05a_pairwise_control_solver": "CLASSICAL_HIGHS_MILP",
+        "uc05a_highs_milp_wall_ms": 5.838,
+        "uc05a_lp_fractional_var_ratio": 0.0,
+        "uc05b_bilingual_surge_solver": "QUANTUM_LP_WS_BF_QAOA",
+        "uc05b_qaoa_top5pct_enrichment": 6.1,
+        "n72_realtime_0p5s_highs_remaining_mip_gap": 0.59542
+      }
+    },
+    {
+      "use_case_id": "UC-06",
+      "pillar": "Pillar II: Coherent Superposition, Zeno Cadence & Safety HUGR",
+      "title": "Ambiguous WMTY Multi-Need Coherent Superposition Gate vs Premature Bureaucratic Collapse",
+      "nhs_clinical_context": "Residents with tangled debt, bereavement, inverted sleep, and polypharmacy fog exhibit low Choice confidence (<0.58) and option-order flip sensitivity if forced into a single tick-box at intake.",
+      "gate_g4_classical_floor": "4-state (2-qubit) statevector is classically trivial; value here is calibrated multi-pathway uncertainty representation and trapped-ion HUGR coherence metrology, not exponential speedup.",
+      "quantum_advantage_mechanism": "Live Jev Choice probabilities prepare |psi_hub> = sum_h sqrt(p_h)|h> in Guppy 1.0 -> HUGR on Selene/Helios-1E-lite, retaining >97% coherent return vs <45% under mid-circuit project_z collapse.",
+      "dcb0129_open_hazards": [
+        "H-QSPM-02",
+        "H-QSPM-04"
+      ],
+      "live_metrics": {
+        "routing_regime_accuracy": 1.0,
+        "hugr_coherent_return_p00": 0.98926,
+        "hugr_premature_collapse_return_p00": 0.36426,
+        "hugr_coherence_gain_delta_p00": 0.625,
+        "cases": [
+          {
+            "case_id": "WMTY_TANGLED_01",
+            "expected_regime": "HOLD_COHERENT_SUPERPOSITION",
+            "routing": {
+              "routing_regime": "HOLD_COHERENT_SUPERPOSITION",
+              "recommended_action": "Hold coherent multi-pathway superposition (welfare_debt_housing_first + pharmacy_smr_green_nature) across N*=6 Link-Worker WMTY check-ins; avoid premature signposting collapse",
+              "urgent_escalation_prob": 0.06,
+              "companion_any_hub_fits_prob": 0.98,
+              "hub_choice_top": "welfare_debt_housing_first",
+              "hub_choice_confidence": 0.24,
+              "hub_choice_probabilities": {
+                "pharmacy_smr_green_nature": 0.4,
+                "welfare_debt_housing_first": 0.43,
+                "group_movement_zeitgeber": 0.03,
+                "peer_befriending_arts_choir": 0.14
+              },
+              "coherent_state_amplitudes": {
+                "pharmacy_smr_green_nature": 0.63246,
+                "welfare_debt_housing_first": 0.65574,
+                "group_movement_zeitgeber": 0.17321,
+                "peer_befriending_arts_choir": 0.37417
+              },
+              "pathway_shannon_entropy_bits": 1.6012
+            },
+            "reversed_hub_top": "welfare_debt_housing_first",
+            "option_order_flipped": false,
+            "regime_matched": true
+          },
+          {
+            "case_id": "WMTY_TANGLED_02",
+            "expected_regime": "HOLD_COHERENT_SUPERPOSITION",
+            "routing": {
+              "routing_regime": "HOLD_COHERENT_SUPERPOSITION",
+              "recommended_action": "Hold coherent multi-pathway superposition (peer_befriending_arts_choir + pharmacy_smr_green_nature) across N*=6 Link-Worker WMTY check-ins; avoid premature signposting collapse",
+              "urgent_escalation_prob": 0.05,
+              "companion_any_hub_fits_prob": 0.98,
+              "hub_choice_top": "peer_befriending_arts_choir",
+              "hub_choice_confidence": 0.29,
+              "hub_choice_probabilities": {
+                "pharmacy_smr_green_nature": 0.22,
+                "welfare_debt_housing_first": 0.11,
+                "group_movement_zeitgeber": 0.2,
+                "peer_befriending_arts_choir": 0.47
+              },
+              "coherent_state_amplitudes": {
+                "pharmacy_smr_green_nature": 0.46904,
+                "welfare_debt_housing_first": 0.33166,
+                "group_movement_zeitgeber": 0.44721,
+                "peer_befriending_arts_choir": 0.68557
+              },
+              "pathway_shannon_entropy_bits": 1.8072
+            },
+            "reversed_hub_top": "peer_befriending_arts_choir",
+            "option_order_flipped": false,
+            "regime_matched": true
+          },
+          {
+            "case_id": "WMTY_CRISP_03",
+            "expected_regime": "COMMIT_SINGLE_PATHWAY",
+            "routing": {
+              "routing_regime": "COMMIT_SINGLE_PATHWAY",
+              "recommended_action": "Co-produce primary referral to `welfare_debt_housing_first` with human Link-Worker sign-off",
+              "urgent_escalation_prob": 0.02,
+              "companion_any_hub_fits_prob": 0.93,
+              "hub_choice_top": "welfare_debt_housing_first",
+              "hub_choice_confidence": 1.0,
+              "hub_choice_probabilities": {
+                "pharmacy_smr_green_nature": 0.0,
+                "welfare_debt_housing_first": 1.0,
+                "group_movement_zeitgeber": 0.0,
+                "peer_befriending_arts_choir": 0.0
+              },
+              "coherent_state_amplitudes": {
+                "pharmacy_smr_green_nature": 0.0,
+                "welfare_debt_housing_first": 1.0,
+                "group_movement_zeitgeber": 0.0,
+                "peer_befriending_arts_choir": 0.0
+              },
+              "pathway_shannon_entropy_bits": -0.0
+            },
+            "reversed_hub_top": "welfare_debt_housing_first",
+            "option_order_flipped": false,
+            "regime_matched": true
+          },
+          {
+            "case_id": "WMTY_CRISP_04",
+            "expected_regime": "COMMIT_SINGLE_PATHWAY",
+            "routing": {
+              "routing_regime": "COMMIT_SINGLE_PATHWAY",
+              "recommended_action": "Co-produce primary referral to `peer_befriending_arts_choir` with human Link-Worker sign-off",
+              "urgent_escalation_prob": 0.02,
+              "companion_any_hub_fits_prob": 0.98,
+              "hub_choice_top": "peer_befriending_arts_choir",
+              "hub_choice_confidence": 1.0,
+              "hub_choice_probabilities": {
+                "pharmacy_smr_green_nature": 0.0,
+                "welfare_debt_housing_first": 0.0,
+                "group_movement_zeitgeber": 0.0,
+                "peer_befriending_arts_choir": 1.0
+              },
+              "coherent_state_amplitudes": {
+                "pharmacy_smr_green_nature": 0.0,
+                "welfare_debt_housing_first": 0.0,
+                "group_movement_zeitgeber": 0.0,
+                "peer_befriending_arts_choir": 1.0
+              },
+              "pathway_shannon_entropy_bits": -0.0
+            },
+            "reversed_hub_top": "peer_befriending_arts_choir",
+            "option_order_flipped": false,
+            "regime_matched": true
+          }
+        ]
+      }
+    },
+    {
+      "use_case_id": "UC-07",
+      "pillar": "Pillar II: Coherent Superposition, Zeno Cadence & Safety HUGR",
+      "title": "Preventing the 21.93% Refusal/DNA Rate via Non-Markovian Zeno vs Anti-Zeno Check-In Cadence",
+      "nhs_clinical_context": "Zero follow-up (N=1) causes silent Core20 dropout, whereas automated weekly/daily SMS nagging (N>=12) triggers Anti-Zeno contact fatigue and disengagement.",
+      "gate_g4_classical_floor": "2-qubit System+Memory Zeno recurrence computes classically in <2 ms; compiled to Guppy 1.0 -> HUGR to verify projective mid-circuit measurement comb physics under trapped-ion alpha noise.",
+      "quantum_advantage_mechanism": "Jev dropout-vulnerability & contact-fatigue Scores parameterize personalized check-in cadence N* in {2, 4, 6}, verified on noisy Guppy 1.0 -> HUGR mid-circuit project_z combs.",
+      "dcb0129_open_hazards": [
+        "H-QSPM-02",
+        "H-QSPM-04"
+      ],
+      "live_metrics": {
+        "cadence_choice_accuracy": 1.0,
+        "option_order_invariance": 1.0,
+        "fragile_core20_optimal_n_star": 6,
+        "fatigued_shift_optimal_n_star": 2,
+        "noisy_2q_hugr_comb": {
+          "N=1": {
+            "noisy_hugr_retention_prob": 0.19775,
+            "exact_noiseless_retention_prob": 0.18693,
+            "hugr_sha256": "996f00bb89c14d26dd795fb1b28668e18776e61bea1f0195b05cd870693f520f",
+            "hugr_bytes": 3946,
+            "shots": 2048
+          },
+          "N=6": {
+            "noisy_hugr_retention_prob": 0.57178,
+            "exact_noiseless_retention_prob": 0.57685,
+            "hugr_sha256": "54f42b7d2a098f76b7211ba79647a3974381dea41c6d0d523c95a53a3dc02ced",
+            "hugr_bytes": 7288,
+            "shots": 2048
+          },
+          "N=12": {
+            "noisy_hugr_retention_prob": 0.4458,
+            "exact_noiseless_retention_prob": 0.46161,
+            "hugr_sha256": "ffdc924a60117fe890d05fc324495eaf03c8a0625ddc312cb55898a25c5c9968",
+            "hugr_bytes": 10523,
+            "shots": 2048
+          }
+        },
+        "profiles": [
+          {
+            "profile_id": "RES_FRAGILE_CORE20",
+            "expected_choice": "biweekly_zeno_stabilization_n6",
+            "jev_dropout_score_0_4": 3.76,
+            "jev_fatigue_score_0_4": 2.74,
+            "prefers_human_continuity_prob": 0.98,
+            "jev_cadence_choice_fwd": "biweekly_zeno_stabilization_n6",
+            "jev_cadence_choice_rev": "biweekly_zeno_stabilization_n6",
+            "option_order_invariant": true,
+            "matched_expected": true,
+            "zeno_curve": {
+              "ht_drift_half_turns": 0.7476,
+              "ht_fatigue_half_turns": 0.14912,
+              "exact_retention_by_cadence": {
+                "N=1": 0.18693,
+                "N=2": 0.45196,
+                "N=4": 0.57662,
+                "N=6": 0.57685,
+                "N=12": 0.46161
+              },
+              "optimal_cadence_n_star": 6,
+              "peak_retention_prob": 0.57685,
+              "zeno_gain_over_single_contact": 0.38992,
+              "anti_zeno_drop_at_n12": 0.11524,
+              "classical_exact_wall_ms": 0.0944
+            }
+          },
+          {
+            "profile_id": "RES_MODERATE_CARER",
+            "expected_choice": "moderate_triweekly_n4",
+            "jev_dropout_score_0_4": 1.87,
+            "jev_fatigue_score_0_4": 1.87,
+            "prefers_human_continuity_prob": 0.92,
+            "jev_cadence_choice_fwd": "moderate_triweekly_n4",
+            "jev_cadence_choice_rev": "moderate_triweekly_n4",
+            "option_order_invariant": true,
+            "matched_expected": true,
+            "zeno_curve": {
+              "ht_drift_half_turns": 0.49245,
+              "ht_fatigue_half_turns": 0.11606,
+              "exact_retention_by_cadence": {
+                "N=1": 0.51108,
+                "N=2": 0.6959,
+                "N=4": 0.75653,
+                "N=6": 0.74296,
+                "N=12": 0.6381
+              },
+              "optimal_cadence_n_star": 4,
+              "peak_retention_prob": 0.75653,
+              "zeno_gain_over_single_contact": 0.24545,
+              "anti_zeno_drop_at_n12": 0.11843,
+              "classical_exact_wall_ms": 0.0468
+            }
+          },
+          {
+            "profile_id": "RES_FATIGUED_SHIFT",
+            "expected_choice": "light_touch_monthly_n2",
+            "jev_dropout_score_0_4": 0.56,
+            "jev_fatigue_score_0_4": 3.84,
+            "prefers_human_continuity_prob": 0.84,
+            "jev_cadence_choice_fwd": "light_touch_monthly_n2",
+            "jev_cadence_choice_rev": "light_touch_monthly_n2",
+            "option_order_invariant": true,
+            "matched_expected": true,
+            "zeno_curve": {
+              "ht_drift_half_turns": 0.3156,
+              "ht_fatigue_half_turns": 0.19092,
+              "exact_retention_by_cadence": {
+                "N=1": 0.72595,
+                "N=2": 0.74484,
+                "N=4": 0.65643,
+                "N=6": 0.55711,
+                "N=12": 0.32813
+              },
+              "optimal_cadence_n_star": 2,
+              "peak_retention_prob": 0.74484,
+              "zeno_gain_over_single_contact": 0.01889,
+              "anti_zeno_drop_at_n12": 0.41671,
+              "classical_exact_wall_ms": 0.0339
+            }
+          }
+        ]
+      }
+    },
+    {
+      "use_case_id": "UC-08",
+      "pillar": "Pillar II: Coherent Superposition, Zeno Cadence & Safety HUGR",
+      "title": "Dual-Gate Primary-Care Triage Shield (Asymmetric H-QSPM-01 Red Flags + Companion Noul)",
+      "nhs_clinical_context": "Primary-care intake streams mix genuine social prescribing needs with acute medical red flags (syncope, withdrawal, chest pain) and non-SP administrative/dental/travel-vaccine requests.",
+      "gate_g4_classical_floor": "Symbolic threshold gate in Python (`p_urgent >= 0.25`, `p_fits < 0.38`) achieves zero-latency deterministic circuit gating prior to quantum state preparation.",
+      "quantum_advantage_mechanism": "Protects QPU/emulator shot budgets and clinical safety simultaneously: 100% H-QSPM-01 escalation recall and 100% out-of-scope rejection before Bloch angle compilation.",
+      "dcb0129_open_hazards": [
+        "H-QSPM-01",
+        "H-QSPM-04"
+      ],
+      "live_metrics": {
+        "overall_shield_accuracy": 0.875,
+        "h_qspm_01_urgent_escalation_recall": 1.0,
+        "companion_noul_out_of_scope_rejection_rate": 1.0,
+        "downstream_quantum_shot_budget_saved_pct": 75.0,
+        "cases": [
+          {
+            "case_id": "SHIELD_URG_01",
+            "expected_regime": "URGENT_CLINICAL_ESCALATION",
+            "predicted_regime": "URGENT_CLINICAL_ESCALATION",
+            "urgent_escalation_prob": 0.99,
+            "companion_any_hub_fits_prob": 0.67,
+            "matched_expected": true
+          },
+          {
+            "case_id": "SHIELD_URG_02",
+            "expected_regime": "URGENT_CLINICAL_ESCALATION",
+            "predicted_regime": "URGENT_CLINICAL_ESCALATION",
+            "urgent_escalation_prob": 0.98,
+            "companion_any_hub_fits_prob": 0.28,
+            "matched_expected": true
+          },
+          {
+            "case_id": "SHIELD_URG_03",
+            "expected_regime": "URGENT_CLINICAL_ESCALATION",
+            "predicted_regime": "URGENT_CLINICAL_ESCALATION",
+            "urgent_escalation_prob": 0.97,
+            "companion_any_hub_fits_prob": 0.65,
+            "matched_expected": true
+          },
+          {
+            "case_id": "SHIELD_OOS_04",
+            "expected_regime": "REJECT_OUT_OF_SCOPE",
+            "predicted_regime": "REJECT_OUT_OF_SCOPE",
+            "urgent_escalation_prob": 0.02,
+            "companion_any_hub_fits_prob": 0.02,
+            "matched_expected": true
+          },
+          {
+            "case_id": "SHIELD_OOS_05",
+            "expected_regime": "REJECT_OUT_OF_SCOPE",
+            "predicted_regime": "REJECT_OUT_OF_SCOPE",
+            "urgent_escalation_prob": 0.02,
+            "companion_any_hub_fits_prob": 0.02,
+            "matched_expected": true
+          },
+          {
+            "case_id": "SHIELD_OOS_06",
+            "expected_regime": "REJECT_OUT_OF_SCOPE",
+            "predicted_regime": "REJECT_OUT_OF_SCOPE",
+            "urgent_escalation_prob": 0.02,
+            "companion_any_hub_fits_prob": 0.02,
+            "matched_expected": true
+          },
+          {
+            "case_id": "SHIELD_SAFE_07",
+            "expected_regime": "COMMIT_SINGLE_PATHWAY",
+            "predicted_regime": "COMMIT_SINGLE_PATHWAY",
+            "urgent_escalation_prob": 0.03,
+            "companion_any_hub_fits_prob": 0.97,
+            "matched_expected": true
+          },
+          {
+            "case_id": "SHIELD_SAFE_08",
+            "expected_regime": "HOLD_COHERENT_SUPERPOSITION",
+            "predicted_regime": "COMMIT_SINGLE_PATHWAY",
+            "urgent_escalation_prob": 0.04,
+            "companion_any_hub_fits_prob": 0.99,
+            "matched_expected": false
+          }
+        ]
+      }
+    },
+    {
+      "use_case_id": "UC-09",
+      "pillar": "Pillar III: Cold-Start 4q Hilbert Kernel & ICB FTQC Roadmap",
+      "title": "PCN Cold-Start Specialist Hub Launch (N = 16 Referrals: Jev -> 4q Quantum Kernel vs TF-IDF)",
+      "nhs_clinical_context": "Newly launched PCN neighbourhood services have only N=16 clinician-labelled MDT cases in Quarter 1, causing raw-text TF-IDF + LogReg/GBDT classifiers to collapse on sparse vocabulary.",
+      "gate_g4_classical_floor": "Benchmarked head-to-head against TF-IDF + LogReg, TF-IDF + GBDT, and classical Jev-8D linear SVM under identical stratified cross-validation.",
+      "quantum_advantage_mechanism": "Speculative 14-primitive Jev fan-out -> theta_k = 2*arcsin(sqrt(p_k)) -> 4q Frobenius Fidelity Quantum Kernel K(x,x') = |<psi(p)|psi(p')>|^2 + noisy HUGR Pauli verification.",
+      "dcb0129_open_hazards": [
+        "H-QSPM-02",
+        "H-QSPM-03"
+      ],
+      "live_metrics": {
+        "cohort_size_n": 16,
+        "hub_classes": 4,
+        "tfidf_logreg_cv_acc": 0.5,
+        "tfidf_logreg_macro_f1": 0.4921,
+        "tfidf_gbdt_cv_acc": 0.4375,
+        "tfidf_gbdt_macro_f1": 0.4409,
+        "jev_8d_linear_cv_acc": 1.0,
+        "jev_8d_linear_macro_f1": 1.0,
+        "jev_4q_quantum_kernel_cv_acc": 0.9375,
+        "jev_4q_quantum_kernel_macro_f1": 0.9365,
+        "hugr_4q_vqc_pauli_mae": 0.0192
+      }
+    },
+    {
+      "use_case_id": "UC-10",
+      "pillar": "Pillar III: Cold-Start 4q Hilbert Kernel & ICB FTQC Roadmap",
+      "title": "28-PCN Mid & South Essex ICB Crossover Planner (HiGHS MILP vs [[8,3,2]] FTQC + Epistemic Audit)",
+      "nhs_clinical_context": "Regional ICB capacity planning across 28 PCNs (143 GP practices) requires knowing exact N and alpha_3 scales where HiGHS MILP stalls and Quantinuum [[8,3,2]] logical qubits become relevant.",
+      "gate_g4_classical_floor": "Empirical scipy HiGHS MILP scaling across N = 12..240 frustrated k=3 variables under a 1.0s clinic budget, paired with free classical Core20 allocator for all k=2 linear workloads.",
+      "quantum_advantage_mechanism": "Maps frustrated ICB hypergraphs onto [[8,3,2]] color-code logical blocks + live Jev atomic forward/reverse epistemic audit sealing SHA-256 governance provenance.",
+      "dcb0129_open_hazards": [
+        "H-QSPM-01",
+        "H-QSPM-02",
+        "H-QSPM-03",
+        "H-QSPM-04"
+      ],
+      "live_metrics": {
+        "mse_28_pcn_classical_highs_parity_diff": 0.0,
+        "mse_28_pcn_core20_gain_pp": 0.0,
+        "sub_crossover_regime_choice_fwd": "classical_highs_milp_sovereign",
+        "sub_crossover_regime_choice_rev": "classical_highs_milp_sovereign",
+        "super_crossover_regime_choice_fwd": "frustrated_cubic_quantum_crossover_candidate",
+        "super_crossover_regime_choice_rev": "frustrated_cubic_quantum_crossover_candidate",
+        "epistemic_audit": {
+          "atomic_noul_assertions": {
+            "asserts_zero_physical_qpu_shots": 0.98,
+            "reports_gate_g4_classical_floor": 0.97,
+            "keeps_nhs_dcb0129_hazards_open": 0.96,
+            "preserves_human_clinical_and_link_worker_authority": 0.93,
+            "complies_with_noncommercial_open_science_mandate": 0.98,
+            "contains_unverified_supremacy_or_rct_claim": 0.03
+          },
+          "forward_governance_posture": "compliant_zero_hype_research_sandbox",
+          "reversed_governance_posture": "compliant_zero_hype_research_sandbox",
+          "option_order_consistent": true,
+          "epistemic_rigor_score_out_of_5": 3.91,
+          "all_atomic_verifiers_passed": true
+        },
+        "scaling_curve": [
+          {
+            "n_vars": 12,
+            "cubic_clauses": 30,
+            "alpha_3": 2.5,
+            "lp_wall_ms": 1.11,
+            "lp_fractional_var_ratio": 1.0,
+            "highs_milp_wall_ms": 52.08,
+            "highs_hit_time_limit": false,
+            "highs_remaining_mip_gap": 0.0,
+            "highs_best_integer_obj": -3.6493,
+            "ftqc_8_3_2_logical_qubits": 12,
+            "ftqc_8_3_2_code_blocks": 4,
+            "ftqc_8_3_2_physical_qubits_est": 40,
+            "qaoa_p2_two_qubit_gates": 240
+          },
+          {
+            "n_vars": 24,
+            "cubic_clauses": 60,
+            "alpha_3": 2.5,
+            "lp_wall_ms": 1.54,
+            "lp_fractional_var_ratio": 0.9583,
+            "highs_milp_wall_ms": 244.71,
+            "highs_hit_time_limit": false,
+            "highs_remaining_mip_gap": 0.0,
+            "highs_best_integer_obj": -13.0158,
+            "ftqc_8_3_2_logical_qubits": 24,
+            "ftqc_8_3_2_code_blocks": 8,
+            "ftqc_8_3_2_physical_qubits_est": 80,
+            "qaoa_p2_two_qubit_gates": 480
+          },
+          {
+            "n_vars": 48,
+            "cubic_clauses": 120,
+            "alpha_3": 2.5,
+            "lp_wall_ms": 2.82,
+            "lp_fractional_var_ratio": 0.9792,
+            "highs_milp_wall_ms": 752.09,
+            "highs_hit_time_limit": true,
+            "highs_remaining_mip_gap": 0.64409,
+            "highs_best_integer_obj": -28.6229,
+            "ftqc_8_3_2_logical_qubits": 48,
+            "ftqc_8_3_2_code_blocks": 16,
+            "ftqc_8_3_2_physical_qubits_est": 160,
+            "qaoa_p2_two_qubit_gates": 960
+          },
+          {
+            "n_vars": 72,
+            "cubic_clauses": 180,
+            "alpha_3": 2.5,
+            "lp_wall_ms": 4.7,
+            "lp_fractional_var_ratio": 0.9722,
+            "highs_milp_wall_ms": 752.12,
+            "highs_hit_time_limit": true,
+            "highs_remaining_mip_gap": 0.40781,
+            "highs_best_integer_obj": -52.2692,
+            "ftqc_8_3_2_logical_qubits": 72,
+            "ftqc_8_3_2_code_blocks": 24,
+            "ftqc_8_3_2_physical_qubits_est": 240,
+            "qaoa_p2_two_qubit_gates": 1440
+          },
+          {
+            "n_vars": 96,
+            "cubic_clauses": 240,
+            "alpha_3": 2.5,
+            "lp_wall_ms": 7.15,
+            "lp_fractional_var_ratio": 0.9896,
+            "highs_milp_wall_ms": 753.18,
+            "highs_hit_time_limit": true,
+            "highs_remaining_mip_gap": 1.09339,
+            "highs_best_integer_obj": -47.6535,
+            "ftqc_8_3_2_logical_qubits": 96,
+            "ftqc_8_3_2_code_blocks": 32,
+            "ftqc_8_3_2_physical_qubits_est": 320,
+            "qaoa_p2_two_qubit_gates": 1920
+          },
+          {
+            "n_vars": 132,
+            "cubic_clauses": 330,
+            "alpha_3": 2.5,
+            "lp_wall_ms": 12.22,
+            "lp_fractional_var_ratio": 0.9773,
+            "highs_milp_wall_ms": 754.36,
+            "highs_hit_time_limit": true,
+            "highs_remaining_mip_gap": 2.491,
+            "highs_best_integer_obj": -40.7471,
+            "ftqc_8_3_2_logical_qubits": 132,
+            "ftqc_8_3_2_code_blocks": 44,
+            "ftqc_8_3_2_physical_qubits_est": 440,
+            "qaoa_p2_two_qubit_gates": 2640
+          }
+        ]
+      }
+    }
+  ],
+  "figure_path": "figures/fig_10_jev_quantum_sp_use_cases.png",
+  "receipt_sha256": "0a4965578521928ccddcb754d2cc9d8f536a1958cc6dee0f840e2ce011a461d5"
+}
