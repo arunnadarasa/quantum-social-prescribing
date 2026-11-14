@@ -125,6 +125,16 @@ const BIBTEX_ENTRIES = {
   url     = {https://samskrift.com/view/b2cef0ea-fbe0-4df7-8546-92b62c7498b3/6631fd61-d667-4328-a798-55b12b7a57fd},
   note    = {75 sparse CSC primary-integrality HiGHS MILP runs + 2,560 raw pre-postprocessing shots across 3 live Quantinuum Nexus Helios-1E-lite HUGR jobs (5a8a78bb, 0813dc16, faf7ccda); 55.57\% (12q) and 83.40\% (16q) Top-5\% concentration (3.09x LP rounding); 0 physical QPU shots}
 }`,
+  world_model: `@article{nadarasa2026qspworldmodel,
+  title   = {A Counterfactual Quantum Social Prescribing World Model ({QSP-WM} v0.1): Calibrated System One Perception, Non-Commuting Trapped-Ion {HUGR} Dynamics, and Rolling-Horizon {HUBO} Planning},
+  author  = {Nadarasa, Arun},
+  year    = {2026},
+  month   = nov,
+  journal = {Samskrift Counterfactual World Model Technical Study (Mid and South Essex NHS Foundation Trust \& ISPPA)},
+  pages   = {1--7},
+  url     = {https://samskrift.com/view/828fbe1b-e53c-43ef-bbe2-81d0024deea8/e0639112-27a8-457f-9268-1cfc9e1bc14a},
+  note    = {Live TypeSafe System One (jev-1.14.0 / Aletheia-QSPM) 6/6 closed-loop perception + 6 non-commuting 3q Guppy 1.0 -> HUGR permutations (97.51\% WPG vs 5.57\% GPW, Nexus HUGR ref 82563d26) + H=1..6 rolling-horizon HUBO MPC (26.37 ms 0\% gap vs 273.9\% gap at V=120) + 10 NHS social prescribing use cases (UC-01..UC-10); 0 physical QPU shots}
+}`,
   monograph: `@article{nadarasa2026qspm,
   title   = {Quantum Social Prescribing: Multi-Scale Quantum Algorithms, Psychoneuroimmunological Grounding, and Multi-Method Health {AI} Governance for Integrated Neighbourhood Care},
   author  = {Nadarasa, Arun},
@@ -250,6 +260,23 @@ async function initPdfReader() {
         { label: "p.4 · Fig. 2 Bias-Field QAOA & HUGR Gadgets", page: 4 },
         { label: "p.5 · Live Helios-1E-lite Tables 2–3 (12q/16q)", page: 5 },
         { label: "p.6 · 48–56q H2-1/Helios-1 Protocol & Refs", page: 6 }
+      ]
+    },
+    world_model: {
+      pdfUrl: "downloads/Quantum_Social_Prescribing_World_Model.pdf",
+      pdfFilename: "Quantum_Social_Prescribing_World_Model.pdf",
+      pagesDir: "pages_world_model",
+      totalPages: 7,
+      altTitle: "Counterfactual Quantum Social Prescribing World Model (QSP-WM v0.1 & 10 Jev Use Cases)",
+      samskriftUrl: "https://samskrift.com/view/828fbe1b-e53c-43ef-bbe2-81d0024deea8/e0639112-27a8-457f-9268-1cfc9e1bc14a",
+      bookmarks: [
+        { label: "p.1 · Abstract, Gate G4 & Motivation", page: 1 },
+        { label: "p.2 · Layer 1 Jev Perception & Table 1", page: 2 },
+        { label: "p.3 · Fig. 1, Layer 2 HUGR & Prop. 1", page: 3 },
+        { label: "p.4 · Table 2, Layer 3 MPC & Sec. 3", page: 4 },
+        { label: "p.5 · Table 3 Horizon Wall & Pillars II–III", page: 5 },
+        { label: "p.6 · Fig. 2 & Table 4 (10 Use Cases)", page: 6 },
+        { label: "p.7 · Epistemic Audit, DCB0129 & Refs", page: 7 }
       ]
     },
     monograph: {
@@ -406,7 +433,8 @@ async function initPdfReader() {
   });
 
   const initialHash = (window.location.hash || "").toLowerCase();
-  if (initialHash.includes("quantum")) applyDocument("quantum_opt");
+  if (initialHash.includes("world")) applyDocument("world_model");
+  else if (initialHash.includes("quantum")) applyDocument("quantum_opt");
   else if (initialHash.includes("monograph")) applyDocument("monograph");
   else applyDocument("focused");
 
