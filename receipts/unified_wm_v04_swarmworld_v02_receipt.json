@@ -1,0 +1,1426 @@
+{
+  "schema_version": "unified_wm_v04_swarmworld_v02_v1",
+  "generated_utc": "2026-11-15T14:16:17.599322+00:00",
+  "models": {
+    "world_model_version": "QSP-WM-v0.4",
+    "swarmworld_version": "SP-SwarmWorld-v0.2",
+    "system_one_model": "jev-1.14.0",
+    "persona": "Aletheia-QSPM"
+  },
+  "governance_and_safety": {
+    "non_commercial_scientific_research_only": true,
+    "physical_hardware_shots": 0,
+    "hqc_cost_total": 0.0,
+    "patient_identifiable_records_used": 0,
+    "data_licence": "UK Open Government Licence v3.0 (NHS England Aggregate GP/PCN Cohort)",
+    "dcb0129_open_hazards": [
+      "H-QSPM-01",
+      "H-QSPM-02",
+      "H-QSPM-03",
+      "H-QSPM-04"
+    ],
+    "dcb0129_hazard_status": "OPEN_UNDER_HUMAN_CLINICAL_AND_LINK_WORKER_AUTHORITY",
+    "literature_grounding": "Pal, Wang & Buehler (arXiv:2608.26081, https://arxiv.org/abs/2608.26081) retrieved via literature-search-arxiv",
+    "acknowledgment": "This work was supported in part by complimentary access to Google Antigravity and Gemini 4 Argon to accelerate scientific workflows."
+  },
+  "live_jev_cross_icb_perception_audit": {
+    "model": "jev-1.14.0",
+    "n_cases_audited": 5,
+    "in_scope_option_order_agreement_pct": 100.0,
+    "all_cases_option_order_agreement_pct": 100.0,
+    "records": [
+      {
+        "case_id": "E54000055_BIRMINGHAM_SMALL_HEATH_CORE20",
+        "p_urgent_escalation": 0.03,
+        "p_valid_nhs_cohort": 0.85,
+        "p_requires_dyna_screening": 0.64,
+        "shift_severity_score_0_to_4": 2.99,
+        "niche_choice_forward": "urban_core20_material_distress",
+        "niche_choice_confidence": 0.99,
+        "niche_choice_reverse": "urban_core20_material_distress",
+        "option_order_invariant": true,
+        "routed_action": "MATCH_REPERTOIRE:urban_core20_material_distress"
+      },
+      {
+        "case_id": "E54000037_DEVON_DARTMOOR_PENINSULA",
+        "p_urgent_escalation": 0.03,
+        "p_valid_nhs_cohort": 0.81,
+        "p_requires_dyna_screening": 0.64,
+        "shift_severity_score_0_to_4": 2.96,
+        "niche_choice_forward": "rural_coastal_transport_peninsula",
+        "niche_choice_confidence": 1.0,
+        "niche_choice_reverse": "rural_coastal_transport_peninsula",
+        "option_order_invariant": true,
+        "routed_action": "MATCH_REPERTOIRE:rural_coastal_transport_peninsula"
+      },
+      {
+        "case_id": "E54000022_NORFOLK_OLDER_POLYPHARMACY",
+        "p_urgent_escalation": 0.03,
+        "p_valid_nhs_cohort": 0.83,
+        "p_requires_dyna_screening": 0.66,
+        "shift_severity_score_0_to_4": 2.99,
+        "niche_choice_forward": "older_age_polypharmacy_smr_priority",
+        "niche_choice_confidence": 1.0,
+        "niche_choice_reverse": "older_age_polypharmacy_smr_priority",
+        "option_order_invariant": true,
+        "routed_action": "MATCH_REPERTOIRE:older_age_polypharmacy_smr_priority"
+      },
+      {
+        "case_id": "DCB0129_H_QSPM_01_ACUTE_SYNCOPE_LOCK",
+        "p_urgent_escalation": 0.96,
+        "p_valid_nhs_cohort": 0.14,
+        "p_requires_dyna_screening": 0.04,
+        "shift_severity_score_0_to_4": 3.93,
+        "niche_choice_forward": "older_age_polypharmacy_smr_priority",
+        "niche_choice_confidence": 0.97,
+        "niche_choice_reverse": "older_age_polypharmacy_smr_priority",
+        "option_order_invariant": true,
+        "routed_action": "URGENT_CLINICAL_ESCALATION"
+      },
+      {
+        "case_id": "DCB0129_OUT_OF_SCOPE_COMMERCIAL_NOISE",
+        "p_urgent_escalation": 0.02,
+        "p_valid_nhs_cohort": 0.02,
+        "p_requires_dyna_screening": 0.05,
+        "shift_severity_score_0_to_4": 3.96,
+        "niche_choice_forward": "low_barrier_suburban_preventive",
+        "niche_choice_confidence": 0.89,
+        "niche_choice_reverse": "low_barrier_suburban_preventive",
+        "option_order_invariant": true,
+        "routed_action": "REJECT_OUT_OF_SCOPE"
+      }
+    ]
+  },
+  "pillar_1a_m24_deconfounded_2x2_ablation": {
+    "n_seeds": 24,
+    "seeds": [
+      4101,
+      4102,
+      4103,
+      4104,
+      4105,
+      4106,
+      4107,
+      4108,
+      4109,
+      4110,
+      4111,
+      4112,
+      4113,
+      4114,
+      4115,
+      4116,
+      4117,
+      4118,
+      4119,
+      4120,
+      4121,
+      4122,
+      4123,
+      4124
+    ],
+    "max_ticks": 800,
+    "exact_signflip_permutations": 16777216,
+    "min_possible_two_sided_signflip_p": 1.19e-07,
+    "wall_s": 50.88,
+    "arms": {
+      "qd_blind_calm": {
+        "heldout_resilience_mean": 0.38095,
+        "heldout_resilience_sd": 0.06098,
+        "heldout_resilience_seeds": [
+          0.31212,
+          0.38499,
+          0.31453,
+          0.49527,
+          0.26483,
+          0.4778,
+          0.36711,
+          0.31263,
+          0.34931,
+          0.39472,
+          0.37336,
+          0.33663,
+          0.34491,
+          0.39105,
+          0.31883,
+          0.34459,
+          0.50153,
+          0.37673,
+          0.37654,
+          0.44308,
+          0.40874,
+          0.40457,
+          0.39116,
+          0.4578
+        ],
+        "portfolio_resilience_mean": 0.60179,
+        "portfolio_resilience_sd": 0.02762,
+        "validated_inventions_mean": 12.917,
+        "validated_inventions_sd": 1.976,
+        "discovery_frontier_auc_mean": 0.5877,
+        "dcb0129_red_flag_recall_pct": 100.0,
+        "dcb0129_oos_leak_events": 0
+      },
+      "qd_guided_calm": {
+        "heldout_resilience_mean": 0.34022,
+        "heldout_resilience_sd": 0.0479,
+        "heldout_resilience_seeds": [
+          0.3595,
+          0.37579,
+          0.2793,
+          0.34936,
+          0.27073,
+          0.37666,
+          0.30158,
+          0.34272,
+          0.30316,
+          0.38998,
+          0.35785,
+          0.35901,
+          0.25189,
+          0.34891,
+          0.33808,
+          0.33046,
+          0.45921,
+          0.37833,
+          0.31188,
+          0.32963,
+          0.41473,
+          0.34872,
+          0.31325,
+          0.27453
+        ],
+        "portfolio_resilience_mean": 0.6003,
+        "portfolio_resilience_sd": 0.01983,
+        "validated_inventions_mean": 9.333,
+        "validated_inventions_sd": 1.786,
+        "discovery_frontier_auc_mean": 0.59119,
+        "dcb0129_red_flag_recall_pct": 100.0,
+        "dcb0129_oos_leak_events": 0
+      },
+      "qd_guided_shock_adversary": {
+        "heldout_resilience_mean": 0.46565,
+        "heldout_resilience_sd": 0.03489,
+        "heldout_resilience_seeds": [
+          0.48852,
+          0.40231,
+          0.50034,
+          0.34139,
+          0.50108,
+          0.49218,
+          0.47576,
+          0.48201,
+          0.46333,
+          0.4903,
+          0.46806,
+          0.4852,
+          0.48572,
+          0.48637,
+          0.47277,
+          0.43744,
+          0.45012,
+          0.4862,
+          0.46584,
+          0.4668,
+          0.46846,
+          0.45504,
+          0.47531,
+          0.43515
+        ],
+        "portfolio_resilience_mean": 0.60177,
+        "portfolio_resilience_sd": 0.01646,
+        "validated_inventions_mean": 7.667,
+        "validated_inventions_sd": 1.239,
+        "discovery_frontier_auc_mean": 0.50517,
+        "dcb0129_red_flag_recall_pct": 100.0,
+        "dcb0129_oos_leak_events": 0
+      },
+      "stigmergy_blind": {
+        "heldout_resilience_mean": 0.32912,
+        "heldout_resilience_sd": 0.05049,
+        "heldout_resilience_seeds": [
+          0.38824,
+          0.361,
+          0.34033,
+          0.30962,
+          0.36478,
+          0.35846,
+          0.35405,
+          0.26111,
+          0.2971,
+          0.37499,
+          0.25301,
+          0.21893,
+          0.3269,
+          0.33274,
+          0.30297,
+          0.41972,
+          0.31212,
+          0.31893,
+          0.42119,
+          0.3769,
+          0.3018,
+          0.33682,
+          0.27486,
+          0.29236
+        ],
+        "portfolio_resilience_mean": 0.49151,
+        "portfolio_resilience_sd": 0.05435,
+        "validated_inventions_mean": 3.25,
+        "validated_inventions_sd": 2.172,
+        "discovery_frontier_auc_mean": 0.52415,
+        "dcb0129_red_flag_recall_pct": 100.0,
+        "dcb0129_oos_leak_events": 0
+      },
+      "stigmergy_guided": {
+        "heldout_resilience_mean": 0.41448,
+        "heldout_resilience_sd": 0.02558,
+        "heldout_resilience_seeds": [
+          0.41335,
+          0.39851,
+          0.45467,
+          0.39756,
+          0.4415,
+          0.38815,
+          0.4594,
+          0.44101,
+          0.40337,
+          0.38928,
+          0.3998,
+          0.42522,
+          0.38368,
+          0.40709,
+          0.43943,
+          0.4305,
+          0.39835,
+          0.41039,
+          0.47229,
+          0.39714,
+          0.37559,
+          0.39625,
+          0.41144,
+          0.41353
+        ],
+        "portfolio_resilience_mean": 0.5456,
+        "portfolio_resilience_sd": 0.03189,
+        "validated_inventions_mean": 1.833,
+        "validated_inventions_sd": 0.702,
+        "discovery_frontier_auc_mean": 0.50092,
+        "dcb0129_red_flag_recall_pct": 100.0,
+        "dcb0129_oos_leak_events": 0
+      }
+    },
+    "paired_contrasts": {
+      "c4_stigmergy_guided_vs_c1_qd_blind_calm_r_hold": {
+        "n_seeds": 24,
+        "mean_diff": 0.03353,
+        "ci95_low": 0.00292,
+        "ci95_high": 0.0635,
+        "ci_excludes_zero": true,
+        "exact_signflip_p": 0.046226621,
+        "wilcoxon_p": 0.06042707
+      },
+      "stigmergy_blind_vs_qd_blind_calm_r_hold": {
+        "n_seeds": 24,
+        "mean_diff": -0.05183,
+        "ci95_low": -0.08301,
+        "ci95_high": -0.02,
+        "ci_excludes_zero": true,
+        "exact_signflip_p": 0.0047229528,
+        "wilcoxon_p": 0.0071890354
+      },
+      "stigmergy_guided_vs_qd_guided_calm_r_hold": {
+        "n_seeds": 24,
+        "mean_diff": 0.07426,
+        "ci95_low": 0.0491,
+        "ci95_high": 0.09894,
+        "ci_excludes_zero": true,
+        "exact_signflip_p": 1.7881393e-05,
+        "wilcoxon_p": 2.4676323e-05
+      },
+      "stigmergy_guided_vs_stigmergy_blind_r_hold": {
+        "n_seeds": 24,
+        "mean_diff": 0.08536,
+        "ci95_low": 0.06548,
+        "ci95_high": 0.10626,
+        "ci_excludes_zero": true,
+        "exact_signflip_p": 1.1920929e-07,
+        "wilcoxon_p": 1.1920929e-07
+      },
+      "stigmergy_guided_vs_omniscient_shock_qd_adversary_r_hold": {
+        "n_seeds": 24,
+        "mean_diff": -0.05118,
+        "ci95_low": -0.06541,
+        "ci95_high": -0.03546,
+        "ci_excludes_zero": true,
+        "exact_signflip_p": 9.7751617e-06,
+        "wilcoxon_p": 8.3446503e-06
+      },
+      "qd_blind_calm_vs_stigmergy_guided_inventions": {
+        "n_seeds": 24,
+        "mean_diff": 11.08333,
+        "ci95_low": 10.29167,
+        "ci95_high": 11.875,
+        "ci_excludes_zero": true,
+        "exact_signflip_p": 1.1920929e-07,
+        "wilcoxon_p": 1.634401e-05
+      },
+      "factorial_main_effect_embodied_stigmergy": {
+        "n_seeds": 24,
+        "mean_diff": 0.01122,
+        "ci95_low": -0.01312,
+        "ci95_high": 0.03547,
+        "ci_excludes_zero": false,
+        "exact_signflip_p": 0.3897866,
+        "wilcoxon_p": 0.5645889
+      },
+      "factorial_main_effect_sensor_guidance": {
+        "n_seeds": 24,
+        "mean_diff": 0.02231,
+        "ci95_low": 0.0063,
+        "ci95_high": 0.03884,
+        "ci_excludes_zero": true,
+        "exact_signflip_p": 0.013860941,
+        "wilcoxon_p": 0.019441962
+      },
+      "factorial_interaction_org_x_guidance": {
+        "n_seeds": 24,
+        "mean_diff": 0.12609,
+        "ci95_low": 0.09801,
+        "ci95_high": 0.15463,
+        "ci_excludes_zero": true,
+        "exact_signflip_p": 3.5762787e-07,
+        "wilcoxon_p": 3.5762787e-07
+      }
+    }
+  },
+  "pillar_1b_zeroshot_cross_icb_transfer": {
+    "source_icb": "Mid and South Essex ICB (E54000026, 28 PCNs, 143 GPs)",
+    "source_repertoire_program_count": 582,
+    "held_out_target_icbs": [
+      {
+        "short_id": "birmingham_solihull_urban_core20",
+        "archetype_label": "Urban Core20 High-Deprivation Metropolitan ICB",
+        "topology_and_demographics": {
+          "icb_ons_code": "E54000055",
+          "icb_name": "Birmingham and Solihull ICB",
+          "n_pcns": 36,
+          "n_gp_practices": 174,
+          "n_sub_icbs": 1,
+          "registered_population": 1563146,
+          "n_edges": 122,
+          "mean_imd2025": 39.01,
+          "core20_practice_fraction": 0.6667,
+          "mean_sedative_opioid_pct": 11.28,
+          "mean_aged_65_plus_pct": 2.56,
+          "n_core20_pcns": 28,
+          "n_high_acb_pcns": 13,
+          "n_rural_peninsula_pcns": 0,
+          "mean_gp_per_pcn": 4.83,
+          "mean_pop_per_gp": 8983.6
+        },
+        "target_icb_empirical_hqmm_fit": {
+          "n_complete_3wave_gps": 165,
+          "fitted_eta_depolarizing": 0.22661,
+          "fitted_theta_norm_rad": 4.03895,
+          "empirical_smr_responsiveness_mult": 1.0037,
+          "empirical_sp_responsiveness_mult": 1.1239,
+          "target_disturbance_intensity": 0.3299
+        },
+        "n_seeds": 12,
+        "agent_actions_zeroshot": 0,
+        "target_static_l1_highs_milp_r_hold_mean": 0.14357,
+        "target_static_l1_highs_solve_ms": 8.19,
+        "zeroshot_mse_monoculture_r_hold_mean": 0.30884,
+        "zeroshot_mse_blind_qd_r_hold_mean": 0.22916,
+        "zeroshot_mse_stigmergic_repertoire_r_hold_mean": 0.29097,
+        "zeroshot_mse_stigmergic_repertoire_r_hold_sd": 0.01489,
+        "insitu_target_icb_skyline_r_hold_mean": 0.39791,
+        "zeroshot_skyline_retention_pct": 73.13,
+        "paired_stigmergy_zs_vs_target_milp": {
+          "n_seeds": 12,
+          "mean_diff": 0.1474,
+          "ci95_low": 0.13975,
+          "ci95_high": 0.15537,
+          "ci_excludes_zero": true,
+          "exact_signflip_p": 0.00048828125,
+          "wilcoxon_p": 0.00048828125
+        },
+        "paired_stigmergy_zs_vs_monoculture_zs": {
+          "n_seeds": 12,
+          "mean_diff": -0.01787,
+          "ci95_low": -0.03678,
+          "ci95_high": -0.00075,
+          "ci_excludes_zero": true,
+          "exact_signflip_p": 0.097167969,
+          "wilcoxon_p": 0.20361328
+        },
+        "paired_stigmergy_zs_vs_blind_qd_zs": {
+          "n_seeds": 12,
+          "mean_diff": 0.06182,
+          "ci95_low": 0.04522,
+          "ci95_high": 0.07721,
+          "ci_excludes_zero": true,
+          "exact_signflip_p": 0.00048828125,
+          "wilcoxon_p": 0.00048828125
+        }
+      },
+      {
+        "short_id": "devon_rural_coastal_peninsula",
+        "archetype_label": "Rural & Coastal Peninsula Moorland ICB",
+        "topology_and_demographics": {
+          "icb_ons_code": "E54000037",
+          "icb_name": "Devon ICB",
+          "n_pcns": 31,
+          "n_gp_practices": 115,
+          "n_sub_icbs": 1,
+          "registered_population": 1256960,
+          "n_edges": 107,
+          "mean_imd2025": 20.6,
+          "core20_practice_fraction": 0.0609,
+          "mean_sedative_opioid_pct": 13.1,
+          "mean_aged_65_plus_pct": 3.99,
+          "n_core20_pcns": 8,
+          "n_high_acb_pcns": 15,
+          "n_rural_peninsula_pcns": 9,
+          "mean_gp_per_pcn": 3.71,
+          "mean_pop_per_gp": 10930.1
+        },
+        "target_icb_empirical_hqmm_fit": {
+          "n_complete_3wave_gps": 111,
+          "fitted_eta_depolarizing": 0.01,
+          "fitted_theta_norm_rad": 0.43181,
+          "empirical_smr_responsiveness_mult": 1.0192,
+          "empirical_sp_responsiveness_mult": 1.0381,
+          "target_disturbance_intensity": 0.2822
+        },
+        "n_seeds": 12,
+        "agent_actions_zeroshot": 0,
+        "target_static_l1_highs_milp_r_hold_mean": 0.14017,
+        "target_static_l1_highs_solve_ms": 6.14,
+        "zeroshot_mse_monoculture_r_hold_mean": 0.15309,
+        "zeroshot_mse_blind_qd_r_hold_mean": 0.18913,
+        "zeroshot_mse_stigmergic_repertoire_r_hold_mean": 0.16174,
+        "zeroshot_mse_stigmergic_repertoire_r_hold_sd": 0.01429,
+        "insitu_target_icb_skyline_r_hold_mean": 0.41584,
+        "zeroshot_skyline_retention_pct": 38.89,
+        "paired_stigmergy_zs_vs_target_milp": {
+          "n_seeds": 12,
+          "mean_diff": 0.02157,
+          "ci95_low": 0.0147,
+          "ci95_high": 0.02983,
+          "ci_excludes_zero": true,
+          "exact_signflip_p": 0.00048828125,
+          "wilcoxon_p": 0.00048828125
+        },
+        "paired_stigmergy_zs_vs_monoculture_zs": {
+          "n_seeds": 12,
+          "mean_diff": 0.00865,
+          "ci95_low": -0.00707,
+          "ci95_high": 0.02482,
+          "ci_excludes_zero": false,
+          "exact_signflip_p": 0.32226562,
+          "wilcoxon_p": 0.30126953
+        },
+        "paired_stigmergy_zs_vs_blind_qd_zs": {
+          "n_seeds": 12,
+          "mean_diff": -0.02739,
+          "ci95_low": -0.03829,
+          "ci95_high": -0.01486,
+          "ci_excludes_zero": true,
+          "exact_signflip_p": 0.0029296875,
+          "wilcoxon_p": 0.0024414062
+        }
+      },
+      {
+        "short_id": "norfolk_waveney_high_acb_older_age",
+        "archetype_label": "Older-Age High-Polypharmacy Coastal/Market-Town ICB",
+        "topology_and_demographics": {
+          "icb_ons_code": "E54000022",
+          "icb_name": "Norfolk and Waveney ICB",
+          "n_pcns": 20,
+          "n_gp_practices": 102,
+          "n_sub_icbs": 1,
+          "registered_population": 1074993,
+          "n_edges": 65,
+          "mean_imd2025": 21.81,
+          "core20_practice_fraction": 0.0882,
+          "mean_sedative_opioid_pct": 14.34,
+          "mean_aged_65_plus_pct": 3.83,
+          "n_core20_pcns": 6,
+          "n_high_acb_pcns": 14,
+          "n_rural_peninsula_pcns": 11,
+          "mean_gp_per_pcn": 5.1,
+          "mean_pop_per_gp": 10539.1
+        },
+        "target_icb_empirical_hqmm_fit": {
+          "n_complete_3wave_gps": 101,
+          "fitted_eta_depolarizing": 0.061,
+          "fitted_theta_norm_rad": 5.04499,
+          "empirical_smr_responsiveness_mult": 1.18,
+          "empirical_sp_responsiveness_mult": 1.18,
+          "target_disturbance_intensity": 0.2934
+        },
+        "n_seeds": 12,
+        "agent_actions_zeroshot": 0,
+        "target_static_l1_highs_milp_r_hold_mean": 0.15294,
+        "target_static_l1_highs_solve_ms": 5.19,
+        "zeroshot_mse_monoculture_r_hold_mean": 0.32308,
+        "zeroshot_mse_blind_qd_r_hold_mean": 0.29683,
+        "zeroshot_mse_stigmergic_repertoire_r_hold_mean": 0.38539,
+        "zeroshot_mse_stigmergic_repertoire_r_hold_sd": 0.02249,
+        "insitu_target_icb_skyline_r_hold_mean": 0.50876,
+        "zeroshot_skyline_retention_pct": 75.75,
+        "paired_stigmergy_zs_vs_target_milp": {
+          "n_seeds": 12,
+          "mean_diff": 0.23244,
+          "ci95_low": 0.21833,
+          "ci95_high": 0.24453,
+          "ci_excludes_zero": true,
+          "exact_signflip_p": 0.00048828125,
+          "wilcoxon_p": 0.00048828125
+        },
+        "paired_stigmergy_zs_vs_monoculture_zs": {
+          "n_seeds": 12,
+          "mean_diff": 0.06231,
+          "ci95_low": 0.04037,
+          "ci95_high": 0.08042,
+          "ci_excludes_zero": true,
+          "exact_signflip_p": 0.0014648438,
+          "wilcoxon_p": 0.0014648438
+        },
+        "paired_stigmergy_zs_vs_blind_qd_zs": {
+          "n_seeds": 12,
+          "mean_diff": 0.08855,
+          "ci95_low": 0.07183,
+          "ci95_high": 0.10278,
+          "ci_excludes_zero": true,
+          "exact_signflip_p": 0.00048828125,
+          "wilcoxon_p": 0.00048828125
+        }
+      }
+    ],
+    "wall_s": 70.33
+  },
+  "pillar_2a_dyna_world_model_imagination": {
+    "n_seeds": 12,
+    "k_imagination_candidates": 5,
+    "max_ticks": 600,
+    "model_free_baseline": {
+      "early_imagination_regret_mean": 0.10655,
+      "wasted_early_build_fraction_mean": 0.7798,
+      "r_hold_tick200_mean": 0.20379,
+      "r_hold_final_mean": 0.20506
+    },
+    "pilot_sample_curve": [
+      {
+        "n_pilot_trajectories": 18,
+        "dyna_markov_168p": {
+          "early_imagination_regret_mean": 0.11124,
+          "wasted_early_build_fraction_mean": 0.7411,
+          "r_hold_tick200_mean": 0.31151,
+          "r_hold_final_mean": 0.36928
+        },
+        "dyna_factored_dbn_36p": {
+          "early_imagination_regret_mean": 0.07238,
+          "wasted_early_build_fraction_mean": 0.4643,
+          "r_hold_tick200_mean": 0.32422,
+          "r_hold_final_mean": 0.41288
+        },
+        "dyna_hqmm_7p": {
+          "early_imagination_regret_mean": 0.00572,
+          "wasted_early_build_fraction_mean": 0.0982,
+          "r_hold_tick200_mean": 0.37468,
+          "r_hold_final_mean": 0.47095
+        },
+        "paired_hqmm_vs_model_free_r_hold_t200": {
+          "n_seeds": 12,
+          "mean_diff": 0.17089,
+          "ci95_low": 0.14291,
+          "ci95_high": 0.2013,
+          "ci_excludes_zero": true,
+          "exact_signflip_p": 0.00048828125,
+          "wilcoxon_p": 0.00048828125
+        },
+        "paired_hqmm_vs_markov168_r_hold_t200": {
+          "n_seeds": 12,
+          "mean_diff": 0.06317,
+          "ci95_low": 0.0287,
+          "ci95_high": 0.10492,
+          "ci_excludes_zero": true,
+          "exact_signflip_p": 0.0034179688,
+          "wilcoxon_p": 0.0034179688
+        },
+        "paired_hqmm_vs_dbn36_r_hold_t200": {
+          "n_seeds": 12,
+          "mean_diff": 0.05046,
+          "ci95_low": 0.00678,
+          "ci95_high": 0.10474,
+          "ci_excludes_zero": true,
+          "exact_signflip_p": 0.055175781,
+          "wilcoxon_p": 0.063964844
+        }
+      },
+      {
+        "n_pilot_trajectories": 36,
+        "dyna_markov_168p": {
+          "early_imagination_regret_mean": 0.09713,
+          "wasted_early_build_fraction_mean": 0.6935,
+          "r_hold_tick200_mean": 0.29533,
+          "r_hold_final_mean": 0.36499
+        },
+        "dyna_factored_dbn_36p": {
+          "early_imagination_regret_mean": 0.08089,
+          "wasted_early_build_fraction_mean": 0.7173,
+          "r_hold_tick200_mean": 0.32884,
+          "r_hold_final_mean": 0.41528
+        },
+        "dyna_hqmm_7p": {
+          "early_imagination_regret_mean": 0.00287,
+          "wasted_early_build_fraction_mean": 0.0387,
+          "r_hold_tick200_mean": 0.37189,
+          "r_hold_final_mean": 0.46875
+        },
+        "paired_hqmm_vs_model_free_r_hold_t200": {
+          "n_seeds": 12,
+          "mean_diff": 0.1681,
+          "ci95_low": 0.13604,
+          "ci95_high": 0.20213,
+          "ci_excludes_zero": true,
+          "exact_signflip_p": 0.00048828125,
+          "wilcoxon_p": 0.00048828125
+        },
+        "paired_hqmm_vs_markov168_r_hold_t200": {
+          "n_seeds": 12,
+          "mean_diff": 0.07656,
+          "ci95_low": 0.0409,
+          "ci95_high": 0.12196,
+          "ci_excludes_zero": true,
+          "exact_signflip_p": 0.00048828125,
+          "wilcoxon_p": 0.00048828125
+        },
+        "paired_hqmm_vs_dbn36_r_hold_t200": {
+          "n_seeds": 12,
+          "mean_diff": 0.04305,
+          "ci95_low": 0.00765,
+          "ci95_high": 0.0789,
+          "ci_excludes_zero": true,
+          "exact_signflip_p": 0.043457031,
+          "wilcoxon_p": 0.052246094
+        }
+      },
+      {
+        "n_pilot_trajectories": 138,
+        "dyna_markov_168p": {
+          "early_imagination_regret_mean": 0.07585,
+          "wasted_early_build_fraction_mean": 0.5595,
+          "r_hold_tick200_mean": 0.31831,
+          "r_hold_final_mean": 0.38945
+        },
+        "dyna_factored_dbn_36p": {
+          "early_imagination_regret_mean": 0.01992,
+          "wasted_early_build_fraction_mean": 0.244,
+          "r_hold_tick200_mean": 0.366,
+          "r_hold_final_mean": 0.4528
+        },
+        "dyna_hqmm_7p": {
+          "early_imagination_regret_mean": 0.00461,
+          "wasted_early_build_fraction_mean": 0.0685,
+          "r_hold_tick200_mean": 0.37772,
+          "r_hold_final_mean": 0.47075
+        },
+        "paired_hqmm_vs_model_free_r_hold_t200": {
+          "n_seeds": 12,
+          "mean_diff": 0.17393,
+          "ci95_low": 0.1444,
+          "ci95_high": 0.20487,
+          "ci_excludes_zero": true,
+          "exact_signflip_p": 0.00048828125,
+          "wilcoxon_p": 0.00048828125
+        },
+        "paired_hqmm_vs_markov168_r_hold_t200": {
+          "n_seeds": 12,
+          "mean_diff": 0.05941,
+          "ci95_low": 0.03302,
+          "ci95_high": 0.09013,
+          "ci_excludes_zero": true,
+          "exact_signflip_p": 0.00048828125,
+          "wilcoxon_p": 0.00048828125
+        },
+        "paired_hqmm_vs_dbn36_r_hold_t200": {
+          "n_seeds": 12,
+          "mean_diff": 0.01172,
+          "ci95_low": 0.00158,
+          "ci95_high": 0.02293,
+          "ci_excludes_zero": true,
+          "exact_signflip_p": 0.073242188,
+          "wilcoxon_p": 0.17626953
+        }
+      }
+    ],
+    "wall_s": 73.67
+  },
+  "pillar_2b_rosenbaum_and_placebo_audit": {
+    "n_caliper_matched_pairs": 185,
+    "matched_wave2_att_pp": 7.496,
+    "matched_did_att_pp": 8.106,
+    "positive_pair_fraction": 0.6973,
+    "rosenbaum_gamma_sweep": [
+      {
+        "gamma_odds_ratio": 1.0,
+        "upper_bound_one_sided_p": 9.05863e-13,
+        "upper_bound_two_sided_p": 1.81173e-12,
+        "remains_significant_alpha_005": true
+      },
+      {
+        "gamma_odds_ratio": 1.25,
+        "upper_bound_one_sided_p": 3.88343e-09,
+        "upper_bound_two_sided_p": 7.76686e-09,
+        "remains_significant_alpha_005": true
+      },
+      {
+        "gamma_odds_ratio": 1.5,
+        "upper_bound_one_sided_p": 8.50962e-07,
+        "upper_bound_two_sided_p": 1.70192e-06,
+        "remains_significant_alpha_005": true
+      },
+      {
+        "gamma_odds_ratio": 1.75,
+        "upper_bound_one_sided_p": 3.41139e-05,
+        "upper_bound_two_sided_p": 6.82278e-05,
+        "remains_significant_alpha_005": true
+      },
+      {
+        "gamma_odds_ratio": 2.0,
+        "upper_bound_one_sided_p": 0.000473844,
+        "upper_bound_two_sided_p": 0.000947687,
+        "remains_significant_alpha_005": true
+      },
+      {
+        "gamma_odds_ratio": 2.25,
+        "upper_bound_one_sided_p": 0.0032543,
+        "upper_bound_two_sided_p": 0.00650861,
+        "remains_significant_alpha_005": true
+      },
+      {
+        "gamma_odds_ratio": 2.5,
+        "upper_bound_one_sided_p": 0.0136888,
+        "upper_bound_two_sided_p": 0.0273776,
+        "remains_significant_alpha_005": true
+      },
+      {
+        "gamma_odds_ratio": 2.75,
+        "upper_bound_one_sided_p": 0.0404385,
+        "upper_bound_two_sided_p": 0.080877,
+        "remains_significant_alpha_005": false
+      },
+      {
+        "gamma_odds_ratio": 3.0,
+        "upper_bound_one_sided_p": 0.0919684,
+        "upper_bound_two_sided_p": 0.183937,
+        "remains_significant_alpha_005": false
+      }
+    ],
+    "critical_gamma_star_alpha_005_two_sided": 2.6304,
+    "critical_gamma_star_alpha_001_two_sided": 2.3175,
+    "critical_gamma_star_did_alpha_005_two_sided": 3.2594,
+    "critical_gamma_star_did_alpha_001_two_sided": 2.8439,
+    "selection_direction_and_balance_audit": {
+      "matched_wave1_acc23_diff_pp": -0.61,
+      "matched_wave1_acc23_smd": -0.0429,
+      "rubin_strict_balance_abs_smd_lt_010": true,
+      "matched_wave1_paired_t_p": 0.03971,
+      "wave1_inactive_negative_selection_into_smr_pp": -7.539,
+      "wave1_inactive_negative_selection_hc3_p": 1.8e-05,
+      "negative_selection_biases_against_smr_first": true
+    },
+    "placebo_negative_control_outcomes": {
+      "wave3_sep2026_highrisk_smr_coverage": {
+        "smr_first_diff_pp": 1.435,
+        "hc3_p": 0.30787,
+        "null_verified": true
+      },
+      "qof_unpaid_carer_prevalence": {
+        "smr_first_effect_pct": 0.0473,
+        "hc3_p": 0.89386,
+        "null_verified": true
+      },
+      "qof_longterm_mental_health_register": {
+        "smr_first_effect_pct": -0.3909,
+        "hc3_p": 0.35619,
+        "null_verified": true
+      }
+    }
+  },
+  "pillar_3a_entangled_corridors_vs_mps": {
+    "uncoupled_product_12q": {
+      "n_qubits": 12,
+      "n_corridors": 4,
+      "total_gates": 88,
+      "two_qubit_cx_gates": 38,
+      "exact_statevector_ms": 1.7,
+      "exact_joint_all_corridors_adherent_prob": 0.033168,
+      "mid_cut_von_neumann_entropy_bits": -0.0,
+      "max_corridor_cut_entropy_bits": -0.0,
+      "corridor_cut_entropies": [
+        {
+          "cut_after_qubit": 2,
+          "corridor_split": "1|3",
+          "s_vn_bits": -0.0
+        },
+        {
+          "cut_after_qubit": 5,
+          "corridor_split": "2|2",
+          "s_vn_bits": -0.0
+        },
+        {
+          "cut_after_qubit": 8,
+          "corridor_split": "3|1",
+          "s_vn_bits": -0.0
+        }
+      ],
+      "mps_bond_dimension_sweep": [
+        {
+          "bond_dim_chi": 1,
+          "state_fidelity": 0.271488,
+          "infidelity_1_minus_f": 0.728512,
+          "prob_tvd": 0.710361,
+          "joint_all_corridors_adherent_prob": 0.108266,
+          "joint_survival_abs_error": 0.075099,
+          "mps_wall_ms": 2.26
+        },
+        {
+          "bond_dim_chi": 2,
+          "state_fidelity": 1.0,
+          "infidelity_1_minus_f": 0.0,
+          "prob_tvd": 0.0,
+          "joint_all_corridors_adherent_prob": 0.033168,
+          "joint_survival_abs_error": 0.0,
+          "mps_wall_ms": 2.13
+        },
+        {
+          "bond_dim_chi": 4,
+          "state_fidelity": 1.0,
+          "infidelity_1_minus_f": 0.0,
+          "prob_tvd": 0.0,
+          "joint_all_corridors_adherent_prob": 0.033168,
+          "joint_survival_abs_error": 0.0,
+          "mps_wall_ms": 1.6
+        },
+        {
+          "bond_dim_chi": 8,
+          "state_fidelity": 1.0,
+          "infidelity_1_minus_f": 0.0,
+          "prob_tvd": 0.0,
+          "joint_all_corridors_adherent_prob": 0.033168,
+          "joint_survival_abs_error": 0.0,
+          "mps_wall_ms": 1.61
+        },
+        {
+          "bond_dim_chi": 16,
+          "state_fidelity": 1.0,
+          "infidelity_1_minus_f": 0.0,
+          "prob_tvd": 0.0,
+          "joint_all_corridors_adherent_prob": 0.033168,
+          "joint_survival_abs_error": 0.0,
+          "mps_wall_ms": 1.8
+        },
+        {
+          "bond_dim_chi": 32,
+          "state_fidelity": 1.0,
+          "infidelity_1_minus_f": 0.0,
+          "prob_tvd": 0.0,
+          "joint_all_corridors_adherent_prob": 0.033168,
+          "joint_survival_abs_error": 0.0,
+          "mps_wall_ms": 1.59
+        }
+      ]
+    },
+    "planar_alliance_chain_12q": {
+      "n_qubits": 12,
+      "n_corridors": 4,
+      "total_gates": 284,
+      "two_qubit_cx_gates": 136,
+      "exact_statevector_ms": 4.78,
+      "exact_joint_all_corridors_adherent_prob": 0.180903,
+      "mid_cut_von_neumann_entropy_bits": 1.54586,
+      "max_corridor_cut_entropy_bits": 1.54586,
+      "corridor_cut_entropies": [
+        {
+          "cut_after_qubit": 2,
+          "corridor_split": "1|3",
+          "s_vn_bits": 1.32656
+        },
+        {
+          "cut_after_qubit": 5,
+          "corridor_split": "2|2",
+          "s_vn_bits": 1.54586
+        },
+        {
+          "cut_after_qubit": 8,
+          "corridor_split": "3|1",
+          "s_vn_bits": 1.36658
+        }
+      ],
+      "mps_bond_dimension_sweep": [
+        {
+          "bond_dim_chi": 1,
+          "state_fidelity": 7.5e-05,
+          "infidelity_1_minus_f": 0.999925,
+          "prob_tvd": 0.635685,
+          "joint_all_corridors_adherent_prob": 0.109962,
+          "joint_survival_abs_error": 0.07094,
+          "mps_wall_ms": 7.79
+        },
+        {
+          "bond_dim_chi": 2,
+          "state_fidelity": 0.055574,
+          "infidelity_1_minus_f": 0.944426,
+          "prob_tvd": 0.858999,
+          "joint_all_corridors_adherent_prob": 0.625417,
+          "joint_survival_abs_error": 0.444515,
+          "mps_wall_ms": 8.92
+        },
+        {
+          "bond_dim_chi": 4,
+          "state_fidelity": 0.294861,
+          "infidelity_1_minus_f": 0.705139,
+          "prob_tvd": 0.640969,
+          "joint_all_corridors_adherent_prob": 0.391048,
+          "joint_survival_abs_error": 0.210146,
+          "mps_wall_ms": 11.24
+        },
+        {
+          "bond_dim_chi": 8,
+          "state_fidelity": 0.836679,
+          "infidelity_1_minus_f": 0.163321,
+          "prob_tvd": 0.219055,
+          "joint_all_corridors_adherent_prob": 0.175758,
+          "joint_survival_abs_error": 0.005145,
+          "mps_wall_ms": 16.85
+        },
+        {
+          "bond_dim_chi": 16,
+          "state_fidelity": 0.992221,
+          "infidelity_1_minus_f": 0.007779,
+          "prob_tvd": 0.040211,
+          "joint_all_corridors_adherent_prob": 0.181296,
+          "joint_survival_abs_error": 0.000393,
+          "mps_wall_ms": 29.96
+        },
+        {
+          "bond_dim_chi": 32,
+          "state_fidelity": 0.999857,
+          "infidelity_1_minus_f": 0.000143,
+          "prob_tvd": 0.00513,
+          "joint_all_corridors_adherent_prob": 0.180599,
+          "joint_survival_abs_error": 0.000303,
+          "mps_wall_ms": 52.31
+        }
+      ]
+    },
+    "nonplanar_cross_icb_18q": {
+      "n_qubits": 18,
+      "n_corridors": 6,
+      "total_gates": 254,
+      "two_qubit_cx_gates": 118,
+      "exact_statevector_ms": 178.68,
+      "exact_joint_all_corridors_adherent_prob": 0.052716,
+      "mid_cut_von_neumann_entropy_bits": 4.37662,
+      "max_corridor_cut_entropy_bits": 4.37662,
+      "corridor_cut_entropies": [
+        {
+          "cut_after_qubit": 2,
+          "corridor_split": "1|5",
+          "s_vn_bits": 1.69485
+        },
+        {
+          "cut_after_qubit": 5,
+          "corridor_split": "2|4",
+          "s_vn_bits": 3.24871
+        },
+        {
+          "cut_after_qubit": 8,
+          "corridor_split": "3|3",
+          "s_vn_bits": 4.37662
+        },
+        {
+          "cut_after_qubit": 11,
+          "corridor_split": "4|2",
+          "s_vn_bits": 3.22061
+        },
+        {
+          "cut_after_qubit": 14,
+          "corridor_split": "5|1",
+          "s_vn_bits": 1.69392
+        }
+      ],
+      "mps_bond_dimension_sweep": [
+        {
+          "bond_dim_chi": 1,
+          "state_fidelity": 0.003994,
+          "infidelity_1_minus_f": 0.996006,
+          "prob_tvd": 0.953976,
+          "joint_all_corridors_adherent_prob": 0.290647,
+          "joint_survival_abs_error": 0.237931,
+          "mps_wall_ms": 21.93
+        },
+        {
+          "bond_dim_chi": 2,
+          "state_fidelity": 0.011363,
+          "infidelity_1_minus_f": 0.988637,
+          "prob_tvd": 0.943382,
+          "joint_all_corridors_adherent_prob": 0.11688,
+          "joint_survival_abs_error": 0.064164,
+          "mps_wall_ms": 28.31
+        },
+        {
+          "bond_dim_chi": 4,
+          "state_fidelity": 0.046117,
+          "infidelity_1_minus_f": 0.953883,
+          "prob_tvd": 0.722806,
+          "joint_all_corridors_adherent_prob": 0.174587,
+          "joint_survival_abs_error": 0.121871,
+          "mps_wall_ms": 43.17
+        },
+        {
+          "bond_dim_chi": 8,
+          "state_fidelity": 0.055624,
+          "infidelity_1_minus_f": 0.944376,
+          "prob_tvd": 0.710331,
+          "joint_all_corridors_adherent_prob": 0.048909,
+          "joint_survival_abs_error": 0.003807,
+          "mps_wall_ms": 86.18
+        },
+        {
+          "bond_dim_chi": 16,
+          "state_fidelity": 0.166463,
+          "infidelity_1_minus_f": 0.833537,
+          "prob_tvd": 0.623059,
+          "joint_all_corridors_adherent_prob": 0.118419,
+          "joint_survival_abs_error": 0.065702,
+          "mps_wall_ms": 232.12
+        },
+        {
+          "bond_dim_chi": 32,
+          "state_fidelity": 0.327717,
+          "infidelity_1_minus_f": 0.672283,
+          "prob_tvd": 0.523099,
+          "joint_all_corridors_adherent_prob": 0.108024,
+          "joint_survival_abs_error": 0.055308,
+          "mps_wall_ms": 861.9
+        }
+      ]
+    }
+  },
+  "pillar_3b_multistart_triad_kempe_vs_qaoa_and_asps": {
+    "regimes": {
+      "sparse_coupled_triad_18q": {
+        "lp_fractional_ratio": 1.0,
+        "exact_ground_energy": -8.695,
+        "qaoa_p1_cx_count": 76,
+        "solvers": {
+          "hubo_sa_1flip_256chains": {
+            "gs_hit_pct": 4.3,
+            "near_optimal_basin_hit_pct": 19.92,
+            "unique_low_energy_basins_found": 8,
+            "true_low_energy_basin_count": 8,
+            "basin_coverage_fraction": 1.0,
+            "normalized_basin_entropy": 0.9755,
+            "mean_energy": -3.1463,
+            "outage_fallback_min_churn_bits": 5.25,
+            "wall_ms": 12.15
+          },
+          "triad_kempe_1start": {
+            "gs_hit_pct": 100.0,
+            "near_optimal_basin_hit_pct": 100.0,
+            "unique_low_energy_basins_found": 1,
+            "true_low_energy_basin_count": 8,
+            "basin_coverage_fraction": 0.125,
+            "normalized_basin_entropy": 0.0,
+            "mean_energy": -8.695,
+            "outage_fallback_min_churn_bits": 15.0,
+            "wall_ms": 21.78
+          },
+          "triad_kempe_64start": {
+            "gs_hit_pct": 93.75,
+            "near_optimal_basin_hit_pct": 100.0,
+            "unique_low_energy_basins_found": 2,
+            "true_low_energy_basin_count": 8,
+            "basin_coverage_fraction": 0.25,
+            "normalized_basin_entropy": 0.1124,
+            "mean_energy": -8.6617,
+            "outage_fallback_min_churn_bits": 12.0,
+            "wall_ms": 19.49
+          },
+          "triad_kempe_256start": {
+            "gs_hit_pct": 98.44,
+            "near_optimal_basin_hit_pct": 100.0,
+            "unique_low_energy_basins_found": 2,
+            "true_low_energy_basin_count": 8,
+            "basin_coverage_fraction": 0.25,
+            "normalized_basin_entropy": 0.0387,
+            "mean_energy": -8.6867,
+            "outage_fallback_min_churn_bits": 12.0,
+            "wall_ms": 26.18
+          },
+          "coherent_triad_qaoa_p1_256shots": {
+            "gs_hit_pct": 6.64,
+            "near_optimal_basin_hit_pct": 45.31,
+            "unique_low_energy_basins_found": 7,
+            "true_low_energy_basin_count": 8,
+            "basin_coverage_fraction": 0.875,
+            "normalized_basin_entropy": 0.8692,
+            "mean_energy": -5.0864,
+            "outage_fallback_min_churn_bits": 5.25,
+            "opt_and_sim_ms": 219.17
+          },
+          "coherent_triad_qaoa_p2_256shots": {
+            "gs_hit_pct": 8.98,
+            "near_optimal_basin_hit_pct": 44.92,
+            "unique_low_energy_basins_found": 8,
+            "true_low_energy_basin_count": 8,
+            "basin_coverage_fraction": 1.0,
+            "normalized_basin_entropy": 0.8887,
+            "mean_energy": -4.9125,
+            "outage_fallback_min_churn_bits": 5.25,
+            "opt_and_sim_ms": 258.36
+          }
+        }
+      },
+      "frustrated_hypercycle_triad_18q": {
+        "lp_fractional_ratio": 1.0,
+        "exact_ground_energy": -7.305,
+        "qaoa_p1_cx_count": 76,
+        "solvers": {
+          "hubo_sa_1flip_256chains": {
+            "gs_hit_pct": 1.95,
+            "near_optimal_basin_hit_pct": 17.97,
+            "unique_low_energy_basins_found": 8,
+            "true_low_energy_basin_count": 8,
+            "basin_coverage_fraction": 1.0,
+            "normalized_basin_entropy": 0.938,
+            "mean_energy": -2.9942,
+            "outage_fallback_min_churn_bits": 10.0,
+            "wall_ms": 9.33
+          },
+          "triad_kempe_1start": {
+            "gs_hit_pct": 0.0,
+            "near_optimal_basin_hit_pct": 100.0,
+            "unique_low_energy_basins_found": 1,
+            "true_low_energy_basin_count": 8,
+            "basin_coverage_fraction": 0.125,
+            "normalized_basin_entropy": 0.0,
+            "mean_energy": -7.02,
+            "outage_fallback_min_churn_bits": 12.0,
+            "wall_ms": 14.75
+          },
+          "triad_kempe_64start": {
+            "gs_hit_pct": 64.06,
+            "near_optimal_basin_hit_pct": 100.0,
+            "unique_low_energy_basins_found": 3,
+            "true_low_energy_basin_count": 8,
+            "basin_coverage_fraction": 0.375,
+            "normalized_basin_entropy": 0.4203,
+            "mean_energy": -7.1998,
+            "outage_fallback_min_churn_bits": 12.0,
+            "wall_ms": 13.25
+          },
+          "triad_kempe_256start": {
+            "gs_hit_pct": 70.7,
+            "near_optimal_basin_hit_pct": 100.0,
+            "unique_low_energy_basins_found": 3,
+            "true_low_energy_basin_count": 8,
+            "basin_coverage_fraction": 0.375,
+            "normalized_basin_entropy": 0.3761,
+            "mean_energy": -7.2194,
+            "outage_fallback_min_churn_bits": 12.0,
+            "wall_ms": 17.95
+          },
+          "coherent_triad_qaoa_p1_256shots": {
+            "gs_hit_pct": 5.86,
+            "near_optimal_basin_hit_pct": 29.3,
+            "unique_low_energy_basins_found": 8,
+            "true_low_energy_basin_count": 8,
+            "basin_coverage_fraction": 1.0,
+            "normalized_basin_entropy": 0.9204,
+            "mean_energy": -3.4279,
+            "outage_fallback_min_churn_bits": 10.0,
+            "opt_and_sim_ms": 214.57
+          },
+          "coherent_triad_qaoa_p2_256shots": {
+            "gs_hit_pct": 8.2,
+            "near_optimal_basin_hit_pct": 35.94,
+            "unique_low_energy_basins_found": 8,
+            "true_low_energy_basin_count": 8,
+            "basin_coverage_fraction": 1.0,
+            "normalized_basin_entropy": 0.8293,
+            "mean_energy": -4.016,
+            "outage_fallback_min_churn_bits": 10.0,
+            "opt_and_sim_ms": 277.43
+          }
+        }
+      }
+    },
+    "asps_hardware_noise_threshold_curve": [
+      {
+        "noise_multiplier_lambda": 0.0,
+        "effective_per_qubit_bitflip_rate": 0.0,
+        "n_shots_raw": 2048,
+        "n_shots_retained_asps": 2048,
+        "asps_retention_pct": 100.0,
+        "effective_shot_overhead_x": 1.0,
+        "raw_gs_hit_pct": 5.76,
+        "asps_gs_hit_pct": 5.76,
+        "raw_mean_energy": -3.474,
+        "asps_mean_energy": -3.474,
+        "energy_barrier_mitigated_delta": 0.0
+      },
+      {
+        "noise_multiplier_lambda": 0.5,
+        "effective_per_qubit_bitflip_rate": 0.007,
+        "n_shots_raw": 2048,
+        "n_shots_retained_asps": 1819,
+        "asps_retention_pct": 88.82,
+        "effective_shot_overhead_x": 1.126,
+        "raw_gs_hit_pct": 4.3,
+        "asps_gs_hit_pct": 4.84,
+        "raw_mean_energy": -1.8727,
+        "asps_mean_energy": -3.4236,
+        "energy_barrier_mitigated_delta": 1.5509
+      },
+      {
+        "noise_multiplier_lambda": 1.0,
+        "effective_per_qubit_bitflip_rate": 0.014,
+        "n_shots_raw": 2048,
+        "n_shots_retained_asps": 1579,
+        "asps_retention_pct": 77.1,
+        "effective_shot_overhead_x": 1.297,
+        "raw_gs_hit_pct": 4.39,
+        "asps_gs_hit_pct": 5.7,
+        "raw_mean_energy": -0.3045,
+        "asps_mean_energy": -3.5222,
+        "energy_barrier_mitigated_delta": 3.2177
+      },
+      {
+        "noise_multiplier_lambda": 2.0,
+        "effective_per_qubit_bitflip_rate": 0.028,
+        "n_shots_raw": 2048,
+        "n_shots_retained_asps": 1249,
+        "asps_retention_pct": 60.99,
+        "effective_shot_overhead_x": 1.64,
+        "raw_gs_hit_pct": 3.52,
+        "asps_gs_hit_pct": 5.76,
+        "raw_mean_energy": 2.678,
+        "asps_mean_energy": -3.4562,
+        "energy_barrier_mitigated_delta": 6.1343
+      },
+      {
+        "noise_multiplier_lambda": 3.5,
+        "effective_per_qubit_bitflip_rate": 0.049,
+        "n_shots_raw": 2048,
+        "n_shots_retained_asps": 841,
+        "asps_retention_pct": 41.06,
+        "effective_shot_overhead_x": 2.435,
+        "raw_gs_hit_pct": 1.86,
+        "asps_gs_hit_pct": 4.52,
+        "raw_mean_energy": 7.2279,
+        "asps_mean_energy": -3.4841,
+        "energy_barrier_mitigated_delta": 10.712
+      },
+      {
+        "noise_multiplier_lambda": 5.0,
+        "effective_per_qubit_bitflip_rate": 0.07,
+        "n_shots_raw": 2048,
+        "n_shots_retained_asps": 546,
+        "asps_retention_pct": 26.66,
+        "effective_shot_overhead_x": 3.751,
+        "raw_gs_hit_pct": 1.12,
+        "asps_gs_hit_pct": 4.21,
+        "raw_mean_energy": 11.8756,
+        "asps_mean_energy": -3.4049,
+        "energy_barrier_mitigated_delta": 15.2805
+      }
+    ]
+  },
+  "live_nexus_helios_1e_lite_jobs": {
+    "backend_name": "Helios-1E-lite",
+    "error_model": "QSystemErrorModel(name='alpha')",
+    "hqc_cost_total": 0.0,
+    "physical_hardware_shots": 0,
+    "entangled_planar_12q": {
+      "job_id": "0c725f9b-0234-46c4-b1ba-eafdef8b7891",
+      "job_name": "qsp-unified-v04-entangled-planar-12q-20261115_135456",
+      "hugr_bytes": 30923,
+      "cloud_elapsed_s": 17.15,
+      "n_shots": 1024,
+      "helios_joint_all_corridors_adherent_prob": 0.18066,
+      "exact_joint_all_corridors_adherent_prob": 0.1809,
+      "corridor_adherence_distribution_tvd_vs_exact": 0.02739
+    },
+    "entangled_nonplanar_18q": {
+      "job_id": "25195504-5c94-48fc-ae50-aa50f28c8845",
+      "job_name": "qsp-unified-v04-entangled-nonplanar-18q-20261115_135456",
+      "hugr_bytes": 29220,
+      "cloud_elapsed_s": 608.3,
+      "n_shots": 1024,
+      "helios_joint_all_corridors_adherent_prob": 0.05762,
+      "exact_joint_all_corridors_adherent_prob": 0.05272,
+      "corridor_adherence_distribution_tvd_vs_exact": 0.0906
+    },
+    "frustrated_hypercycle_triad_18q": {
+      "job_id": "0449cbac-12af-4e4a-a143-f50562040c9d",
+      "job_name": "qsp-unified-v04-frustrated-hypercycle-triad-18q-20261115_135456",
+      "hugr_bytes": 15145,
+      "cloud_elapsed_s": 213.12,
+      "raw_diversity": {
+        "gs_hit_pct": 7.23,
+        "near_optimal_basin_hit_pct": 35.55,
+        "unique_low_energy_basins_found": 8,
+        "true_low_energy_basin_count": 8,
+        "basin_coverage_fraction": 1.0,
+        "normalized_basin_entropy": 0.9188,
+        "mean_energy": -2.6587,
+        "outage_fallback_min_churn_bits": 10.0
+      },
+      "asps_filter": {
+        "n_shots_raw": 512,
+        "n_shots_retained_asps": 480,
+        "asps_retention_pct": 93.75,
+        "effective_shot_overhead_x": 1.067,
+        "raw_gs_hit_pct": 7.23,
+        "asps_gs_hit_pct": 7.71,
+        "raw_mean_energy": -2.6587,
+        "asps_mean_energy": -3.7626,
+        "energy_barrier_mitigated_delta": 1.1039
+      },
+      "asps_diversity": {
+        "gs_hit_pct": 7.71,
+        "near_optimal_basin_hit_pct": 37.92,
+        "unique_low_energy_basins_found": 8,
+        "true_low_energy_basin_count": 8,
+        "basin_coverage_fraction": 1.0,
+        "normalized_basin_entropy": 0.9188,
+        "mean_energy": -3.7626,
+        "outage_fallback_min_churn_bits": 10.0
+      }
+    }
+  },
+  "live_jev_epistemic_audit": {
+    "atomic_noul_assertions": {
+      "asserts_zero_physical_qpu_shots": 0.99,
+      "reports_gate_g4_classical_floor": 0.97,
+      "keeps_nhs_dcb0129_hazards_open": 0.97,
+      "preserves_human_clinical_and_link_worker_authority": 0.96,
+      "complies_with_noncommercial_open_science_mandate": 0.98,
+      "contains_unverified_supremacy_or_rct_claim": 0.05
+    },
+    "forward_governance_posture": "compliant_zero_hype_research_sandbox",
+    "reversed_governance_posture": "compliant_zero_hype_research_sandbox",
+    "option_order_consistent": true,
+    "epistemic_rigor_score_out_of_5": 3.89,
+    "all_atomic_verifiers_passed": true
+  },
+  "total_wall_s": 215.29,
+  "receipt_sha256": "5f6cf49b005f7db179b0fb6447c5e10d078c2d7f2cb0f4f4490e1fd84985f59f"
+}

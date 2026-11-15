@@ -1988,6 +1988,13 @@
   },
   "receipts_summary": [
     {
+      "file": "unified_wm_v04_swarmworld_v02_receipt.json",
+      "sha256": "5f6cf49b005f7db179b0fb6447c5e10d078c2d7f2cb0f4f4490e1fd84985f59f",
+      "platforms": "Full Unified Upgrade (`QSP-WM v0.4` \u00d7 `SP-SwarmWorld v0.2`) via `antigravity-jev-social-prescribing-quantum` (`jev-1.14.0` cross-ICB perception & epistemic audit) + `M=24` `2\u00d72` Deconfounding & Zero-Shot 3-ICB England Transfer (`87` PCNs, `391` GPs) + Sutton Dyna Imagination & Rosenbaum `\u0393*` (`5,661` GPs) + SVD `MPS` (`\u03c7=1..32`) & `64`-Start `Triad-Kempe` vs `ASPS` + 3 Live `12q/18q` Quantinuum Nexus `Helios-1E-lite` Jobs (`0c725f9b`, `25195504`, `0449cbac`; 2,560 shots, 0.00 HQC)",
+      "metrics": "Pillar 1A (M=24 2x2 + Adversary): C4 R_hold = 0.4145 +- 0.0256 vs C1 0.3810 +- 0.0610 (Delta=+0.0335, exact p=0.0462), Org x Guidance +0.1261 (p=3.58e-7), omniscient Shock-QD adversary 0.4657 (p=9.78e-6); Pillar 1B (Zero-Shot 3-ICB Transfer, 0 agent actions): Birmingham 73.1% skyline (0.2910; Monoculture 0.3088 NS), Norfolk 75.8% (0.3854 beats all, p=0.00146), Devon 38.9% (0.1617, rural moorland gap); Pillar 2A/2B (QSP-WM v0.4): Dyna N_pilot=18 build regret 0.57 pp vs 10.66 pp Model-Free & 11.12 pp 168p Markov (p=4.88e-4), Rosenbaum Gamma*(0.05)=2.6304 (Gamma*_DiD=3.2594), 3/3 null placebos; Pillar 3A/3B: 12q planar MPS chi=32 TVD=0.0051 (52 ms, Job 0c725f9b 18.07%) vs 18q non-planar S_vN=4.38b TVD=0.5231 (Job 25195504 5.76%); 64-Start Triad-Kempe 64.06% GS (13.3 ms, 3/8 basins) vs 18q QAOA 8/8=100% basins (Job 0449cbac + ASPS 7.23%->7.71% GS, 93.75% ret.); live jev-1.14.0 5/5 (100%) & Rigor 3.89/5",
+      "floor": "Omniscient Shock-QD 0.4657 / 64-Start Kempe 64.06% GS (13.3 ms) / MPS \u03c7=32 (52 ms)"
+    },
+    {
       "file": "sp_swarmworld_v01_receipt.json",
       "sha256": "0e089fb1ffad36dd5cbf664e17be1a72d4f5d5424559dcd13e1709aa17175e6e",
       "platforms": "Social Prescribing SwarmWorld (`SP-SwarmWorld v0.1`, adapting `arXiv:2608.26081`) via `antigravity-jev-social-prescribing-quantum` (`jev-1.14.0` perception & epistemic audit) + Real 28-PCN / 143-GP Mid & South Essex Topology (`81` edges) + Safety-Locked 16-Register VM (`NHS DCB0129`) + 2 Live `12q` Quantinuum Nexus `Helios-1E-lite` Jobs (`e3625be1`, `dc923f89`; 2,048 shots, 0.00 HQC)",
