@@ -1,0 +1,1509 @@
+{
+  "schema_version": "sp-swarmworld-v0.1",
+  "generated_at_utc": "2026-11-15T12:41:57.589824+00:00",
+  "persona": "Aletheia-QSPM",
+  "methodological_foundation": {
+    "citation": "Pal, K., Wang, E., & Buehler, M. J. (2026). SwarmWorld: Cumulative Culture and Innovation in Multi-Agent Worlds. arXiv:2608.26081.",
+    "arxiv_abs_url": "https://arxiv.org/abs/2608.26081",
+    "arxiv_pdf_url": "https://arxiv.org/pdf/2608.26081",
+    "frozen_consequence_physics": "Quantum Social Prescribing World Model v0.3 (QSP-WM v0.3)"
+  },
+  "typesafe_model_verified": "jev-1.14.0",
+  "quantum_emulator_target": "Quantinuum Nexus Helios-1E-lite (QSystemErrorModel alpha, 0.00 HQC)",
+  "physical_hardware_shots": 0,
+  "patient_identifiable_records_used": 0,
+  "public_ogl_v3_practice_aggregates_and_synthetic_vignettes_only": true,
+  "nhs_dcb0129_open_hazards": [
+    "H-QSPM-01",
+    "H-QSPM-02",
+    "H-QSPM-03",
+    "H-QSPM-04"
+  ],
+  "non_commercial_mandate": "100% Non-Commercial Scientific Research & Free NHS Primary-Care Public Good",
+  "mandatory_acknowledgment": "This work was supported in part by complimentary access to Google Antigravity and Gemini 4 Argon to accelerate scientific workflows.",
+  "live_jev_pcn_sensor_perception_audit": {
+    "model": "jev-1.14.0",
+    "n_structured_observations": 7,
+    "in_scope_option_order_invariance_rate": 1.0,
+    "all_7_option_order_invariance_rate": 1.0,
+    "dcb0129_syncope_halted": true,
+    "companion_oos_rejected": true,
+    "derived_swarm_perception_calibration": {
+      "fuel_gain": 1.329,
+      "smr_gain": 1.2275,
+      "transport_gain": 1.3255
+    },
+    "observations": [
+      {
+        "state_id": "MSE_TILBURY_CHADWELL_CORE20",
+        "pcn_code": "U06243",
+        "pcn_name": "Tilbury and Chadwell PCN",
+        "p_urgent_escalation": 0.02,
+        "p_in_scope_companion": 0.98,
+        "p_fuel_welfare_first": 0.96,
+        "p_pharmacist_smr_priority": 0.5,
+        "p_rural_minibus_bridge": 0.06,
+        "stress_severity_0_to_4": 3.14,
+        "forward_choice": "welfare_then_smr_then_green",
+        "reverse_choice": "welfare_then_smr_then_green",
+        "choice_confidence": 1.0,
+        "option_order_invariant": true,
+        "routed_decision": "welfare_then_smr_then_green"
+      },
+      {
+        "state_id": "MSE_CANVEY_HIGH_ACB_POLYPHARMACY",
+        "pcn_code": "U84454",
+        "pcn_name": "Canvey PCN",
+        "p_urgent_escalation": 0.03,
+        "p_in_scope_companion": 0.98,
+        "p_fuel_welfare_first": 0.08,
+        "p_pharmacist_smr_priority": 0.95,
+        "p_rural_minibus_bridge": 0.03,
+        "stress_severity_0_to_4": 2.52,
+        "forward_choice": "smr_then_welfare_then_green",
+        "reverse_choice": "smr_then_welfare_then_green",
+        "choice_confidence": 0.71,
+        "option_order_invariant": true,
+        "routed_decision": "smr_then_welfare_then_green"
+      },
+      {
+        "state_id": "MSE_DENGIE_RURAL_PENINSULA",
+        "pcn_code": "U09727",
+        "pcn_name": "Dengie and South Woodham Ferrers PCN",
+        "p_urgent_escalation": 0.02,
+        "p_in_scope_companion": 0.98,
+        "p_fuel_welfare_first": 0.47,
+        "p_pharmacist_smr_priority": 0.61,
+        "p_rural_minibus_bridge": 0.95,
+        "stress_severity_0_to_4": 2.83,
+        "forward_choice": "transport_bridged_welfare_smr_green",
+        "reverse_choice": "transport_bridged_welfare_smr_green",
+        "choice_confidence": 0.96,
+        "option_order_invariant": true,
+        "routed_decision": "transport_bridged_welfare_smr_green"
+      },
+      {
+        "state_id": "MSE_SOUTHEND_COMPOUNDED_CORE20_ACB",
+        "pcn_code": "U02453",
+        "pcn_name": "Southend West Central PCN",
+        "p_urgent_escalation": 0.03,
+        "p_in_scope_companion": 0.98,
+        "p_fuel_welfare_first": 0.96,
+        "p_pharmacist_smr_priority": 0.71,
+        "p_rural_minibus_bridge": 0.02,
+        "stress_severity_0_to_4": 3.22,
+        "forward_choice": "welfare_then_smr_then_green",
+        "reverse_choice": "welfare_then_smr_then_green",
+        "choice_confidence": 1.0,
+        "option_order_invariant": true,
+        "routed_decision": "welfare_then_smr_then_green"
+      },
+      {
+        "state_id": "MSE_RAYLEIGH_SUBURBAN_PREVENTIVE",
+        "pcn_code": "U12553",
+        "pcn_name": "Aegros Health PCN",
+        "p_urgent_escalation": 0.02,
+        "p_in_scope_companion": 0.97,
+        "p_fuel_welfare_first": 0.02,
+        "p_pharmacist_smr_priority": 0.06,
+        "p_rural_minibus_bridge": 0.02,
+        "stress_severity_0_to_4": 0.27,
+        "forward_choice": "streamlined_smr_to_green",
+        "reverse_choice": "streamlined_smr_to_green",
+        "choice_confidence": 1.0,
+        "option_order_invariant": true,
+        "routed_decision": "streamlined_smr_to_green"
+      },
+      {
+        "state_id": "DCB0129_ACUTE_SYNCOPE_HQSPM01",
+        "pcn_code": "SAFETY_GATE_01",
+        "pcn_name": "Statutory Hazard H-QSPM-01 Boundary Check",
+        "p_urgent_escalation": 0.98,
+        "p_in_scope_companion": 0.75,
+        "p_fuel_welfare_first": 0.15,
+        "p_pharmacist_smr_priority": 0.78,
+        "p_rural_minibus_bridge": 0.03,
+        "stress_severity_0_to_4": 3.91,
+        "forward_choice": "smr_then_welfare_then_green",
+        "reverse_choice": "smr_then_welfare_then_green",
+        "choice_confidence": 0.96,
+        "option_order_invariant": true,
+        "routed_decision": "URGENT_CLINICAL_ESCALATION"
+      },
+      {
+        "state_id": "COMPANION_NOUL_OOS_ADMIN_TICKET",
+        "pcn_code": "SCOPE_GATE_02",
+        "pcn_name": "Companion Noul Out-of-Scope Admin Filter",
+        "p_urgent_escalation": 0.01,
+        "p_in_scope_companion": 0.01,
+        "p_fuel_welfare_first": 0.02,
+        "p_pharmacist_smr_priority": 0.03,
+        "p_rural_minibus_bridge": 0.01,
+        "stress_severity_0_to_4": 0.02,
+        "forward_choice": "streamlined_smr_to_green",
+        "reverse_choice": "streamlined_smr_to_green",
+        "choice_confidence": 0.93,
+        "option_order_invariant": true,
+        "routed_decision": "REJECT_OUT_OF_SCOPE"
+      }
+    ]
+  },
+  "swarmworld_benchmark": {
+    "mse_topology": {
+      "n_pcns": 28,
+      "n_gp_practices": 143,
+      "registered_population": 1266245,
+      "n_undirected_edges": 81,
+      "n_core20_hotspots": 8,
+      "n_high_acb_hotspots": 7,
+      "n_rural_peninsula_pcns": 4
+    },
+    "experimental_design": {
+      "seeds": [
+        4101,
+        4102,
+        4103,
+        4104,
+        4105,
+        4106,
+        4107,
+        4108
+      ],
+      "n_world_seeds": 8,
+      "inferential_unit": "world_seed",
+      "n_agents": 28,
+      "max_ticks": 800,
+      "macroturn_interval": 25,
+      "checkpoints": [
+        100,
+        200,
+        400,
+        800
+      ],
+      "heldout_disturbance_schedules": 8,
+      "heldout_eval_ticks": 72,
+      "elapsed_wall_seconds": 72.243
+    },
+    "conditions": {
+      "static_l1_highs_milp": {
+        "n_world_seeds": 8,
+        "final_endpoints": {
+          "heldout_resilience_mean": {
+            "mean": 0.14416,
+            "sd": 0.02311,
+            "seed_values": [
+              0.15562,
+              0.08799,
+              0.15181,
+              0.15532,
+              0.15477,
+              0.14322,
+              0.15585,
+              0.14868
+            ]
+          },
+          "portfolio_resilience": {
+            "mean": 0.17968,
+            "sd": 0.02407,
+            "seed_values": [
+              0.18893,
+              0.12028,
+              0.19173,
+              0.18783,
+              0.18812,
+              0.18583,
+              0.18837,
+              0.18634
+            ]
+          },
+          "discovery_frontier_auc": {
+            "mean": 0.33993,
+            "sd": 0.00672,
+            "seed_values": [
+              0.33816,
+              0.34242,
+              0.34807,
+              0.33283,
+              0.34673,
+              0.33081,
+              0.34568,
+              0.33471
+            ]
+          },
+          "best_final_artifact": {
+            "mean": 0.32631,
+            "sd": 0.01094,
+            "seed_values": [
+              0.31111,
+              0.32087,
+              0.34285,
+              0.32582,
+              0.33421,
+              0.32549,
+              0.31418,
+              0.33596
+            ]
+          },
+          "validated_inventions": {
+            "mean": 0.0,
+            "sd": 0.0,
+            "seed_values": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "active_artifact_count": {
+            "mean": 16.0,
+            "sd": 0.0,
+            "seed_values": [
+              16.0,
+              16.0,
+              16.0,
+              16.0,
+              16.0,
+              16.0,
+              16.0,
+              16.0
+            ]
+          }
+        },
+        "checkpoint_trajectories": {
+          "100": {
+            "heldout_resilience_mean": 0.15055,
+            "portfolio_resilience": 0.17856,
+            "discovery_frontier_auc": 0.3308,
+            "best_final_artifact": 0.33348,
+            "validated_inventions": 0.0,
+            "active_artifact_count": 16.0
+          },
+          "200": {
+            "heldout_resilience_mean": 0.14998,
+            "portfolio_resilience": 0.17956,
+            "discovery_frontier_auc": 0.33572,
+            "best_final_artifact": 0.33553,
+            "validated_inventions": 0.0,
+            "active_artifact_count": 16.0
+          },
+          "400": {
+            "heldout_resilience_mean": 0.15048,
+            "portfolio_resilience": 0.17968,
+            "discovery_frontier_auc": 0.33852,
+            "best_final_artifact": 0.3389,
+            "validated_inventions": 0.0,
+            "active_artifact_count": 16.0
+          },
+          "800": {
+            "heldout_resilience_mean": 0.14416,
+            "portfolio_resilience": 0.17968,
+            "discovery_frontier_auc": 0.33993,
+            "best_final_artifact": 0.32631,
+            "validated_inventions": 0.0,
+            "active_artifact_count": 16.0
+          }
+        },
+        "multi_agent_artifact_fraction_mean": 0.0,
+        "cross_agent_fork_fraction_mean": 0.0,
+        "total_program_forks_mean": 0.0,
+        "max_lineage_depth_mean": 0.0,
+        "noncreator_reuse_fraction_mean": 0.0,
+        "physical_observation_first_reuse_fraction_mean": 0.0,
+        "dcb0129_red_flag_recall_pct": 100.0,
+        "dcb0129_oos_leak_events_total": 0,
+        "dcb0129_capacity_overloads_total": 0,
+        "mean_highs_solve_ms": 6.652
+      },
+      "classical_map_elites_qd": {
+        "n_world_seeds": 8,
+        "final_endpoints": {
+          "heldout_resilience_mean": {
+            "mean": 0.36616,
+            "sd": 0.08299,
+            "seed_values": [
+              0.31212,
+              0.38499,
+              0.31453,
+              0.49527,
+              0.26483,
+              0.4778,
+              0.36711,
+              0.31263
+            ]
+          },
+          "portfolio_resilience": {
+            "mean": 0.60653,
+            "sd": 0.02912,
+            "seed_values": [
+              0.55286,
+              0.60964,
+              0.5996,
+              0.6351,
+              0.61191,
+              0.64446,
+              0.61682,
+              0.58186
+            ]
+          },
+          "discovery_frontier_auc": {
+            "mean": 0.57899,
+            "sd": 0.03961,
+            "seed_values": [
+              0.52815,
+              0.51061,
+              0.60394,
+              0.58385,
+              0.58034,
+              0.6105,
+              0.6228,
+              0.59177
+            ]
+          },
+          "best_final_artifact": {
+            "mean": 0.59446,
+            "sd": 0.03685,
+            "seed_values": [
+              0.51475,
+              0.60983,
+              0.60751,
+              0.63668,
+              0.59651,
+              0.61677,
+              0.57372,
+              0.59991
+            ]
+          },
+          "validated_inventions": {
+            "mean": 12.875,
+            "sd": 2.3566,
+            "seed_values": [
+              12.0,
+              11.0,
+              16.0,
+              13.0,
+              13.0,
+              9.0,
+              13.0,
+              16.0
+            ]
+          },
+          "active_artifact_count": {
+            "mean": 27.75,
+            "sd": 0.46291,
+            "seed_values": [
+              28.0,
+              27.0,
+              28.0,
+              28.0,
+              28.0,
+              27.0,
+              28.0,
+              28.0
+            ]
+          }
+        },
+        "checkpoint_trajectories": {
+          "100": {
+            "heldout_resilience_mean": 0.18048,
+            "portfolio_resilience": 0.20837,
+            "discovery_frontier_auc": 0.25071,
+            "best_final_artifact": 0.42059,
+            "validated_inventions": 2.25,
+            "active_artifact_count": 7.375
+          },
+          "200": {
+            "heldout_resilience_mean": 0.33449,
+            "portfolio_resilience": 0.42168,
+            "discovery_frontier_auc": 0.38998,
+            "best_final_artifact": 0.52118,
+            "validated_inventions": 7.125,
+            "active_artifact_count": 17.875
+          },
+          "400": {
+            "heldout_resilience_mean": 0.41158,
+            "portfolio_resilience": 0.54424,
+            "discovery_frontier_auc": 0.50156,
+            "best_final_artifact": 0.57693,
+            "validated_inventions": 11.125,
+            "active_artifact_count": 26.125
+          },
+          "800": {
+            "heldout_resilience_mean": 0.36616,
+            "portfolio_resilience": 0.60653,
+            "discovery_frontier_auc": 0.57899,
+            "best_final_artifact": 0.59446,
+            "validated_inventions": 12.875,
+            "active_artifact_count": 27.75
+          }
+        },
+        "multi_agent_artifact_fraction_mean": 0.0,
+        "cross_agent_fork_fraction_mean": 0.0,
+        "total_program_forks_mean": 290.38,
+        "max_lineage_depth_mean": 0.0,
+        "noncreator_reuse_fraction_mean": 0.0,
+        "physical_observation_first_reuse_fraction_mean": 0.0,
+        "dcb0129_red_flag_recall_pct": 100.0,
+        "dcb0129_oos_leak_events_total": 0,
+        "dcb0129_capacity_overloads_total": 0,
+        "mean_qd_archive_occupancy": 23.25
+      },
+      "isolated_best_of_28": {
+        "n_world_seeds": 8,
+        "final_endpoints": {
+          "heldout_resilience_mean": {
+            "mean": 0.20768,
+            "sd": 0.04233,
+            "seed_values": [
+              0.1974,
+              0.20844,
+              0.19593,
+              0.19238,
+              0.28807,
+              0.18248,
+              0.24731,
+              0.14941
+            ]
+          },
+          "portfolio_resilience": {
+            "mean": 0.4747,
+            "sd": 0.10349,
+            "seed_values": [
+              0.53136,
+              0.49161,
+              0.48986,
+              0.52463,
+              0.51313,
+              0.51084,
+              0.51511,
+              0.22105
+            ]
+          },
+          "discovery_frontier_auc": {
+            "mean": 0.52353,
+            "sd": 0.00808,
+            "seed_values": [
+              0.51151,
+              0.53466,
+              0.53069,
+              0.51944,
+              0.52519,
+              0.51951,
+              0.51649,
+              0.53071
+            ]
+          },
+          "best_final_artifact": {
+            "mean": 0.54585,
+            "sd": 0.0125,
+            "seed_values": [
+              0.55997,
+              0.53444,
+              0.55887,
+              0.53369,
+              0.53131,
+              0.55904,
+              0.55021,
+              0.53928
+            ]
+          },
+          "validated_inventions": {
+            "mean": 3.625,
+            "sd": 0.51755,
+            "seed_values": [
+              4.0,
+              3.0,
+              4.0,
+              3.0,
+              4.0,
+              4.0,
+              4.0,
+              3.0
+            ]
+          },
+          "active_artifact_count": {
+            "mean": 4.875,
+            "sd": 0.64087,
+            "seed_values": [
+              5.0,
+              5.0,
+              4.0,
+              4.0,
+              5.0,
+              5.0,
+              6.0,
+              5.0
+            ]
+          }
+        },
+        "checkpoint_trajectories": {
+          "100": {
+            "heldout_resilience_mean": 0.12446,
+            "portfolio_resilience": 0.14486,
+            "discovery_frontier_auc": 0.425,
+            "best_final_artifact": 0.51905,
+            "validated_inventions": 1.125,
+            "active_artifact_count": 1.875
+          },
+          "200": {
+            "heldout_resilience_mean": 0.14312,
+            "portfolio_resilience": 0.17744,
+            "discovery_frontier_auc": 0.47532,
+            "best_final_artifact": 0.52667,
+            "validated_inventions": 2.0,
+            "active_artifact_count": 2.125
+          },
+          "400": {
+            "heldout_resilience_mean": 0.19336,
+            "portfolio_resilience": 0.34536,
+            "discovery_frontier_auc": 0.50534,
+            "best_final_artifact": 0.5307,
+            "validated_inventions": 3.0,
+            "active_artifact_count": 3.25
+          },
+          "800": {
+            "heldout_resilience_mean": 0.20768,
+            "portfolio_resilience": 0.4747,
+            "discovery_frontier_auc": 0.52353,
+            "best_final_artifact": 0.54585,
+            "validated_inventions": 3.625,
+            "active_artifact_count": 4.875
+          }
+        },
+        "multi_agent_artifact_fraction_mean": 0.0,
+        "cross_agent_fork_fraction_mean": 0.0,
+        "total_program_forks_mean": 0.0,
+        "max_lineage_depth_mean": 0.0,
+        "noncreator_reuse_fraction_mean": 0.0,
+        "physical_observation_first_reuse_fraction_mean": 0.0,
+        "dcb0129_red_flag_recall_pct": 100.0,
+        "dcb0129_oos_leak_events_total": 0,
+        "dcb0129_capacity_overloads_total": 0
+      },
+      "no_explicit_culture_physical_stigmergy": {
+        "n_world_seeds": 8,
+        "final_endpoints": {
+          "heldout_resilience_mean": {
+            "mean": 0.15166,
+            "sd": 0.00823,
+            "seed_values": [
+              0.15359,
+              0.14611,
+              0.14499,
+              0.15972,
+              0.14394,
+              0.14509,
+              0.16667,
+              0.15313
+            ]
+          },
+          "portfolio_resilience": {
+            "mean": 0.23664,
+            "sd": 0.03275,
+            "seed_values": [
+              0.24477,
+              0.24902,
+              0.24755,
+              0.25415,
+              0.15664,
+              0.24219,
+              0.25665,
+              0.24211
+            ]
+          },
+          "discovery_frontier_auc": {
+            "mean": 0.33956,
+            "sd": 0.0018,
+            "seed_values": [
+              0.34026,
+              0.3384,
+              0.33695,
+              0.33762,
+              0.3413,
+              0.33909,
+              0.34116,
+              0.34167
+            ]
+          },
+          "best_final_artifact": {
+            "mean": 0.33248,
+            "sd": 0.0103,
+            "seed_values": [
+              0.32061,
+              0.33727,
+              0.33917,
+              0.33632,
+              0.32189,
+              0.32005,
+              0.34777,
+              0.3368
+            ]
+          },
+          "validated_inventions": {
+            "mean": 0.0,
+            "sd": 0.0,
+            "seed_values": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "active_artifact_count": {
+            "mean": 28.0,
+            "sd": 0.0,
+            "seed_values": [
+              28.0,
+              28.0,
+              28.0,
+              28.0,
+              28.0,
+              28.0,
+              28.0,
+              28.0
+            ]
+          }
+        },
+        "checkpoint_trajectories": {
+          "100": {
+            "heldout_resilience_mean": 0.15214,
+            "portfolio_resilience": 0.16872,
+            "discovery_frontier_auc": 0.30001,
+            "best_final_artifact": 0.32617,
+            "validated_inventions": 0.0,
+            "active_artifact_count": 25.625
+          },
+          "200": {
+            "heldout_resilience_mean": 0.15323,
+            "portfolio_resilience": 0.18091,
+            "discovery_frontier_auc": 0.32158,
+            "best_final_artifact": 0.33492,
+            "validated_inventions": 0.0,
+            "active_artifact_count": 28.0
+          },
+          "400": {
+            "heldout_resilience_mean": 0.15175,
+            "portfolio_resilience": 0.20148,
+            "discovery_frontier_auc": 0.33355,
+            "best_final_artifact": 0.33576,
+            "validated_inventions": 0.0,
+            "active_artifact_count": 28.0
+          },
+          "800": {
+            "heldout_resilience_mean": 0.15166,
+            "portfolio_resilience": 0.23664,
+            "discovery_frontier_auc": 0.33956,
+            "best_final_artifact": 0.33248,
+            "validated_inventions": 0.0,
+            "active_artifact_count": 28.0
+          }
+        },
+        "multi_agent_artifact_fraction_mean": 0.1875,
+        "cross_agent_fork_fraction_mean": 0.0,
+        "total_program_forks_mean": 0.0,
+        "max_lineage_depth_mean": 0.0,
+        "noncreator_reuse_fraction_mean": 1.0,
+        "physical_observation_first_reuse_fraction_mean": 1.0,
+        "dcb0129_red_flag_recall_pct": 100.0,
+        "dcb0129_oos_leak_events_total": 0,
+        "dcb0129_capacity_overloads_total": 0
+      },
+      "no_communication_executable_stigmergy": {
+        "n_world_seeds": 8,
+        "final_endpoints": {
+          "heldout_resilience_mean": {
+            "mean": 0.42034,
+            "sd": 0.03365,
+            "seed_values": [
+              0.39382,
+              0.40171,
+              0.46066,
+              0.40693,
+              0.42786,
+              0.41521,
+              0.37896,
+              0.47758
+            ]
+          },
+          "portfolio_resilience": {
+            "mean": 0.55493,
+            "sd": 0.03203,
+            "seed_values": [
+              0.55528,
+              0.56326,
+              0.55195,
+              0.57099,
+              0.5566,
+              0.58338,
+              0.48059,
+              0.57742
+            ]
+          },
+          "discovery_frontier_auc": {
+            "mean": 0.49246,
+            "sd": 0.02162,
+            "seed_values": [
+              0.51288,
+              0.48687,
+              0.47622,
+              0.5099,
+              0.48254,
+              0.50368,
+              0.45311,
+              0.51444
+            ]
+          },
+          "best_final_artifact": {
+            "mean": 0.54779,
+            "sd": 0.02156,
+            "seed_values": [
+              0.51451,
+              0.5218,
+              0.53183,
+              0.56026,
+              0.56622,
+              0.55733,
+              0.56862,
+              0.56179
+            ]
+          },
+          "validated_inventions": {
+            "mean": 2.0,
+            "sd": 1.06904,
+            "seed_values": [
+              3.0,
+              1.0,
+              3.0,
+              3.0,
+              1.0,
+              1.0,
+              1.0,
+              3.0
+            ]
+          },
+          "active_artifact_count": {
+            "mean": 28.0,
+            "sd": 0.0,
+            "seed_values": [
+              28.0,
+              28.0,
+              28.0,
+              28.0,
+              28.0,
+              28.0,
+              28.0,
+              28.0
+            ]
+          }
+        },
+        "checkpoint_trajectories": {
+          "100": {
+            "heldout_resilience_mean": 0.24974,
+            "portfolio_resilience": 0.31622,
+            "discovery_frontier_auc": 0.32415,
+            "best_final_artifact": 0.36099,
+            "validated_inventions": 0.25,
+            "active_artifact_count": 25.5
+          },
+          "200": {
+            "heldout_resilience_mean": 0.30004,
+            "portfolio_resilience": 0.38143,
+            "discovery_frontier_auc": 0.37609,
+            "best_final_artifact": 0.43651,
+            "validated_inventions": 1.0,
+            "active_artifact_count": 28.0
+          },
+          "400": {
+            "heldout_resilience_mean": 0.33461,
+            "portfolio_resilience": 0.43002,
+            "discovery_frontier_auc": 0.42666,
+            "best_final_artifact": 0.48629,
+            "validated_inventions": 1.125,
+            "active_artifact_count": 28.0
+          },
+          "800": {
+            "heldout_resilience_mean": 0.42034,
+            "portfolio_resilience": 0.55493,
+            "discovery_frontier_auc": 0.49246,
+            "best_final_artifact": 0.54779,
+            "validated_inventions": 2.0,
+            "active_artifact_count": 28.0
+          }
+        },
+        "multi_agent_artifact_fraction_mean": 1.0,
+        "cross_agent_fork_fraction_mean": 0.4383,
+        "total_program_forks_mean": 572.25,
+        "max_lineage_depth_mean": 26.12,
+        "noncreator_reuse_fraction_mean": 1.0,
+        "physical_observation_first_reuse_fraction_mean": 1.0,
+        "dcb0129_red_flag_recall_pct": 100.0,
+        "dcb0129_oos_leak_events_total": 0,
+        "dcb0129_capacity_overloads_total": 0
+      },
+      "full_culture": {
+        "n_world_seeds": 8,
+        "final_endpoints": {
+          "heldout_resilience_mean": {
+            "mean": 0.40975,
+            "sd": 0.01995,
+            "seed_values": [
+              0.42462,
+              0.38612,
+              0.41686,
+              0.41307,
+              0.41732,
+              0.38073,
+              0.39901,
+              0.44027
+            ]
+          },
+          "portfolio_resilience": {
+            "mean": 0.54272,
+            "sd": 0.03657,
+            "seed_values": [
+              0.59154,
+              0.49255,
+              0.53723,
+              0.48811,
+              0.57543,
+              0.5503,
+              0.54632,
+              0.56025
+            ]
+          },
+          "discovery_frontier_auc": {
+            "mean": 0.4985,
+            "sd": 0.03685,
+            "seed_values": [
+              0.519,
+              0.51117,
+              0.43851,
+              0.44458,
+              0.5283,
+              0.51646,
+              0.49681,
+              0.53319
+            ]
+          },
+          "best_final_artifact": {
+            "mean": 0.53789,
+            "sd": 0.0273,
+            "seed_values": [
+              0.56073,
+              0.50103,
+              0.52895,
+              0.56293,
+              0.55261,
+              0.49813,
+              0.56623,
+              0.53248
+            ]
+          },
+          "validated_inventions": {
+            "mean": 1.75,
+            "sd": 0.88641,
+            "seed_values": [
+              3.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              2.0,
+              2.0,
+              3.0
+            ]
+          },
+          "active_artifact_count": {
+            "mean": 28.0,
+            "sd": 0.0,
+            "seed_values": [
+              28.0,
+              28.0,
+              28.0,
+              28.0,
+              28.0,
+              28.0,
+              28.0,
+              28.0
+            ]
+          }
+        },
+        "checkpoint_trajectories": {
+          "100": {
+            "heldout_resilience_mean": 0.26231,
+            "portfolio_resilience": 0.33419,
+            "discovery_frontier_auc": 0.32327,
+            "best_final_artifact": 0.37326,
+            "validated_inventions": 0.125,
+            "active_artifact_count": 26.0
+          },
+          "200": {
+            "heldout_resilience_mean": 0.29921,
+            "portfolio_resilience": 0.37319,
+            "discovery_frontier_auc": 0.37277,
+            "best_final_artifact": 0.44656,
+            "validated_inventions": 0.5,
+            "active_artifact_count": 28.0
+          },
+          "400": {
+            "heldout_resilience_mean": 0.33062,
+            "portfolio_resilience": 0.42794,
+            "discovery_frontier_auc": 0.42996,
+            "best_final_artifact": 0.49144,
+            "validated_inventions": 0.75,
+            "active_artifact_count": 28.0
+          },
+          "800": {
+            "heldout_resilience_mean": 0.40975,
+            "portfolio_resilience": 0.54272,
+            "discovery_frontier_auc": 0.4985,
+            "best_final_artifact": 0.53789,
+            "validated_inventions": 1.75,
+            "active_artifact_count": 28.0
+          }
+        },
+        "multi_agent_artifact_fraction_mean": 1.0,
+        "cross_agent_fork_fraction_mean": 0.4137,
+        "total_program_forks_mean": 574.38,
+        "max_lineage_depth_mean": 30.25,
+        "noncreator_reuse_fraction_mean": 1.0,
+        "physical_observation_first_reuse_fraction_mean": 1.0,
+        "dcb0129_red_flag_recall_pct": 100.0,
+        "dcb0129_oos_leak_events_total": 0,
+        "dcb0129_capacity_overloads_total": 0
+      }
+    },
+    "paired_seed_contrasts": {
+      "silent_exec_stigmergy_vs_isolated_best28_heldout": {
+        "mean_diff": 0.21266,
+        "ci95_low": 0.17269,
+        "ci95_high": 0.25534,
+        "ci_excludes_zero": true,
+        "exact_signflip_p": 0.007812,
+        "wilcoxon_p": 0.007812
+      },
+      "silent_exec_stigmergy_vs_isolated_best28_portfolio": {
+        "mean_diff": 0.08024,
+        "ci95_low": 0.02199,
+        "ci95_high": 0.16588,
+        "ci_excludes_zero": true,
+        "exact_signflip_p": 0.023438,
+        "wilcoxon_p": 0.023438
+      },
+      "silent_exec_stigmergy_vs_isolated_best28_single_best_artifact": {
+        "mean_diff": 0.00194,
+        "ci95_low": -0.01732,
+        "ci95_high": 0.01941,
+        "ci_excludes_zero": false,
+        "exact_signflip_p": 0.867188,
+        "wilcoxon_p": 0.945312
+      },
+      "silent_exec_stigmergy_vs_map_elites_heldout": {
+        "mean_diff": 0.05418,
+        "ci95_low": -0.01206,
+        "ci95_high": 0.11749,
+        "ci_excludes_zero": false,
+        "exact_signflip_p": 0.148438,
+        "wilcoxon_p": 0.195312
+      },
+      "silent_exec_stigmergy_vs_static_highs_heldout": {
+        "mean_diff": 0.27618,
+        "ci95_low": 0.25185,
+        "ci95_high": 0.30106,
+        "ci_excludes_zero": true,
+        "exact_signflip_p": 0.007812,
+        "wilcoxon_p": 0.007812
+      },
+      "full_culture_vs_silent_exec_stigmergy_heldout": {
+        "mean_diff": -0.01059,
+        "ci95_low": -0.0279,
+        "ci95_high": 0.00779,
+        "ci_excludes_zero": false,
+        "exact_signflip_p": 0.3125,
+        "wilcoxon_p": 0.3125
+      },
+      "full_culture_vs_no_explicit_culture_inventions": {
+        "mean_diff": 1.75,
+        "ci95_low": 1.25,
+        "ci95_high": 2.375,
+        "ci_excludes_zero": true,
+        "exact_signflip_p": 0.007812,
+        "wilcoxon_p": 0.007812
+      }
+    },
+    "behavioral_phenotypes": {
+      "n_agent_windows": 2688,
+      "broad_2mode_silhouette_phys11": 0.7974,
+      "broad_2mode_silhouette_all13": 0.789,
+      "leave_seed_out_ari_mean": 0.9978,
+      "anticircularity_3mode_silhouette_phys11": 0.7428,
+      "by_condition": {
+        "full_culture": {
+          "artifact_centered_fraction_mean": 0.7633928571428572,
+          "artifact_centered_seed_fractions": [
+            0.75,
+            0.7589,
+            0.7679,
+            0.7679,
+            0.7857,
+            0.75,
+            0.7679,
+            0.7589
+          ],
+          "window_progression_w0_to_w3": [
+            0.0536,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "window_role_switching_mean": 0.32886904761904767
+        },
+        "no_communication_executable_stigmergy": {
+          "artifact_centered_fraction_mean": 0.7700892857142858,
+          "artifact_centered_seed_fractions": [
+            0.75,
+            0.7679,
+            0.7857,
+            0.7768,
+            0.7679,
+            0.7589,
+            0.7768,
+            0.7768
+          ],
+          "window_progression_w0_to_w3": [
+            0.0804,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "window_role_switching_mean": 0.32738095238095244
+        },
+        "no_explicit_culture_physical_stigmergy": {
+          "artifact_centered_fraction_mean": 0.7633928571428572,
+          "artifact_centered_seed_fractions": [
+            0.7589,
+            0.7589,
+            0.7679,
+            0.7679,
+            0.7589,
+            0.7589,
+            0.7857,
+            0.75
+          ],
+          "window_progression_w0_to_w3": [
+            0.0536,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "window_role_switching_mean": 0.32738095238095244
+        }
+      }
+    },
+    "diffusion_and_network_cartography": {
+      "creator_to_adopter_motif_over_shuffled_null": {
+        "lag_10_ticks": 1.1611,
+        "lag_25_ticks": 1.085,
+        "lag_50_ticks": 1.0993,
+        "lag_100_ticks": 1.14,
+        "lag_200_ticks": 1.0847
+      },
+      "network_cartography_and_knockout": {
+        "full_culture": {
+          "bh_validated_agent_pairs_mean": 116.5,
+          "nodf_nestedness_0_1_mean": 0.2781,
+          "community_persistence_ami_mean": 0.8566,
+          "knockout_50pct_artifact_access_random": 0.9932,
+          "knockout_50pct_artifact_access_high_degree": 0.9464,
+          "knockout_50pct_artifact_access_broker": 0.7098,
+          "knockout_auc_random": 0.9988,
+          "knockout_auc_high_degree": 0.9959,
+          "knockout_auc_broker": 0.9686
+        },
+        "no_communication_executable_stigmergy": {
+          "bh_validated_agent_pairs_mean": 130.25,
+          "nodf_nestedness_0_1_mean": 0.2637,
+          "community_persistence_ami_mean": 0.8633,
+          "knockout_50pct_artifact_access_random": 0.9933,
+          "knockout_50pct_artifact_access_high_degree": 0.9152,
+          "knockout_50pct_artifact_access_broker": 0.7232,
+          "knockout_auc_random": 0.9988,
+          "knockout_auc_high_degree": 0.9931,
+          "knockout_auc_broker": 0.9802
+        },
+        "no_explicit_culture_physical_stigmergy": {
+          "bh_validated_agent_pairs_mean": 117.5,
+          "nodf_nestedness_0_1_mean": 0.2671,
+          "community_persistence_ami_mean": 0.766,
+          "knockout_50pct_artifact_access_random": 0.9934,
+          "knockout_50pct_artifact_access_high_degree": 0.9509,
+          "knockout_50pct_artifact_access_broker": 0.7143,
+          "knockout_auc_random": 0.9988,
+          "knockout_auc_high_degree": 0.9893,
+          "knockout_auc_broker": 0.9624
+        }
+      }
+    },
+    "representative_executable_lineage": [
+      {
+        "program_id": "program_31485764b52987c8d21a61cf",
+        "author_agent": "A05",
+        "created_tick": 5,
+        "edit_distance_from_parent": 0,
+        "install_count": 5,
+        "n_instructions": 16
+      },
+      {
+        "program_id": "program_4976a5f3113251bed709da0b",
+        "author_agent": "A24",
+        "created_tick": 147,
+        "edit_distance_from_parent": 1,
+        "install_count": 1,
+        "n_instructions": 16
+      },
+      {
+        "program_id": "program_d24b61d48ca30f39126bced4",
+        "author_agent": "A15",
+        "created_tick": 239,
+        "edit_distance_from_parent": 1,
+        "install_count": 1,
+        "n_instructions": 16
+      },
+      {
+        "program_id": "program_2992a0ce55289dbf0ca7aa38",
+        "author_agent": "A24",
+        "created_tick": 247,
+        "edit_distance_from_parent": 3,
+        "install_count": 1,
+        "n_instructions": 19
+      },
+      {
+        "program_id": "program_0518047448416e3b96c25c1c",
+        "author_agent": "A09",
+        "created_tick": 259,
+        "edit_distance_from_parent": 1,
+        "install_count": 1,
+        "n_instructions": 19
+      },
+      {
+        "program_id": "program_0afa967eff5c078ab1418a6b",
+        "author_agent": "A03",
+        "created_tick": 278,
+        "edit_distance_from_parent": 1,
+        "install_count": 1,
+        "n_instructions": 19
+      },
+      {
+        "program_id": "program_3ad571d9a4e9bf5197971037",
+        "author_agent": "A24",
+        "created_tick": 322,
+        "edit_distance_from_parent": 1,
+        "install_count": 1,
+        "n_instructions": 19
+      },
+      {
+        "program_id": "program_89d464392cc3a7bf947bafa7",
+        "author_agent": "A26",
+        "created_tick": 399,
+        "edit_distance_from_parent": 1,
+        "install_count": 1,
+        "n_instructions": 19
+      },
+      {
+        "program_id": "program_f99bd3f1746fb633496786eb",
+        "author_agent": "A09",
+        "created_tick": 409,
+        "edit_distance_from_parent": 1,
+        "install_count": 1,
+        "n_instructions": 19
+      },
+      {
+        "program_id": "program_90e698f944ba5d01dbc7cbed",
+        "author_agent": "A10",
+        "created_tick": 409,
+        "edit_distance_from_parent": 1,
+        "install_count": 1,
+        "n_instructions": 20
+      },
+      {
+        "program_id": "program_7582e0bcb1c45b4a862227b7",
+        "author_agent": "A12",
+        "created_tick": 436,
+        "edit_distance_from_parent": 1,
+        "install_count": 1,
+        "n_instructions": 20
+      },
+      {
+        "program_id": "program_fcb2e89b00d1ede41c9c39ca",
+        "author_agent": "A15",
+        "created_tick": 439,
+        "edit_distance_from_parent": 1,
+        "install_count": 1,
+        "n_instructions": 20
+      },
+      {
+        "program_id": "program_4eaacbdddc233befe82c6230",
+        "author_agent": "A26",
+        "created_tick": 474,
+        "edit_distance_from_parent": 1,
+        "install_count": 1,
+        "n_instructions": 20
+      },
+      {
+        "program_id": "program_8c40b7e5d7de2ca8ae9b7e07",
+        "author_agent": "A15",
+        "created_tick": 489,
+        "edit_distance_from_parent": 1,
+        "install_count": 1,
+        "n_instructions": 20
+      },
+      {
+        "program_id": "program_9fe5b07a6d0fa6488cae6d87",
+        "author_agent": "A09",
+        "created_tick": 534,
+        "edit_distance_from_parent": 1,
+        "install_count": 1,
+        "n_instructions": 20
+      },
+      {
+        "program_id": "program_5afbcd4c33381dd8b203ca47",
+        "author_agent": "A10",
+        "created_tick": 534,
+        "edit_distance_from_parent": 1,
+        "install_count": 1,
+        "n_instructions": 20
+      },
+      {
+        "program_id": "program_f05f2375ec15c36ef459545d",
+        "author_agent": "A06",
+        "created_tick": 606,
+        "edit_distance_from_parent": 1,
+        "install_count": 1,
+        "n_instructions": 20
+      },
+      {
+        "program_id": "program_49038e457086eb11fe736dc7",
+        "author_agent": "A10",
+        "created_tick": 609,
+        "edit_distance_from_parent": 1,
+        "install_count": 1,
+        "n_instructions": 20
+      },
+      {
+        "program_id": "program_57e2d53dab1559cc3dd175d1",
+        "author_agent": "A25",
+        "created_tick": 623,
+        "edit_distance_from_parent": 1,
+        "install_count": 1,
+        "n_instructions": 20
+      },
+      {
+        "program_id": "program_f4d0fc9af480acfc0acba9f7",
+        "author_agent": "A26",
+        "created_tick": 624,
+        "edit_distance_from_parent": 1,
+        "install_count": 1,
+        "n_instructions": 20
+      },
+      {
+        "program_id": "program_968ad4f51886b646fd85cd43",
+        "author_agent": "A15",
+        "created_tick": 639,
+        "edit_distance_from_parent": 1,
+        "install_count": 1,
+        "n_instructions": 20
+      },
+      {
+        "program_id": "program_1587e71f3ce4f0617cd41f5f",
+        "author_agent": "A03",
+        "created_tick": 678,
+        "edit_distance_from_parent": 1,
+        "install_count": 2,
+        "n_instructions": 20
+      },
+      {
+        "program_id": "program_4bd3826a89b8309d500ec416",
+        "author_agent": "A07",
+        "created_tick": 732,
+        "edit_distance_from_parent": 1,
+        "install_count": 1,
+        "n_instructions": 20
+      },
+      {
+        "program_id": "program_333b81d7c52bdca00c35b12b",
+        "author_agent": "A10",
+        "created_tick": 734,
+        "edit_distance_from_parent": 1,
+        "install_count": 1,
+        "n_instructions": 20
+      },
+      {
+        "program_id": "program_d802d4422dd830893d490550",
+        "author_agent": "A06",
+        "created_tick": 756,
+        "edit_distance_from_parent": 1,
+        "install_count": 0,
+        "n_instructions": 20
+      }
+    ]
+  },
+  "live_12q_helios_multi_corridor_rollout": {
+    "sp_swarm_portfolio_12q": {
+      "nexus_job_name": "sp-swarm-v01-sp-swarm-portfolio-12q-20261115_124137",
+      "nexus_job_id": "e3625be1-2100-4dfb-abd8-fdb81b0a9caf",
+      "hugr_ref_id": "63715b7c-ad05-443a-8671-b67e35bb0a74",
+      "hugr_bytes": 13376,
+      "n_qubits": 12,
+      "n_shots": 1024,
+      "cloud_elapsed_s": 15.38,
+      "corridor_adherence_helios": [
+        0.58984,
+        0.54199,
+        0.6123,
+        0.63867
+      ],
+      "mean_corridor_adherence_helios": 0.5957,
+      "min_corridor_adherence_helios": 0.54199,
+      "joint_all4_adherent_helios": 0.11621,
+      "exact_statevector": {
+        "corridors": [
+          {
+            "corridor_name": "Tilbury_Chadwell_Core20",
+            "stages": [
+              "W",
+              "P",
+              "G"
+            ],
+            "exact_adherence_qubit_prob": 0.56973,
+            "exact_full_111_prob": 0.44113
+          },
+          {
+            "corridor_name": "Canvey_Island_HighACB",
+            "stages": [
+              "P",
+              "W",
+              "G"
+            ],
+            "exact_adherence_qubit_prob": 0.54073,
+            "exact_full_111_prob": 0.42831
+          },
+          {
+            "corridor_name": "Dengie_Peninsula_Rural",
+            "stages": [
+              "W",
+              "M",
+              "P",
+              "G"
+            ],
+            "exact_adherence_qubit_prob": 0.63717,
+            "exact_full_111_prob": 0.57356
+          },
+          {
+            "corridor_name": "Rayleigh_Suburban_Preventive",
+            "stages": [
+              "P",
+              "G"
+            ],
+            "exact_adherence_qubit_prob": 0.62061,
+            "exact_full_111_prob": 0.55479
+          }
+        ],
+        "exact_joint_all4_adherent_prob": 0.12182,
+        "exact_mean_corridor_adherence": 0.59206,
+        "exact_min_corridor_adherence": 0.54073
+      }
+    },
+    "isolated_specialist_12q": {
+      "nexus_job_name": "sp-swarm-v01-isolated-specialist-12q-20261115_124137",
+      "nexus_job_id": "dc923f89-3a05-4229-ac79-6d98b8a7f5b4",
+      "hugr_ref_id": "c2faf53f-6b92-4064-bc89-a52171144e2f",
+      "hugr_bytes": 12093,
+      "n_qubits": 12,
+      "n_shots": 1024,
+      "cloud_elapsed_s": 17.43,
+      "corridor_adherence_helios": [
+        0.11133,
+        0.11719,
+        0.12012,
+        0.2627
+      ],
+      "mean_corridor_adherence_helios": 0.15283,
+      "min_corridor_adherence_helios": 0.11133,
+      "joint_all4_adherent_helios": 0.00098,
+      "exact_statevector": {
+        "corridors": [
+          {
+            "corridor_name": "Tilbury_Chadwell_Core20",
+            "stages": [
+              "P",
+              "G"
+            ],
+            "exact_adherence_qubit_prob": 0.11382,
+            "exact_full_111_prob": 0.03388
+          },
+          {
+            "corridor_name": "Canvey_Island_HighACB",
+            "stages": [
+              "P",
+              "G"
+            ],
+            "exact_adherence_qubit_prob": 0.11274,
+            "exact_full_111_prob": 0.04279
+          },
+          {
+            "corridor_name": "Dengie_Peninsula_Rural",
+            "stages": [
+              "P",
+              "G"
+            ],
+            "exact_adherence_qubit_prob": 0.10663,
+            "exact_full_111_prob": 0.05722
+          },
+          {
+            "corridor_name": "Rayleigh_Suburban_Preventive",
+            "stages": [
+              "P",
+              "G"
+            ],
+            "exact_adherence_qubit_prob": 0.27938,
+            "exact_full_111_prob": 0.22701
+          }
+        ],
+        "exact_joint_all4_adherent_prob": 0.00038,
+        "exact_mean_corridor_adherence": 0.15314,
+        "exact_min_corridor_adherence": 0.10663
+      }
+    },
+    "joint_all4_survival_ratio_helios": 118.582
+  },
+  "live_typesafe_epistemic_audit": {
+    "atomic_noul_assertions": {
+      "asserts_zero_physical_qpu_shots": 0.98,
+      "reports_gate_g4_classical_floor": 0.98,
+      "keeps_nhs_dcb0129_hazards_open": 0.95,
+      "preserves_human_clinical_and_link_worker_authority": 0.76,
+      "complies_with_noncommercial_open_science_mandate": 0.97,
+      "contains_unverified_supremacy_or_rct_claim": 0.04
+    },
+    "forward_governance_posture": "compliant_zero_hype_research_sandbox",
+    "reversed_governance_posture": "compliant_zero_hype_research_sandbox",
+    "option_order_consistent": true,
+    "epistemic_rigor_score_out_of_5": 3.2,
+    "all_atomic_verifiers_passed": true
+  },
+  "figures": {
+    "master_figure": "figures/fig_sp_swarmworld_v01.png",
+    "paper_fig1": "samskrift_swarmworld/figures/fig1_mechanism_ablation_and_tradeoffs.png",
+    "paper_fig2": "samskrift_swarmworld/figures/fig2_mse_topology_lineage_and_helios12q.png",
+    "paper_fig3": "samskrift_swarmworld/figures/fig3_phenotypes_diffusion_and_knockout.png"
+  },
+  "total_benchmark_wall_s": 98.56,
+  "receipt_sha256": "0e089fb1ffad36dd5cbf664e17be1a72d4f5d5424559dcd13e1709aa17175e6e"
+}

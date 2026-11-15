@@ -1988,6 +1988,13 @@
   },
   "receipts_summary": [
     {
+      "file": "sp_swarmworld_v01_receipt.json",
+      "sha256": "0e089fb1ffad36dd5cbf664e17be1a72d4f5d5424559dcd13e1709aa17175e6e",
+      "platforms": "Social Prescribing SwarmWorld (`SP-SwarmWorld v0.1`, adapting `arXiv:2608.26081`) via `antigravity-jev-social-prescribing-quantum` (`jev-1.14.0` perception & epistemic audit) + Real 28-PCN / 143-GP Mid & South Essex Topology (`81` edges) + Safety-Locked 16-Register VM (`NHS DCB0129`) + 2 Live `12q` Quantinuum Nexus `Helios-1E-lite` Jobs (`e3625be1`, `dc923f89`; 2,048 shots, 0.00 HQC)",
+      "metrics": "Live jev-1.14.0 PCN Perception: 7/7 (100%) forward=reverse invariance, syncope halt p_urg=0.98, admin OOS rejection p_comp=0.01; 6-Condition Gate G4 Benchmark (M=8 seeds, S=8 unseen zero-agent shocks): C4 Silent Executable Stigmergy R_hold = 0.4203 +- 0.0337 (+0.2762 vs C0 Static L1-HiGHS p=0.0078; +0.2127 vs C2 Best-of-28 p=0.0078; 572.3 forks, 43.8% cross-agent), while C2 matches single-hub peak (0.5459 vs 0.5478), C1 MAP-Elites QD (0 Jev calls) wins raw inventions (12.88, 2.47x higher shock SD), and C5 Full Culture chat yields no shock gain (0.4098, Broker AUC 0.9686 vs 0.9802); Live 12q Helios-1E-lite Outage Rollout: Swarm Portfolio 11.62% (119/1,024; exact 12.18%) vs Isolated Monoculture 0.10% (1/1,024) -> 118.6x survival; 100% DCB0129 recall",
+      "floor": "6.65 ms Static HiGHS / MAP-Elites QD 0.3662 / Best-of-28 s*=0.5459"
+    },
+    {
       "file": "qsp_world_model_v03_receipt.json",
       "sha256": "8e0af82d6b70f8aafe3bc9fffa6130451146a1d89f2ffc17dd8dd9d16aed0f13",
       "platforms": "Real NHS Falsification, Coupled-Triad QAOA & Closed-Loop MPC (`QSP-WM v0.3`) via `antigravity-jev-social-prescribing-quantum` (`jev-1.14.0`) + Real 3-Wave NHS England Panel (`5,661` GPs) + Coupled-Triad Lock (`V=18..72`) + Exact Heisenberg Pauli Propagation (`18q..64q`) + 3 Live Quantinuum Nexus `Helios-1E-lite` Jobs (`bf5c4d7a`, `94851f97`, `e1477d30`; 1,536 shots, 0.00 HQC)",

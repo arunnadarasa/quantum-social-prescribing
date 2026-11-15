@@ -135,6 +135,16 @@ const BIBTEX_ENTRIES = {
   url     = {https://samskrift.com/view/828fbe1b-e53c-43ef-bbe2-81d0024deea8/e0639112-27a8-457f-9268-1cfc9e1bc14a},
   note    = {Real 3-wave NHS England GP panel (5,661 GPs, N=671 crossover: +10.05 pp HC3 ANCOVA p=5.39e-27, +7.50 pp 1:1 caliper ATT p=8.26e-12, Sep 2026 SMR null p=0.526) + Coupled-Triad QAOA on Helios-1E-lite (Job e1477d30: 5.86\% exact GS = 15,360x random, 99.61\% Top-1\%, 58 uq vs 0.00\% GS 1-body Job 94851f97) + 64q Heisenberg Pauli backprop (39.5 ms at p=1 vs 85.2x-103.1x p=3 blowup) + 0.018 ms closed-loop disruption twin (-67.8\% churn, 100\% H-QSPM-01 recall); 7 live Helios-1E-lite cloud jobs across v0.2-v0.3; 0 physical QPU shots}
 }`,
+  swarmworld: `@article{nadarasa2026spswarmworld,
+  title   = {Social Prescribing {SwarmWorld} ({SP-SwarmWorld} v0.1): Executable Stigmergy, Cumulative Neighbourhood Pathway Design, and 12-Qubit {Helios-1E-lite} Multi-Corridor Evaluation Across 28 {Mid \& South Essex} {PCNs}},
+  author  = {Nadarasa, Arun},
+  year    = {2026},
+  month   = nov,
+  journal = {Samskrift Executable Stigmergy \& Neighbourhood Systems Study (Mid and South Essex NHS Foundation Trust \& ISPPA)},
+  pages   = {1--7},
+  url     = {https://samskrift.com/view/f13f8ee0-6355-466a-9259-4de72f18f499/b1fb1545-2a95-4aaa-96d8-210726b7ff92},
+  note    = {Adapts SwarmWorld (arXiv:2608.26081) across 28 real MSE PCNs (143 GPs, 1,266,245 patients, OGL v3.0) with strict proposal-consequence separation, immutable NHS DCB0129 safety-locked 16-register VM controllers, M=8 matched seeds x 6 Gate G4 conditions x S=8 unseen agent-free shock schedules (C4 R_hold = 0.4203 +- 0.0337 vs Static L1-HiGHS 0.1442 p=0.0078 & Best-of-28 0.2077 p=0.0078), and 2 live 12q Quantinuum Nexus Helios-1E-lite cloud jobs (e3625be1 & dc923f89, 2,048 shots, 11.62\% vs 0.10\% joint survival = 118.6x); 0 physical QPU shots}
+}`,
   monograph: `@article{nadarasa2026qspm,
   title   = {Quantum Social Prescribing: Multi-Scale Quantum Algorithms, Psychoneuroimmunological Grounding, and Multi-Method Health {AI} Governance for Integrated Neighbourhood Care},
   author  = {Nadarasa, Arun},
@@ -281,6 +291,23 @@ async function initPdfReader() {
         { label: "p.10 · Sec. 5 (10 Use Cases) & Table 6", page: 10 },
         { label: "p.11 · Fig. 4 & Sec. 6 Epistemic Audit", page: 11 },
         { label: "p.12 · Acknowledgments & 23 References", page: 12 }
+      ]
+    },
+    swarmworld: {
+      pdfUrl: "downloads/Social_Prescribing_SwarmWorld.pdf",
+      pdfFilename: "Social_Prescribing_SwarmWorld.pdf",
+      pagesDir: "pages_swarmworld",
+      totalPages: 7,
+      altTitle: "Social Prescribing SwarmWorld (SP-SwarmWorld v0.1): Executable Stigmergy Across 28 MSE PCNs",
+      samskriftUrl: "https://samskrift.com/view/f13f8ee0-6355-466a-9259-4de72f18f499/b1fb1545-2a95-4aaa-96d8-210726b7ff92",
+      bookmarks: [
+        { label: "p.1 · Abstract & Gate G4 Box", page: 1 },
+        { label: "p.2 · 28-PCN MSE Physics & Eq. 1", page: 2 },
+        { label: "p.3 · Tables 1–2 & 16-Reg Safety VM", page: 3 },
+        { label: "p.4 · Fig. 1 & Single-Peak Trade-Offs", page: 4 },
+        { label: "p.5 · Fig. 2 & Table 3 (12q Helios-1E-lite)", page: 5 },
+        { label: "p.6 · Fig. 3, Table 4 & Epistemic Audit", page: 6 },
+        { label: "p.7 · Full 21 References", page: 7 }
       ]
     },
     monograph: {
@@ -437,7 +464,8 @@ async function initPdfReader() {
   });
 
   const initialHash = (window.location.hash || "").toLowerCase();
-  if (initialHash.includes("world")) applyDocument("world_model");
+  if (initialHash.includes("swarm")) applyDocument("swarmworld");
+  else if (initialHash.includes("world")) applyDocument("world_model");
   else if (initialHash.includes("quantum")) applyDocument("quantum_opt");
   else if (initialHash.includes("monograph")) applyDocument("monograph");
   else applyDocument("focused");
