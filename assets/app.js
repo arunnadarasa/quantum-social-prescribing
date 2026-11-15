@@ -126,14 +126,14 @@ const BIBTEX_ENTRIES = {
   note    = {75 sparse CSC primary-integrality HiGHS MILP runs + 2,560 raw pre-postprocessing shots across 3 live Quantinuum Nexus Helios-1E-lite HUGR jobs (5a8a78bb, 0813dc16, faf7ccda); 55.57\% (12q) and 83.40\% (16q) Top-5\% concentration (3.09x LP rounding); 0 physical QPU shots}
 }`,
   world_model: `@article{nadarasa2026qspworldmodel,
-  title   = {A Counterfactual Quantum Social Prescribing World Model ({QSP-WM} v0.2): Calibrated System One Perception, Out-of-Sample Unitary Learning, and Live $18$--$24$-Qubit Spatiotemporal {HUBO} Planning on {Quantinuum} {Helios-1E-lite}},
+  title   = {A Counterfactual Quantum Social Prescribing World Model ({QSP-WM} v0.3): Real $3$-Wave {NHS} Order Falsification, Coupled-Triad Coherent Tunneling \& Pauli-Propagation Boundaries, and Closed-Loop Neighbourhood {MPC} on {Quantinuum} {Helios-1E-lite}},
   author  = {Nadarasa, Arun},
   year    = {2026},
   month   = nov,
   journal = {Samskrift Counterfactual World Model Technical Study (Mid and South Essex NHS Foundation Trust \& ISPPA)},
-  pages   = {1--9},
+  pages   = {1--12},
   url     = {https://samskrift.com/view/828fbe1b-e53c-43ef-bbe2-81d0024deea8/e0639112-27a8-457f-9268-1cfc9e1bc14a},
-  note    = {Live TypeSafe System One (jev-1.14.0 / Aletheia-QSPM) 6/6 closed-loop perception + 5-seed out-of-sample 7p MLE-HQMM learning curve vs 168p Markov/36p DBN + HiGHS vs 512-chain Native Cubic HUBO-SA primal-dual gap decomposition (37.02\% primal starvation at V=120) + 4 live Quantinuum Nexus Helios-1E-lite cloud jobs (defea6a2, 6ed2cea0, 940e47e5, 3fea11ae: 54.69\% Top-1\%, 3.18x LP rounding on zero-retrain 24q) + 10 NHS social prescribing use cases; 0 physical QPU shots}
+  note    = {Real 3-wave NHS England GP panel (5,661 GPs, N=671 crossover: +10.05 pp HC3 ANCOVA p=5.39e-27, +7.50 pp 1:1 caliper ATT p=8.26e-12, Sep 2026 SMR null p=0.526) + Coupled-Triad QAOA on Helios-1E-lite (Job e1477d30: 5.86\% exact GS = 15,360x random, 99.61\% Top-1\%, 58 uq vs 0.00\% GS 1-body Job 94851f97) + 64q Heisenberg Pauli backprop (39.5 ms at p=1 vs 85.2x-103.1x p=3 blowup) + 0.018 ms closed-loop disruption twin (-67.8\% churn, 100\% H-QSPM-01 recall); 7 live Helios-1E-lite cloud jobs across v0.2-v0.3; 0 physical QPU shots}
 }`,
   monograph: `@article{nadarasa2026qspm,
   title   = {Quantum Social Prescribing: Multi-Scale Quantum Algorithms, Psychoneuroimmunological Grounding, and Multi-Method Health {AI} Governance for Integrated Neighbourhood Care},
@@ -266,19 +266,21 @@ async function initPdfReader() {
       pdfUrl: "downloads/Quantum_Social_Prescribing_World_Model.pdf",
       pdfFilename: "Quantum_Social_Prescribing_World_Model.pdf",
       pagesDir: "pages_world_model",
-      totalPages: 9,
-      altTitle: "Counterfactual Quantum Social Prescribing World Model (QSP-WM v0.2 & 10 Jev Use Cases)",
+      totalPages: 12,
+      altTitle: "Counterfactual Quantum Social Prescribing World Model (QSP-WM v0.3 & 10 Jev Use Cases)",
       samskriftUrl: "https://samskrift.com/view/828fbe1b-e53c-43ef-bbe2-81d0024deea8/e0639112-27a8-457f-9268-1cfc9e1bc14a",
       bookmarks: [
-        { label: "p.1 · Abstract, Gate G4 & Motivation", page: 1 },
+        { label: "p.1 · Abstract & Gate G4 Floors", page: 1 },
         { label: "p.2 · Layer 1 Jev Perception & Table 1", page: 2 },
-        { label: "p.3 · Fig. 1 (v0.1), Layer 2 HUGR & Prop. 1", page: 3 },
-        { label: "p.4 · Table 2 & Layer 3 Spatiotemporal MPC", page: 4 },
-        { label: "p.5 · Table 3 Horizon Wall & Sec. 3 (v0.2 MLE)", page: 5 },
-        { label: "p.6 · Fig. 2 (v0.2 4-Panel) & 18q–24q MPC", page: 6 },
-        { label: "p.7 · Table 4 (v0.2 Summary) & Sec. 4 (10 UCs)", page: 7 },
-        { label: "p.8 · Fig. 3 & Table 5 (UC-01..UC-10)", page: 8 },
-        { label: "p.9 · Epistemic Audit, DCB0129 & 22 Refs", page: 9 }
+        { label: "p.3 · Layer 2 HUGR, Prop. 1 & Fig. 1", page: 3 },
+        { label: "p.5 · Tables 2–3 & Sec. 3 (v0.2 MLE)", page: 5 },
+        { label: "p.6 · Fig. 2 (v0.2 4-Panel) & Gap Audit", page: 6 },
+        { label: "p.7 · Table 4 & Sec. 4 (v0.3 NHS Panel)", page: 7 },
+        { label: "p.8 · Fig. 3 (v0.3 4-Panel) & Coupled Triads", page: 8 },
+        { label: "p.9 · Table 5 (v0.3 Summary) & Disruption Twin", page: 9 },
+        { label: "p.10 · Sec. 5 (10 Use Cases) & Table 6", page: 10 },
+        { label: "p.11 · Fig. 4 & Sec. 6 Epistemic Audit", page: 11 },
+        { label: "p.12 · Acknowledgments & 23 References", page: 12 }
       ]
     },
     monograph: {

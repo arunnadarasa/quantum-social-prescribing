@@ -1988,6 +1988,13 @@
   },
   "receipts_summary": [
     {
+      "file": "qsp_world_model_v03_receipt.json",
+      "sha256": "8e0af82d6b70f8aafe3bc9fffa6130451146a1d89f2ffc17dd8dd9d16aed0f13",
+      "platforms": "Real NHS Falsification, Coupled-Triad QAOA & Closed-Loop MPC (`QSP-WM v0.3`) via `antigravity-jev-social-prescribing-quantum` (`jev-1.14.0`) + Real 3-Wave NHS England Panel (`5,661` GPs) + Coupled-Triad Lock (`V=18..72`) + Exact Heisenberg Pauli Propagation (`18q..64q`) + 3 Live Quantinuum Nexus `Helios-1E-lite` Jobs (`bf5c4d7a`, `94851f97`, `e1477d30`; 1,536 shots, 0.00 HQC)",
+      "metrics": "Priority A (Real 3-Wave NHS Panel, N=671 crossover): SMR->SP +10.05 pp HC3 ANCOVA (p=5.39e-27) & +7.50 pp 1:1 caliper ATT (185 pairs, p=8.26e-12), Sep 2026 SMR null (+0.98 pp, p=0.526), MSE(138)->39-ICB crossover Brier 0.1853 vs GBDT 0.1990 (DBN/GBDT overtake at N>=280; live 6q Job bf5c4d7a); Priority B (Coupled-Triad Lock & Pauli Backprop): V=72 1-flip SA/Tabu/PT 0.0% GS, live 18q Helios Coherent Triad-Tunneling QAOA (e1477d30, 68 CX) 5.86% exact GS (15/256 = 15,360x random) & 99.61% Top-1% (58 uq) vs 0.00% GS 1-body LP-WS-QAOA (94851f97), 64q p=1 Pauli backprop 39.5 ms vs 85.2x-103.1x p=3 blowup; Priority C (25-ep Closed-Loop Twin): 0.018 ms 100% 0-recompute, 2.44 vs 7.58 bits churn (-67.8%), 100% H-QSPM-01 recall",
+      "floor": "39.5 ms 64q p=1 Pauli / 458 ms Kempe / L1-HiGHS 31.3% adh"
+    },
+    {
       "file": "qsp_world_model_v02_receipt.json",
       "sha256": "343d865d10eaa1f8ede607a8436b30d9b30f1d25cc4ab17a47cbcf2acf302109",
       "platforms": "Peer-Review Hardening (`QSP-WM v0.2`) via `antigravity-jev-social-prescribing-quantum` (`jev-1.14.0`) + 5-Seed Out-of-Sample Unitary MLE vs Classical DBN/Markov + HiGHS vs 512-Chain Native Cubic `HUBO-SA` Gap Audit + 4 Live Quantinuum Nexus `Helios-1E-lite` Jobs (`defea6a2`, `6ed2cea0`, `940e47e5`, `3fea11ae`; 1,472 shots, 0.00 HQC)",
