@@ -1988,6 +1988,13 @@
   },
   "receipts_summary": [
     {
+      "file": "qsp_world_model_v02_receipt.json",
+      "sha256": "343d865d10eaa1f8ede607a8436b30d9b30f1d25cc4ab17a47cbcf2acf302109",
+      "platforms": "Peer-Review Hardening (`QSP-WM v0.2`) via `antigravity-jev-social-prescribing-quantum` (`jev-1.14.0`) + 5-Seed Out-of-Sample Unitary MLE vs Classical DBN/Markov + HiGHS vs 512-Chain Native Cubic `HUBO-SA` Gap Audit + 4 Live Quantinuum Nexus `Helios-1E-lite` Jobs (`defea6a2`, `6ed2cea0`, `940e47e5`, `3fea11ae`; 1,472 shots, 0.00 HQC)",
+      "metrics": "Out-of-Sample MLE (N=18..540, non-unitary relapse): 7p HQMM RMSE 0.0615 (92.0% seq acc) vs 0.0921 168p 8-State Markov & 0.1168 36p DBN at N=36, live 6q Nexus Job defea6a2 WPG 83.30% vs GPW 6.35% (+76.95 pp); Gap Audit (V=120): Cubic HUBO-SA reaches -69.39 (146.6 ms) vs HiGHS -34.46 -> 37.02% genuine MILP primal starvation + 62.98% McCormick dual looseness; Live Helios-1E-lite MPC (56 CX, 0 post-proc): 18q (6ed2cea0) 21.88% Top-1% (3.11x LP, 52 uq), 21q (940e47e5) 17.19% (22 uq), zero-retrain 24q (3fea11ae) 54.69% Top-1% (3.18x LP, 35 uq)",
+      "floor": "18.3\u201324.3 ms Exact HiGHS (18\u201324v) / 146.6 ms Cubic SA (V=120)"
+    },
+    {
       "file": "qsp_world_model_v01_receipt.json",
       "sha256": "87b17c6915e274c0489e5b2dba7a088405c372fcab0c4203bd52f765006d3019",
       "platforms": "Counterfactual Quantum Social Prescribing World Model (`QSP-WM v0.1`) via `antigravity-jev-social-prescribing-quantum` (`jev-1.14.0` closed-loop perception) + 6 Non-Commuting 3q Guppy 1.0 -> HUGR Permutations (12,288 Selene shots + Nexus HUGR 82563d26) + 4x3 Spatiotemporal MPC & H=1..6 Horizon Wall",
