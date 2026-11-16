@@ -276,8 +276,8 @@ async function initPdfReader() {
       pdfUrl: "downloads/Quantum_Social_Prescribing_World_Model.pdf",
       pdfFilename: "Quantum_Social_Prescribing_World_Model.pdf",
       pagesDir: "pages_world_model",
-      totalPages: 14,
-      altTitle: "Counterfactual Quantum Social Prescribing World Model (QSP-WM v0.4 & 10 Jev Use Cases)",
+      totalPages: 15,
+      altTitle: "Counterfactual Quantum Social Prescribing World Model (QSP-WM v0.5 & 10 Jev Use Cases)",
       samskriftUrl: "https://samskrift.com/view/828fbe1b-e53c-43ef-bbe2-81d0024deea8/e0639112-27a8-457f-9268-1cfc9e1bc14a",
       bookmarks: [
         { label: "p.1 · Abstract & Gate G4 Floors", page: 1 },
@@ -289,10 +289,11 @@ async function initPdfReader() {
         { label: "p.8 · Fig. 3 (v0.3 4-Panel) & Coupled Triads", page: 8 },
         { label: "p.9 · Table 5 (v0.3 Summary) & Disruption Twin", page: 9 },
         { label: "p.10 · Sec. 5 (v0.4 Rosenbaum Γ* & Dyna)", page: 10 },
-        { label: "p.11 · Fig. 4, Table 6 (v0.4) & Sec. 6", page: 11 },
-        { label: "p.12 · Fig. 5 (10 Use Cases) & Epistemic Audit", page: 12 },
-        { label: "p.13 · Table 7 (UC-01..10) & Open Hazards", page: 13 },
-        { label: "p.14 · Full 27 References", page: 14 }
+        { label: "p.11 · Fig. 4, Table 6 (v0.4) & Sec. 6 (Tessa)", page: 11 },
+        { label: "p.12 · Table 7 (v0.5 Tessa) & Post-WM MPS", page: 12 },
+        { label: "p.13 · Fig. 5 (v0.5 Tessa) & Sec. 7–8", page: 13 },
+        { label: "p.14 · Fig. 6 (10 Use Cases) & Open Hazards", page: 14 },
+        { label: "p.15 · Table 8 (UC-01..10) & 30 References", page: 15 }
       ]
     },
     swarmworld: {

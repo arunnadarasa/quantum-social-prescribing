@@ -1988,6 +1988,13 @@
   },
   "receipts_summary": [
     {
+      "file": "tessa_moth_helios_icb_receipt.json",
+      "sha256": "b07d33e14163bd0b29e32cd074b6d543af1858bf56803bef7b5675eca52b3d5d",
+      "platforms": "Whole-ICB Tessa State Preparation (`QSP-WM v0.5`, adapting Bultrini `arXiv:2611.18440v1`) via `antigravity-jev-social-prescribing-quantum` (`jev-1.14.0` epistemic audit) + 6 Live Moth Quantum Cloud API Emulator Jobs (`qpixl-v1` `873ebba3`/`f6c1675c`/`71d5285c`, `tessa-image-v1` `3a80d447`, `blur-core-v1` `c224c902`, `graph-v1` `3fd12283`; `mode='emu'`) + 3 Live `18q` Quantinuum Nexus `Helios-1E-lite` Jobs (`38f0213d`, `2596d13f`, `473b34f1`; 5,120 shots, 0.00 HQC)",
+      "metrics": "143-GP Mid & South Essex ICB Reconstruction: programmable 18q 4-regular trapped-ion circulant on live Helios-1E-lite (Job 38f0213d, 1,024 shots, 16 parallel CX layers) hits DRR MAE = 0.0310 (r=0.9799) vs Moth qpixl-v1 fake_fez Heron r2 + DRR MAE = 0.0547 (4,096 shots, Job 71d5285c; aer 0.0132) & dual-angle tessa-image-v1 MAE = 0.0161 (Job 3a80d447); 20-Pathway Fibonacci Bloch Constellation + r/||r||: 100.0% exact match (+55.94 pp vs linear Z + DRR 44.06%); Single-Hadamard K_a Witness (Job 2596d13f): MAE = 0.0351 vs exact O(C), N=64 RMSE 0.0854 (0% undef) vs 0.3048 plug-in (24.5% undef); Honest blur-core-v1 negative (Gini 0.2087 -> 0.6019 without Kraus damping); Post-WM Entanglement Boundary: pure Tessa Prop. 1 5q floor 0.053 ms (N(D:D)=0.0, 1D chi=2 MPS TVD=0.0000) vs Tessa + non-commuting QSP-WM breaking Prop. 1 (0.3410 div, N(D:D)=0.0014, 127x MI, chi=32 MPS TVD=0.6592; live Job 473b34f1 <Z_d> MAE=0.0236); live jev-1.14.0 6/6 PASS & Rigor 4.11/5",
+      "floor": "0.053 ms Prop. 1 5q Floor / 8.89 ms 1D \u03c7=2 MPS (TVD=0.0000) / 5.78 ms Exact O(C) K_a"
+    },
+    {
       "file": "unified_wm_v04_swarmworld_v02_receipt.json",
       "sha256": "5f6cf49b005f7db179b0fb6447c5e10d078c2d7f2cb0f4f4490e1fd84985f59f",
       "platforms": "Full Unified Upgrade (`QSP-WM v0.4` \u00d7 `SP-SwarmWorld v0.2`) via `antigravity-jev-social-prescribing-quantum` (`jev-1.14.0` cross-ICB perception & epistemic audit) + `M=24` `2\u00d72` Deconfounding & Zero-Shot 3-ICB England Transfer (`87` PCNs, `391` GPs) + Sutton Dyna Imagination & Rosenbaum `\u0393*` (`5,661` GPs) + SVD `MPS` (`\u03c7=1..32`) & `64`-Start `Triad-Kempe` vs `ASPS` + 3 Live `12q/18q` Quantinuum Nexus `Helios-1E-lite` Jobs (`0c725f9b`, `25195504`, `0449cbac`; 2,560 shots, 0.00 HQC)",
